@@ -1,0 +1,59 @@
+.glass-fabric {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .glass-fabric .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .glass-fabric h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .glass-fabric h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .glass-fabric ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .glass-fabric ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: left; /* Dodano, aby zapewnić wyrównanie tekstu do lewej */
+  }
+  
+  .glass-fabric ul li strong {
+    color: #2a2a2a;
+  }
+  
+  .glass-fabric p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .glass-fabric p strong {
+    color: #333;
+  }
+  .card_img_glass{
+    height: 200px;
+    object-fit: cover;
+  }
+
+  

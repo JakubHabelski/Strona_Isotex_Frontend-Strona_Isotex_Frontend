@@ -1,0 +1,78 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+   
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.clientSlider{
+    display: flex;
+    
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    max-width: 1600px; /* Odpowiednik Tailwind max-w-7xl */
+    margin: 0 auto; 
+}
+.list {
+    display: flex;
+    /*animation: scroll 5s ;  Animacja przesuwania */
+  
+}
+.logoContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 10px; /* Odpowiednik Tailwind mx-2.5 */
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white; /* Zastępuje Tailwind bg-white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Zastępuje Tailwind shadow-lg */
+    flex-shrink: 0; /* Dodane, aby zapobiec ścieśnianiu */
+}
+.logo{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    padding: 20px; /* Odpowiednik Tailwind p-2.5 */
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10;
+    background: red; 
+}
+
+.clientSliderContainer{
+    
+}
+
+@media (max-width: 992px) {
+    .clientSlider{
+        max-width: 630px;
+    }
+}
+@media (max-width: 1300px){
+    .clientSlider{
+       max-width: 950px;
+    }
+}
+@media (max-width: 1700px){
+    .clientSlider{
+       max-width: 1270px;
+    }
+}

@@ -1,0 +1,114 @@
+.body{
+  font-family: "Roboto";
+}
+
+.short_info_tab {
+  justify-content: center;
+  background-color: rgb(29, 29, 114);
+  color: white;
+  display: flex;
+  font-size: 0.7em;
+  padding: 50px;
+}
+@media screen and (max-width: 992px) {
+  .short_info_tab {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (max-width: 576px) {
+  .short_info_tab {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 5%;
+  }
+}
+.short_info_tab > div {
+  margin: 10px;
+  display: flex;
+}
+.short_info_tab > div > * {
+  margin: 10px;
+  text-align: start;
+}
+
+.Shortinfo2 td {
+  border: 0;
+}
+.td_left {
+  width: 50%;
+}
+
+.image-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap; /* Pozwala na zawijanie obrazków do następnego wiersza */
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-hover {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image-hover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.short-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-hover:hover .overlay {
+  opacity: 1;
+}
+
+.full-text {
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.footer_link:link {
+  text-decoration: none;
+  color: white;
+}
+.footer_link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_link:active {
+  text-decoration: underline;
+}

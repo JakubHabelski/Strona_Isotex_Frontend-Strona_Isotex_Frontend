@@ -1,0 +1,111 @@
+/* Zmienne dla dynamicznych marginesów */
+:root {
+  --slide-margin: 8px; /* Minimalny margines na małych ekranach */
+  --slide-width: 300px; /* Stała szerokość slajdu */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --slide-margin: 16px; /* Większy margines na średnich ekranach */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --slide-margin: 24px; /* Największy margines na dużych ekranach */
+  }
+}
+
+.sliderContainer {
+  position: relative;
+  max-width: calc(100% - 2 * var(--slide-margin));
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px var(--slide-margin);
+  box-sizing: border-box;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 var(--slide-width); /* Stała szerokość slajdu */
+  height: 400px; /* Stała wysokość */
+  margin: 0 8px; /* Odstęp między slajdami */
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.activeDot {
+  background-color: #333;
+}
+
+/* Responsywność - liczba widocznych slajdów */
+@media (min-width: 768px) {
+  .sliderTrack {
+    width: calc(var(--slide-width) * 2 + 16px); /* 2 slajdy + odstępy */
+  }
+}
+
+@media (min-width: 1024px) {
+  .sliderTrack {
+    width: calc(var(--slide-width) * 4 + 48px); /* 4 slajdy + odstępy */
+  }
+}

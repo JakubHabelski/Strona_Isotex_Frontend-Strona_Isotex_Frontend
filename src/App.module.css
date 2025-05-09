@@ -1,0 +1,128 @@
+.body{
+  font-family: "Roboto";
+}
+
+.Shortinfo2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: min(1500px, 90%);
+  padding: clamp(0px, 5vw, 20px);
+  margin: auto;
+
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.textBlock {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.imageBlock {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.h2_custom {
+  color: #e30613;
+  font-weight: 600;
+}
+/* RESPONSYWNOŚĆ */
+@media (max-width: 992px) {
+  .Shortinfo2 {
+    grid-template-columns: 1fr;
+  }
+
+  .imageBlock {
+    margin-top: 1rem;
+  }
+}
+
+.Shortinfo3 {
+  display: flex;
+  width: min(1500px, 90%);
+  padding: clamp(0px, 5vw, 20px);
+  margin: auto;
+  gap: 2rem;
+}
+.Shortinfo3 > div {
+  margin: 10px;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  padding: clamp(0px, 5vw, 20px);
+}
+.Shortinfo3 > div:hover {
+  margin: 10px;
+  display: flex;
+  transform: scale(1.05);
+  background-color: #e30613;
+  border-radius: 8px;
+  color: white;
+}
+@media screen and (max-width: 992px) {
+  .Shortinfo3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+  .Shortinfo3 > div {
+    width: 100%;
+  }
+  .Shortinfo3 > div:hover {
+    margin: 10px;
+    display: flex;
+    transform: scale(1.05);
+    background-color: #e30613;
+    border-radius: 8px;
+    color: white;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Shortinfo3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+  .Shortinfo3 > div {
+    width: 100%;
+  }
+  .Shortinfo3 > div:hover {
+    margin: 10px;
+    display: flex;
+    transform: scale(1.05);
+    background-color: #e30613;
+    border-radius: 8px;
+    color: white;
+  }
+}
+
+
+
+@keyframes appear{
+  from{
+      opacity: 0;
+      scale: 0.5;
+  }
+  to{
+      opacity: 1;
+      scale: 1;
+  }
+}
+
+.scroll_block{
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

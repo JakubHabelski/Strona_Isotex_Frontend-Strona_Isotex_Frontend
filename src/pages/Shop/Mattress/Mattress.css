@@ -1,0 +1,16 @@
+.product_list{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.description{
+    font-size: xx-small;
+}
+.title{
+    font-size: medium;
+}
+.img-fluid {
+    width: 100%;  /* Dopasowuje szerokość do szerokości karty */
+    height: 200px;  /* Możesz dostosować wysokość */
+    object-fit: cover;  /* Dopasowuje obraz, zachowując proporcje */
+  }
+  

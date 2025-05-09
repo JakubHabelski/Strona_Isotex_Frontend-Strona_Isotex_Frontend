@@ -1,0 +1,64 @@
+.CertificatePageInfo {
+    width: min(1500px, 95%);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    
+  
+}
+
+.CertificatePageInfo .CertificateInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background-color: white;
+    border: 1px solid #dee2e6; /* lekka ramka */
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.CertificatePageInfo .CertificateInfo:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.CertificatePageInfo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.CertificatePageInfo h2 {
+    font-size: 1.5rem;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.CertificatePageInfo p {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.5;
+}
+.CertificatePageInfo .CertificateInfo .CertificateLinks{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 20px 0px;
+    
+}
+.CertificatePageInfo .CertificateInfo .CertificateLinks >*{
+    width: 100%;
+    
+}
+
+
+
+@media  (max-width: 992px){
+    .CertificatePageInfo .CertificateInfo {        
+        grid-template-columns: 1fr;        
+    }
+   
+}

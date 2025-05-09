@@ -1,0 +1,36 @@
+.cart_element2{
+    display: flex;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid beige;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+.cart_element2 p {
+    text-align: center;  /* Wyśrodkowanie tekstu w poziomie */
+    margin: 0;           /* Opcjonalne - usuwa marginesy */
+  }
+  .item_img2 {
+
+    height: 200px;
+    object-fit: contain; /* Skaluje obrazek w taki sposób, aby mieścił się w kontenerze */
+}
+.sumary2{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cart_element2 > *{
+    padding: 20px;
+}
+
+body{
+    background-color: lightgrey;
+    overflow-x: hidden;
+}

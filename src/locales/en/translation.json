@@ -1,0 +1,990 @@
+{
+    "header": {
+      "title": "Welcome to IsoTex"
+    },
+    "button": {
+      "more": "Learn more"
+    },
+    "modal": {
+      "title": "Company Relocation",
+      "text": "We inform you that Isotex Group has changed its location. All our services and products remain unchanged.",
+      "address": "New address: Daszyńskiego 9a 56-500 Syców",
+      "phone": "Phone: +48 600 511 029",
+      "email": "Email: info@isotex-poland.com",
+      "btn": "Learn more"
+    },
+    "shortinfo": {
+      "experience": "Experience. We have nearly 30 years of experience in the industry.",
+      "technology": "Technology. We manufacture efficient and safe products.",
+      "quality": "Quality. We offer high-quality insulation products. We are ISO 9001 certified.",
+      "complexity": "Complexity. We handle sales, design, production, and installation of insulation."
+    },
+
+
+    
+  "shortinfo3": {
+    "title": "What sets us apart",
+    "item1": {
+      "title": "Experience",
+      "desc": "We have nearly 30 years of experience in the industry."
+    },
+    "item2": {
+      "title": "Technology",
+      "desc": "We manufacture efficient and safe products."
+    },
+    "item3": {
+      "title": "Quality",
+      "desc": "We offer high-quality insulation products. We are ISO 9001 certified."
+    },
+    "item4": {
+      "title": "Comprehensiveness",
+      "desc": "We handle sales, design, production, and installation of insulation."
+    }
+  },
+
+    "HoverImage":{
+        "WhatWeDo": "What we do?"
+      },
+      "OurClients":{
+        "Clients": "Our Clients"
+      },
+
+  "accordion": {
+    "item1": {
+      "title": "How does cooperation with isoTex look like?",
+      "body": "Cooperation with isoTex consists of several stages. First, our employees take measurements of the installations and equipment at the client’s site. Based on the results, an individual project and quotation for the protective insulation is prepared. Once accepted by the client, we proceed to production. After manufacturing, the insulation is installed on pipelines or machines. We provide professional support at every stage. We advise on the best solutions for each case and help optimize investment costs."
+    },
+    "item2": {
+      "title": "Production of insulation elements",
+      "body": "The production of insulation elements is the core of isoTex's operations. We primarily create various types of insulation, covers, and mats. Their main task is to protect devices such as engines, turbines, and other installations. We use only high-quality materials with excellent thermal insulation properties and good flexibility.\nWe most often use fiberglass or ceramic fabrics, as they resist high temperatures and provide proper sealing and flexibility. We also use coating materials such as silicone, aluminum foil, or Teflon. We specialize in creating insulation for fittings, pipes, machines and their components, and other devices that generate high heat during operation."
+    }
+  },
+
+  "hoverImage": {
+    "image1": {
+      "short": "Pipe insulation",
+      "full": "We specialize in thermal insulation. Their primary purpose is to protect industrial installations and devices from heat loss. We mainly offer: pipe insulation, pipeline insulation, and high-temperature insulation."
+    },
+    "image2": {
+      "short": "Valve insulation",
+      "full": "We sell flexible polyurethane foams used in upholstered furniture and mattresses. We offer foams in various densities (T and HR):\n low – from 14 to 23 kg/m3,\n medium – from 23 to 29 kg/m3,\n high – from 29 kg/m3."
+    },
+    "image3": {
+      "short": "Turbine insulation",
+      "full": "Part of our services includes the production of turbine insulation. We mainly offer insulation mattresses. The insulation of power turbines with reusable mattresses has several advantages. This technology is:\n renewable,\n dry,\n clean."
+    },
+    "image4": {
+      "short": "Engine, machine and equipment insulation",
+      "full": "Our company also manufactures insulation for engines, machines, and devices. We offer insulation mattresses whose main purpose is thermal protection and damage prevention. Our insulations are:\n tailored to the shape of the equipment,\n flexible,\n effective."
+    }
+  },
+
+
+  "shortinfo2": {
+    "heading": "Thermal insulation manufacturer",
+    "paragraph": "IsoTex, a manufacturer of thermal insulation, is located in Komorów, Lower Silesian Voivodeship. Our main business activities include the production, sale, and installation of components designed to protect industrial equipment and installations from heat loss. We have been providing services in this industry for nearly 30 years, starting our operations in 1994.\n\nWe encourage you to take advantage of our services!\n\nWe offer a comprehensive approach – our services include sales, design, production, and installation of insulation. The technology we use ensures that our products are efficient and safe for daily use. Customers can also rely on professional support at every stage of cooperation.",
+    "button": "Learn more",
+    "imageAlt": "Thermal insulation manufacturer IsoTex"
+  },
+  "navbar": {
+    "about": "About us",
+    "insulations": "Thermal insulation",
+    "products": "Insulation products",
+    "cooperation": "Cooperation",
+    "technology": "Technology",
+    "faq": "FAQ",
+    "foam": "Polyurethane foam",
+    "blog": "Blog",
+    "contact": "Contact",
+    "shop": "Shop",
+    "technicalFabrics": "Technical fabrics",
+    "fillings": "Fillings",
+    "gaskets": "High-temperature gaskets"
+  },
+    "carousel": {
+    "title1": "Thermal insulation",
+    "text1": "We produce and sell thermal insulation. These include, for example, pipeline insulation.",
+    "title2": "Polyurethane foams",
+    "text2": "We offer flexible polyurethane foams, including standard T and highly elastic HR types.",
+    "title3": "Contact",
+    "text3": "If you're interested in purchasing our products or using our services, feel free to contact our staff."
+    },
+    "footer": {
+        "visitUs": "Visit Us",
+        "address": "ISOTEX GROUP Ilona Żurawa",
+        "email": "info@isotex-poland.com",
+        "regulationsPolicies": "Regulations & Policies",
+        "qualityPolicy": "Quality Policy",
+        "hygienicCertificate": "Hygienic Certificate",
+        "certifications": "Certifications",
+        "certificationPL": "PN-EN ISO 9001:2015 (PL)",
+        "certificationDE": "PN-EN ISO 9001:2015 (DE)",
+        "certificationFR": "PN-EN ISO 9001:2015 (FR)",
+        "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
+        "allRightsReserved": "All rights reserved"
+        },
+        "fabrics": {
+            "glassFabrics": "Glass Fabrics",
+            "glassFabricsDescription": "Glass fabrics are a primary material used in the production of thermal insulation. They are highly resistant to temperatures up to 550°C, non-flammable, and resistant to most chemicals. Due to their structure, they offer durability and flexibility, making them ideal for insulating various industrial components such as pipes, valves, and turbines.",
+            "aramidFabrics": "Aramid Fabrics",
+            "aramidFabricsDescription": "Aramid fabrics (e.g., Kevlar®) offer exceptional mechanical resistance while being resistant to high temperatures. They are used in insulation materials requiring high abrasion, tear, and vibration resistance. They are ideal for environments with intense wear, combining thermal protection with mechanical durability.",
+            "cutParts": "Cut and Stamped Parts",
+            "cutPartsDescription": "Cut and stamped parts made from technical fabrics are crucial in producing custom-made thermal insulation. With the ability to precisely cut materials such as glass or aramid fabric, it's possible to create components perfectly adapted to the shape of turbines, valves, elbows, and other non-standard industrial components. Optimized for dimensions and shapes, these cut elements provide effective thermal protection, ease of installation, and an aesthetically finished insulation mat."
+            },
+       "fillings": {
+            "mineralWool": "Mineral Wool",
+            "mineralWoolDescription": "Mineral wools are insulation materials made from mineral fibers, such as glass wool or rock wool. They are known for their excellent thermal and acoustic properties, making them ideal for insulating buildings, pipes, or industrial equipment. Due to their fibrous structure, mineral wools are fire-resistant and non-combustible, increasing the safety of usage.",
+            
+            "ceramicWool": "Ceramic Wool",
+            "ceramicWoolDescription": "Ceramic wools are materials with high temperature resistance, used in industrial insulation. They offer excellent thermal and acoustic properties, making them perfect for insulating furnaces, boilers, and other devices operating under extreme conditions. Their fibrous structure provides effective sound dampening and minimizes heat loss.",
+            
+            "glassMat": "Glass Mats",
+            "glassMatDescription": "Glass mats are insulation materials made from glass fibers, which offer excellent thermal and acoustic properties. They are lightweight, flexible, and easy to process, making them ideal for insulating buildings, pipes, and industrial equipment. Due to their fibrous structure, glass mats are fire-resistant and non-combustible, enhancing safety during use."
+            },
+
+
+         "fabrics_info": {
+            "fabricsTitle": "Glass and Aramid Fabrics",
+            "generalDescription": "Technical fabrics are specialized materials with exceptional mechanical, thermal, and chemical properties. They are used in various industries, from energy to automotive, providing effective thermal insulation, protection against high temperatures, and durability even in extreme working conditions."
+            },
+
+            "glass_info": {
+                "generalCharacteristics": "Glass Fabrics – General Characteristics",
+                "generalDescription": "Glass fabrics are materials made of glass fibers that are characterized by exceptional resistance to high temperatures, fire, and chemicals. Due to these properties, they are widely used in industry, including the production of thermal insulation, welding shields, and other materials protecting against extreme conditions.",
+                "typesOfFibers": "Types of Glass Fibers",
+                "eGlassFiber": "E-Glass Fiber",
+                "eGlassFiberDescription": "E-glass fibers are materials that offer high resistance to temperatures reaching up to 550°C. Due to their electrical properties, they are widely used in electrical and industrial insulation.",
+                "texturedAndSmoothFibers": "Textured and Smooth Fibers",
+                "filamentFibers": "Filament Fibers",
+                "filamentFibersDescription": "Smooth, long, continuous fibers that are characterized by high mechanical strength and resistance to high temperatures.",
+                "texturedFibers": "Textured Fibers",
+                "texturedFibersDescription": "Fibers that have been subjected to texturing (crimping), increasing their volume, flexibility, and thermal insulation properties. Air trapped between fibers acts as an additional thermal barrier.",
+                "productionProcess": "Production Process",
+                "productionProcessDescription": "Glass fabrics are created by weaving glass fibers, which can be textured or filamentous, to form a durable fabric resistant to high temperatures. Their mechanical strength is the result of using high-quality glass yarns and a controlled manufacturing process.",
+                "coatings": "Coatings and Coatings",
+                "coatingsDescription": "Glass fabrics can be coated or covered with various substances to enhance their properties.",
+                "siliconeCoating": "Silicone Coating",
+                "siliconeCoatingDescription": "Silicone coating is commonly used to increase resistance to high temperatures, water, oils, and chemicals. Silicone-coated material also exhibits antistatic properties and is fire-resistant.",
+                "vermiculiteCoating": "Vermiculite Coating",
+                "graySiliconeCoating": "Gray Silicone Coated Fabric",
+                "vermiculiteCoatingDescription": "Vermiculite is a natural mineral used as a protective coating. It increases the material's resistance to high temperatures and chemicals.",
+                "aluminumCoating": "Aluminum Coating",
+                "aluminumCoatingDescription": "Glass fabrics can be coated with aluminum to increase their resistance to high temperatures and better protection against thermal radiation.",
+                "yellowSiliconeCoating": "Yellow Silicone Coated Fabric",
+                "properties": "Properties of Glass Fabrics",
+                "temperatureResistance": "Temperature Resistance",
+                "temperatureResistanceDescription": "Glass fabrics show high resistance to temperatures up to 550°C (for standard E-glass fabrics), and in some special fabrics – even up to 1000°C.",
+                "chemicalResistance": "Chemical Resistance",
+                "chemicalResistanceDescription": "Glass fabrics are resistant to the action of many chemicals, making them ideal for use in challenging industrial conditions where contact with aggressive chemicals is common.",
+                "flexibilityAndStrength": "Flexibility and Mechanical Strength",
+                "flexibilityAndStrengthDescription": "Thanks to the use of textured fibers, glass fabrics offer high flexibility and mechanical strength, which is particularly important in applications requiring resistance to shock and mechanical damage.",
+                "application": "Applications of Glass Fabrics",
+                "applicationDescription": "Glass fabrics find wide application in many industries, such as:",
+                "thermalInsulation": "Thermal Insulation",
+                "thermalInsulationDescription": "Thermo-e-glass products are used to create thermal shields that protect equipment and installations from high temperatures. Glass fabrics are used to produce thermal blankets, protective mats, sleeves, or seals.",
+                "metalurgicalEnergyIndustry": "Metallurgical and Energy Industry",
+                "metalurgicalEnergyIndustryDescription": "They are used in the production of protective materials for turbines, valves, pipelines, and other industrial installations that require high-temperature resistance.",
+                "fireProtection": "Fire Protection",
+                "fireProtectionDescription": "Glass fabrics are used as a base material for producing fire protection covers, including protective clothing, fire blankets, and shields for industrial machines.",
+                "summary": "Summary",
+                "summaryDescription": "Glass fabrics, thanks to their resistance to high temperatures, flexibility, mechanical strength, and resistance to chemical factors, are essential materials in many industries, from the production of thermal insulation materials to protective shields in harsh working conditions."
+              },
+
+
+              "aramid_info": {
+                "generalCharacteristics": "Aramid Fabrics – General Characteristics",
+                "generalDescription": "Aramid fabrics are technical materials made of aramid fibers such as Kevlar® and Twaron® that are known for their exceptional mechanical strength, resistance to cuts, abrasions, and high temperatures. Their excellent physicochemical properties make them suitable for the most demanding industrial and protective applications.",
+                "aramidTypes": "Types of Aramid Fibers",
+                "kevlar": "Kevlar®",
+                "kevlarDescription": "One of the most well-known aramid fibers, valued for its exceptional tensile strength and thermal resistance. It is used in protective equipment, aerospace, and automotive industries.",
+                "twaron": "Twaron®",
+                "twaronDescription": "A European equivalent of Kevlar®, with very similar properties. It is often used in the production of composite materials and personal protective equipment.",
+                "productionProcess": "Aramid Fabric Production Process",
+                "productionProcessDescription": "Aramid fabrics are made by weaving aramid fibers in various weaves such as plain, twill, or satin. Depending on the application, they can also be reinforced, laminated, or coated with additional protective layers (e.g., neoprene, silicone, PTFE).",
+                "coatingsAndModifications": "Coatings and Modifications",
+                "silicone": "Silicone",
+                "siliconeDescription": "Increases resistance to weather and chemical factors.",
+                "aluminum": "Aluminum",
+                "aluminumDescription": "Aluminum coating improves infrared radiation heat reflection.",
+                "siliconeCoatedAramid": "Silicone Coated Aramid Fabric",
+                "aluminumCoatedAramid": "Aluminum Coated Aramid Fabric",
+                "properties": "Properties of Aramid Fabrics",
+                "thermalResistance": "Thermal Resistance",
+                "thermalResistanceDescription": "Aramid fabrics withstand temperatures up to around 500°C, and in short contact, even higher. They do not melt but char, making them ideal for fire-resistant applications.",
+                "mechanicalResistance": "Mechanical Resistance",
+                "mechanicalResistanceDescription": "They are exceptionally resistant to stretching, tearing, cutting, and abrasion – significantly outperforming glass fabrics in this respect.",
+                "chemicalResistance": "Chemical Resistance",
+                "chemicalResistanceDescription": "They perform well against most organic solvents and industrial chemicals.",
+                "lowWeight": "Low Weight",
+                "lowWeightDescription": "Despite their high strength, aramid fabrics are lightweight, which allows them to be used in mobile applications and protective clothing.",
+                "applications": "Applications of Aramid Fabrics",
+                "defenseAndRescue": "Defense and Rescue Industry",
+                "defenseAndRescueDescription": "Bulletproof vests, helmets, fire-resistant suits.",
+                "thermalAndFireProtection": "Thermal and Fire Protection",
+                "thermalAndFireProtectionDescription": "Welding gloves, fire curtains, turbine shields.",
+                "automotiveAndAviation": "Automotive and Aviation",
+                "automotiveAndAviationDescription": "Composite components, skin, structural reinforcements.",
+                "industrialInsulation": "Industrial Insulation",
+                "industrialInsulationDescription": "Thermal covers, seals, fireproof materials.",
+                "summary": "Summary",
+                "summaryDescription": "Aramid fabrics, with their unique properties – particularly resistance to temperature, cuts, and mechanical damage – are among the most advanced technical materials. They are used not only in heavy industry but also in military, medical, and aerospace technologies."
+            },
+            "fillingInfo": {
+                "title": "Fillings in Thermal Insulation Mattresses: Key Materials and Their Applications",
+                "description": "Thermal insulation mattresses are effective solutions used in industry to protect installations from heat loss and ensure the safety of people and equipment. A key role in their effectiveness is played by the filling material, which is responsible for the thermal insulation properties, fire resistance, as well as chemical and mechanical resistance of the entire system.",
+                "mainFunctions": "Main Functions of Fillings in Thermal Insulation Mattresses",
+                "thermalInsulation": "Thermal Insulation - ",
+                "thermalInsulationDesc": "The primary function of the filling is to reduce heat loss. High-temperature industrial installations – such as pipelines, turbines, valves, or heat exchangers – require an effective barrier to prevent energy from escaping. A good filling maintains process temperature, improves energy efficiency, and reduces operational costs.",
+                "highTemperatureProtection": "Protection Against High Temperatures - ",
+                "highTemperatureProtectionDesc": "Fillings must be resistant to extreme temperatures – both long-term and short-term (peak). Depending on the application, materials capable of withstanding temperatures from several hundred to over a thousand degrees Celsius may be used.",
+                "fireSafety": "Fire Safety and Protection - ",
+                "fireSafetyDesc": "Due to their non-flammable and charring properties, fillings help protect people and equipment from fire and high temperatures in the event of system failures.",
+                "chemicalMechanicalResistance": "Chemical and Mechanical Resistance - ",
+                "chemicalMechanicalResistanceDesc": "In many industrial environments, resistance to moisture, oils, chemicals, vibrations, and abrasion is crucial. Proper selection of the filling material allows the mattress to be adapted to harsh working conditions.",
+                "flexibility": "Flexibility and Shape Adaptability - ",
+                "flexibilityDesc": "Fillings must fit well against the insulated element – whether it is a valve, pipe elbow, or another irregular shape. Due to their structure, they can be easily molded and adapted, facilitating the installation and removal of insulation during maintenance.",
+                "mainTypes": "Main Types of Fillings: ",
+                "mineralWools": "Mineral Wools",
+                "mineralWoolsDesc": "Mineral wools are materials made from inorganic fibers such as glass or basalt. Due to their porous structure, they are excellent at limiting heat flow while also damping noise. They are non-flammable, making them indispensable in areas where fire safety is a priority – in construction, piping installations, and industrial systems.",
+                "ceramicWools": "Ceramic Wools",
+                "ceramicWoolsDesc": "Ceramic wools are used where other materials cannot withstand temperature – in furnaces, boilers, or fire zones. Resistant to extreme conditions, they provide effective thermal barriers even above 1000°C. Their light, fibrous structure allows them to conform well to irregular surfaces, while also reducing noise.",
+                "glassMats": "Glass Mats",
+                "glassMatsDesc": "Glass mats are lightweight, flexible materials made from thin glass fibers. They are ideal for areas requiring easy installation and processing, such as insulation of ducts, equipment, or building elements. Due to their fire resistance and good sound-damping properties, they are versatile solutions in many industries."
+            },
+            
+
+            
+                "mineralWoolInfo": {
+                  "characteristics": {
+                    "title": "Mineral Wool – General Characteristics",
+                    "description": "Mineral wool is an insulating material made from mineral fibers, such as glass wool or rock wool. It is characterized by excellent thermal and acoustic insulation properties, as well as resistance to high temperatures, making it widely used in construction, industry, and other fields where high protection against heat, noise, and fire is required."
+                  },
+                  "types": {
+                    "title": "Types of Mineral Wool",
+                    "description": "Mineral wool comes in two main types:",
+                    "glassWool": {
+                      "title": "Glass Wool: ",
+                      "description": "It is a product obtained from molten glass, which is then spun into fibers, creating a material with excellent insulating properties. It is relatively lightweight and easy to process."
+                    },
+                    "rockWool": {
+                      "title": "Rock Wool (Basalt): ",
+                      "description": "Produced from natural basalt stones, it has slightly better thermal and acoustic insulation properties than glass wool, as well as higher resistance to high temperatures."
+                    }
+                  },
+                  "comparisonCard": {
+                    "title": "Visual Comparison of Glass and Rock Mineral Wool"
+                  },
+                  "comparison": {
+                    "title": "Comparison of Glass Wool and Rock Wool",
+                    "table": {
+                      "feature": "Feature",
+                      "glassWool": "Glass Wool",
+                      "rockWool": "Rock Wool (Stone)",
+                      "thermalInsulation": {
+                        "feature": "Thermal Insulation",
+                        "glassWool": "Better thermal insulation.",
+                        "rockWool": "Slightly worse thermal insulation, but better fire resistance."
+                      },
+                      "compressionResistance": {
+                        "feature": "Compression Resistance",
+                        "glassWool": "Lower resistance, more prone to compression.",
+                        "rockWool": "Higher resistance, better for applications requiring high pressure."
+                      },
+                      "acousticInsulation": {
+                        "feature": "Acoustic Insulation",
+                        "glassWool": "Very good, better at damping higher frequencies.",
+                        "rockWool": "Good at damping sounds, but may be less effective at higher frequencies."
+                      },
+                      "vaporPermeability": {
+                        "feature": "Vapor Permeability",
+                        "glassWool": "Better at lower densities.",
+                        "rockWool": "Lower, better in places requiring tight insulation."
+                      },
+                      "fireResistance": {
+                        "feature": "Fire Resistance",
+                        "glassWool": "Fire-resistant, withstands up to 500°C.",
+                        "rockWool": "More fire-resistant, withstands up to 1000°C, does not melt."
+                      },
+                      "weight": {
+                        "feature": "Weight",
+                        "glassWool": "Lighter, easier to transport.",
+                        "rockWool": "Heavier, more durable, but harder to install."
+                      },
+                      "moistureResistance": {
+                        "feature": "Moisture Resistance",
+                        "glassWool": "Less resistant to moisture, can be damaged by water contact.",
+                        "rockWool": "Better moisture resistance, does not absorb water, more resistant to mold."
+                      },
+                      "application": {
+                        "feature": "Application",
+                        "glassWool": "Thermal and acoustic insulation in construction.",
+                        "rockWool": "Industrial and fire insulation, in furnaces and boilers."
+                      }
+                    },
+                    "mobile": {
+                      "thermalInsulation": {
+                        "feature": "Thermal Insulation",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Better thermal insulation.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Slightly worse thermal insulation, but better fire resistance."
+                      },
+                      "compressionResistance": {
+                        "feature": "Compression Resistance",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Lower resistance, more prone to compression.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Higher resistance, better for applications requiring high pressure."
+                      },
+                      "acousticInsulation": {
+                        "feature": "Acoustic Insulation",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Very good, better at damping higher frequencies.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Good at damping sounds, but may be less effective at higher frequencies."
+                      },
+                      "vaporPermeability": {
+                        "feature": "Vapor Permeability",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Better at lower densities.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Lower, better in places requiring tight insulation."
+                      },
+                      "fireResistance": {
+                        "feature": "Fire Resistance",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Fire-resistant, withstands up to 500°C.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "More fire-resistant, withstands up to 1000°C, does not melt."
+                      },
+                      "weight": {
+                        "feature": "Weight",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Lighter, easier to transport.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Heavier, more durable, but harder to install."
+                      },
+                      "moistureResistance": {
+                        "feature": "Moisture Resistance",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Less resistant to moisture, can be damaged by water contact.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Better moisture resistance, does not absorb water, more resistant to mold."
+                      },
+                      "application": {
+                        "feature": "Application",
+                        "glassWoolTitle": "Glass Wool: ",
+                        "glassWool": "Thermal and acoustic insulation in construction.",
+                        "rockWoolTitle": "Rock Wool: ",
+                        "rockWool": "Industrial and fire insulation, in furnaces and boilers."
+                      }
+                    }
+                  },
+                  "production": {
+                    "title": "Mineral Wool Production Process",
+                    "description": "Mineral wool is produced by melting mineral raw materials in high-temperature furnaces and then spinning them into fine fibers. These fibers are then formed into mats, boards, or granules that can be used as insulating materials. The production of mineral wool is a process that requires precise temperature and time management to ensure optimal material properties."
+                  },
+                  "coatings": {
+                    "title": "Coatings and Coverings",
+                    "description": "Mineral wool can be coated with various substances to enhance its properties:",
+                    "aluminum": {
+                      "title": "Aluminum Coating - ",
+                      "description": "Used to increase the material's resistance to moisture, improve its insulating properties, and enhance resistance to chemicals."
+                    },
+                    "glassFiber": {
+                      "title": "Glass Fiber Coating - ",
+                      "description": "Increases the mechanical strength of the material and protects it from mechanical damage."
+                    },
+                    "aluminumCard": {
+                      "title": "Mineral Wool with Aluminum Coating"
+                    },
+                    "glassFiberCard": {
+                      "title": "Mineral Wool with Glass Fiber Coating"
+                    }
+                  },
+                  "properties": {
+                    "title": "Properties of Mineral Wool",
+                    "description": "Mineral wool has a range of beneficial properties that make it one of the most commonly used insulating materials:",
+                    "highTemperature": {
+                      "title": "High-Temperature Resistance: ",
+                      "description": "Mineral wool exhibits very high resistance to fire, making it an excellent material for fireproof insulation. Depending on the type of wool, temperature resistance can range from 350°C to even 1000°C."
+                    },
+                    "thermalInsulation": {
+                      "title": "Thermal Insulation: ",
+                      "description": "Due to its fiber structure, mineral wool effectively insulates against heat, reducing heating costs in buildings and protecting industrial equipment from excessive heating."
+                    },
+                    "acousticInsulation": {
+                      "title": "Acoustic Insulation: ",
+                      "description": "This material effectively dampens sounds, making it an ideal solution in construction, especially for multi-story and industrial buildings where noise can be an issue."
+                    },
+                    "chemicalResistance": {
+                      "title": "Chemical Resistance: ",
+                      "description": "Mineral wool is resistant to many chemicals, making it suitable for harsh industrial conditions where it is exposed to aggressive substances."
+                    }
+                  },
+                  "applications": {
+                    "title": "Applications of Mineral Wool",
+                    "description": "Mineral wool is widely used in many industries:",
+                    "buildingInsulation": {
+                      "title": "Building Insulation: ",
+                      "description": "It is commonly used in construction, in both residential and industrial buildings, as an insulating material for walls, roofs, floors, and pipes. Mineral wool significantly improves the energy efficiency of buildings."
+                    },
+                    "industrialInsulation": {
+                      "title": "Industrial Insulation: ",
+                      "description": "Used in industry to insulate equipment such as boilers, furnaces, pipelines, or reactors where high temperatures occur. Due to its fire resistance, this material effectively protects against overheating and reduces fire risks."
+                    },
+                    "acousticInsulation": {
+                      "title": "Acoustic Insulation: ",
+                      "description": "Used to dampen noise in offices, production halls, conference rooms, or other facilities where sound level control is required."
+                    },
+                    "fireProtection": {
+                      "title": "Fire Protection: ",
+                      "description": "Mineral wool is used in the production of protective clothing, fireproof blankets, and other fire protection materials."
+                    }
+                  },
+                  "summary": {
+                    "title": "Summary",
+                    "description": "Mineral wool is an extremely versatile material that, thanks to its fire resistance, high insulating properties, and chemical resistance, is widely used in various industries. From construction to industry, it is indispensable in creating effective insulation and fire protection systems, making it one of the most important insulating materials on the market."
+                  }
+                },
+
+        "ceramicWoolInfo": {
+    "characteristics": {
+      "title": "Ceramic Wool – General Characteristics",
+      "description": "Ceramic wool is a high-temperature insulating material made from ceramic fibers, typically based on aluminum oxide and silica. Due to its exceptional resistance to extreme temperatures and excellent thermal insulation properties, it is used in the most demanding industrial conditions, such as furnaces, boilers, or power generation installations.",
+      "description2": "This material is lightweight, flexible, and easy to shape, making it suitable for hard-to-reach areas or irregular surfaces. It is resistant to thermal shocks, does not conduct heat, and does not react with most chemicals."
+    },
+    "properties": {
+      "title": "Properties of Ceramic Wool",
+      "highTemperature": {
+        "title": "Resistance to Extreme Temperatures: ",
+        "description": "Ceramic wool can operate at temperatures from 800°C to as high as 1400°C, depending on its chemical composition. It is non-flammable and does not melt, making it an ideal choice for fire and thermal applications."
+      },
+      "lowConductivity": {
+        "title": "Low Thermal Conductivity: ",
+        "description": "Thanks to its fibrous structure, it retains heat within devices and installations, reducing energy losses."
+      },
+      "chemicalResistance": {
+        "title": "Chemical Resistance: ",
+        "description": "This material does not react with most acids, alkalis, and industrial gases, making it suitable for aggressive industrial environments."
+      },
+      "lightweight": {
+        "title": "Lightweight and Easy Installation: ",
+        "description": "Ceramic wool is significantly lighter than traditional refractory materials, facilitating its transport, processing, and installation."
+      },
+      "thermalShock": {
+        "title": "Thermal Shock Resistance: ",
+        "description": "It does not get damaged by sudden temperature changes, which is crucial in installations that are cyclically heated and cooled."
+      }
+    },
+    "forms": {
+      "title": "Forms and Coatings",
+      "description": "Ceramic wool is available in many forms: mats, ropes, paper, blankets, or vacuum-formed modules. Depending on the requirements, it can also be coated with special protective layers, such as:",
+      "aluminum": {
+        "title": "Aluminum Coatings: ",
+        "description": "Improve aesthetics, increase moisture resistance, and reflect radiant heat."
+      },
+      "technicalFabrics": {
+        "title": "Technical Fabrics: ",
+        "description": "Such as coatings made of glass or silica fibers, which protect against mechanical damage and enhance product durability."
+      }
+    },
+    "applications": {
+      "title": "Applications of Ceramic Wool",
+      "description": "Ceramic wool is used wherever effective insulation is required in extreme conditions:",
+      "energyIndustry": {
+        "title": "Energy Industry: ",
+        "description": "For insulating turbines, boilers, steam pipelines, and combustion chambers."
+      },
+      "metallurgy": {
+        "title": "Metallurgy and Foundries: ",
+        "description": "For lining furnaces, foundries, and transport channels for molten metals."
+      },
+      "petrochemical": {
+        "title": "Petrochemical and Chemical Industry: ",
+        "description": "For insulating tanks and reactors exposed to high temperatures and chemical substances."
+      },
+      "heatingDevices": {
+        "title": "Production of Heating Devices: ",
+        "description": "In boilers, laboratory furnaces, industrial dryers, or heaters."
+      },
+      "fireProtection": {
+        "title": "Fire Protection: ",
+        "description": "In passive fire protection systems, fire-resistant doors, and thermal barriers."
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "description": "Ceramic wool is a technologically advanced insulating material designed for the most demanding industrial applications. Thanks to its resistance to extreme temperatures, thermal shocks, and chemical substances, it provides not only thermal protection but also operational safety. Its versatility, lightweight nature, and ease of installation make it a preferred component in insulation systems across many industries."
+    }
+  },
+  
+  
+  "glassMatInfo": {
+    "characteristics": {
+      "title": "Glass Mats – Properties, Applications, and Advantages",
+      "description": "Glass mats are insulating materials made from thin glass fibers, forming a compact, flexible structure resembling cotton or fabric. They are characterized by low density, good thermal resistance, and excellent acoustic insulation. Due to their lightweight nature and ease of processing, these mats are widely used in both construction and industry."
+    },
+    "properties": {
+      "title": "Characteristics and Properties",
+      "description": "Glass fiber mats stand out with a range of beneficial features:",
+      "highTemperature": {
+        "title": "High-Temperature Resistance: ",
+        "description": "Glass mats can withstand temperatures of 500–600°C, making them suitable for thermal insulation in industrial environments."
+      },
+      "nonFlammability": {
+        "title": "Non-Flammability: ",
+        "description": "Glass fibers are non-flammable, and their structure prevents the spread of fire."
+      },
+      "flexibility": {
+        "title": "Flexibility and Ease of Shaping: ",
+        "description": "Mats can be easily cut and adapted to irregular shapes, significantly simplifying their installation."
+      },
+      "chemicalResistance": {
+        "title": "Chemical Resistance: ",
+        "description": "The material is resistant to many aggressive chemicals, including oils, solvents, and vapors."
+      },
+      "biologicalResistance": {
+        "title": "Biological Corrosion Resistance: ",
+        "description": "Mats do not rot, do not degrade under moisture, and do not provide an environment conducive to mold growth."
+      },
+      "acousticInsulation": {
+        "title": "Acoustic Insulation: ",
+        "description": "The fibrous structure allows for effective sound absorption and noise reduction."
+      }
+    },
+    "comparison": {
+      "title": "Comparison of Glass Mat Types",
+      "table": {
+        "type": "Mat Type",
+        "description": "Description",
+        "binder": "Binder",
+        "applications": "Typical Applications",
+        "csm": {
+          "type": "Chopped Strand Mat (CSM)",
+          "description": "Randomly arranged short glass fibers bonded with a binder",
+          "binder": "Emulsion / Powder",
+          "applications": "Resin composites, automotive parts, technical covers"
+        },
+        "emulsion": {
+          "type": "Emulsion Mat",
+          "description": "CSM with emulsion – more flexible and easier to shape",
+          "binder": "Emulsion",
+          "applications": "Insulation in automotive, complex-shaped components"
+        },
+        "powder": {
+          "type": "Powder Mat",
+          "description": "CSM with powder – stiffer, stable for large surfaces",
+          "binder": "Powder",
+          "applications": "Thermal insulation coverings, e.g., for boilers, turbines, pipelines"
+        },
+        "needle": {
+          "type": "Needle Mat",
+          "description": "Mechanically bonded fibers without binder – elastic, durable",
+          "binder": "None",
+          "applications": "Acoustic and thermal insulation in industry and buildings"
+        },
+        "coated": {
+          "type": "Aluminum/Fabric Coated Mat",
+          "description": "Coated with aluminum foil or technical fabric – resistant to damage",
+          "binder": "Various",
+          "applications": "Insulating mattresses, engine compartments, valves, turbines"
+        },
+        "loose": {
+          "type": "Loose/Loosely Bound Mat",
+          "description": "Light structure without binder or with minimal amount",
+          "binder": "None or very little",
+          "applications": "Mattress fillings, sound-absorbing partitions"
+        },
+        "automotive": {
+          "type": "Automotive Industry Mat",
+          "description": "Reinforced CSM mat for harsh conditions",
+          "binder": "Emulsion / Powder",
+          "applications": "Thermal and acoustic insulation in vehicles"
+        }
+      },
+      "mobile": {
+        "csm": {
+          "type": "Chopped Strand Mat (CSM)",
+          "descriptionTitle": "Description: ",
+          "description": "Randomly arranged short glass fibers bonded with a binder",
+          "binderTitle": "Binder: ",
+          "binder": "Emulsion / Powder",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Resin composites, automotive parts, technical covers"
+        },
+        "emulsion": {
+          "type": "Emulsion Mat",
+          "descriptionTitle": "Description: ",
+          "description": "CSM with emulsion – more flexible and easier to shape",
+          "binderTitle": "Binder: ",
+          "binder": "Emulsion",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Insulation in automotive, complex-shaped components"
+        },
+        "powder": {
+          "type": "Powder Mat",
+          "descriptionTitle": "Description: ",
+          "description": "CSM with powder – stiffer, stable for large surfaces",
+          "binderTitle": "Binder: ",
+          "binder": "Powder",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Thermal insulation coverings, e.g., for boilers, turbines, pipelines"
+        },
+        "needle": {
+          "type": "Needle Mat",
+          "descriptionTitle": "Description: ",
+          "description": "Mechanically bonded fibers without binder – elastic, durable",
+          "binderTitle": "Binder: ",
+          "binder": "None",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Acoustic and thermal insulation in industry and buildings"
+        },
+        "coated": {
+          "type": "Aluminum/Fabric Coated Mat",
+          "descriptionTitle": "Description: ",
+          "description": "Coated with aluminum foil or technical fabric – resistant to damage",
+          "binderTitle": "Binder: ",
+          "binder": "Various",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Insulating mattresses, engine compartments, valves, turbines"
+        },
+        "loose": {
+          "type": "Loose/Loosely Bound Mat",
+          "descriptionTitle": "Description: ",
+          "description": "Light structure without binder or with minimal amount",
+          "binderTitle": "Binder: ",
+          "binder": "None or very little",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Mattress fillings, sound-absorbing partitions"
+        },
+        "automotive": {
+          "type": "Automotive Industry Mat",
+          "descriptionTitle": "Description: ",
+          "description": "Reinforced CSM mat for harsh conditions",
+          "binderTitle": "Binder: ",
+          "binder": "Emulsion / Powder",
+          "applicationsTitle": "Typical Applications: ",
+          "applications": "Thermal and acoustic insulation in vehicles"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Advantages of Using Glass Mats",
+      "lightweight": {
+        "title": "Lightweight and Easy Installation ",
+        "description": "Glass mats are lightweight, facilitating transport and installation. They can be easily cut and shaped, speeding up installation even in hard-to-reach areas."
+      },
+      "flexibility": {
+        "title": "High Flexibility and Shape Adaptability ",
+        "description": "They are highly flexible, ensuring good adhesion to irregular surfaces, valves, or pipes. They provide tight insulation without thermal bridges."
+      },
+      "durability": {
+        "title": "High Durability and Resistance to External Factors ",
+        "description": "Resistant to mechanical damage, moisture, mold, and most chemicals. They retain insulating properties for a long time, even in harsh industrial conditions."
+      },
+      "fireSafety": {
+        "title": "Fire Safety ",
+        "description": "Non-flammable (Class A1), they do not melt easily and do not emit harmful gases. Suitable where fire protection is required."
+      },
+      "noiseReduction": {
+        "title": "Noise Reduction Capability ",
+        "description": "Thanks to their fibrous structure, they effectively absorb sounds. Used in acoustic partitions and for soundproofing machines, ventilation ducts, or partition walls."
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "description": "Glass mats are a versatile insulating material that combines high insulation efficiency, fire and chemical resistance, and ease of processing. Their use in industry and construction enables the creation of durable, effective, and safe insulation systems. They are also an excellent filling for insulating mattresses used in areas exposed to high temperatures and noise."
+    }
+  }
+  ,
+
+  "productCategoryList": {
+  "title": "List of Product Categories:",
+  "fabrics": {
+    "title": "Fabrics",
+    "glassFabric": "Glass Fabrics",
+    "aramidFabric": "Aramid Fabrics"
+  },
+  "fillings": {
+    "title": "Fillings",
+    "mineralWool": "Mineral Wool",
+    "ceramicWool": "Ceramic Wool",
+    "glassMat": "Glass Mats"
+  },
+  "services": {
+    "title": "Services",
+    "measurement": "Measurements",
+    "project": "Project",
+    "mattressProduction": "Mattress Production",
+    "installation": "Insulation Installation"
+  }
+}  ,
+"language": {
+    "pl": "Polish",
+    "en": "English"
+  },
+  "products": {
+    "title": "Products: {{category}}",
+    "price": "Price: {{price}} PLN",
+    "outOfStock": "Out of stock",
+    "unavailable": "Unavailable",
+    "addToCart": "Add to cart"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "product": "Product",
+    "quantity": "Quantity in cart",
+    "pricePerUnit": "Price per unit",
+    "remove": "Remove",
+    "summary": "Summary",
+    "total": "Total to pay",
+    "proceedToShipping": "Proceed to shipping",
+    "currency": "PLN",
+    "added": "Added to cart: {{name}}"
+  },
+  "categories": {
+    "CERAMIC_WOOL": "Ceramic Wool",
+    "GLASS_FABRIC": "Glass Fabric",
+    "MINERAL_WOOL": "Mineral Wool",
+    "PROJECT": "Project",
+    "MATTRESS_PRODUCTION": "Mattress Production",
+    "GLASS_MAT": "Glass Mat",
+    "MEASUREMENT": "Measurements",
+    "ARAMID_FABRIC": "Aramid Fabric",
+    "INSTALLATION": "Installation"
+  },
+  "errors": {
+    "apiFailed": "Failed to fetch products"
+  },
+  "order": {
+    "title": "Order Form",
+    "customerDetails": "Customer Details",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "nip": "NIP",
+    "regon": "REGON",
+    "shippingDetails": "Shipping Details",
+    "street": "Street",
+    "homenr": "House Number",
+    "city": "City",
+    "postcode": "Postal Code",
+    "summary": "Order Summary",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total Amount",
+    "submit": "Send Order",
+    "success": "Order sent successfully!"
+  },
+  "VideoHeader":{
+    
+    "description": "Thermal Insulation"
+    
+  }   ,
+  "OurProjects":{
+    "title": "Our projects",
+    "buttons":{
+      "turbines": "Turbines",
+      "valves": "Valves",
+      "exchangers": "Exchangers",
+      "production": "Production"
+    }
+  },
+  "JoinUs":{
+    "title": "Join us",
+    "description": "Join us and become part of our team!",
+    "button": "Apply now"
+  }
+  ,
+  "JoinUsPageForm":{
+    "Title": "Join us",
+    "SubTitle": "If you are interested in working with us, please contact us!",
+    "SubSubTitle": "We will contact you within 7 working days.",    
+    "formBasicName":{
+      "Name":"Name and Surname",
+      "NamePlaceholder":"Enter your name and surname",
+      "ProvideName":"Please provide your name and surname"
+    },
+    "formBasicEmail":{
+      "Email":"Email address", 
+      "EmailPlaceholder":"Enter your email address",
+      "ProvideEmail":"Please provide your email address"
+    },
+    "formBasicPhone":{
+      "Phone":"Phone number",
+      "PhonePlaceholder":"Enter your phone number",
+      "ProvidePhone":"Please provide your phone number"
+    },
+    "formBasicCV":{
+      "CV":"CV",
+      "CVPlaceholder":"Upload your CV",
+      "ProvideCV":"Please upload your CV"
+    },
+    "formBasicPrivacyPolicy":{
+      "DataProcessingConsent":"I consent to the processing of my personal data by the company ISOTEX GROUP Ilona Żurawa for the purpose of recruitment.",
+      "LearnMore":"Learn more",
+      "DataProcessingConsentFeedback":"Please provide your consent to the processing of personal data"
+    },
+    "formBasicSubmit":{
+      "Submit":"Submit"
+    },
+    
+    "Modal":{
+      "Title": "Procesing of Personal Data Information",
+      "Body": "The administrator of your personal data is ISOTEX GROUP Ilona Żurawa based in Syców, ul. Daszyńskiego 9a, 56-500 Syców. Your personal data will be processed for the purpose of recruitment for the position you are applying for. You have the right to access the content of your data and to correct it. Providing data is voluntary but necessary to conduct the recruitment process.",
+      "PrivacyPolicy":"Privacy Policy"
+    }
+  
+
+  },
+  "PrivacyPolicy": {
+    "title": "PRIVACY POLICY OF THE WEBSITE www.isotex-poland.com",
+    "introduction": {
+      "p1": "The protection of Users' privacy is particularly important to ISOTEX GROUP Ilona Żurawa. For this reason, Users of the Website www.isotex-poland.com are guaranteed high standards of privacy protection. ISOTEX GROUP Ilona Żurawa, as the Data Controller, ensures the security of data provided by Users.",
+      "p2": "The Controller's goal is also to properly inform Users about their rights and obligations related to the processing of personal data, particularly in light of the provisions on personal data protection set out in Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (hereinafter referred to as 'GDPR'). Therefore, to protect the privacy of Website Users, in this document, the Controller informs about the legal basis for processing personal data provided by Users in connection with their use of the Website www.isotex-poland.com (hereinafter referred to as the 'Website'), the methods of collecting, processing, and protecting personal data, as well as the rights of Users.",
+      "p3": "A User is any natural person whose data is concerned, using the website www.isotex-poland.com or electronic services available through the Website.",
+      "p4": "The Controller of personal data provided by the User on the Website www.isotex-poland.com is ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, NIP 9111824789 (hereinafter referred to as the 'Controller')."
+    },
+    "userConsent": {
+      "title": "USER CONSENT",
+      "p1": "Using the Website www.isotex-poland.com by the User means that the User accepts that the Controller collects and uses personal data in accordance with this Privacy Policy.",
+      "p2": "The personal data of the Website User is processed by the Controller based on their consent, and in some cases described in this document, within the legitimate interest of the Controller. The User has the right to withdraw their previously given consent at any time. The withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal.",
+      "p3": "In the event of a change to this Privacy Policy, and the User continues to use the Website, this is deemed as consent to the current terms of the Privacy Policy."
+    },
+    "personalData": {
+      "title": "PERSONAL DATA PROCESSED BY THE CONTROLLER",
+      "acquisition": {
+        "title": "Method of Obtaining Personal Data",
+        "p1": "The Controller obtains personal data directly from the User through the Website, via its available functionalities and communication tools, and by sending messages to the Controller through them.",
+        "p2": "Providing personal data by the User is voluntary."
+      },
+      "types": {
+        "title": "Types of Processed Personal Data",
+        "p1": "The Controller collects the following personal data concerning the User through the Website:",
+        "li1": "First and last name;",
+        "li2": "E-mail address;",
+        "li3": "Phone number;",
+        "li4": "Content of the message;",
+        "li5": "Subject of the message."
+      }
+    },
+    "purposes": {
+      "title": "PURPOSES OF PROCESSING PERSONAL DATA",
+      "p1": "The manner in which the Controller processes data concerning the User depends on the User's use of the Website and its available functionalities. The Controller processes the User's personal data for the following purposes:",
+      "communication": {
+        "title": "Communication with the User.",
+        "p1": "The Controller uses the User's personal data to communicate with them in a personalized manner. The information communicated to the User concerns offered products or services, personal data security, network updates, reminders, but also suggested offers from the Controller or its partners. Communication with the User also pertains to User support. Personal data is used to assist the User, resolve technical issues, and respond to their complaints or claims."
+      },
+      "electronicOffers": {
+        "title": "Presenting Commercial Offers to the User Electronically.",
+        "p1": "The purpose of using the User's personal data provided through the Website's communication functionalities and tools is marketing communication conducted by the Controller as part of its business activities, particularly presenting commercial offers to the User electronically."
+      },
+      "phoneOffers": {
+        "title": "Presenting Commercial Offers to the User via Telephone Contact.",
+        "p1": "The purpose of using the User's personal data provided through the Website's communication functionalities and tools is marketing communication conducted by the Controller as part of its business activities, particularly by presenting commercial offers to the User via telephone contact."
+      },
+      "newsletter": {
+        "title": "Sending Information to the User Electronically as Part of the Controller's Newsletter Subscription.",
+        "p1": "The purpose of using the User's personal data provided through the Controller's newsletter subscription form available on the Website is to inform the User electronically (via e-mail) about new products, services, promotions, or events of the Controller or its partners."
+      },
+      "comments": {
+        "title": "Enabling the User to Submit Comments or Opinions.",
+        "p1": "The Controller uses the User's personal data to enable them to comment on or provide opinions about the activities, services, or products of the Controller or entities cooperating with it."
+      },
+      "additional": {
+        "p1": "The Controller may process the User's personal data obtained through the Website also for the following purposes:",
+        "li1": "to conclude and perform any contract between the User and the Controller and to provide services to the User as a client of the Controller in accordance with Article 6(1)(b) of the GDPR;",
+        "li2": "to conduct financial settlements with the User who is a client of the Controller for the performance of any contract concluded between the parties, as well as potential claims from the User who is a client within the legitimate interest of the Controller in accordance with Article 6(1)(f) of the GDPR, and to fulfill the Controller's legal obligations towards tax authorities based on separate regulations in accordance with Article 6(1)(c) of the GDPR;",
+        "li3": "to carry out the Controller's marketing activities within the legitimate interest of the Controller within the meaning of Article 6(1)(f) of the GDPR, as well as in accordance with the User's declarations of intent regarding marketing communication provided to the Controller. Consents given for marketing communication (e.g., for sending commercial information electronically or telephone contact for direct marketing purposes) may be withdrawn at any time without affecting the lawfulness of processing based on consent before its withdrawal;",
+        "li4": "to fulfill the Controller's legal obligations towards the User as specified in the GDPR, within the meaning of Article 6(1)(c) of the GDPR."
+      }
+    },
+    "sharing": {
+      "title": "SHARING PERSONAL DATA",
+      "p1": "The User's personal data is not transferred by the Controller to third parties."
+    },
+    "userRights": {
+      "title": "USER RIGHTS",
+      "rights": {
+        "title": "User Rights",
+        "p1": "At every stage of the processing of their data, the User is granted a number of rights allowing them to access their data, verify the correctness of data processing, correct it, as well as object to its processing, request the deletion of data, restriction of processing, or data portability.",
+        "p2": "If the User wishes to exercise their rights as a data subject, they may contact the Controller using the following contact details: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+      },
+      "complaint": {
+        "title": "Right to Lodge a Complaint with a Supervisory Authority",
+        "p1": "The User whose personal data is processed by the Controller has the right to lodge a complaint with the supervisory authority responsible for personal data protection (President of the Personal Data Protection Office)."
+      }
+    },
+    "cookies": {
+      "title": "COOKIES",
+      "p1": "The Controller informs that while using the Website, fragments of code called 'cookies,' which are text files corresponding to HTTP requests sent to the Controller's server, are stored on the User's end device. Cookies are installed by every browser through which the User visits the Website. Cookies are used on the Website for the following purposes:",
+      "li1": "maintaining the technical correctness and continuity of the session between the Website server and the User's end device;",
+      "li2": "optimizing the User's use of the Website's pages and adjusting their display on the User's end device;",
+      "li3": "ensuring the security of using the Website;",
+      "li4": "collecting statistics on visits to the Website's pages to support improving their structure and content;",
+      "li5": "displaying content tailored to the User's preferences on their end device.",
+      "p2": "Detailed information regarding the cookies used by the Controller and their management is available in the Cookie Policy."
+    },
+    "other": {
+      "title": "OTHER IMPORTANT INFORMATION",
+      "security": {
+        "title": "Protection of Personal Data Security",
+        "p1": "The Controller implements appropriate measures to ensure the security of the User's personal data. Secure use of the Website is ensured by the systems and procedures applied to protect against access and disclosure of data to unauthorized persons. Furthermore, the systems and processes used by the Controller are regularly monitored to detect potential threats. Personal data obtained by the Controller is stored in computer systems with strictly limited access."
+      },
+      "storage": {
+        "title": "Storage of Personal Data",
+        "p1": "The period of storage of Users' personal data depends on the purposes of data processing by the Controller.",
+        "p2": "The Controller stores personal data for the period necessary to achieve specific purposes, i.e.:",
+        "li1": "in the case of providing a service/delivering a product to the User - for the period necessary for the Controller to perform the ordered service or deliver the product to the User.",
+        "p3": "In each of the above cases, after the necessary processing period, the data may be processed only for the purpose of pursuing claims arising from the relationship between the parties until the final resolution of such claims through legal proceedings."
+      },
+      "changes": {
+        "title": "Changes to the Privacy Policy",
+        "p1": "To update the information contained in this Privacy Policy and ensure its compliance with applicable law, this Privacy Policy may be subject to change. In the event of a change in the content of the Privacy Policy, the date of its update indicated at the end of the text will be changed. To obtain information on the method of personal data protection, the Controller recommends that Users regularly review the provisions of the Privacy Policy."
+      },
+      "contact": {
+        "title": "Contact Information",
+        "p1": "To obtain any information regarding this Privacy Policy, the User may contact the Data Controller: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, using the following contact details: isotex.biuro@wp.pl.",
+        "p2": "Additionally, it is also possible to contact by post at the address: Komorów 9A, 56-500 Syców."
+      },
+      "update": {
+        "p1": "The last update of this document took place on 12.01.2023."
+      }
+    }
+  },
+
+  
+    "CertificatePage": {
+      "OurCerts": "Our Certificates",
+      "ISO90012015": {
+        "Certdesc": "ISO 9001:2015 is an international standard that defines the requirements for a Quality Management System (QMS). The ISO 9001:2015 certificate is recognized and widely applied across the globe.\n The ISO 9001:2015 system provides guidelines for developing principles and procedures necessary to deliver products and services that meet customer needs and legal requirements. It outlines various areas that impact effective quality management, such as customer focus, involvement of top management and employees, planning, implementation, monitoring of processes, and continuous improvement.\n Organizations holding an ISO 9001:2015 certificate guarantee that their products and services meet specified standards, which helps expand their potential customer base.\n The ISO 9001:2015 system is compatible with other management systems such as ISO 14001:2015. Thanks to the alignment with Annex SL, integrating management systems is more effective.",
+        "MoreInfo": {
+          "desc": "More information about ISO 9001:2015 is available here: "
+        }
+      },
+      "Hygienic_Certificate": {
+        "CartName": "Hygienic Certificate B.BK",
+        "Certdesc": "The NIZP-PZH-BBK Hygienic Certificate confirms that our insulation mattresses are safe for human health and suitable for use in environments requiring high hygiene standards. Issued by the National Institute of Public Health – National Institute of Hygiene, the certificate guarantees that our products do not emit harmful substances and can be safely used in industrial, food, or pharmaceutical facilities.\n",
+        "MoreInfo": {
+          "desc": "More information about the hygienic certificate is available here: "
+        },
+        "Button" : "Hygienic Certificate"
+      }
+    }
+  
+  
+  
+ 
+    
+
+
+
+
+
+
+
+
+  }
+  

@@ -1,0 +1,24 @@
+.table_format table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+.table_format  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .table_format  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  .table_format tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .table_format tr:hover {
+    background-color: #f1f1f1;
+  }

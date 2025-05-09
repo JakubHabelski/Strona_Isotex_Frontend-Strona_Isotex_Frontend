@@ -1,0 +1,57 @@
+.video_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video_header__container {
+  will-change: opacity; /* Optymalizacja dla opacity */
+}
+
+.text_content {
+  animation: appear 1s linear forwards;
+  will-change: transform, opacity;
+  color: white; 
+}
+
+.animation_done {
+  animation: none; /* Wyłącza animację po jej zakończeniu */
+  transform: none; /* Resetuje transform, żeby JS mógł działać */
+}
+
+.isotex-title {
+  font-size: 3.25rem; /* Odpowiednik Tailwind text-4xl */
+  color: white; /* Zastępuje Tailwind text-white */
+}
+
+.isotex-subtitle {
+  font-size: 2.25rem; /* Odpowiednik Tailwind text-xl */
+  color: white; /* Zastępuje Tailwind text-white */
+}
+
+@media (min-width: 768px) {
+  .isotex-title {
+    font-size: 3.75rem; /* Odpowiednik Tailwind md:text-6xl */
+  }
+  .isotex-subtitle {
+    font-size: 1.5rem; /* Odpowiednik Tailwind md:text-2xl */
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    transform: translateY(70vh);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
+}

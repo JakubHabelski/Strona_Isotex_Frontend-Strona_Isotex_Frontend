@@ -1,0 +1,16 @@
+@media screen and (max-width: 992px) {
+    .paragraf{
+        font-size: x-small;
+    } 
+    .carousel_item{
+        height: 30vh;
+    }
+    
+}
+.carousel_container img{
+    filter: brightness(0.5);  
+    object-fit: cover;
+}
+.carousel_container > carousel_item{
+    height: 100vh;
+}

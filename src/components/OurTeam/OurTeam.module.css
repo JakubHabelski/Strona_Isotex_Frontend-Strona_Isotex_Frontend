@@ -1,0 +1,78 @@
+.teamContainer {
+    display: grid;
+    width: min(900px, 90%);
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.teamContainer .teamMember .teamMemberIMG {
+    width: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: contain;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamContainer .teamMember h2 {
+    text-align: center;
+}
+
+.teamContainer .teamMember p {
+    text-align: center;
+}
+
+.teamContainer .teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamContainer .teamMember:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.teamContainer .teamMember:hover .teamMemberIMG {
+    transform: scale(1.05) rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .teamContainer {
+        grid-template-columns: 1fr 1fr; /* Dwa elementy w rzędzie */
+    }
+}
+
+@media (max-width: 768px) {
+    .teamContainer {
+        grid-template-columns: 1fr; /* Jeden element w rzędzie */
+    }
+}
+
+@media (max-width: 576px) {
+    .teamContainer {
+        width: 100%; /* Pełna szerokość na małych ekranach */
+        padding: 10px;
+    }
+
+    .teamContainer .teamMember {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .teamContainer .teamMember .teamMemberIMG {
+        aspect-ratio: 1/1; /* Kwadratowy obraz na bardzo małych ekranach */
+    }
+}

@@ -1,0 +1,989 @@
+{
+    "header": {
+      "title": "Witamy w IsoTex"
+    },
+    "button": {
+      "more": "Dowiedz się więcej"
+    },
+    "modal": {
+      "title": "Zmiana Lokalizacji Firmy",
+      "text": "Informujemy, że firma Isotex Group zmieniła lokalizację. Wszystkie nasze usługi i produkty pozostają bez zmian.",
+      "address": "Nowy adres: ul. Daszyńskiego 9a 56-500 Syców",
+      "phone": "Telefon: +48 600 511 029",
+      "email": "Email: info@isotex-poland.com",
+      "btn": "Dowiedz się więcej"
+    },
+    "shortinfo": {
+      "experience": "Doświadczenie. Mamy blisko 30-letnie doświadczenie w branży.",
+      "technology": "Technologia. Produkujemy wydajne oraz bezpieczne produkty.",
+      "quality": "Jakość. Oferujemy wysokiej jakości produkty izolacyjne. Posiadamy certyfikat ISO 9001.",
+      "complexity": "Kompleksowość. Zajmujemy się sprzedażą, projektowaniem, produkcją i montażem izolacji."
+    },
+    
+        "shortinfo3": {
+          "title": "Co nas wyróżnia",
+          "item1": {
+            "title": "Doświadczenie",
+            "desc": "Mamy blisko 30-letnie doświadczenie w branży."
+          },
+          "item2": {
+            "title": "Technologia",
+            "desc": "Produkujemy wydajne oraz bezpieczne produkty."
+          },
+          "item3": {
+            "title": "Jakość",
+            "desc": "Oferujemy wysokiej jakości produkty izolacyjne. Posiadamy certryfikat ISO 9001"
+          },
+          "item4": {
+            "title": "Kompleksowość",
+            "desc": "Zajmujemy się sprzedażą, projektowaniem, produkcją i montażem izolacji."
+          }
+        },
+
+      "HoverImage":{
+        "WhatWeDo": "Czym sie zajmujemy?"
+      },
+      "OurClients":{
+        "Clients": "Nasi Klienci"
+      },
+
+     "accordion": {
+            "item1": {
+            "title": "Jak wygląda współpraca z firmą isoTex?",
+            "body": "Współpraca z firmą isoTex złożona jest z kilku etapów. Na początku pracownicy przeprowadzają pomiary instalacji i urządzeń u Klienta. Na podstawie uzyskanych wyników przygotowywany zostaje indywidualny projekt oraz wycena stworzenia otuliny ochronnej. Jeżeli Klient go zaakceptuje, można przejść do wykonania izolacji. Po jej wyprodukowaniu następuje montaż na rurociągach lub maszynach. Zapewniamy specjalistyczne wsparcie na każdym etapie. Podpowiadamy, jakie rozwiązania najlepiej sprawdzą się w danym przypadku, a także pomagamy w optymalizacji kosztów inwestycji."
+            },
+            "item2": {
+            "title": "Produkcja elementów izolacyjnych",
+            "body": "Produkcja elementów izolacyjnych stanowi podstawowy zakres działalności firmy isoTex. Tworzymy przede wszystkim różnego rodzaju izolacje, otuliny oraz materace. Ich głównym zadaniem jest ochrona urządzeń takich jak silniki, turbiny i inne instalacje. Do ich wykonania wykorzystujemy jedynie wysokiej jakości materiały, które odznaczają się doskonałymi właściwościami termoizolacyjnymi, a do tego są elastyczne.\nNajczęściej używamy tkanin z włókna szklanego lub ceramicznego, ponieważ są one odporne na działanie wysokich temperatur, a do tego zapewniają odpowiednią szczelność i są elastyczne. Do wytworzenia przemysłowych produktów izolacyjnych wykorzystujemy również materiały służące do powlekania – np. silikon, folię aluminiową lub teflon. Specjalizujemy się w tworzeniu izolacji armatury, rur, maszyn i ich podzespołów, a także innych urządzeń, które podczas pracy wytwarzają dużą ilość ciepła."
+            }
+        },
+
+      "hoverImage": {
+            "image1": {
+            "short": "Izolacje rur",
+            "full": "Specjalizujemy się w wykonywaniu izolacji termicznych. Ich podstawowym zadaniem jest ochrona instalacji i urządzeń wykorzystywanych w przemyśle przed stratami ciepła. W sprzedaży mamy przede wszystkim: izolacje termiczne rur, izolacje termiczne rurociągów, izolacje termiczne wysokotemperaturowe."
+            },
+            "image2": {
+            "short": "Izolacje armatury",
+            "full": "Zajmujemy się sprzedażą elastycznych pianek poliuretanowych, które wykorzystywane są w produkcji mebli tapicerowanych oraz materaców. W asortymencie mamy pianki o rozmaitej gęstości (T oraz HR):\n niskiej – od 14 do 23 kg/m3,\n średniej – od 23 do 29 kg/m3,\n wysokiej – od 29 kg/m3."
+            },
+            "image3": {
+            "short": "Izolacje turbin",
+            "full": "Część usług świadczonych przez naszą firmę związana jest z produkcją izolacji turbin. W ofercie dostępne są przede wszystkim materace izolacyjne. Izolacja turbin energetycznych za pomocą materaców wielokrotnego użytku wyróżnia się kilkoma zaletami. Technologia ta wyróżnia się tym, że jest:\n odnawialna,\n sucha,\n czysta."
+            },
+            "image4": {
+            "short": "Izolacje silników, maszyn i urządzeń",
+            "full": "Nasza firma zajmuje się także produkcją izolacji silników, maszyn oraz urządzeń. W asortymencie dostępne są izolacyjne materace. Ich głównym zadaniem jest termiczne zabezpieczenie wymienionych elementów i ochrona przed uszkodzeniami. Tworzone przez nas izolacje są:\n dopasowane do kształtu urządzeń,\n elastyczne,\n skuteczne."
+            }
+        },
+        "shortinfo2": {
+            "heading": "Producent izolacji termicznych",
+            "paragraph": "Producent izolacji termicznych IsoTex znajduje się w Komorowie w województwie dolnośląskim. Główny zakres naszej działalności związany jest z produkcją, sprzedażą oraz montażem elementów przeznaczonych do zabezpieczania urządzeń i instalacji przemysłowych przed utratą ciepła. W tej branży usługi świadczymy od prawie 30 lat. Działalność rozpoczęliśmy w 1994 roku.\n\nZachęcamy do skorzystania z naszych usług!\n\nZapewniamy kompleksowość usług – zakres naszych działań obejmuje sprzedaż, projektowanie, produkcję oraz montaż izolacji. Stosowana technologia sprawia, że wykonywane w naszym zakładzie produkty są wydajne i bezpieczne w codziennym użytkowaniu. Klienci mogą też liczyć na fachowe wsparcie na każdym etapie współpracy.",
+            "button": "Dowiedz się więcej",
+            "imageAlt": "Producent izolacji termicznych isoTex"
+        },
+        
+            "navbar": {
+              "about": "O nas",
+              "insulations": "Izolacje termiczne",
+              "products": "Produkty izolacyjne",
+              "cooperation": "Współpraca",
+              "technology": "Technologia",
+              "faq": "FAQ",
+              "foam": "Pianka poliuretanowa",
+              "blog": "Blog",
+              "contact": "Kontakt",
+              "shop": "Sklep",
+              "technicalFabrics": "Tkaniny techniczne",
+              "fillings": "Wypełnienia",
+              "gaskets": "Uszczelki wysokotemperaturowe"
+            },
+
+            "carousel": {
+                "title1": "Izolacje termiczne",
+                "text1": "Zajmujemy się produkcją i sprzedażą izolacji termicznych. Wśród nich wyróżnić można np. izolacje rurociągów.",
+                "title2": "Pianki poliuretanowe",
+                "text2": "W ofercie mamy elastyczne pianki poliuretanowe. Wśród nich można wyróżnić pianki T i wysokoelastyczne HR.",
+                "title3": "Kontakt",
+                "text3": "Osoby zainteresowane kupnem naszych produktów lub skorzystaniem z usług, zachęcamy do kontaktu z pracownikami."
+                },
+            "footer": {
+                "visitUs": "Odwiedź nas",
+                "address": "ISOTEX GROUP Ilona Żurawa",
+                "email": "info@isotex-poland.com",
+                "regulationsPolicies": "Regulacje i polityki",
+                "qualityPolicy": "Polityka jakości",
+                "hygienicCertificate": "Atest higieniczny",
+                "certifications": "Certyfikaty",
+                "certificationPL": "PN-EN ISO 9001:2015 (PL)",
+                "certificationDE": "PN-EN ISO 9001:2015 (DE)",
+                "certificationFR": "PN-EN ISO 9001:2015 (FR)",
+                "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
+                "allRightsReserved": "Wszelkie prawa zastrzeżone"
+                },
+                "fabrics": {
+                    "glassFabrics": "Tkaniny szklane",
+                    "glassFabricsDescription": "Tkaniny szklane stanowią podstawowy materiał stosowany w produkcji izolacji termicznych. Charakteryzują się wysoką odpornością na temperatury dochodzące nawet do 550°C, są niepalne oraz odporne na działanie większości chemikaliów. Dzięki swojej strukturze zapewniają trwałość i elastyczność, co umożliwia precyzyjne dopasowanie izolacji do różnorodnych elementów instalacji przemysłowych – takich jak rurociągi, zawory czy turbiny.",
+                    "aramidFabrics": "Tkaniny aramidowe",
+                    "aramidFabricsDescription": "Tkaniny aramidowe (np. z włókien typu Kevlar®) cechują się wyjątkową odpornością mechaniczną przy jednoczesnej odporności na działanie wysokich temperatur. Znajdują zastosowanie w izolacjach wymagających dużej wytrzymałości na ścieranie, rozdarcia i drgania. Doskonale sprawdzają się w miejscach narażonych na intensywną eksploatację, łącząc funkcję ochrony termicznej z trwałością mechaniczną.",
+                    "cutParts": "Wycinki i części tłoczone",
+                    "cutPartsDescription": "Wycinki i części tłoczone z tkanin technicznych stanowią kluczowy element w produkcji indywidualnie dopasowanych izolacji termicznych. Dzięki możliwości precyzyjnego docinania materiałów takich jak tkanina szklana czy aramidowa, możliwe jest tworzenie elementów idealnie dopasowanych do kształtu turbin, zaworów, kolan i innych niestandardowych komponentów przemysłowych. Zoptymalizowane pod kątem wymiarów i kształtów, wycinane elementy zapewniają skuteczną ochronę termiczną, łatwość montażu i estetyczne wykończenie gotowych mat izolacyjnych."
+                    },
+       "fillings": {
+        "mineralWool": "Wełny mineralne",
+        "mineralWoolDescription": "Wełny mineralne to materiały izolacyjne wykonane z włókien mineralnych, takich jak wełna szklana czy wełna skalna. Charakteryzują się doskonałymi właściwościami termicznymi i akustycznymi, co czyni je idealnym wyborem do izolacji budynków, rur czy urządzeń przemysłowych. Dzięki swojej strukturze włóknistej, wełny mineralne są odporne na ogień i niepalne, co zwiększa bezpieczeństwo użytkowania.",
+        
+        "ceramicWool": "Wełny ceramiczne",
+        "ceramicWoolDescription": "Wełny ceramiczne to materiały o wysokiej odporności na temperatury, które znajdują zastosowanie w izolacji przemysłowej. Charakteryzują się doskonałymi właściwościami termicznymi oraz akustycznymi, co czyni je idealnym wyborem do izolacji pieców, kotłów czy innych urządzeń pracujących w ekstremalnych warunkach. Dzięki swojej strukturze włóknistej, wełny ceramiczne zapewniają efektywne tłumienie dźwięków oraz minimalizują straty ciepła.",
+        
+        "glassMat": "Maty szklane",
+        "glassMatDescription": "Maty szklane to materiały izolacyjne wykonane z włókien szklanych, które charakteryzują się doskonałymi właściwościami termicznymi i akustycznymi. Są lekkie, elastyczne i łatwe w obróbce, co sprawia, że idealnie nadają się do izolacji budynków, rur czy urządzeń przemysłowych. Dzięki swojej strukturze włóknistej, maty szklane są odporne na ogień i niepalne, co zwiększa bezpieczeństwo użytkowania."
+        },
+
+        "fabrics_info": {
+            "fabricsTitle": "Tkaniny szklane i aramidowe",
+            "generalDescription": "Tkaniny techniczne to specjalistyczne materiały o wyjątkowych właściwościach mechanicznych, termicznych i chemicznych. Znajdują zastosowanie w wielu gałęziach przemysłu – od energetyki po motoryzację – zapewniając skuteczną izolację termiczną, ochronę przed wysoką temperaturą i trwałość nawet w ekstremalnych warunkach pracy."
+            },
+         "glass_info": {
+            "generalCharacteristics": "Tkaniny szklane – ogólna charakterystyka",
+            "generalDescription": "Tkaniny szklane to materiały wykonane z włókien szklanych, które charakteryzują się wyjątkową odpornością na wysokie temperatury, ogień i substancje chemiczne. Dzięki tym właściwościom znajdują szerokie zastosowanie w przemyśle, m.in. w produkcji izolacji termicznych, osłon spawalniczych i innych materiałów chroniących przed ekstremalnymi warunkami.",
+            "typesOfFibers": "Rodzaje włókien szklanych",
+            "eGlassFiber": "Włókno szklane E",
+            "eGlassFiberDescription": "Włókna E-szklane to materiały oferujące wysoką odporność na temperatury dochodzące do 550°C. Dzięki swoim właściwościom elektrycznym znajdują szerokie zastosowanie w izolacjach elektrycznych i przemysłowych.",
+            "texturedAndSmoothFibers": "Włókna teksturowane i gładkie",
+            "filamentFibers": "Włókna filamentowe",
+            "filamentFibersDescription": "Gładkie, długie, ciągłe włókna charakteryzujące się dużą wytrzymałością mechaniczną i odpornością na wysokie temperatury.",
+            "texturedFibers": "Włókna teksturowane",
+            "texturedFibersDescription": "Włókna, które zostały poddane teksturowaniu (skręcaniu), co zwiększa ich objętość, elastyczność i właściwości termoizolacyjne. Powietrze zatrzymane między włóknami działa jako dodatkowa bariera termiczna.",
+            "productionProcess": "Proces produkcji",
+            "productionProcessDescription": "Tkaniny szklane wytwarzane są przez tkanie włókien szklanych, które mogą być teksturowane lub filamentowe, tworząc wytrzymałą tkaninę odporną na wysokie temperatury. Ich wytrzymałość mechaniczną uzyskuje się dzięki użyciu wysokiej jakości przędzy szklanej oraz kontrolowanemu procesowi produkcji.",
+            "coatings": "Powłoki i pokrycia",
+            "coatingsDescription": "Tkaniny szklane mogą być pokryte różnymi substancjami, które poprawiają ich właściwości.",
+            "siliconeCoating": "Powłoka silikonowa",
+            "graySiliconeCoating": "Tkanina pokryta szarym silikonem",
+            "siliconeCoatingDescription": "Powłoka silikonowa jest powszechnie stosowana w celu zwiększenia odporności na wysokie temperatury, wodę, oleje i substancje chemiczne. Materiał pokryty silikonem wykazuje również właściwości antystatyczne oraz odporność na ogień.",
+            "vermiculiteCoating": "Powłoka wermikulitowa",
+            "vermiculiteCoatingDescription": "Wermikulit to naturalny minerał używany jako powłoka ochronna. Zwiększa odporność materiału na wysokie temperatury oraz substancje chemiczne.",
+            "aluminumCoating": "Powłoka aluminiowa",
+            "aluminumCoatingDescription": "Tkaniny szklane mogą być pokryte aluminium, co zwiększa ich odporność na wysokie temperatury oraz lepszą ochronę przed promieniowaniem cieplnym.",
+            "yellowSiliconeCoating": "Tkanina pokryta żółtym silikonem",
+            "properties": "Właściwości tkanin szklanych",
+            "temperatureResistance": "Odporność na temperaturę",
+            "temperatureResistanceDescription": "Tkaniny szklane charakteryzują się dużą odpornością na temperatury dochodzące do 550°C (dla standardowych tkanin E-szklanych), a w przypadku niektórych specjalnych tkanin – nawet do 1000°C.",
+            "chemicalResistance": "Odporność chemiczna",
+            "chemicalResistanceDescription": "Tkaniny szklane są odporne na działanie wielu substancji chemicznych, co sprawia, że są idealnym materiałem do stosowania w trudnych warunkach przemysłowych, gdzie kontakt z agresywnymi substancjami chemicznymi jest powszechny.",
+            "flexibilityAndStrength": "Elastyczność i wytrzymałość mechaniczna",
+            "flexibilityAndStrengthDescription": "Dzięki zastosowaniu włókien teksturowanych, tkaniny szklane oferują dużą elastyczność i wytrzymałość mechaniczną, co ma szczególne znaczenie w zastosowaniach wymagających odporności na wstrząsy i uszkodzenia mechaniczne.",
+            "application": "Zastosowanie tkanin szklanych",
+            "applicationDescription": "Tkaniny szklane znajdują szerokie zastosowanie w wielu gałęziach przemysłu, takich jak:",
+            "thermalInsulation": "Izolacja termiczna",
+            "thermalInsulationDescription": "Produkty termoizolacyjne wykonane z włókien E-szklanych służą do tworzenia osłon termicznych, które chronią urządzenia i instalacje przed wysokimi temperaturami. Tkaniny szklane są wykorzystywane do produkcji koców termoizolacyjnych, osłon ochronnych, rękawów czy uszczelek.",
+            "metalurgicalEnergyIndustry": "Przemysł metalurgiczny i energetyczny",
+            "metalurgicalEnergyIndustryDescription": "Są wykorzystywane w produkcji materiałów ochronnych dla turbin, zaworów, rurociągów i innych instalacji przemysłowych wymagających odporności na wysokie temperatury.",
+            "fireProtection": "Ochrona przeciwpożarowa",
+            "fireProtectionDescription": "Tkaniny szklane są wykorzystywane jako materiał bazowy do produkcji osłon przeciwpożarowych, w tym odzieży ochronnej, koców gaśniczych oraz osłon dla maszyn przemysłowych.",
+            "summary": "Podsumowanie",
+            "summaryDescription": "Tkaniny szklane, dzięki swojej odporności na wysokie temperatury, elastyczności, wytrzymałości mechanicznej i odporności na czynniki chemiczne, są materiałami niezbędnymi w wielu gałęziach przemysłu, począwszy od produkcji materiałów izolacyjnych termicznych po osłony ochronne w trudnych warunkach roboczych."
+        } ,
+        "aramid_info": {
+            "generalCharacteristics": "Tkaniny aramidowe – ogólna charakterystyka",
+            "generalDescription": "Tkaniny aramidowe to materiały techniczne wykonane z włókien aramidowych, takich jak Kevlar® czy Twaron®, które charakteryzują się wyjątkową wytrzymałością mechaniczną, odpornością na przecięcia, ścieranie oraz działanie wysokich temperatur. Ich doskonałe właściwości fizykochemiczne sprawiają, że są one wykorzystywane w najbardziej wymagających aplikacjach przemysłowych i ochronnych.",
+            "aramidTypes": "Typy włókien aramidowych",
+            "kevlar": "Kevlar®",
+            "kevlarDescription": "Jedno z najbardziej znanych włókien aramidowych, cenione za swoją niezwykle wysoką wytrzymałość na rozciąganie oraz odporność termiczną. Znajduje zastosowanie m.in. w sprzęcie ochronnym, przemyśle lotniczym i motoryzacyjnym.",
+            "twaron": "Twaron®",
+            "twaronDescription": "Europejski odpowiednik Kevlaru®, o bardzo zbliżonych właściwościach. Często stosowany w produkcji elementów kompozytowych oraz środków ochrony osobistej.",
+            "productionProcess": "Proces produkcji tkanin aramidowych",
+            "productionProcessDescription": "Tkaniny aramidowe powstają w wyniku tkania włókien aramidowych w różnego rodzaju splotach, takich jak płócienny, skośny czy satynowy. W zależności od zastosowania, mogą być również wzmacniane, laminowane lub powlekane dodatkowymi warstwami ochronnymi (np. neoprenem, silikonem, PTFE).",
+            "coatingsAndModifications": "Powłoki i modyfikacje",
+            "silicone": "Silikon",
+            "siliconeDescription": "Zwiększa odporność na czynniki atmosferyczne i chemiczne.",
+            "aluminum": "Aluminium",
+            "aluminumDescription": "Powłoka aluminiowa poprawia odbijanie ciepła promieniowania podczerwonego.",
+            "siliconeCoatedAramid": "Tkanina aramidowa pokryta silikonem",
+            "aluminumCoatedAramid": "Tkanina aramidowa pokryta aluminium",
+            "properties": "Właściwości tkanin aramidowych",
+            "thermalResistance": "Odporność termiczna",
+            "thermalResistanceDescription": "Tkaniny aramidowe wytrzymują temperatury do ok. 500°C, a w krótkim kontakcie nawet więcej. Nie topią się, lecz zwęglają, co czyni je idealnymi do zastosowań przeciwpożarowych.",
+            "mechanicalResistance": "Odporność mechaniczna",
+            "mechanicalResistanceDescription": "Są wyjątkowo odporne na rozciąganie, rozdarcia, przecięcia i ścieranie – znacznie przewyższają pod tym względem tkaniny szklane.",
+            "chemicalResistance": "Odporność chemiczna",
+            "chemicalResistanceDescription": "Dobrze radzą sobie z większością rozpuszczalników organicznych i chemikaliów przemysłowych.",
+            "lowWeight": "Niska masa własna",
+            "lowWeightDescription": "Mimo dużej wytrzymałości, tkaniny aramidowe są lekkie, co pozwala stosować je w aplikacjach mobilnych i odzieży ochronnej.",
+            "applications": "Zastosowanie tkanin aramidowych",
+            "defenseAndRescue": "Przemysł obronny i ratowniczy",
+            "defenseAndRescueDescription": "Kamizelki kuloodporne, hełmy, kombinezony strażackie.",
+            "thermalAndFireProtection": "Ochrona termiczna i przeciwogniowa",
+            "thermalAndFireProtectionDescription": "Rękawice spawalnicze, kurtyny ogniochronne, osłony turbin.",
+            "automotiveAndAviation": "Motoryzacja i lotnictwo",
+            "automotiveAndAviationDescription": "Elementy kompozytowe, poszycia, wzmocnienia strukturalne.",
+            "industrialInsulation": "Izolacje przemysłowe",
+            "industrialInsulationDescription": "Pokrowce termiczne, uszczelnienia, materiały ogniotrwałe.",
+            "summary": "Podsumowanie",
+            "summaryDescription": "Tkaniny aramidowe, dzięki swoim unikalnym właściwościom – szczególnie odporności na temperaturę, przecięcia i uszkodzenia mechaniczne – należą do najnowocześniejszych materiałów technicznych. Znajdują zastosowanie nie tylko w przemyśle ciężkim, ale także w technologiach wojskowych, medycznych i lotniczych."
+        } ,
+         "fillingInfo": {
+        "title": "Wypełnienia w materacach izolacyjnych: Kluczowe materiały i ich zastosowanie",
+        "description": "Materace izolacyjne to skuteczne rozwiązania stosowane w przemyśle, które mają na celu ochronę instalacji przed stratami ciepła, a także zapewnienie bezpieczeństwa ludzi i urządzeń. Kluczową rolę w ich skuteczności odgrywa materiał wypełniający, który odpowiada za właściwości termoizolacyjne, ognioodporność oraz odporność chemiczną i mechaniczną całego systemu.",
+        "mainFunctions": "Główne funkcje wypełnień w materacach izolacyjnych",
+        "thermalInsulation": "Izolacja termiczna - ",
+        "thermalInsulationDesc": "Podstawową funkcją wypełnienia jest ograniczenie strat ciepła. Wysokotemperaturowe instalacje przemysłowe – takie jak rurociągi, turbiny, zawory czy wymienniki ciepła – wymagają skutecznej bariery chroniącej przed ucieczką energii cieplnej. Dobre wypełnienie utrzymuje temperaturę procesową, poprawia efektywność energetyczną i zmniejsza koszty eksploatacji.",
+        "highTemperatureProtection": "Ochrona przed wysokimi temperaturami - ",
+        "highTemperatureProtectionDesc": "Wypełnienia muszą być odporne na działanie ekstremalnych temperatur – zarówno długotrwałe, jak i krótkotrwałe (szczytowe). W zależności od zastosowania, mogą być wykorzystywane materiały wytrzymujące od kilkuset do ponad tysiąca stopni Celsjusza.",
+        "fireSafety": "Bezpieczeństwo i ochrona przeciwpożarowa - ",
+        "fireSafetyDesc": "Dzięki właściwościom niepalnym i zwęglającym się, wypełnienia pomagają chronić ludzi i urządzenia przed ogniem oraz wysokimi temperaturami w przypadku awarii systemów.",
+        "chemicalMechanicalResistance": "Odporność chemiczna i mechaniczna - ",
+        "chemicalMechanicalResistanceDesc": "W wielu środowiskach przemysłowych kluczowa jest odporność na wilgoć, oleje, chemikalia, drgania czy ścieranie. Odpowiedni dobór materiału wypełniającego pozwala dostosować materac do trudnych warunków pracy.",
+        "flexibility": "Elastyczność i dopasowanie do kształtu - ",
+        "flexibilityDesc": "Wypełnienia muszą dobrze przylegać do izolowanego elementu – niezależnie od tego, czy jest to zawór, kolano rury, czy inny nieregularny kształt. Dzięki odpowiedniej strukturze, można je łatwo formować i dopasowywać, co ułatwia montaż i demontaż izolacji np. podczas przeglądów.",
+        "mainTypes": "Główne rodzaje wypełnień: ",
+        "mineralWools": "Wełny mineralne",
+        "mineralWoolsDesc": "Wełny mineralne to materiały wykonane z włókien nieorganicznych, takich jak szkło czy bazalt. Dzięki swojej porowatej strukturze doskonale ograniczają przepływ ciepła, jednocześnie tłumiąc hałas. Są niepalne, co czyni je niezastąpionymi wszędzie tam, gdzie liczy się bezpieczeństwo ogniowe – w budownictwie, instalacjach rurowych i przemysłowych.",
+        "ceramicWools": "Wełny ceramiczne",
+        "ceramicWoolsDesc": "Wełny ceramiczne stosowane są tam, gdzie inne materiały nie wytrzymują temperatury – w piecach, kotłach czy strefach ognia. Odporne na ekstremalne warunki, zapewniają skuteczną barierę termiczną nawet powyżej 1000°C. Ich lekka, włóknista struktura sprawia, że dobrze dopasowują się do nieregularnych powierzchni, zapewniając jednocześnie redukcję hałasu.",
+        "glassMats": "Maty szklane",
+        "glassMatsDesc": "Maty szklane to lekkie, elastyczne materiały wykonane z cienkich włókien szkła. Sprawdzają się w miejscach wymagających łatwego montażu i obróbki, np. przy izolacji kanałów, urządzeń czy elementów budynków. Dzięki odporności na ogień oraz dobrej zdolności tłumienia dźwięków, są wszechstronnym rozwiązaniem w wielu branżach."
+    },
+
+    "mineralWoolInfo": {
+    "characteristics": {
+      "title": "Wełna mineralna – ogólna charakterystyka",
+      "description": "Wełna mineralna to materiał izolacyjny, który powstaje z włókien mineralnych, takich jak wełna szklana czy wełna skalna. Charakteryzuje się doskonałymi właściwościami termoizolacyjnymi, akustycznymi oraz odpornością na wysokie temperatury, co sprawia, że jest szeroko wykorzystywana w budownictwie, przemyśle oraz innych dziedzinach, gdzie wymagana jest wysoka ochrona przed ciepłem, hałasem i ogniem."
+    },
+    "types": {
+      "title": "Typy wełny mineralnej",
+      "description": "Wełna mineralna występuje w dwóch głównych typach:",
+      "glassWool": {
+        "title": "Wełna szklana: ",
+        "description": "Jest produktem uzyskanym z topionego szkła, które następnie jest włóknione, tworząc materiał o doskonałych właściwościach izolacyjnych. Jest stosunkowo lekka i łatwa w obróbce."
+      },
+      "rockWool": {
+        "title": "Wełna skalna (bazaltowa): ",
+        "description": "Produkowana z naturalnych kamieni bazaltowych, ma nieco lepsze właściwości termoizolacyjne i akustyczne niż wełna szklana, a także wyższą odporność na wysokie temperatury."
+      }
+    },
+    "comparisonCard": {
+      "title": "Porównanie wizualne wełny mineralnej szklanej i skalnej"
+    },
+    "comparison": {
+      "title": "Porównanie wełny szklanej i skalnej",
+      "table": {
+        "feature": "Cecha",
+        "glassWool": "Wełna szklana",
+        "rockWool": "Wełna skalna (kamienna)",
+        "thermalInsulation": {
+          "feature": "Izolacyjność cieplna",
+          "glassWool": "Lepsza izolacja cieplna.",
+          "rockWool": "Nieco gorsza izolacja cieplna, ale lepsza odporność na ogień."
+        },
+        "compressionResistance": {
+          "feature": "Odporność na ściskanie",
+          "glassWool": "Niższa odporność, bardziej podatna na kompresję.",
+          "rockWool": "Wyższa odporność, lepsza do aplikacji wymagających dużego nacisku."
+        },
+        "acousticInsulation": {
+          "feature": "Izolacyjność akustyczna",
+          "glassWool": "Bardzo dobra, lepsza w tłumieniu wyższych częstotliwości.",
+          "rockWool": "Dobrze tłumi dźwięki, ale może być mniej efektywna w wyższych częstotliwościach."
+        },
+        "vaporPermeability": {
+          "feature": "Paroprzepuszczalność",
+          "glassWool": "Lepsza przy niższych gęstościach.",
+          "rockWool": "Niższa, lepsza w miejscach wymagających szczelnej izolacji."
+        },
+        "fireResistance": {
+          "feature": "Ognioodporność",
+          "glassWool": "Ognioodporna, wytrzymuje do 500°C.",
+          "rockWool": "Bardziej ognioodporna, wytrzymuje do 1000°C, nie topnieje."
+        },
+        "weight": {
+          "feature": "Waga",
+          "glassWool": "Lżejsza, łatwiejsza w transporcie.",
+          "rockWool": "Cięższa, bardziej wytrzymała, ale trudniejsza w instalacji."
+        },
+        "moistureResistance": {
+          "feature": "Odporność na wilgoć",
+          "glassWool": "Mniej odporna na wilgoć, może się zniszczyć w kontakcie z wodą.",
+          "rockWool": "Lepsza odporność na wilgoć, nie wchłania wody, odporniejsza na pleśń."
+        },
+        "application": {
+          "feature": "Zastosowanie",
+          "glassWool": "Izolacja cieplna, akustyczna w budownictwie.",
+          "rockWool": "Izolacja przemysłowa, ogniowa, w piecach i kotłach."
+        }
+      },
+      "mobile": {
+        "thermalInsulation": {
+          "feature": "Izolacyjność cieplna",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Lepsza izolacja cieplna.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Nieco gorsza izolacja cieplna, ale lepsza odporność na ogień."
+        },
+        "compressionResistance": {
+          "feature": "Odporność na ściskanie",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Niższa odporność, bardziej podatna na kompresję.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Wyższa odporność, lepsza do aplikacji wymagających dużego nacisku."
+        },
+        "acousticInsulation": {
+          "feature": "Izolacyjność akustyczna",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Bardzo dobra, lepsza w tłumieniu wyższych częstotliwości.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Dobrze tłumi dźwięki, ale może być mniej efektywna w wyższych częstotliwościach."
+        },
+        "vaporPermeability": {
+          "feature": "Paroprzepuszczalność",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Lepsza przy niższych gęstościach.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Niższa, lepsza w miejscach wymagających szczelnej izolacji."
+        },
+        "fireResistance": {
+          "feature": "Ognioodporność",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Ognioodporna, wytrzymuje do 500°C.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Bardziej ognioodporna, wytrzymuje do 1000°C, nie topnieje."
+        },
+        "weight": {
+          "feature": "Waga",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Lżejsza, łatwiejsza w transporcie.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Cięższa, bardziej wytrzymała, ale trudniejsza w instalacji."
+        },
+        "moistureResistance": {
+          "feature": "Odporność na wilgoć",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Mniej odporna na wilgoć, może się zniszczyć w kontakcie z wodą.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Lepsza odporność na wilgoć, nie wchłania wody, odporniejsza na pleśń."
+        },
+        "application": {
+          "feature": "Zastosowanie",
+          "glassWoolTitle": "Wełna szklana: ",
+          "glassWool": "Izolacja cieplna, akustyczna w budownictwie.",
+          "rockWoolTitle": "Wełna skalna: ",
+          "rockWool": "Izolacja przemysłowa, ogniowa, w piecach i kotłach."
+        }
+      }
+    },
+    "production": {
+      "title": "Proces produkcji wełny mineralnej",
+      "description": "Wełna mineralna powstaje poprzez topienie surowców mineralnych w wysokotemperaturowych piecach, a następnie włóknienie ich na cienkie nitki. Następnie włókna są formowane w maty, płyty lub granulaty, które mogą być używane jako materiały izolacyjne. Produkcja wełny mineralnej jest procesem wymagającym precyzyjnego zarządzania temperaturą i czasem, aby zapewnić optymalne właściwości materiału."
+    },
+    "coatings": {
+      "title": "Powłoka i pokrycia",
+      "description": "Wełna mineralna może być powlekana różnymi substancjami w celu poprawy jej właściwości:",
+      "aluminum": {
+        "title": "Powłoka aluminiowa - ",
+        "description": "Stosowana, aby zwiększyć odporność materiału na wilgoć, poprawić jego właściwości izolacyjne i odporność na działanie chemikaliów."
+      },
+      "glassFiber": {
+        "title": "Powłoka z włókien szklanych - ",
+        "description": "Zwiększa wytrzymałość mechaniczną materiału oraz zabezpiecza przed uszkodzeniami mechanicznymi."
+      },
+      "aluminumCard": {
+        "title": "Wełna mineralna z powłoką aluminiową"
+      },
+      "glassFiberCard": {
+        "title": "Wełna mineralna z powłoka z włókien szlanych"
+      }
+    },
+    "properties": {
+      "title": "Właściwości wełny mineralnej",
+      "description": "Wełna mineralna posiada szereg korzystnych właściwości, które czynią ją jednym z najczęściej wykorzystywanych materiałów izolacyjnych:",
+      "highTemperature": {
+        "title": "Odporność na wysokie temperatury: ",
+        "description": "Wełna mineralna wykazuje bardzo wysoką odporność na działanie ognia, co czyni ją doskonałym materiałem do izolacji przeciwpożarowej. W zależności od typu wełny, odporność na temperaturę może wynosić od 350°C do nawet 1000°C."
+      },
+      "thermalInsulation": {
+        "title": "Izolacyjność termiczna: ",
+        "description": "Dzięki swojej strukturze włókien, wełna mineralna skutecznie izoluje przed ciepłem, co pozwala na obniżenie kosztów ogrzewania w budynkach oraz ochronę urządzeń przemysłowych przed nadmiernym nagrzewaniem się."
+      },
+      "acousticInsulation": {
+        "title": "Izolacyjność akustyczna: ",
+        "description": "Materiał ten skutecznie tłumi dźwięki, co sprawia, że jest idealnym rozwiązaniem w budownictwie, szczególnie w przypadku budynków wielopiętrowych i przemysłowych, gdzie hałas może być problemem."
+      },
+      "chemicalResistance": {
+        "title": "Odporność chemiczna: ",
+        "description": "Wełna mineralna jest odporna na działanie wielu substancji chemicznych, dzięki czemu znajduje zastosowanie w trudnych warunkach przemysłowych, gdzie narażona jest na kontakt z agresywnymi chemikaliami."
+      }
+    },
+    "applications": {
+      "title": "Zastosowanie wełny mineralnej",
+      "description": "Wełna mineralna jest szeroko stosowana w wielu branżach:",
+      "buildingInsulation": {
+        "title": "Izolacje budowlane: ",
+        "description": "Jest powszechnie wykorzystywana w budownictwie, zarówno w budynkach mieszkalnych, jak i przemysłowych, jako materiał izolacyjny ścian, dachów, podłóg oraz rur. Wełna mineralna pozwala na znaczne poprawienie efektywności energetycznej budynków."
+      },
+      "industrialInsulation": {
+        "title": "Izolacje przemysłowe: ",
+        "description": "Używana w przemyśle do izolacji urządzeń, takich jak kotły, piecyki, rurociągi czy reaktory, gdzie występują wysokie temperatury. Dzięki swojej odporności na ogień, materiał ten skutecznie chroni przed przegrzaniem i zmniejsza ryzyko pożarów."
+      },
+      "acousticInsulation": {
+        "title": "Izolacje akustyczne: ",
+        "description": "Wykorzystywana do tłumienia hałasu w biurach, halach produkcyjnych, salach konferencyjnych czy innych obiektach, gdzie wymagana jest kontrola poziomu dźwięku."
+      },
+      "fireProtection": {
+        "title": "Ochrona przeciwpożarowa: ",
+        "description": "Wełna mineralna znajduje zastosowanie w produkcji odzieży ochronnej, koców ogniochronnych, a także w innych materiałach ochrony przeciwpożarowej."
+      }
+    },
+    "summary": {
+      "title": "Podsumowanie",
+      "description": "Wełna mineralna jest niezwykle wszechstronnym materiałem, który dzięki swojej odporności na ogień, wysokim właściwościom izolacyjnym oraz odporności na chemikalia, znajduje szerokie zastosowanie w różnych branżach. Od budownictwa po przemysł, jest niezastąpiona w tworzeniu skutecznych systemów izolacyjnych i ochrony przed ogniem, co czyni ją jednym z najważniejszych materiałów izolacyjnych na rynku."
+    }
+  },
+
+  "ceramicWoolInfo": {
+    "characteristics": {
+      "title": "Wełna ceramiczna – ogólna charakterystyka",
+      "description": "Wełna ceramiczna to wysokotemperaturowy materiał izolacyjny wykonany z włókien ceramicznych, zazwyczaj na bazie tlenku glinu i krzemionki. Dzięki swojej wyjątkowej odporności na ekstremalne temperatury oraz bardzo dobrej izolacyjności cieplnej, znajduje zastosowanie w najbardziej wymagających warunkach przemysłowych, takich jak piece, kotły czy instalacje energetyczne.",
+      "description2": "Materiał ten jest lekki, elastyczny i łatwy do formowania, co sprawia, że można go stosować w trudno dostępnych miejscach lub na nieregularnych powierzchniach. Jest odporny na szoki termiczne, nie przewodzi ciepła i nie reaguje z większością substancji chemicznych."
+    },
+    "properties": {
+      "title": "Właściwości wełny ceramicznej",
+      "highTemperature": {
+        "title": "Odporność na ekstremalne temperatury: ",
+        "description": "Wełna ceramiczna może pracować w temperaturach od 800°C do nawet 1400°C, w zależności od składu chemicznego. Jest materiałem niepalnym i nie topi się, co czyni ją idealnym wyborem do zastosowań ogniowych i termicznych."
+      },
+      "lowConductivity": {
+        "title": "Niska przewodność cieplna: ",
+        "description": "Dzięki swojej włóknistej strukturze zatrzymuje ciepło wewnątrz urządzeń i instalacji, redukując straty energetyczne."
+      },
+      "chemicalResistance": {
+        "title": "Odporność chemiczna: ",
+        "description": "Materiał ten nie wchodzi w reakcje z większością kwasów, zasad i gazów przemysłowych, co sprawia, że jest odpowiedni do agresywnego środowiska przemysłowego."
+      },
+      "lightweight": {
+        "title": "Lekkość i łatwość montażu: ",
+        "description": "Wełna ceramiczna jest znacznie lżejsza niż tradycyjne materiały ogniotrwałe, co ułatwia jej transport, obróbkę i montaż."
+      },
+      "thermalShock": {
+        "title": "Odporność na szoki termiczne: ",
+        "description": "Nie ulega zniszczeniu przy gwałtownych zmianach temperatury, co jest kluczowe w instalacjach cyklicznie nagrzewanych i chłodzonych."
+      }
+    },
+    "forms": {
+      "title": "Formy dostępności i pokrycia",
+      "description": "Wełna ceramiczna jest dostępna w wielu formach: w postaci mat, sznurów, papieru, koców czy modułów formowanych próżniowo. W zależności od potrzeb, materiał ten może być również pokrywany specjalnymi warstwami zabezpieczającymi, np.:",
+      "aluminum": {
+        "title": "Pokrycia z aluminium: ",
+        "description": "Poprawiają estetykę, zwiększają odporność na wilgoć oraz odbijają promieniowanie cieplne."
+      },
+      "technicalFabrics": {
+        "title": "Tkaniny techniczne: ",
+        "description": "Takie jak powłoki z włókien szklanych lub krzemionkowych, które chronią przed uszkodzeniami mechanicznymi i zwiększają trwałość produktu."
+      }
+    },
+    "applications": {
+      "title": "Zastosowanie wełny ceramicznej",
+      "description": "Wełna ceramiczna znajduje zastosowanie wszędzie tam, gdzie wymagana jest skuteczna izolacja w ekstremalnych warunkach:",
+      "energyIndustry": {
+        "title": "Przemysł energetyczny: ",
+        "description": "Do izolacji turbin, kotłów, rurociągów parowych i komór spalania."
+      },
+      "metallurgy": {
+        "title": "Hutnictwo i metalurgia: ",
+        "description": "Do wyłożenia pieców hutniczych, odlewni, ciągów transportowych stopionych metali."
+      },
+      "petrochemical": {
+        "title": "Przemysł petrochemiczny i chemiczny: ",
+        "description": "Do izolacji zbiorników i reaktorów narażonych na wysoką temperaturę i działanie substancji chemicznych."
+      },
+      "heatingDevices": {
+        "title": "Produkcja urządzeń grzewczych: ",
+        "description": "W kotłach, piecach laboratoryjnych, suszarkach przemysłowych czy nagrzewnicach."
+      },
+      "fireProtection": {
+        "title": "Ochrona przeciwpożarowa: ",
+        "description": "W konstrukcjach pasywnych systemów ogniochronnych, drzwiach ognioodpornych, barierach cieplnych."
+      }
+    },
+    "summary": {
+      "title": "Podsumowanie",
+      "description": "Wełna ceramiczna to zaawansowany technologicznie materiał izolacyjny, zaprojektowany z myślą o najbardziej wymagających zastosowaniach przemysłowych. Dzięki odporności na ekstremalne temperatury, szoki termiczne i działanie substancji chemicznych, zapewnia nie tylko ochronę cieplną, ale również bezpieczeństwo eksploatacyjne. Jej wszechstronność, lekkość i łatwość montażu sprawiają, że jest chętnie wybierana jako komponent w systemach izolacyjnych w wielu gałęziach przemysłu."
+    }
+  },
+
+
+  "glassMatInfo": {
+    "characteristics": {
+      "title": "Maty szklane – właściwości, zastosowania i zalety",
+      "description": "Maty szklane to materiały izolacyjne wykonane z cienkich włókien szklanych, które tworzą zwartą, elastyczną strukturę przypominającą watę lub tkaninę. Charakteryzują się niską gęstością, dobrą odpornością termiczną oraz znakomitą izolacyjnością akustyczną. Dzięki swojej lekkości i łatwości obróbki, maty te znajdują szerokie zastosowanie zarówno w budownictwie, jak i w przemyśle."
+    },
+    "properties": {
+      "title": "Charakterystyka i właściwości",
+      "description": "Maty z włókien szklanych wyróżniają się szeregiem korzystnych cech:",
+      "highTemperature": {
+        "title": "Odporność na wysokie temperatury: ",
+        "description": "Maty szklane wytrzymują działanie temperatur rzędu 500–600°C, co czyni je odpowiednimi do izolacji termicznej w środowiskach przemysłowych."
+      },
+      "nonFlammability": {
+        "title": "Niepalność: ",
+        "description": "Włókna szklane są niepalne, a ich struktura zapobiega rozprzestrzenianiu się ognia."
+      },
+      "flexibility": {
+        "title": "Elastyczność i łatwość formowania: ",
+        "description": "Maty można łatwo przycinać i dopasowywać do nieregularnych kształtów, co znacznie ułatwia ich montaż."
+      },
+      "chemicalResistance": {
+        "title": "Odporność chemiczna: ",
+        "description": "Materiał wykazuje odporność na działanie wielu agresywnych substancji chemicznych, w tym olejów, rozpuszczalników i par."
+      },
+      "biologicalResistance": {
+        "title": "Odporność na korozję biologiczną: ",
+        "description": "Maty nie gniją, nie ulegają degradacji pod wpływem wilgoci i nie stanowią środowiska sprzyjającego rozwojowi pleśni."
+      },
+      "acousticInsulation": {
+        "title": "Izolacyjność akustyczna: ",
+        "description": "Struktura włóknista pozwala na skuteczne pochłanianie dźwięków i redukcję hałasu."
+      }
+    },
+    "comparison": {
+      "title": "Porównanie typów mat szklanych",
+      "table": {
+        "type": "Typ maty",
+        "description": "Opis",
+        "binder": "Spoiwo",
+        "applications": "Typowe zastosowania",
+        "csm": {
+          "type": "Mata z posiekanych włókien (CSM)",
+          "description": "Losowo ułożone krótkie włókna szklane, łączone spoiwem",
+          "binder": "Emulsja / Proszek",
+          "applications": "Kompozyty z żywic, części motoryzacyjne, osłony techniczne"
+        },
+        "emulsion": {
+          "type": "Mata emulsyjna",
+          "description": "CSM z emulsją – bardziej elastyczna i łatwa w formowaniu",
+          "binder": "Emulsja",
+          "applications": "Izolacje w motoryzacji, elementy o skomplikowanych kształtach"
+        },
+        "powder": {
+          "type": "Mata proszkowa",
+          "description": "CSM z proszkiem – sztywniejsza, stabilna w dużych powierzchniach",
+          "binder": "Proszek",
+          "applications": "Pokrycia termoizolacyjne np. na kotły, turbiny, rurociągi"
+        },
+        "needle": {
+          "type": "Mata igłowana (needle mat)",
+          "description": "Włókna łączone mechanicznie bez spoiwa – sprężysta, wytrzymała",
+          "binder": "Brak",
+          "applications": "Izolacja akustyczna i termiczna w przemyśle i budynkach"
+        },
+        "coated": {
+          "type": "Mata powlekana aluminium / tkaniną",
+          "description": "Pokryta folią alu lub tkaniną techniczną – odporna na uszkodzenia",
+          "binder": "Różne",
+          "applications": "Materace izolacyjne, komory silnikowe, zawory, turbiny"
+        },
+        "loose": {
+          "type": "Mata luzem / luźno związana",
+          "description": "Lekka struktura bez spoiwa lub z minimalną ilością",
+          "binder": "Brak lub bardzo mało",
+          "applications": "Wypełnienia materacy, przegrody dźwiękochłonne"
+        },
+        "automotive": {
+          "type": "Mata do przemysłu motoryzacyjnego",
+          "description": "Wzmocniona mata CSM do trudnych warunków",
+          "binder": "Emulsja / Proszek",
+          "applications": "Izolacje cieplne i akustyczne w pojazdach"
+        }
+      },
+      "mobile": {
+        "csm": {
+          "type": "Mata z posiekanych włókien (CSM)",
+          "descriptionTitle": "Opis: ",
+          "description": "Losowo ułożone krótkie włókna szklane, łączone spoiwem",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Emulsja / Proszek",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Kompozyty z żywic, części motoryzacyjne, osłony techniczne"
+        },
+        "emulsion": {
+          "type": "Mata emulsyjna",
+          "descriptionTitle": "Opis: ",
+          "description": "CSM z emulsją – bardziej elastyczna i łatwa w formowaniu",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Emulsja",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Izolacje w motoryzacji, elementy o skomplikowanych kształtach"
+        },
+        "powder": {
+          "type": "Mata proszkowa",
+          "descriptionTitle": "Opis: ",
+          "description": "CSM z proszkiem – sztywniejsza, stabilna w dużych powierzchniach",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Proszek",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Pokrycia termoizolacyjne np. na kotły, turbiny, rurociągi"
+        },
+        "needle": {
+          "type": "Mata igłowana (needle mat)",
+          "descriptionTitle": "Opis: ",
+          "description": "Włókna łączone mechanicznie bez spoiwa – sprężysta, wytrzymała",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Brak",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Izolacja akustyczna i termiczna w przemyśle i budynkach"
+        },
+        "coated": {
+          "type": "Mata powlekana aluminium / tkaniną",
+          "descriptionTitle": "Opis: ",
+          "description": "Pokryta folią alu lub tkaniną techniczną – odporna na uszkodzenia",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Różne",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Materace izolacyjne, komory silnikowe, zawory, turbiny"
+        },
+        "loose": {
+          "type": "Mata luzem / luźno związana",
+          "descriptionTitle": "Opis: ",
+          "description": "Lekka struktura bez spoiwa lub z minimalną ilością",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Brak lub bardzo mało",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Wypełnienia materacy, przegrody dźwiękochłonne"
+        },
+        "automotive": {
+          "type": "Mata do przemysłu motoryzacyjnego",
+          "descriptionTitle": "Opis: ",
+          "description": "Wzmocniona mata CSM do trudnych warunków",
+          "binderTitle": "Spoiwo: ",
+          "binder": "Emulsja / Proszek",
+          "applicationsTitle": "Typowe zastosowania: ",
+          "applications": "Izolacje cieplne i akustyczne w pojazdach"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Zalety stosowania mat szklanych",
+      "lightweight": {
+        "title": "Lekkość i łatwość montażu ",
+        "description": "Maty szklane są lekkie, co ułatwia transport i instalację. Można je łatwo przycinać i dopasowywać do kształtów, co przyspiesza montaż nawet w trudno dostępnych miejscach."
+      },
+      "flexibility": {
+        "title": "Duża elastyczność i dopasowanie do kształtów ",
+        "description": "Są bardzo elastyczne, dzięki czemu dobrze przylegają do nieregularnych powierzchni, zaworów czy rur. Zapewniają szczelną izolację bez mostków cieplnych."
+      },
+      "durability": {
+        "title": "Wysoka trwałość i odporność na czynniki zewnętrzne ",
+        "description": "Odporne na uszkodzenia mechaniczne, wilgoć, pleśń i większość substancji chemicznych. Zachowują właściwości izolacyjne przez długi czas, nawet w trudnych warunkach przemysłowych."
+      },
+      "fireSafety": {
+        "title": "Bezpieczeństwo pożarowe ",
+        "description": "Niepalne (klasa A1), nie topnieją łatwo i nie wydzielają szkodliwych gazów. Sprawdzają się tam, gdzie wymagana jest ochrona przeciwpożarowa."
+      },
+      "noiseReduction": {
+        "title": "Zdolność do tłumienia hałasu ",
+        "description": "Dzięki włóknistej strukturze skutecznie pochłaniają dźwięki. Stosowane w przegrodach akustycznych i do wygłuszenia maszyn, kanałów wentylacyjnych czy ścian działowych."
+      }
+    },
+    "summary": {
+      "title": "Podsumowanie",
+      "description": "Maty szklane to wszechstronny materiał izolacyjny, który łączy w sobie wysoką skuteczność izolacyjną, odporność na ogień i chemikalia oraz łatwość obróbki. Ich zastosowanie w przemyśle i budownictwie pozwala na stworzenie trwałych, efektywnych i bezpiecznych systemów izolacyjnych. Stanowią również doskonałe wypełnienie materacy izolacyjnych stosowanych w miejscach narażonych na działanie wysokich temperatur oraz hałasu."
+    }
+    
+  
+
+  },
+
+"productCategoryList": {
+    "title": "Lista kategorii produktów:",
+    "fabrics": {
+      "title": "Tkaniny",
+      "glassFabric": "Tkaniny szklane",
+      "aramidFabric": "Tkaniny Aramidowe"
+    },
+    "fillings": {
+      "title": "Wypełnienia",
+      "mineralWool": "Wełny mineralne",
+      "ceramicWool": "Wełny ceramiczne",
+      "glassMat": "Maty szklane"
+    },
+    "services": {
+      "title": "Usługi",
+      "measurement": "Pomiary",
+      "project": "Projekt",
+      "mattressProduction": "Produkcja materacy",
+      "installation": "Montaż izolacji"
+    }
+  },
+  
+ "language": {
+    "pl": "Polski",
+    "en": "Angielski"
+  },
+  "products": {
+    "title": "Produkty: {{category}}",
+    "price": "Cena: {{price}} zł",
+    "outOfStock": "Brak w magazynie",
+    "unavailable": "Niedostępny",
+    "addToCart": "Dodaj do koszyka"
+  },
+  "cart": {
+    "title": "Twój koszyk",
+    "empty": "Twój koszyk jest pusty",
+    "product": "Produkt",
+    "quantity": "Ilość w koszyku",
+    "pricePerUnit": "Cena za szt.",
+    "remove": "Usuń",
+    "summary": "Podsumowanie",
+    "total": "Łącznie do zapłaty",
+    "proceedToShipping": "Przejdź do wysyłki",
+    "currency": "PLN",
+    "added": "Dodano do koszyka: {{name}}"
+  },
+  "categories": {
+    "CERAMIC_WOOL": "Wełna ceramiczna",
+    "GLASS_FABRIC": "Tkanina szklana",
+    "MINERAL_WOOL": "Wełna mineralna",
+    "PROJECT": "Projekt",
+    "MATTRESS_PRODUCTION": "Produkcja materacy",
+    "GLASS_MAT": "Mata szklana",
+    "MEASUREMENT": "Pomiary",
+    "ARAMID_FABRIC": "Tkanina aramidowa",
+    "INSTALLATION": "Montaż"
+  },
+  "errors": {
+    "apiFailed": "Nie udało się pobrać produktów"
+  },
+  "order": {
+    "title": "Formularz zamówienia",
+    "customerDetails": "Dane klienta",
+    "name": "Imię i nazwisko",
+    "email": "Adres email",
+    "phone": "Numer telefonu",
+    "nip": "NIP",
+    "regon": "REGON",
+    "shippingDetails": "Dane do wysyłki",
+    "street": "Ulica",
+    "homenr": "Numer domu",
+    "city": "Miasto",
+    "postcode": "Kod pocztowy",
+    "summary": "Podsumowanie zamówienia",
+    "quantity": "Ilość",
+    "price": "Cena",
+    "total": "Łączna suma",
+    "submit": "Wyślij zamówienie",
+    "success": "Zamówienie zostało wysłane pomyślnie!"
+  },
+  "VideoHeader":{
+    
+    "description": "Izolacje termiczne"
+    
+  },
+  "OurProjects":{
+    "title": "Nasze projekty",
+    "buttons":{
+      "turbines": "Turbiny",
+      "valves": "Zawory",
+      "exchangers": "Wymienniki",
+      "production": "Produkcja"
+    }
+  }
+  ,
+  "JoinUs":{
+    "title": "Dołącz do nas",
+    "description": "Jeśli jesteś zainteresowany pracą w naszej firmie, skontaktuj się z nami!",
+    "button": "Aplikuj"
+  },
+  "JoinUsPageForm":{
+    "Title": "Dołącz do nas",
+    "SubTitle": "Jeśli jesteś zainteresowany pracą w naszej firmie, skontaktuj się z nami!",
+    "SubSubTitle": "Skontaktujemy się z Tobą w ciągu 7 dni roboczych.",
+    "formBasicName":{
+      "Name":"Imię i nazwisko",
+      "NamePlaceholder":"Wpisz swoje imię i nazwisko",
+      "ProvideName":"Proszę podać swoje imię i nazwisko"
+    },
+    "formBasicEmail":{
+      "Email":"Adres e-mail",
+      "EmailPlaceholder":"Wpisz swój adres e-mail",
+      "ProvideEmail":"Proszę podać swój adres e-mail"
+    },
+    "formBasicPhone":{
+      "Phone":"Numer telefonu",
+      "PhonePlaceholder":"Wpisz swój numer telefonu",
+      "ProvidePhone":"Proszę podać swój numer telefonu"
+    },
+    "formBasicCV":{
+      "CV":"CV",
+      "CVPlaceholder":"Wybierz plik",
+      "ProvideCV":"Proszę podać swoje CV"
+    },
+    "formBasicPrivacyPolicy": {
+      
+      "DataProcessingConsent": "Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę ISOTEX GROUP Ilona Żurawa w celu rekrutacji.",
+      "LearnMore":"Dowiedz się więcej",
+      "DataProcessingConsentFeedback":"Proszę wyrazić zgodę na przetwarzanie moich danych osobowych przez firmę ISOTEX GROUP Ilona Żurawa w celu rekrutacji."
+    },
+    "formBasicSubmit":{
+      "Submit":"Wyślij"
+    },
+    "Modal":{
+      "Title":"Informacja o przetwarzaniu danych osobowych",
+      "Body": "Administratorem Twoich danych osobowych jest ISOTEX GROUP Ilona Żurawa z siedzibą w Sycowie, ul. Daszyńskiego 9a, 56-500 Syców. Twoje dane osobowe będą przetwarzane w celu rekrutacji na stanowisko, na które aplikujesz. Masz prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne, ale niezbędne do przeprowadzenia procesu rekrutacji.",
+      "PrivacyPolicy":"Polityka prywatności"
+      
+    }
+  },
+
+  "PrivacyPolicy": {
+    "title": "POLITYKA PRYWATNOŚCI SERWISU www.isotex-poland.com",
+    "introduction": {
+      "p1": "Ochrona prywatności Użytkowników jest dla ISOTEX GROUP Ilona Żurawa szczególnie ważna. Z tego względu Użytkownicy Serwisu www.isotex-poland.com mają zagwarantowane wysokie standardy ochrony prywatności. ISOTEX GROUP Ilona Żurawa jako Administrator danych dba o bezpieczeństwo udostępnionych przez Użytkowników danych.",
+      "p2": "Celem Administratora jest również należyte informowanie Użytkowników o prawach i obowiązkach związanych z przetwarzaniem danych osobowych, szczególnie wobec treści przepisów o ochronie danych osobowych określonych w rozporządzeniu Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27.04.2016r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (dalej jako „RODO”). Dlatego też, dbając o ochronę prywatności Użytkowników Serwisu, w niniejszym dokumencie Administrator informuje o podstawach prawnych przetwarzania danych osobowych przekazanych przez Użytkowników w związku z korzystaniem przez nich z Serwisu www.isotex-poland.com (dalej jako „Serwis”), sposobach zbierania, przetwarzania i ochrony danych osobowych, a także o prawach Użytkowników.",
+      "p3": "Użytkownikiem jest każda osoba fizyczna, której dane dotyczą, korzystająca z serwisu internetowego www.isotex-poland.com lub usług elektronicznych dostępnych za pośrednictwem Serwisu.",
+      "p4": "Administratorem danych osobowych udostępnionych przez Użytkownika w Serwisie www.isotex-poland.com jest ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, NIP 9111824789, (dalej jako „Administrator”)."
+    },
+    "userConsent": {
+      "title": "ZGODA UŻYTKOWNIKA",
+      "p1": "Korzystanie z Serwisu www.isotex-poland.com przez Użytkownika oznacza, że Użytkownik akceptuje, że Administrator gromadzi oraz wykorzystuje dane osobowe zgodnie z niniejszą Polityką Prywatności.",
+      "p2": "Dane osobowe Użytkownika Serwisu są przetwarzane przez Administratora w oparciu o jego zgodę, zaś w niektórych przypadkach opisanych w niniejszym dokumencie, w ramach prawnie uzasadnionego interesu Administratora. Użytkownik ma prawo w dowolnym momencie wycofać wyrażoną wcześniej zgodę. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej wycofaniem.",
+      "p3": "W przypadku, gdy nastąpi zmiana niniejszej Polityki Prywatności, a Użytkownik nadal będzie korzystał z Serwisu, to poczytuje się to za wyrażenie zgody na aktualne warunki Polityki Prywatności."
+    },
+    "personalData": {
+      "title": "DANE OSOBOWE PRZETWARZANE PRZEZ ADMINISTRATORA",
+      "acquisition": {
+        "title": "Sposób pozyskiwania danych osobowych",
+        "p1": "Administrator pozyskuje dane osobowe bezpośrednio od Użytkownika za pośrednictwem Serwisu, poprzez dostępne w nim funkcjonalności i narzędzia do komunikacji oraz przesłanie za ich pośrednictwem wiadomości do Administratora.",
+        "p2": "Podanie danych osobowych przez Użytkownika jest dobrowolne."
+      },
+      "types": {
+        "title": "Rodzaje przetwarzanych danych osobowych",
+        "p1": "Administrator gromadzi za pośrednictwem Serwisu następujące dane osobowe dotyczące Użytkownika:",
+        "li1": "Imię i nazwisko;",
+        "li2": "Adres e-mail;",
+        "li3": "Numer telefonu;",
+        "li4": "Treść wiadomości;",
+        "li5": "Temat wiadomości."
+      }
+    },
+    "purposes": {
+      "title": "CELE PRZETWARZANIA DANYCH OSOBOWYCH",
+      "p1": "Sposób przetwarzania przez Administratora danych dotyczących Użytkownika zależy od sposobu korzystania przez Użytkownika z Serwisu i dostępnych w nim funkcjonalności. Administrator przetwarza dane osobowe Użytkownika w następujących celach:",
+      "communication": {
+        "title": "Komunikacji z Użytkownikiem.",
+        "p1": "Administrator wykorzystuje dane osobowe Użytkownika w celu komunikacji z nim w spersonalizowany sposób. Komunikowane Użytkownikowi informacje dotyczą oferowanych produktów lub usług, bezpieczeństwa danych osobowych, aktualizacji sieci, przypomnień, ale również sugerowanych ofert Administratora lub jego partnerów. Komunikacja z Użytkownikiem dotyczy także obsługi Użytkownika. Dane osobowe wykorzystywane są w celu pomocy Użytkownikowi, rozwiązaniu problemów technicznych oraz odpowiedzi na jego skargi lub reklamacje."
+      },
+      "electronicOffers": {
+        "title": "Przedstawiania Użytkownikowi ofert handlowych drogą elektroniczną.",
+        "p1": "Celem korzystania z danych osobowych Użytkownika udostępnionych przez niego za pośrednictwem funkcjonalności i narzędzi do komunikacji dostępnych w Serwisie jest komunikacja marketingowa prowadzona przez Administratora w ramach prowadzonej działalności, w szczególności przedstawianie ofert handlowych Użytkownikowi drogą elektroniczną."
+      },
+      "phoneOffers": {
+        "title": "Przedstawiania Użytkownikowi ofert handlowych w kontakcie telefonicznym.",
+        "p1": "Celem korzystania z danych osobowych Użytkownika udostępnionych przez niego za pośrednictwem funkcjonalności i narzędzi do komunikacji dostępnych w Serwisie jest komunikacja marketingowa prowadzona przez Administratora w ramach prowadzonej działalności, w szczególności poprzez przedstawianie ofert handlowych Użytkownikowi w kontakcie telefonicznym."
+      },
+      "newsletter": {
+        "title": "Przesyłania Użytkownikowi informacji drogą elektroniczną w ramach zapisu na newsletter Administratora.",
+        "p1": "Celem korzystania przez Administratora z danych osobowych Użytkownika udostępnionych w ramach formularza zapisu na newsletter Administratora udostępnionego w Serwisie jest informowanie Użytkownika drogą elektroniczną (e-mailowo) o nowych produktach, usługach, promocjach lub wydarzeniach Administratora lub jego partnerów."
+      },
+      "comments": {
+        "title": "Umożliwienia przesyłania przez Użytkownika komentarzy lub opinii.",
+        "p1": "Administrator wykorzystuje dane osobowe Użytkownika w celu umożliwienia mu komentowania/opiniowania działalności, usług lub produktów Administratora lub podmiotów z nim współpracujących."
+      },
+      "additional": {
+        "p1": "Administrator może przetwarzać dane osobowe Użytkownika pozyskane za pośrednictwem Serwisu również w następujących celach:",
+        "li1": "w celu zawarcia i realizacji ewentualnej umowy pomiędzy Użytkownikiem a Administratorem oraz obsługi Użytkownika jako klienta Administratora zgodnie z art. 6 ust. 1 lit. b) RODO;",
+        "li2": "w celu prowadzenia rozliczeń finansowych z Użytkownikiem będącym klientem Administratora tytułem realizacji ewentualnej umowy zawartej między stronami, a także ewentualnego dochodzenia roszczeń od Użytkownika będącego klientem w ramach prawnie uzasadnionego interesu Administratora zgodnie z art. 6 ust. 1 lit. f) RODO oraz spełnienia obowiązków prawnych Administratora wobec organów podatkowych na podstawie odrębnych przepisów zgodnie z art. 6 ust. 1 lit. c) RODO;",
+        "li3": "w celu realizacji działań marketingowych Administratora w ramach prawnie uzasadnionego interesu Administratora w rozumieniu art. 6 ust. 1 lit. f) RODO, a także zgodnie z oświadczeniami woli dotyczącymi komunikacji marketingowej złożonymi wobec Administratora. Zgody udzielone w zakresie komunikacji marketingowej (np. na przesyłanie informacji handlowych drogą elektroniczną lub kontakt telefoniczny w celach marketingu bezpośredniego) mogą być wycofane w dowolnym czasie, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem;",
+        "li4": "w celu realizacji obowiązków prawnych Administratora wobec Użytkownika określonych w RODO, w rozumieniu art. 6 ust. 1 lit. c) RODO."
+      }
+    },
+    "sharing": {
+      "title": "UDOSTĘPNIANIE DANYCH OSOBOWYCH",
+      "p1": "Dane osobowe Użytkownika nie są przekazywane przez Administratora podmiotom trzecim."
+    },
+    "userRights": {
+      "title": "PRAWA UŻYTKOWNIKA",
+      "rights": {
+        "title": "Prawa Użytkownika",
+        "p1": "Użytkownik na każdym etapie przetwarzania jego danych zapewniony ma szereg uprawnień pozwalających mu uzyskać dostęp do swoich danych, weryfikację prawidłowości przetwarzania danych, ich korektę, jak również ma prawo zgłoszenia sprzeciwu wobec ich przetwarzania, może żądać usunięcia danych, ograniczenia przetwarzania lub przeniesienia danych.",
+        "p2": "W przypadku chęci skorzystania przez Użytkownika z przysługujących mu praw jako podmiotu danych osobowych, może on się skontaktować z Administratorem za pomocą następujących danych kontaktowych: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+      },
+      "complaint": {
+        "title": "Prawo wniesienia skargi do organu nadzorczego",
+        "p1": "Użytkownik, którego dane osobowe są przetwarzane przez Administratora ma prawo wnieść skargę do organu nadzoru właściwego w sprawach ochrony danych osobowych (Prezesa Urzędu Ochrony Danych Osobowych)."
+      }
+    },
+    "cookies": {
+      "title": "PLIKI COOKIES",
+      "p1": "Administrator informuje, iż podczas korzystania z Serwisu w urządzeniu końcowym Użytkownika zapisywane są fragmenty kodu zwane „cookies”, które są plikami tekstowymi odpowiadającymi zapytaniom HTTP kierowanym do serwera Administratora. Pliki „cookies” są instalowane przez każdą przeglądarkę, z której Użytkownik odwiedza Serwis. Pliki „cookies” wykorzystywane są w Serwisie w celu:",
+      "li1": "utrzymania technicznej poprawności i ciągłości sesji pomiędzy serwerem Serwisu a urządzeniem końcowym Użytkownika;",
+      "li2": "optymalizacji korzystania przez Użytkownika ze stron internetowych Serwisu i dostosowania sposobu ich wyświetlania na urządzeniu końcowym Użytkownika;",
+      "li3": "zapewnienia bezpieczeństwa korzystania z Serwisu;",
+      "li4": "zbierania statystyk odwiedzin stron Serwisu wspierających ulepszanie ich struktury i zawartości;",
+      "li5": "wyświetlania na urządzeniu końcowym Użytkownika treści dostosowanych do jego preferencji.",
+      "p2": "Szczegółowe informacje odnośnie stosowanych przez Administratora plików cookie oraz zarządzania nimi dostępne są w Polityce Cookies."
+    },
+    "other": {
+      "title": "INNE WAŻNE INFORMACJE",
+      "security": {
+        "title": "Ochrona bezpieczeństwa danych osobowych",
+        "p1": "Administrator wprowadza odpowiednie środki mające na celu zapewnienie bezpieczeństwa danych osobowych Użytkownika. Bezpieczne korzystanie z Serwisu zapewniają stosowane systemy oraz procedury chroniące przed dostępem oraz ujawnieniem danych osobom niepożądanym. Ponadto stosowane przez Administratora systemy oraz procesy są regularnie monitorowane w celu wykrycia ewentualnych zagrożeń. Pozyskane przez Administratora dane osobowe przechowywane są w systemach komputerowych, do których dostęp jest ściśle ograniczony."
+      },
+      "storage": {
+        "title": "Przechowywanie danych osobowych",
+        "p1": "Okres przechowywania danych osobowych Użytkowników uzależniony jest od celów przetwarzania przez Administratora danych.",
+        "p2": "Administrator przechowuje dane osobowe przez taki okres, jaki jest konieczny do osiągnięcia określonych celów, tj.:",
+        "li1": "w przypadku świadczenia usługi/dostarczenia produktu na rzecz Użytkownika - przez okres niezbędny dla realizacji przez Administratora zamówionej usługi bądź dostarczenia produktu na rzecz Użytkownika.",
+        "p3": "W każdym z powyższych przypadków, po upływie niezbędnego okresu przetwarzania, dane mogą być przetwarzane tylko w celu dochodzenia roszczeń na tle łączących strony relacji do czasu ostatecznego rozstrzygnięcia tych roszczeń na drodze prawnej."
+      },
+      "changes": {
+        "title": "Zmiany Polityki prywatności",
+        "p1": "W celu uaktualnienia informacji zawartych w niniejszej Polityce prywatności oraz jej zgodności z obowiązującymi przepisami prawa, niniejsza Polityka prywatności może ulec zmianie. W przypadku zmiany treści Polityki prywatności, zmieniona zostanie data jej aktualizacji wskazana na końcu jej tekstu. W celu zasięgnięcia informacji o sposobie ochrony danych osobowych, Administrator rekomenduje Użytkownikom regularne zapoznawanie się z postanowieniami Polityki Prywatności."
+      },
+      "contact": {
+        "title": "Informacje kontaktowe",
+        "p1": "W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, z wykorzystaniem następujących danych kontaktowych: isotex.biuro@wp.pl.",
+        "p2": "Ponadto istnieje również możliwość kontaktu drogą pocztową pod adresem: Komorów 9A, 56-500 Syców."
+      },
+      "update": {
+        "p1": "Ostatnia aktualizacja niniejszego dokumentu miała miejsce dnia 12.01.2023."
+      }
+    }
+  },
+
+
+  "CertificatePage":{
+      "OurCerts": "Nasze certyfikaty",
+      "ISO90012015":{
+          "Certdesc": "ISO 9001:2015 jest to międzynarodowa norma określająca wymagania dotyczące Systemu Zarządzania Jakością (SZJ). Certyfikat ISO 9001:2015 jest uznawany i powszechnie stosowany na całym świecie.\n System ISO 9001:2015 zawiera wytyczne do opracowania zasad i procedur niezbędnych do dostarczania produktów i usług, które spełniają potrzeby klientów oraz wymagania prawne. Przedstawia on różne obszary wpływające na skuteczne zarządzanie jakością, takie jak koncentracja na kliencie, zaangażowanie najwyższego kierownictwa i pracowników,  planowanie, wdrażanie  i monitorowanie procesów wraz z ich ciągłym doskonaleniem.\n Organizacje, które posiadają certyfikat ISO 9001:2015 dają gwarancję, że oferowane produkty i usługi spełniają określone wymagania, co przekłada się na zwiększenie grona potencjalnych klientów.\n System ISO 9001:2015 jest kompatybilny z innymi systemami zarządzania, takimi jak ISO 14001:2015. Dzięki dostosowaniu struktury ISO 9001:2015 do wymagań dokumentu Annex SL integracja systemów zarządzania jest bardziej efektywna. ",
+          "MoreInfo": {
+            "desc": "Więcej informacji o normie ISO 9001:2015 znajdziesz tutaj: "
+          }
+      },
+      "Hygienic_Certificate":{
+        "CartName": "Atest higieniczny B.BK",
+        "Certdesc": "Atest higieniczny NIZP-PZH-BBK potwierdza, że nasze materace izolacyjne są bezpieczne dla zdrowia i mogą być stosowane w środowiskach wymagających wysokich standardów higieny. Certyfikat wydany przez Narodowy Instytut Zdrowia Publicznego – Państwowy Zakład Higieny gwarantuje, że nasze wyroby nie wydzielają szkodliwych substancji i mogą być bezpiecznie używane m.in. w zakładach przemysłowych, spożywczych czy farmaceutycznych.\n",
+        "MoreInfo": {
+          "desc": "Więcej informacji o ateście higienicznym znajdziesz tutaj: "
+        },
+        "Button" : "Atest higieniczny"
+      }
+  }
+  
+
+
+
+
+
+    
+
+             
+
+
+
+          
+          
+
+
+    
+  }
+  

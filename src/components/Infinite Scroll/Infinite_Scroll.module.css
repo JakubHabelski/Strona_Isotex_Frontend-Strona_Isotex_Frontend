@@ -1,0 +1,110 @@
+.infinite_scroll_container *,
+.infinite_scroll_container *::before,
+.infinite_scroll_container *::after {
+    box-sizing: border-box;
+}
+
+.infinite_scroll_container * {
+    margin: 0;
+}
+
+.infinite_scroll_container .wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 300px; /* Zmieniono wysokość wrappera */
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+    );
+}
+
+@keyframes infinite_scroll_container_scrollLeft {
+    to {
+        left: -300px; /* Zmieniono na 300px */
+    }
+}
+
+.infinite_scroll_container .item {
+    width: 300px; /* Zmieniono szerokość */
+    height: 300px; /* Zmieniono wysokość */
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(300px * 10), 100%); /* Zmieniono na 300px */
+    animation-name: infinite_scroll_container_scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.infinite_scroll_container .item1 {
+    animation-delay: calc(30s / 10 * (10 - 1) * -1);
+}
+
+.infinite_scroll_container .item2 {
+    animation-delay: calc(30s / 10 * (10 - 2) * -1);
+}
+
+.infinite_scroll_container .item3 {
+    animation-delay: calc(30s / 10 * (10 - 3) * -1);
+}
+
+.infinite_scroll_container .item4 {
+    animation-delay: calc(30s / 10 * (10 - 4) * -1);
+}
+
+.infinite_scroll_container .item5 {
+    animation-delay: calc(30s / 10 * (10 - 5) * -1);
+}
+
+.infinite_scroll_container .item6 {
+    animation-delay: calc(30s / 10 * (10 - 6) * -1);
+}
+
+.infinite_scroll_container .item7 {
+    animation-delay: calc(30s / 10 * (10 - 7) * -1);
+}
+
+.infinite_scroll_container .item8 {
+    animation-delay: calc(30s / 10 * (10 - 8) * -1);
+}
+
+.infinite_scroll_container .item9 {
+    animation-delay: calc(30s / 10 * (10 - 9) * -1);
+}
+
+.infinite_scroll_container .item10 {
+    animation-delay: calc(30s / 10 * (10 - 10) * -1);
+}
+
+.infinite_scroll_container .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+}
+.infinite_scroll_container .overlay{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 10;
+    background: red;
+}
+.infinite_scroll_container .overlaytex{
+
+}

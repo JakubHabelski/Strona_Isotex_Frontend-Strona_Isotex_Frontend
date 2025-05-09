@@ -1,0 +1,25 @@
+.language_switcher{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 20px;
+}
+@media screen and (max-width: 992px) {
+    .language_switcher {
+        
+
+    }
+    .language_switcher > button{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    
+    .language_switcher {
+        grid-column: span 2;
+        width: -webkit-fill-available;
+    }
+  }

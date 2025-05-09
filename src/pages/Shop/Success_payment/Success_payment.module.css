@@ -1,0 +1,20 @@
+.Success_payment_box{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    width: 100vw;
+    height: 100vh;
+    
+}
+.Success_payment_mess{
+    background-color: white;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: auto;
+}

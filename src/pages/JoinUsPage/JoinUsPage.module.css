@@ -1,0 +1,21 @@
+.join_us_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: min(800px, 90%);
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+
+.join_us_page .form_join_us{
+    
+    width: min(800px, 90%);
+    margin: 20px auto;
+    
+}
+
