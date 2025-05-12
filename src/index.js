@@ -25,6 +25,10 @@ import TestPage from './pages/TestPage/TestPage';
 import { CartProvider } from './components/CartContext/CartContext';
 import Success_payment from './pages/Shop/Success_payment/Success_payment';
 import CertificatePage from './pages/Certificate/CertifikatePage';
+import Check_order from './pages/Shop/Check_order/Check_order';
+import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_order_form';
+import AddProduct from './pages/Shop/AddProduct/AddProduct';
+import EditProducts from './pages/Shop/EditProducts/EditProducts';
 
 const root = document.getElementById("root");
 
@@ -59,6 +63,10 @@ ReactDOM.createRoot(root).render(
       <Route path='/Sklep/Koszyk' element={<Cart/>}/>
       <Route path='/Sklep/Koszyk/Wysylka' element={<Sending/>} />
       <Route path='/success' element={<Success_payment/>}/>
+      <Route path='/check-order' element={<Check_order/>} />
+      <Route path='/check-order-form' element={<Check_order_form/>} />
+      <Route path='/AddProduct' element={<AddProduct></AddProduct>} />
+      <Route path='/EditProducts' element={<EditProducts/>} />
 
       ## Test
       <Route path="/mainpage" element={<MainPage />} />

@@ -107,7 +107,7 @@ function SendOrder() {
     
     
     useEffect(() => {
-        fetch("https://sklep-isotex.serveo.net/PayU_API/Create_an_Order") // zmień na właściwy URL, jeśli inny
+        fetch("https://testfunkcjonalonscisklepu.pl/PayU_API/Create_an_Order") // zmień na właściwy URL, jeśli inny
         .then(response => response.text()) // bo zwracasz String (redirectUri)
         .then(data => {
             console.log("Redirect URI:", data);

@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@react-spring/web": "^9.7.5",
+    "@supabase/supabase-js": "^2.49.4",
     "@tabler/icons-react": "^3.31.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -62,6 +63,5 @@
   },
   "engines": {
     "node": ">=22.0.0"
-}
-
+  }
 }

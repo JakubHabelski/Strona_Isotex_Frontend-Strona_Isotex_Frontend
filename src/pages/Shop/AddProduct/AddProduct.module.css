@@ -1,0 +1,7 @@
+.AddProductForm{
+    background-color: white;
+    width: min(1500px, 90%);
+    margin: 32px auto 32px auto;
+    padding: 20px;
+    border-radius: 20px;
+}

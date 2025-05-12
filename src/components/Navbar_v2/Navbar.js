@@ -29,8 +29,8 @@ export default function Navbar_v2() {
     <>
     <div className={styles.navbar_background}>
      <div className={`${styles.social_media} `}>
-        <a href="https://www.facebook.com/IsotexGroup" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href="https://www.instagram.com/isotexgroup/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://www.facebook.com/P.P.U.H.Isotex/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/isotex_insulation_matters/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
         <a href="https://pl.linkedin.com/in/isotex-group-128758264" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
         <a href="https://www.youtube.com/watch?v=DaNj3DzocqQ" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-youtube"></ion-icon></a>
         <a href="tel:+48600511029" target="_blank" rel="noopener noreferrer" className={styles.social_media_text}><ion-icon name="call-outline" ></ion-icon> +48 600 511 029</a>
