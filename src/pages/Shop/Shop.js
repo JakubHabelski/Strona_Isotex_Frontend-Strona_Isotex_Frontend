@@ -26,7 +26,7 @@ function Product_Category_List() {
                 </Col>
                 <Col>
                     <Card className={styles.card} onClick={() => navigate(`/Sklep/ARAMID_FABRIC`)}>
-                        <Card.Img variant="top" src="/assets/materials/fabrics/Aramid/Tkanina_aramidowa.jpg" className={styles.card_img} />
+                        <Card.Img variant="top" src="/assets/materials/fabrics/aramid/tkanina_aramidowa.jpg" className={styles.card_img} />
                         <Card.Body>
                             <Card.Title>{t('productCategoryList.fabrics.aramidFabric')}</Card.Title>                        
                         </Card.Body>
