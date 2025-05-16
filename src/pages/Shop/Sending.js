@@ -86,13 +86,13 @@ function SendOrder() {
         street: "",
         homenr: "",
         postcode: "",
-        order_sum: (orderSum*100)
+        order_sum: (orderSum)
     });
 
     console.log(formData)
     // Aktualizacja order_sum w formData przy zmianie products
     useEffect(() => {
-        setFormData(prev => ({ ...prev, order_sum: (orderSum*100)}));
+        setFormData(prev => ({ ...prev, order_sum: (orderSum)}));
     }, [orderSum]);
 
     // Obsługa zmian w formularzu
@@ -123,7 +123,7 @@ function SendOrder() {
         const simplifiedProducts = cartItems.map(item => ({
             id: item.id,
             quantity: item.quantity,
-            price: item.price * 100
+            price: item.price
         }));
         cartItems.forEach(element => {
             console.log(element.price)

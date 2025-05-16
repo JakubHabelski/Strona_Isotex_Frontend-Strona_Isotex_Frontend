@@ -701,6 +701,11 @@
 
   "productCategoryList": {
   "title": "List of Product Categories:",
+  "main_cat:":{
+      "Fabrics": "Fabrics",
+      "Fillings": "Fillings",
+      "Services": "Services"
+    },
   "fabrics": {
     "title": "Fabrics",
     "glassFabric": "Glass Fabrics",

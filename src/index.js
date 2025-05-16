@@ -29,6 +29,7 @@ import Check_order from './pages/Shop/Check_order/Check_order';
 import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_order_form';
 import AddProduct from './pages/Shop/AddProduct/AddProduct';
 import EditProducts from './pages/Shop/EditProducts/EditProducts';
+import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
 
 const root = document.getElementById("root");
 
@@ -71,6 +72,7 @@ ReactDOM.createRoot(root).render(
       ## Test
       <Route path="/mainpage" element={<MainPage />} />
       <Route path="/test" element={<TestPage />} />
+      <Route path='/MainPageShop' element={<MainPageShop></MainPageShop>} />
     </Routes>
   </BrowserRouter>
   </CartProvider>

@@ -695,6 +695,11 @@
 
 "productCategoryList": {
     "title": "Lista kategorii produktów:",
+    "main_cat:":{
+      "fabrics": "Tkaniny",
+      "fillings": "Wypełnienia",
+      "services": "Usługi"
+    },
     "fabrics": {
       "title": "Tkaniny",
       "glassFabric": "Tkaniny szklane",
