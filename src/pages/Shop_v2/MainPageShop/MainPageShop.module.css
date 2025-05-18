@@ -1,4 +1,59 @@
-.MainPageShopLinks{
+.MainPageShopLinks {
     display: flex;
     flex-direction: column;
+    padding: 1rem; /* Poprawiono z padding: auto */
+    width: 100%; /* Dodano, żeby zajmował całą szerokość kolumny */
+    box-sizing: border-box; /* Zapewnia, że padding nie przechodzi poza szerokość */
+  }
+  
+  .MainPageShopLinks img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .MainPageShopLinks .MainCategory {
+    display: flex;
+    align-items: center;
+    /*padding: 0.5rem;  Ustawiono konkretną wartość paddingu */
+    width: 100%; /* Rozciąga cały div na szerokość */
+    justify-content: space-between; /* Rozkłada elementy równomiernie */
+    
+  }
+  
+  .MainPageShopLinks .MainCategory h3 {
+    margin: 0 auto 0 1rem; /* Dostosowano marginesy, żeby tekst był w centrum, ale z odstępem */
+    flex-grow: 1; /* Pozwala h3 rozciągnąć się i wypełnić przestrzeń */
+  }
+  .MainPageShopLinks .subcategorylist {
+    margin-top: 1rem;
+    overflow: hidden; /* Ukrywa zawartość poza max-height */
+    transition: max-height 0.3s ease-in-out; /* Płynna zmiana wysokości */
+  }
+  .MainPageShopLinks .subcategorylist .listitem{
+    display: flex;
+  }
+  .MainPageShopLinks .subcategorylist .bar{
+    width: 32px;
+    height: auto;
+    border-left: 15px solid white;
+    border-right: 15px solid white;
+    background-color: grey;
+  }
+  .MainPageShopLinks .MainCategory img:last-child {
+    transition: transform 0.3s;
+}
+
+.MainCategory.open img:last-child {
+    transform: rotate(90deg);
+}
+
+.carousel_container img{
+    filter: brightness(0.5);  
+    object-fit: cover;
+}
+.carousel_container > carousel_item{
+    height: 100vh;
+}
+.CarouselShop{
+
 }

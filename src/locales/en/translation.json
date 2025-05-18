@@ -724,7 +724,38 @@
     "mattressProduction": "Mattress Production",
     "installation": "Insulation Installation"
   }
-}  ,
+} ,
+"MainPageShop":{
+  "LeftBar":{
+    "Category":{
+      "Fabrics": "Fabrics",
+      "Fillings": "Fillings",
+      "Services": "Services"
+    },
+    "fabrics": {
+      "title": "Fabrics",
+      "glassFabric": "Glass Fabrics",
+      "aramidFabric": "Aramid Fabrics"
+    },
+    "fillings": {
+      "title": "Fillings",
+      "mineralWool": "Mineral Wool",
+      "ceramicWool": "Ceramic Wool",
+      "glassMat": "Glass Mats"
+    },
+    "services": {
+      "title": "Services",
+      "measurement": "Measurements",
+      "project": "Project",
+      "mattressProduction": "Mattress Production",
+      "installation": "Insulation Installation"
+    }
+  } 
+},
+
+
+
+
 "language": {
     "pl": "Polish",
     "en": "English"

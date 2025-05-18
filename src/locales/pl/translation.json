@@ -719,6 +719,34 @@
       "installation": "Montaż izolacji"
     }
   },
+  "MainPageShop":{
+    "LeftBar":{
+      "Category":{
+        "Fabrics": "Tkaniny",
+        "Fillings": "Wypełnienia",
+        "Services": "Usługi"
+      },
+      
+    "fabrics": {
+      "title": "Tkaniny",
+      "glassFabric": "Tkaniny szklane",
+      "aramidFabric": "Tkaniny Aramidowe"
+    },
+    "fillings": {
+      "title": "Wypełnienia",
+      "mineralWool": "Wełny mineralne",
+      "ceramicWool": "Wełny ceramiczne",
+      "glassMat": "Maty szklane"
+    },
+    "services": {
+      "title": "Usługi",
+      "measurement": "Pomiary",
+      "project": "Projekt",
+      "mattressProduction": "Produkcja materacy",
+      "installation": "Montaż izolacji"
+    }
+    } 
+  },
   
  "language": {
     "pl": "Polski",
