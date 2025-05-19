@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react"
 
 
@@ -15,13 +16,21 @@ export default function TestPage() {
     const [redirectUri, setRedirectUri] = useState(null);
 
     useEffect(() => {
-        fetch("http://192.168.68.111:8080/PayU_API/Create_an_Order") // zmień na właściwy URL, jeśli inny
-        .then(response => response.text()) // bo zwracasz String (redirectUri)
-        .then(data => {
-            console.log("Redirect URI:", data);
-            setRedirectUri(data);
-        })
-        .catch(error => console.error("Błąd podczas pobierania:", error));
+        try {
+                const response =  axios.get(
+                    'http://192.168.68.119:8080/Category_API/GetSubCategoriesByCategory',
+                    {
+                        params: { CategoryId: 2522 }
+                    }
+                );
+               // setSubCategories(response.data);
+              //  setLoading(false);
+              console.log(response.data)
+            } catch (err) {
+              //  setError('Kurwa, coś poszło nie tak z API!');
+              //  setLoading(false);
+                console.error(err);
+            }
     }, []);
    
 

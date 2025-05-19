@@ -1,3 +1,7 @@
+.MainPageShopLinksContainer{
+  padding-top: 50px;
+}
+
 .MainPageShopLinks {
     display: flex;
     flex-direction: column;
@@ -26,7 +30,7 @@
   }
   .MainPageShopLinks .subcategorylist {
     margin-top: 1rem;
-    overflow: hidden; /* Ukrywa zawartość poza max-height */
+    overflow-x: hidden; /* Ukrywa zawartość poza max-height */
     transition: max-height 0.3s ease-in-out; /* Płynna zmiana wysokości */
   }
   .MainPageShopLinks .subcategorylist .listitem{
@@ -35,8 +39,8 @@
   .MainPageShopLinks .subcategorylist .bar{
     width: 32px;
     height: auto;
-    border-left: 15px solid white;
-    border-right: 15px solid white;
+    border-left: 15px solid #f8f9fa;
+    border-right: 15px solid #f8f9fa;
     background-color: grey;
   }
   .MainPageShopLinks .MainCategory img:last-child {
@@ -54,6 +58,94 @@
 .carousel_container > carousel_item{
     height: 100vh;
 }
-.CarouselShop{
+.MainCategoryCard{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) repeat(3, 0);
+  grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 200px;
+  width: auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  transition: 0.3s ease-in;
+}
+.MainCategoryList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.MainCategoryCard:hover{
+  box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 0.5);
+  scale: 1.01;
+}
+.MainCategoryCard h5{
+  grid-area: 1 / 1 / 2 / 2;
+}
+.MainCategoryCard p{
+  grid-area: 2 / 1 / 3 / 2;
+}
+.MainCategoryCard img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  grid-area: 1 / 2 / 3 / 3;
+}
 
+.FeaturedProducts {
+  padding: 20px;
+}
+
+.FeaturedProducts h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.ProductCard {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+.ProductCard:hover {
+  box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 0.5);
+  scale: 1.01;
+}
+
+.ProductCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.ProductCard h5 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.ProductCard p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.ProductCard button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ProductCard button:hover {
+  background-color: #0056b3;
 }

@@ -1,109 +1,123 @@
 .sliderContainer {
-    width: 100%; /* Zajmuje 100% szerokości nadrzędnego elementu */
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px; /* Zaokrąglone rogi */
-  }
-  
-  .slider {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Możesz dostosować wysokość */
-  }
-  
-  .slidesWrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out; /* Płynna animacja przesuwania */
-  }
-  
-  .slide {
-    flex: 0 0 100%; /* Każdy slajd zajmuje 100% szerokości */
-    position: relative;
-    height: 100%;
-  }
-  
-  .slideImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px; /* Zaokrąglone rogi na obrazkach */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border-radius: 12px; /* Overlay też ma zaokrąglone rogi */
-  }
-  
-  .overlay h2 {
-    font-size: 2.5rem;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  .overlay p {
-    font-size: 1.2rem;
-    margin: 10px 0 0;
-  }
-  
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: background 0.3s;
-    border-radius: 50%; /* Okrągłe przyciski dla lepszego wyglądu */
-  }
-  
-  .prev:hover,
-  .next:hover {
-    background: rgba(0, 0, 0, 1);
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .dots {
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dot.active {
-    background-color: #717171;
-  }
+  width: 100%; /* Zajmuje 100% szerokości nadrzędnego elementu */
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 12px; /* Zaokrąglone rogi */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Możesz dostosować wysokość */
+  display: flex; /* Dodajemy flex, żeby lepiej zarządzać zawartością */
+  flex-direction: column; /* Ustawiamy kolumnowy układ */
+}
+
+.slidesWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out; /* Płynna animacja przesuwania */
+}
+
+.slide {
+  padding: 100px 50px;
+  flex: 0 0 100%; /* Każdy slajd zajmuje 100% szerokości */
+  position: relative;
+  height: 100%;
+}
+
+.slideImage {
+  float: right;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px; /* Zaokrąglone rogi na obrazkach */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 100px 50px;
+  border-radius: 12px; /* Overlay też ma zaokrąglone rogi */
+}
+
+.overlay h2 {
+  width: 50%;
+  text-align: left;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  display: flex; /* Dodajemy flex, żeby lepiej zarządzać wysokością */
+  align-items: center; /* Wyrównanie tekstu w pionie */
+}
+
+.overlay p {
+  width: 50%;
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+  font-weight: lighter;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.3s;
+  border-radius: 50%; /* Okrągłe przyciski dla lepszego wyglądu */
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  padding: 10px 0;
+  position: absolute; /* Pozycjonujemy absolutnie w slider */
+  bottom: 10px; /* Kropki na dole slidera */
+  width: 100%; /* Zajmują pełną szerokość */
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #717171;
+}

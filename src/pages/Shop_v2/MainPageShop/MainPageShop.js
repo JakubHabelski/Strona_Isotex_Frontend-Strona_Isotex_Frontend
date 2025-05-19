@@ -22,6 +22,7 @@ function MainPageShopMain() {
     {
       key: 'fabrics',
       icon: '/assets/fabric.png',
+      image: '/assets/materials/fabrics/glass/Silikon_szary.jpg',
       label: t('MainPageShop.LeftBar.Category.Fabrics'),
       arrowId: 'fabricArrow',
       subcategories: ['glassFabric', 'aramidFabric'],
@@ -29,6 +30,7 @@ function MainPageShopMain() {
     {
       key: 'fillings',
       icon: '/assets/icons/wool-fabric.png',
+      image: '/assets/materials/Fillings/welna-mineralna.jpg',
       label: t('MainPageShop.LeftBar.Category.Fillings'),
       arrowId: 'fillingArrow',
       subcategories: ['mineralWool', 'ceramicWool', 'glassMat'],
@@ -36,11 +38,38 @@ function MainPageShopMain() {
     {
       key: 'services',
       icon: '/assets/icons/services.png',
+      image: '/assets/handshake.jpg',
       label: t('MainPageShop.LeftBar.Category.Services'),
       arrowId: 'servicesArrow',
       subcategories: ['measurement', 'project', 'mattressProduction', 'installation'],
     },
   ];
+
+  const products = {
+  fabrics: [
+    { id: 1, subcategory: 'glassFabric', name: 'Silikon Szary', image: '/assets/materials/fabrics/glass/Silikon_szary.jpg', price: 99.99 },
+    // ...
+  ],
+  fillings: [
+    { id: 2, subcategory: 'mineralWool', name: 'Wełna Mineralna', image: '/assets/materials/Fillings/welna-mineralna.jpg', price: 49.99 },
+    // ...
+  ],
+  services: [
+    { id: 3, subcategory: 'measurement', name: 'Pomiar', image: '/assets/handshake.jpg', price: 199.99 },
+    // ...
+  ],
+};
+
+  // Funkcja do poprawnego wyświetlania form słowa "kategoria"
+    const getCategoryLabel = (count) => {
+      if (count === 1) {
+        return "kategoria";
+      }
+      if (count >= 2 && count <= 4) {
+        return "kategorie";
+      }
+      return "kategorii"; // Dla 0, 5 i więcej
+    };
 
   const toggleList = (key, arrowId) => {
     setShowLists((prev) => {
@@ -64,8 +93,8 @@ function MainPageShopMain() {
   }, [showLists]);
 
   return (
-    <Row>
-      <Col xs={12} md={2}>
+    <Row style={{margin: 0}}>
+      <Col xs={12} md={2} className={style.MainPageShopLinksContainer}>
         {categories.map((category) => (
           <div key={category.key} className={style.MainPageShopLinks}>
             <div
@@ -101,6 +130,34 @@ function MainPageShopMain() {
       <Col xs={12} md={10}>
       <div style={{ width: '100%', padding: '20px' }}>
         <ImageCarousel></ImageCarousel>
+        <div className={style.MainCategoryList}>
+          {categories.map((category) =>(
+          <div className={style.MainCategoryCard}>
+            <h5>{category.label}</h5>
+            <p>{category.subcategories.length} {getCategoryLabel(category.subcategories.length)}</p>
+            <img src={category.image}></img>
+          </div>
+        ))}
+        </div>
+        <div className={style.FeaturedProducts}>
+  <h2>{t('MainPageShop.FeaturedProducts.Title')}</h2>
+  <div className={style.ProductList}>
+    {categories.map((category) =>
+      products[category.key]?.slice(0, 1).map((product) => ( // Bierzemy jeden produkt na kategorię
+        <div key={product.id} className={style.ProductCard}>
+          <img src={product.image} alt={product.name} />
+          <h5>{product.name}</h5>
+          <p>{t(`MainPageShop.LeftBar.${category.key}.${product.subcategory}`)}</p>
+          <p>{product.price} PLN</p>
+          <button onClick={() => navigate(`/shop/${category.key}/${product.subcategory}/${product.id}`)}>
+            {t('MainPageShop.FeaturedProducts.BuyNow')}
+          </button>
+        </div>
+      ))
+    )}
+  </div>
+</div>
+        
       </div>
         
       </Col>
