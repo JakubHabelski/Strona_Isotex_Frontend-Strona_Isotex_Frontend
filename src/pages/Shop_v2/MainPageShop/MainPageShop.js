@@ -1,75 +1,90 @@
 import Navbar from "../../../components/Navbar_v2/Navbar";
 import Footer from '../../../components/Footer';
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Image, Row, Spinner } from "react-bootstrap";
 import style from './MainPageShop.module.css';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
-import ControlledCarousel from "../../../components/Carousel/Carousel";
 import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
+import axios from "axios";
 
 function MainPageShopMain() {
-  const [showLists, setShowLists] = useState({
-    fabrics: false,
-    fillings: false,
-    services: false,
-  });
+  const apiUrl = process.env.REACT_APP_API_URL;
+  const [categories, setCategories] = useState([]);
+  const [subcategoriesbycat, setSubcategoriesbycat] = useState([]);
+  const [subcatbottomlist, setSubcatbottomlist] = useState([]);
+  const [selectedCat, setSelectedCat] = useState('');
+  const [subcatBottomList, SetSubcatBottomList] = useState('');
+  const [showLists, setShowLists] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [productList, setProductList] = useState([]);
+  const [selectedSubCat, setSelectedSubCat] = useState(null);
+
   const listRefs = useRef({});
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const categories = [
-    {
-      key: 'fabrics',
-      icon: '/assets/fabric.png',
-      image: '/assets/materials/fabrics/glass/Silikon_szary.jpg',
-      label: t('MainPageShop.LeftBar.Category.Fabrics'),
-      arrowId: 'fabricArrow',
-      subcategories: ['glassFabric', 'aramidFabric'],
-    },
-    {
-      key: 'fillings',
-      icon: '/assets/icons/wool-fabric.png',
-      image: '/assets/materials/Fillings/welna-mineralna.jpg',
-      label: t('MainPageShop.LeftBar.Category.Fillings'),
-      arrowId: 'fillingArrow',
-      subcategories: ['mineralWool', 'ceramicWool', 'glassMat'],
-    },
-    {
-      key: 'services',
-      icon: '/assets/icons/services.png',
-      image: '/assets/handshake.jpg',
-      label: t('MainPageShop.LeftBar.Category.Services'),
-      arrowId: 'servicesArrow',
-      subcategories: ['measurement', 'project', 'mattressProduction', 'installation'],
-    },
-  ];
+  useEffect(() => {
+    setLoading(true);
+    axios.get('http://192.168.68.103:8080/Category_API/GetCategories')
+      .then(async (response) => {
+        const categoriesData = response.data;
+        const categoriesWithSub = await Promise.all(
+          categoriesData.map(async (cat) => {
+            let subcategories = [];
+            try {
+              const subRes = await axios.get('http://192.168.68.103:8080/Category_API/GetSubCategoriesByCategory', {
+                params: { CategoryId: cat.id }
+              });
+              subcategories = subRes.data;
+            } catch (e) {
+              subcategories = [];
+            }
+            // Dynamiczny label wg języka
+            const label = i18n.language === 'en' ? cat.LabelEN : cat.LabelPL;
+            return {
+              key: cat.id,
+              icon: cat.icon_url,
+              image: '/assets/materials/fabrics/glass/Silikon_szary.jpg',
+              label,
+              arrowId: `arrow_${cat.id}`,
+              subcategories: subcategories.map(sub => ({
+                key: sub.id,
+                label: i18n.language === 'en' ? sub.LabelEN : sub.LabelPL
+              }))
+            };
+          })
+        );
+        setCategories(categoriesWithSub);
 
-  const products = {
-  fabrics: [
-    { id: 1, subcategory: 'glassFabric', name: 'Silikon Szary', image: '/assets/materials/fabrics/glass/Silikon_szary.jpg', price: 99.99 },
-    // ...
-  ],
-  fillings: [
-    { id: 2, subcategory: 'mineralWool', name: 'Wełna Mineralna', image: '/assets/materials/Fillings/welna-mineralna.jpg', price: 49.99 },
-    // ...
-  ],
-  services: [
-    { id: 3, subcategory: 'measurement', name: 'Pomiar', image: '/assets/handshake.jpg', price: 199.99 },
-    // ...
-  ],
-};
+        // Domyślnie wszystkie listy zwinięte
+        const initialShowLists = {};
+        categoriesWithSub.forEach(cat => {
+          initialShowLists[cat.key] = false;
+        });
+        setShowLists(initialShowLists);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Błąd podczas pobierania kategorii:', error);
+        setLoading(false);
+      });
+  }, [i18n.language]);
 
-  // Funkcja do poprawnego wyświetlania form słowa "kategoria"
-    const getCategoryLabel = (count) => {
-      if (count === 1) {
-        return "kategoria";
-      }
-      if (count >= 2 && count <= 4) {
-        return "kategorie";
-      }
-      return "kategorii"; // Dla 0, 5 i więcej
-    };
+  useEffect(() => {
+    if (selectedCat) {
+      axios.get('http://192.168.68.103:8080/Category_API/GetSubCategoriesByCategory', {
+        params: { CategoryId: selectedCat }
+      })
+        .then((response) => {
+          setSubcategoriesbycat(response.data);
+        })
+        .catch((error) => {
+          setSubcategoriesbycat([]);
+        });
+    }
+  }, [selectedCat]);
+
 
   const toggleList = (key, arrowId) => {
     setShowLists((prev) => {
@@ -83,6 +98,27 @@ function MainPageShopMain() {
     });
   };
 
+  const showBottomList = (key) =>{
+    console.log(key)
+    axios.get('http://192.168.68.103:8080/Category_API/GetSubCategoriesByCategory', {
+      params : { CategoryId: key}
+    })
+      .then((response) =>{
+        console.log("setSubcatbottomlist: ",response.data)
+        setSubcatbottomlist(response.data)
+      })
+  }
+  const handleSelectSubCatBottomList = (key) =>{
+    setSelectedSubCat(key);
+    console.log(key)
+    axios.get(`${apiUrl}/products/subcategory/${key}/pl`)
+    .then((response) =>{
+      console.log(response.data)
+      setProductList(response.data)
+    })
+  }
+
+
   useEffect(() => {
     Object.keys(listRefs.current).forEach((key) => {
       const ref = listRefs.current[key];
@@ -93,73 +129,93 @@ function MainPageShopMain() {
   }, [showLists]);
 
   return (
-    <Row style={{margin: 0}}>
+    <Row style={{ margin: 0 }}>
       <Col xs={12} md={2} className={style.MainPageShopLinksContainer}>
-        {categories.map((category) => (
-          <div key={category.key} className={style.MainPageShopLinks}>
-            <div
-              style={{ cursor: 'pointer' }}
-              className={style.MainCategory}
-              onClick={() => toggleList(category.key, category.arrowId)}
-            >
-              <Image src={category.icon} alt={category.label} width={32} height={32} />
-              <h3>{category.label}</h3>
-              <Image
-                src="/assets/icons/right-arrow.png"
-                id={category.arrowId}
-                alt="Arrow"
-                width={32}
-                height={32}
-              />
+        {loading ? (
+          <>
+          <Spinner animation="border" role="status">
+            
+          </Spinner><span  style={{color: "black"}}> &nbsp; Loading...</span>
+          </>
+          
+        ) : (
+          categories.map((category) => (
+            <div key={category.key} className={style.MainPageShopLinks}>
+              <div
+                style={{ cursor: 'pointer' }}
+                className={style.MainCategory}
+                
+              >
+                <Image src={category.icon} alt={category.label} width={32} height={32} />
+                <h3 onClick={() => showBottomList(category.key)}>{category.label}</h3>
+                <Image
+                  src="/assets/icons/right-arrow.png"
+                  id={category.arrowId}
+                  alt="Arrow"
+                  width={32}
+                  height={32}
+                  onClick={() => toggleList(category.key, category.arrowId)}
+                />
+              </div>
+              <div
+                ref={(el) => (listRefs.current[category.key] = el)}
+                className={`${style.subcategorylist} ${showLists[category.key] ? style.open : ''}`}
+              >
+                {category.subcategories.map((subcategory) => (
+                  <div key={subcategory.key} className={style.listitem}>
+                    <div className={style.bar}></div>
+                    <p>{subcategory.label}</p>
+                    <Image src="/assets/icons/right-arrow.png" alt="Arrow" width={32} height={32} onClick={() => navigate(`/Sklep/${subcategory.key}`)}/>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div
-              ref={(el) => (listRefs.current[category.key] = el)}
-              className={`${style.subcategorylist} ${showLists[category.key] ? style.open : ''}`}
-            >
-              {category.subcategories.map((subcategory) => (
-                <div key={subcategory} className={style.listitem}>
-                  <div className={style.bar}></div>
-                  <p>{t(`MainPageShop.LeftBar.${category.key}.${subcategory}`)}</p>
-                  <Image src="/assets/icons/right-arrow.png" alt="Arrow" width={32} height={32} />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))
+        )}
       </Col>
       <Col xs={12} md={10}>
-      <div style={{ width: '100%', padding: '20px' }}>
-        <ImageCarousel></ImageCarousel>
-        <div className={style.MainCategoryList}>
-          {categories.map((category) =>(
-          <div className={style.MainCategoryCard}>
-            <h5>{category.label}</h5>
-            <p>{category.subcategories.length} {getCategoryLabel(category.subcategories.length)}</p>
-            <img src={category.image}></img>
+        <div style={{ width: '100%', padding: '20px' }}>
+          <ImageCarousel />
+          <div>
+            <h5 style={{fontWeight: "lighter", margin: "20px 0px"}}>
+              {subcatbottomlist.length > 0 && subcatbottomlist[0].categoryShowDTO
+                ? (i18n.language === "en"
+                    ? subcatbottomlist[0].categoryShowDTO.LabelEN
+                    : subcatbottomlist[0].categoryShowDTO.LabelPL)
+                : null}
+            </h5>
+            <div className={style.MainCategoryList}>
+              {selectedSubCat && productList.length > 0 ? (
+                productList.map((product) => (
+                  <div key={product.id}>
+                    {product.id}
+                    {/* Możesz tu dodać więcej informacji o produkcie */}
+                  </div>
+                ))
+              ) : subcatbottomlist && subcatbottomlist.length > 0 ? (
+                subcatbottomlist.map((subcat) => (
+                  <div
+                    className={style.MainCategoryCard}
+                    key={subcat.id}
+                    onClick={() => handleSelectSubCatBottomList(subcat.id)}
+                  >
+                    <h5>{i18n.language === "en" ? subcat.LabelEN : subcat.LabelPL}</h5>
+                    <p>{subcatbottomlist.length}</p>
+                    <img src={subcat.photo_url} />
+                  </div>
+                ))
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
-        ))}
+          <div className={style.FeaturedProducts}>
+            <h2>{t('MainPageShop.FeaturedProducts.Title')}</h2>
+            <div className={style.ProductList}>
+           
+            </div>
+          </div>
         </div>
-        <div className={style.FeaturedProducts}>
-  <h2>{t('MainPageShop.FeaturedProducts.Title')}</h2>
-  <div className={style.ProductList}>
-    {categories.map((category) =>
-      products[category.key]?.slice(0, 1).map((product) => ( // Bierzemy jeden produkt na kategorię
-        <div key={product.id} className={style.ProductCard}>
-          <img src={product.image} alt={product.name} />
-          <h5>{product.name}</h5>
-          <p>{t(`MainPageShop.LeftBar.${category.key}.${product.subcategory}`)}</p>
-          <p>{product.price} PLN</p>
-          <button onClick={() => navigate(`/shop/${category.key}/${product.subcategory}/${product.id}`)}>
-            {t('MainPageShop.FeaturedProducts.BuyNow')}
-          </button>
-        </div>
-      ))
-    )}
-  </div>
-</div>
-        
-      </div>
-        
       </Col>
     </Row>
   );

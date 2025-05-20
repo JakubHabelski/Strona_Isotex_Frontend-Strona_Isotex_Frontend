@@ -8,11 +8,16 @@ import style from "../AddProduct/AddProduct.module.css"
 
 
 function EditProductsList(){
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const [products, setProducts] = useState([]);
     const [editRow, setEditRow] = useState(null);
     const [selectedCategory, setselectedCategory] = useState("");
     const [selectedSubCategory, setSelectedSubCategory] = useState("");
+    const [categories, setCategories] = useState([]);
+    const [subcategories, setSubcategories] = useState([]);
+    const [selectedCat, setSelectedCat] = useState('');
+    const [selectedSubCat, setSelectedSubCat] = useState('');
 
     const [show, setShow] = useState(false);
 
@@ -20,27 +25,31 @@ function EditProductsList(){
     
 
 
-    const categories = [{en: "FABRIC", pl: "Tkaniny"}, {en: "FILLING", pl: "Wypełnienia"}, {en: "SERVICES", pl: "Usługi"}];
-    const subCategories = {
-        FABRIC: [
-            { value: "GLASS_FABRIC", label: "Tkaniny szklane" },
-            { value: "ARAMID_FABRIC", label: "Tkaniny aramidowe" },
-        ],
-        FILLING: [
-            { value: "MINERAL_WOOL", label: "Wełna mineralna" },
-            { value: "CERAMIC_WOOL", label: "Wełna ceramiczna" },
-            { value: "GLASS_MAT", label: "Mata szklana" },
-        ],
-        SERVICES: [
-            { value: "MESURING", label: "Pomiar" },
-            { value: "PROJECT", label: "Projekt" },
-            { value: "MATTRESS_PRODUCTION", label: "Produkcja materacy" },
-            { value: "INSTALLATION", label: "Montaż" },
-        ]
-        };
+    useEffect(() => {
+    axios.get(`${apiUrl}/Category_API/GetCategories`)
+        .then((response) => {
+        setCategories(response.data);
+        })
+        .catch((error) => {
+        console.error('Błąd podczas pobierania kategorii:', error);
+        });
+    }, []);
+    useEffect(() => {
+    if (selectedCat) {
+        axios.get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+        params: { CategoryId: selectedCat }
+        })
+        .then((response) => {
+            setSubcategories(response.data);
+        })
+        .catch((error) => {
+            setSubcategories([]);
+        });
+    }
+    }, [selectedCat]);
 
 
-    const apiUrl = process.env.REACT_APP_API_URL;
+
     const request = `${apiUrl}/Product_API/updateProduct`;
 
     const [formData, setFormData] = useState({
@@ -63,24 +72,32 @@ function EditProductsList(){
     }, {apiUrl})
 
 
-     const handleEditClick = async (product) =>{
-       setShow(true);
-      console.log(product.id);
-      setEditRow(product.id)
-      setFormData({
+    const handleEditClick = async (product) => {
+    setShow(true);
+    setEditRow(product.id);
+
+    // Załóżmy, że product.category i product.subcategory to obiekty
+    // Wyciągnij klucz/enum/value do selecta (np. en, value lub inny unikalny identyfikator)
+    const categoryValue = product.category?.en || product.category; // lub inny klucz, zależnie od struktury
+    const subCategoryValue = product.subcategory?.value || product.subcategory; // analogicznie
+
+    setselectedCategory(categoryValue);
+    setSelectedSubCategory(subCategoryValue);
+
+    setFormData({
         id: product.id,
         name_pl: product.translations[0].name,
         name_en: product.translations[1].name,
         description_pl: product.translations[0].description,
         description_en: product.translations[1].description,
         price: product.price,
-        category: product.category,
-        subCategory: product.subcategory,
+        category: categoryValue,
+        subCategory: subCategoryValue,
         stock_quantity: product.stock_quantity,
         photo: product.image_url
-      })
-          
-    }
+    });
+    };
+
 const handleChange = (event) => {
     const { name, value, files } = event.target;
 
@@ -90,6 +107,7 @@ const handleChange = (event) => {
     }));
 };
 
+
     const handleSelectChange = (event) => {
         const value = event.target.value;
         setselectedCategory(value);
@@ -98,20 +116,25 @@ const handleChange = (event) => {
             category: value
         }));
         };
-    const handleSubCategoryChange = (event) =>{
-        const  value = event.target.value;
-        setSelectedSubCategory(value);
-        setFormData((prevData) => ({
-            ...prevData,
-            subCategory: value
-        }));
-    }
+    const handleCategoryChange = (event) => {
+    setSelectedCat(event.target.value);
+    setSelectedSubCat(''); // resetuj podkategorię przy zmianie kategorii
+    };
+
+    const handleSubCategoryChange = (event) => {
+    setSelectedSubCat(event.target.value);
+    };
     const handleUpload = async () => {
         const file = formData.photo;
+        if (!file || typeof file === "string") {
+            // Nie ma nowego pliku do uploadu
+            return null;
+        }
+
         const fileName = `${Date.now()}_${file.name}`;
 
         const { data, error } = await supabase.storage
-            .from('teststrony') // <- Twój bucket
+            .from('teststrony')
             .upload(fileName, file);
 
         if (error) {
@@ -122,7 +145,7 @@ const handleChange = (event) => {
         const publicUrl = supabase.storage
             .from('teststrony')
             .getPublicUrl(fileName).data.publicUrl;
-
+        console.log("publicUrl: ", publicUrl)
         return publicUrl;
     };
 
@@ -130,10 +153,7 @@ const handleChange = (event) => {
         event.preventDefault();
 
         const imageUrl = await handleUpload();
-        if (!imageUrl) {
-            alert("Błąd przesyłania zdjęcia.");
-            return;
-        }
+       
 
         const productData = {
             id : parseInt(formData.id),
@@ -142,11 +162,14 @@ const handleChange = (event) => {
             description_pl: formData.description_pl,
             description_en: formData.description_en,
             price: parseFloat(formData.price),
-            category: formData.category,
-            subCategory: formData.subCategory,
+            category: selectedCat,
+            subCategory: selectedSubCat,
             stock_quantity: parseInt(formData.stock_quantity),
-            photoUrl: imageUrl // <- Wysyłasz tylko URL
+          //  photoUrl: imageUrl // <- Wysyłasz tylko URL
         };
+            if (imageUrl) {
+            productData.photoUrl = imageUrl;
+        }
         console.log("productData: "+productData)
         try {
             await axios.put(request, productData, {
@@ -190,8 +213,20 @@ const handleChange = (event) => {
                             <td>{product.translations[1].description}</td>
                             <td>{product.price}</td>
                             <td>{product.stock_quantity}</td>
-                            <td>{product.category}</td>
-                            <td>{product.subcategory}</td>
+                            <td>
+                                {
+                                    product.category?.translations?.find(t => t.locale === "PL")?.label ||
+                                    product.category?.translations?.[0]?.label ||
+                                    "-"
+                                }
+                                </td>
+                                <td>
+                                {
+                                    product.subcategory?.translations?.find(t => t.locale === "PL")?.label ||
+                                    product.subcategory?.translations?.[0]?.label ||
+                                    "-"
+                                }
+                                </td>
                             <td style={{maxWidth: "500px"}}><img src={product.image_url} style={{maxWidth:"-webkit-fill-available"}}></img></td>
                             <td>
                                 <Button onClick={() => handleEditClick(product)}>Edytuj</Button>
@@ -229,35 +264,45 @@ const handleChange = (event) => {
                           <Form.Label>Cena</Form.Label>
                           <Form.Control type="number" placeholder="Opis" name="price" value={formData.price} onChange={handleChange} required/>
                       </Form.Group>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                      <Form.Label>Kategoria</Form.Label>
-                      <Form.Select value={selectedCategory} onChange={handleSelectChange} required>
-                          <option value="" disabled hidden>Wybierz kategorię...</option>
-                          {categories.map((cat) => (
-                          <option key={cat.en} value={cat.en}>{cat.pl}</option>
-                          ))}
-                      </Form.Select>
-                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="categorySelect">
+                        <Form.Label>Kategoria</Form.Label>
+                        <Form.Select value={selectedCat} onChange={handleCategoryChange} required>
+                            <option value="" disabled hidden>Wybierz kategorię...</option>
+                            {categories.map((cat) => (
+                            <option key={cat.id} value={cat.id}>
+                                {cat.LabelPL}
+                            </option>
+                            ))}
+                        </Form.Select>
+                        </Form.Group>
 
-                      {selectedCategory && (
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                          <Form.Label>Podkategoria</Form.Label>
-                          <Form.Select value={selectedSubCategory} onChange={handleSubCategoryChange} required>
-                          <option value="" disabled hidden>Wybierz podkategorię...</option>
-                          {subCategories[selectedCategory].map((sub) => (
-                              <option key={sub.value} value={sub.value}>{sub.label}</option>
-                          ))}
-                          </Form.Select>
-                      </Form.Group>
-                      )}
+                        {selectedCat && (
+                        <Form.Group className="mb-3" controlId="subcategorySelect">
+                            <Form.Label>Podkategoria</Form.Label>
+                            <Form.Select value={selectedSubCat} onChange={handleSubCategoryChange} required>
+                            <option value="" disabled hidden>Wybierz podkategorię...</option>
+                            {subcategories.map((sub) => (
+                                <option key={sub.id} value={sub.id}>
+                                {sub.LabelPL}
+                                </option>
+                            ))}
+                            </Form.Select>
+                        </Form.Group>
+                        )}
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                           <Form.Label>Stan magazynowy</Form.Label>
                           <Form.Control type="number" placeholder="Ilość" name="stock_quantity" value={formData.stock_quantity} onChange={handleChange} required/>
                       </Form.Group>
-                      <Form.Group controlId="formFile" className="mb-3">
-                          <Form.Label>Zdjęcie</Form.Label>
-                          <Form.Control type="file"  name="photo"  onChange={handleChange} required/>
-                      </Form.Group>
+                        <Form.Group controlId="formFile" className="mb-3">
+                            <Form.Label>Zdjęcie</Form.Label>
+                            <Form.Control type="file" name="photo" onChange={handleChange} />
+                            {typeof formData.photo === "string" && formData.photo && (
+                                <div style={{marginTop: 8}}>
+                                <img src={formData.photo} alt="Aktualne zdjęcie" style={{maxWidth: 150}} />
+                                <div style={{fontSize: 12, color: "#888"}}>Aktualne zdjęcie produktu</div>
+                                </div>
+                            )}
+                            </Form.Group>
 
                       <Button variant="primary" type="submit">Wyślij</Button>
                   </Form>

@@ -5,10 +5,13 @@ import axios from "axios";
 import { Button, Form, Table } from "react-bootstrap";
 import style from "./Check_order.module.css"
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 function OrderInfo(){
    // const { orderid } = useParams();
+    const { i18n } = useTranslation();
+
     const [OrderInfo, SetOrderInfo] = useState({});
     const [form_order_id, Setfrom_order_id] = useState("");
     const [showCustomerInfo, setShowCustomerInfo] = useState(false);
@@ -75,21 +78,27 @@ function OrderInfo(){
                 <th>Cena</th>
                 </tr>
             </thead>
-           <tbody>
-            {Array.isArray(OrderInfo.orderProductsInfo) ? (
-                OrderInfo.orderProductsInfo.map((ProductsInfo) => (
-                <tr key={ProductsInfo.id}>
-                    <td>{ProductsInfo.product?.id}</td>
-                    <td>{ProductsInfo.product?.translations?.[0]?.name || "Brak nazwy"}</td>
-                    <td>{ProductsInfo.quantity}</td>
-                    <td>{ProductsInfo.product?.price}</td>
-                </tr>
-                ))
-            ) : (
-                <tr>
-                <td colSpan={4}>Ładowanie danych lub brak produktów...</td>
-                </tr>
-            )}
+            <tbody>
+                {Array.isArray(OrderInfo.orderProductsInfo) ? (
+                    OrderInfo.orderProductsInfo.map((ProductsInfo) => {
+                    // Pobierz tłumaczenie zgodnie z językiem
+                    const translation = ProductsInfo.product?.translations?.find(
+                        t => t.locale === i18n.language.toUpperCase()
+                    );
+                    return (
+                        <tr key={ProductsInfo.id}>
+                        <td>{ProductsInfo.product?.id}</td>
+                        <td>{translation?.name || "Brak nazwy"}</td>
+                        <td>{ProductsInfo.quantity}</td>
+                        <td>{ProductsInfo.product?.price}</td>
+                        </tr>
+                    );
+                    })
+                ) : (
+                    <tr>
+                    <td colSpan={4}>Ładowanie danych lub brak produktów...</td>
+                    </tr>
+                )}
             </tbody>
 
         </Table>

@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import Footer from "../../../components/Footer";
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { supabase } from '../../../utils/supabase';
 import style from "./AddProduct.module.css"
@@ -11,6 +11,12 @@ function AddProductform(){
     const apiUrl = process.env.REACT_APP_API_URL;
     const request = `${apiUrl}/Product_API/addproduct`;
 
+    const [categories, setCategories] = useState([]);
+    const [subcategories, setSubcategories] = useState([]);
+    const [subcategoriesbycat, setSubcategoriesbycat] = useState([]);
+    const [selectedCat, setSelectedCat] = useState('');
+    const [selectedSubCat, setSelectedSubCat] = useState('');   
+    /*
     const categories = [{en: "FABRIC", pl: "Tkaniny"}, {en: "FILLING", pl: "Wypełnienia"}, {en: "SERVICES", pl: "Usługi"}];
     const subCategories = {
         FABRIC: [
@@ -29,9 +35,54 @@ function AddProductform(){
             { value: "INSTALLATION", label: "Montaż" },
         ]
         };
+    */
+    //fetching cateogries
+    useEffect(() => {
+          axios.get(`${apiUrl}/Category_API/GetCategories`)
+            .then((response) => {
+              console.log(response.data);
+              setCategories(response.data);
+            })
+            .catch((error) => {
+              console.error('Błąd podczas pobierania kategorii:', error);
+            });
+        }, []);
+    //fetching subcategories by selected category
+    useEffect(() =>{
+      if(selectedCat){axios.get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+        params:{
+          CategoryId: selectedCat
+        }
+      })
+      .then((response) =>{
+        console.log("setSubcategoriesbycat: ",response.data)
+        setSubcategoriesbycat(response.data)
+      })
+      .catch((error) =>{
+        console.log("Błąd: " , error)
+        setSubcategoriesbycat([])
+      });}
+    }, [selectedCat]);
 
+    const handleCategoryChange = (event) =>{
+      const {name, value} = event.target;
+      setSelectedCat(value)
+      console.log("selectedCat: ", selectedCat)
+      setFormData((prevData) => ({
+            ...prevData,
+            category: value
+        }));
+    }
+    const handleSubCategoryChange = (event) =>{
+      const {name, value} = event.target;
+      setSelectedSubCat(value);
+      console.log("selectedsubcat: ", value);
+      setFormData((prevData) => ({
+            ...prevData,
+            subCategory: value
+        }));
+    }
 
-    
     const [selectedCategory, setselectedCategory] = useState("");
     const [selectedSubCategory, setSelectedSubCategory] = useState("");
 
@@ -41,7 +92,7 @@ function AddProductform(){
         description_pl: "",
         description_en: "",
         price: "",
-        category: selectedCategory,
+        category: selectedCat,
         subCategory: selectedSubCategory,
         stock_quantity: "",
         photo: ''
@@ -63,6 +114,7 @@ function AddProductform(){
             category: value
         }));
         };
+    /*
     const handleSubCategoryChange = (event) =>{
         const  value = event.target.value;
         setSelectedSubCategory(value);
@@ -71,6 +123,7 @@ function AddProductform(){
             subCategory: value
         }));
     }
+        */
     const handleUpload = async () => {
         const file = formData.photo;
         const fileName = `${Date.now()}_${file.name}`;
@@ -152,24 +205,24 @@ function AddProductform(){
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Kategoria</Form.Label>
-            <Form.Select value={selectedCategory} onChange={handleSelectChange} required>
-                <option value="" disabled hidden>Wybierz kategorię...</option>
-                {categories.map((cat) => (
-                <option key={cat.en} value={cat.en}>{cat.pl}</option>
-                ))}
-            </Form.Select>
+                      <Form.Select value={formData.category} onChange={handleCategoryChange}>
+                        <option value="" disabled hidden>Wybierz kategorię...</option>
+                        {categories.map((category) =>(
+                        <option name={category.id} value={category.id}>{category.LabelPL}</option>
+                      ))}
+                      </Form.Select>
             </Form.Group>
 
-            {selectedCategory && (
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Podkategoria</Form.Label>
-                <Form.Select value={selectedSubCategory} onChange={handleSubCategoryChange} required>
-                <option value="" disabled hidden>Wybierz podkategorię...</option>
-                {subCategories[selectedCategory].map((sub) => (
-                    <option key={sub.value} value={sub.value}>{sub.label}</option>
-                ))}
-                </Form.Select>
-            </Form.Group>
+             {selectedCat &&(
+                        <Form.Group>
+                          <Form.Label>Podkategoria</Form.Label>
+                          <Form.Select value={formData.subCategory} onChange={handleSubCategoryChange}>
+                            <option value='' disabled hidden>Wybierz podkategorię</option>
+                            {subcategoriesbycat.map((subcategory) =>(
+                              <option value={subcategory.id}>{subcategory.LabelPL}</option>
+                            ))}
+                          </Form.Select>
+                        </Form.Group>
             )}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Stan magazynowy</Form.Label>

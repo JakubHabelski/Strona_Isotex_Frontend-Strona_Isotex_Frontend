@@ -29,6 +29,7 @@
     flex-grow: 1; /* Pozwala h3 rozciągnąć się i wypełnić przestrzeń */
   }
   .MainPageShopLinks .subcategorylist {
+    overflow: hidden;
     margin-top: 1rem;
     overflow-x: hidden; /* Ukrywa zawartość poza max-height */
     transition: max-height 0.3s ease-in-out; /* Płynna zmiana wysokości */
