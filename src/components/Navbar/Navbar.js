@@ -55,7 +55,7 @@ function NavbarMain() {
               <Nav.Link href="#pricing">{t("navbar.foam")}</Nav.Link>
               <Nav.Link href="#pricing">{t("navbar.blog")}</Nav.Link>
               <Nav.Link href="#pricing">{t("navbar.contact")}</Nav.Link>
-              <Nav.Link onClick={() => navigate("/Sklep")}>
+              <Nav.Link onClick={() => navigate("/MainPageShop")}>
                 {t("navbar.shop")}
               </Nav.Link>
             </Nav>

@@ -1,5 +1,5 @@
 .MainPageShopLinksContainer{
-  padding-top: 50px;
+  
 }
 
 .MainPageShopLinks {
@@ -62,7 +62,7 @@
 .MainCategoryCard{
   display: grid;
   grid-template-columns: repeat(2, 1fr) repeat(3, 0);
-  grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+  grid-template-rows: 200px repeat(4, 0);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 200px;
@@ -80,19 +80,26 @@
   box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 0.5);
   scale: 1.01;
 }
-.MainCategoryCard h5{
+.MainCategoryCard .CardText{
   grid-area: 1 / 1 / 2 / 2;
-}
-.MainCategoryCard p{
-  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
 .MainCategoryCard img{
   object-fit: contain;
   width: 100%;
   height: 100%;
-  grid-area: 1 / 2 / 3 / 3;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.arrow {
+  transition: transform 0.3s;
 }
 
+.arrowOpen {
+  transform: rotate(90deg);
+}
 .FeaturedProducts {
   padding: 20px;
 }
@@ -150,3 +157,10 @@
 .ProductCard button:hover {
   background-color: #0056b3;
 }
+  .modal_custom_img{
+    width: min(1500px, 100%);
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+
+  }

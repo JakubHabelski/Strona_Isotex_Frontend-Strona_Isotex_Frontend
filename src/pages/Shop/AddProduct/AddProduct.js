@@ -145,7 +145,6 @@ function AddProductform(){
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
 
         const imageUrl = await handleUpload();
         if (!imageUrl) {

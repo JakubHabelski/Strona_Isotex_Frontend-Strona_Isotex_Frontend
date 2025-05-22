@@ -757,7 +757,14 @@
     "price": "Cena: {{price}} zł",
     "outOfStock": "Brak w magazynie",
     "unavailable": "Niedostępny",
-    "addToCart": "Dodaj do koszyka"
+    "addToCart": "Dodaj do koszyka",
+    "productsCount_0": "Brak produktów",
+    "productsCount_1": "{{count}} produkt",
+    "productsCount_2": "{{count}} produkty",
+    "productsCount_3": "{{count}} produkty",
+    "productsCount_4": "{{count}} produkty",
+    "productsCount_5": "{{count}} produktów",
+    "productsCount_plural": "{{count}} produktów"
   },
   "cart": {
     "title": "Twój koszyk",

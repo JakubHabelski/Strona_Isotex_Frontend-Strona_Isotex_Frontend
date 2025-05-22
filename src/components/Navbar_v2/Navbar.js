@@ -21,7 +21,7 @@ export default function Navbar_v2() {
     { path: "/fabrics", name: t("navbar.technicalFabrics") },
     { path: "/wypelnienia", name: t("navbar.fillings") },
     { path: "/kontakt", name: t("navbar.contact") },
-    { path: "/Sklep", name: t("navbar.shop") },
+    { path: "/MainPageShop", name: t("navbar.shop") },
   ]
 
 

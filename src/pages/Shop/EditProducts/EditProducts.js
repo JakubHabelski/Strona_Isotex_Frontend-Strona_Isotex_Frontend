@@ -150,7 +150,6 @@ const handleChange = (event) => {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
 
         const imageUrl = await handleUpload();
        
