@@ -69,6 +69,7 @@
 }
 .card_element{
     width: 100%;
+    cursor: pointer;
 }
 .card_element img{
     aspect-ratio: 1/1;

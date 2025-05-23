@@ -30,7 +30,7 @@ export default function ParallaxImage() {
         const overlayProgress = Math.min(Math.max((scrollPosition - sectionTop) / sectionHeight, 0), 1);
         const overlayOpacity = 0.5 + overlayProgress * 0.5;
         overlay.style.opacity = overlayOpacity;
-
+        /*
         console.log('Parallax:', {
           offsetTop,
           offsetHeight: sectionHeight,
@@ -41,7 +41,7 @@ export default function ParallaxImage() {
           scrollY_plus_windowHeight: scrollPosition + windowHeight,
           parallaxOffset,
           overlayOpacity,
-        });
+        }); */
       } else {
         console.log('Refs missing:', {
           parallax: parallaxRef.current,

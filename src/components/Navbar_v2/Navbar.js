@@ -17,7 +17,7 @@ export default function Navbar_v2() {
 
   const menuData = [
     { path: "/", name: "Home" },
-    { path: "/about", name: t("navbar.about") },
+    { path: "/AboutUs", name: t("navbar.about") },
     { path: "/fabrics", name: t("navbar.technicalFabrics") },
     { path: "/wypelnienia", name: t("navbar.fillings") },
     { path: "/kontakt", name: t("navbar.contact") },

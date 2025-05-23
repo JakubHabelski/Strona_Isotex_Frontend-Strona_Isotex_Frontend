@@ -1,0 +1,104 @@
+/* SimpleBanner.module.css */
+.SimpleBannerContainer{
+    height: calc(100vh - 133px);
+}
+.banner {
+  background: linear-gradient(to right top, #1E3A8A, #3B82F6, #60A5FA);
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Dekoracyjne elementy (zamiast gwiazdek) */
+.decorativeElementLeft,
+.decorativeElementRight {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: sparkle 2s infinite alternate;
+}
+
+.decorativeElementLeft {
+  top: 20px;
+  left: 20px;
+}
+
+.decorativeElementRight {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Animacje */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .decorativeElementLeft,
+  .decorativeElementRight {
+    width: 30px;
+    height: 30px;
+  }
+}

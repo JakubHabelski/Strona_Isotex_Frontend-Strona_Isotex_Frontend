@@ -1,4 +1,4 @@
-import '../fabrics_list/fabrics_list.css';
+
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
@@ -13,7 +13,7 @@ export default function Filling_List() {
 
   return (
     <>
-      <Card className="card_item" onClick={() => redirectToPage('/wypelnienia/welna-mineralna')}>
+      <Card onClick={() => redirectToPage('/wypelnienia/welna-mineralna')}>
         <Card.Img variant="top" src="/assets/materials/Fillings/welna-mineralna.jpg" className="card_img" />
         <Card.Body>
           <Card.Title>{t("fillings.mineralWool")}</Card.Title>  {/* Przetłumaczony tytuł */}
@@ -23,7 +23,7 @@ export default function Filling_List() {
         </Card.Body>
       </Card>
 
-      <Card className="card_item" onClick={() => redirectToPage('/wypelnienia/welna-ceramiczna')}>
+      <Card  onClick={() => redirectToPage('/wypelnienia/welna-ceramiczna')}>
         <Card.Img variant="top" src="/assets/materials/Fillings/welna-ceramiczna.jpg" className="card_img" />
         <Card.Body>
           <Card.Title>{t("fillings.ceramicWool")}</Card.Title>  {/* Przetłumaczony tytuł */}
@@ -33,7 +33,7 @@ export default function Filling_List() {
         </Card.Body>
       </Card>
 
-      <Card className="card_item" onClick={() => redirectToPage('/wypelnienia/mata-szklana')}>
+      <Card onClick={() => redirectToPage('/wypelnienia/mata-szklana')}>
         <Card.Img variant="top" src="/assets/materials/Fillings/mata-szklana.jpg" className="card_img" />
         <Card.Body>
           <Card.Title>{t("fillings.glassMat")}</Card.Title>  {/* Przetłumaczony tytuł */}

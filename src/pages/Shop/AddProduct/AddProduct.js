@@ -181,6 +181,7 @@ function AddProductform(){
     console.log(formData)
     return(
         <>
+        <h1>Dodaj produkt</h1>
         <Form onSubmit={handleSubmit} className={style.AddProductForm}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Nazwa Polska</Form.Label>

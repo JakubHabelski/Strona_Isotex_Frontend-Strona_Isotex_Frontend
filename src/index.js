@@ -30,6 +30,8 @@ import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_or
 import AddProduct from './pages/Shop/AddProduct/AddProduct';
 import EditProducts from './pages/Shop/EditProducts/EditProducts';
 import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
+import ShopManager from './pages/ShopManager/ShopManager';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 const root = document.getElementById("root");
 
@@ -38,6 +40,7 @@ ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path='/AboutUs' element={<AboutUs/>} />
 
       ## Fiber
       <Route path='/fabrics' element={<Fabrics />} />
@@ -58,6 +61,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/certyfikaty" element={<CertificatePage/>} />
       
       ## Shop
+      <Route path='/ShopManager' element={<ShopManager/>} />
       <Route path="/Sklep" element={<Shop />} />
       <Route path="/Sklep/:category" element={<Product_List />} />
       <Route path="/Sklep/:category/:item" element={<ProductDetail />} />
@@ -68,6 +72,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/check-order-form' element={<Check_order_form/>} />
       <Route path='/AddProduct' element={<AddProduct></AddProduct>} />
       <Route path='/EditProducts' element={<EditProducts/>} />
+
 
       ## Test
       <Route path="/mainpage" element={<MainPage />} />

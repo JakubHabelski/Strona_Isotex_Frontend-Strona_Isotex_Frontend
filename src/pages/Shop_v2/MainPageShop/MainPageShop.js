@@ -223,8 +223,8 @@ function MainPageShopMain() {
   );
 
   return (
-    <>
-      <Col xs={12} md={2} className={style.MainPageShopLinksContainer} style={{ position: "fixed", top: "150px" }}>
+    <div style ={{display: "flex", flexDirection: "row"}}>
+      <Col xs={12} md={2} className={style.MainPageShopLinksContainer} style={{ position: "sticky", top: "150px" }}>
         {loading ? (
           <div>
             <Spinner animation="border" role="status" />
@@ -233,8 +233,9 @@ function MainPageShopMain() {
         ) : (
           categories.map(renderCategory)
         )}
+        
       </Col>
-      <Col xs={12} md={{ span: 10, offset: 2 }}>
+      <Col xs={12} md={10}>
         <div style={{ width: "100%", padding: "20px" }}>
           <ImageCarousel />
           <Breadcrumb>
@@ -306,7 +307,7 @@ function MainPageShopMain() {
           <Toast.Body>{toastMessage}</Toast.Body>
         </Toast>
       </ToastContainer>
-    </>
+    </div>
   );
 }
 

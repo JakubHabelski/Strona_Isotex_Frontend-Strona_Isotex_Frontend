@@ -1,0 +1,69 @@
+.FirstBlock {
+    margin-top: 30px;
+    height: 100%;
+     display: flex;
+    flex-direction: row;
+}
+.FirstBlock h1{ 
+    text-align:left !important;
+}
+.FirstBlock img {
+   
+    max-width: 50%;
+    margin-left: 2rem;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.FirstBlock p {
+    text-align: justify;
+}
+.SecondBlock {
+    margin-top: 30px;
+    height: 100%;
+     display: flex;
+    flex-direction: row;
+}
+.SecondBlock h1{ 
+    text-align:left !important;
+}
+
+.SecondBlock p {
+    text-align: justify;
+}
+
+
+.professionalism_icon{
+    width: 250px;
+    height: 250px;
+    margin-right: 2rem;
+}
+@keyframes appear {
+    from{
+        
+      /*  scale: 0.5;
+      clip-path: inset(100% 100% 0 0); 
+        */
+        transform:  translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+      /*  clip-path: inset(0 0 0 0);
+       scale: 1;
+      */
+     
+      transform:  translateX(0);
+
+    }
+}
+
+.view{
+
+}
+.block{
+    margin:  150px auto ;
+    animation: appear linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
