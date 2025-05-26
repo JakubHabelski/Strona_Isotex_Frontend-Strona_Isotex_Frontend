@@ -19,12 +19,14 @@ export default function Navbar_v2() {
   useEffect(() => {
     const handleScroll = () => {
       if (!navbar.current || !social_media_ref.current) return;
+      /*
       if (currentScroll < window.scrollY) {
         navbar.current.style.transform = `translateY(-${social_media_ref.current.offsetHeight}px)`;
       } else {
         navbar.current.style.transform = `translateY(0px)`;
       }
       setCurrentScroll(window.scrollY);
+      */
     };
 
     window.addEventListener('scroll', handleScroll);

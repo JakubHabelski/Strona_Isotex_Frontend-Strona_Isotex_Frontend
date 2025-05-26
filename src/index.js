@@ -32,6 +32,7 @@ import EditProducts from './pages/Shop/EditProducts/EditProducts';
 import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
 import ShopManager from './pages/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
+import Home from './pages/Home/Home';
 
 const root = document.getElementById("root");
 
@@ -75,6 +76,7 @@ ReactDOM.createRoot(root).render(
 
 
       ## Test
+      <Route path='/home' element={<Home/>} />
       <Route path="/mainpage" element={<MainPage />} />
       <Route path="/test" element={<TestPage />} />
       <Route path='/MainPageShop' element={<MainPageShop></MainPageShop>} />
