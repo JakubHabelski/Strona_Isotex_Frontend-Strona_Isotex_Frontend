@@ -4,12 +4,32 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { BsCart } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
 
 
 
 
 export default function Navbar_v2() {
 
+  const social_media_ref = useRef(null);
+  const navbar = useRef(null);
+
+  const [currentScroll, setCurrentScroll] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!navbar.current || !social_media_ref.current) return;
+      if (currentScroll < window.scrollY) {
+        navbar.current.style.transform = `translateY(-${social_media_ref.current.offsetHeight}px)`;
+      } else {
+        navbar.current.style.transform = `translateY(0px)`;
+      }
+      setCurrentScroll(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [currentScroll]);
 
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -27,8 +47,8 @@ export default function Navbar_v2() {
 
   return (
     <>
-    <div className={styles.navbar_background}>
-     <div className={`${styles.social_media} `}>
+    <div className={styles.navbar_background} ref={navbar}>
+     <div className={`${styles.social_media} `} ref={social_media_ref}>
         <a href="https://www.facebook.com/P.P.U.H.Isotex/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
         <a href="https://www.instagram.com/isotex_insulation_matters/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
         <a href="https://pl.linkedin.com/in/isotex-group-128758264" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>

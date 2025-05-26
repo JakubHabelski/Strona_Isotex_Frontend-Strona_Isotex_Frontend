@@ -6,22 +6,28 @@
   .productCard {
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    
     overflow: hidden;
     width: min(1500px, 90%);
     margin: auto;
+    /*
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    */
   }
   
   .imageContainer {
     flex: 1 1 50%;
     max-width: 50%;
-    background-color: #f9f9f9;
+    
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*
+background-color: #f9f9f9;
+    */
   }
   
   .productImage {
@@ -29,6 +35,9 @@
     max-width: 400px;
     object-fit: contain;
     border-radius: 12px;
+    /*
+
+    */
   }
   
   .details {
@@ -37,6 +46,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /*
+
+    */
   }
   
   .productName {

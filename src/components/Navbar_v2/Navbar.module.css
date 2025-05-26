@@ -16,6 +16,7 @@ a {
     top:0;
     width: 100%;
     z-index: 100;
+    transition: transform 0.3s ease-in;
 }
 
 .Navbar_v2{
@@ -26,9 +27,10 @@ a {
 
 .social_media{
     /*background:#ec430f; */
+   
     background:red;
     
-    display: flex !important;
+    display: flex;
     justify-content: center !important;
     align-items: center !important;
 }

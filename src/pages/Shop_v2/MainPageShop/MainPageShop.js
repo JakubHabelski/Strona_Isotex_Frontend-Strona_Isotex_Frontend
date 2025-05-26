@@ -166,14 +166,19 @@ function MainPageShopMain() {
         {category.subcategories.map((subcategory) => (
           <div key={subcategory.key} className={style.listitem}>
             <div className={style.bar}></div>
-            <p>{subcategory.label}</p>
-            <Image
+            <p
+              onClick={() => handleSubcategorySelect(subcategory.key)}
+              style={{cursor: "pointer"}}
+            >{subcategory.label}
+            </p>
+            
+           {/* <Image
               src="/assets/icons/right-arrow.png"
               alt="Arrow"
               width={32}
               height={32}
               onClick={() => navigate(`/Sklep/${subcategory.key}`)}
-            />
+            /> */}
           </div>
         ))}
       </div>

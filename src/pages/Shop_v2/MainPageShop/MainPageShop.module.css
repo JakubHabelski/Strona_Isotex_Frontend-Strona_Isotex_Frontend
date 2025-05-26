@@ -21,6 +21,7 @@
     /*padding: 0.5rem;  Ustawiono konkretną wartość paddingu */
     width: 100%; /* Rozciąga cały div na szerokość */
     justify-content: space-between; /* Rozkłada elementy równomiernie */
+    cursor: pointer;
     
   }
   
@@ -73,8 +74,9 @@
 }
 .MainCategoryList{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 300px);
   gap: 1rem;
+  justify-content: space-around;
 }
 .MainCategoryCard:hover{
   box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 0.5);

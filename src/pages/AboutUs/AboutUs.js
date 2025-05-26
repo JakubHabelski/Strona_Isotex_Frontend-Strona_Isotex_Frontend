@@ -110,11 +110,11 @@ function AboutUsPage(){
 
 export default function AboutUs(){
     return(
-        <>
+        <div style={{backgroundImage: "linear-gradient(to right, #4facfe 0%, #00f2fe 100%)"}}>
         <Navbar_v2/>
         <SimpleBanner/>
         <AboutUsPage/>
         <Footer/>
-        </>
+        </div>
     )
 }
