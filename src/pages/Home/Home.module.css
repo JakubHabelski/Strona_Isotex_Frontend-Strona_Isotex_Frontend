@@ -1,16 +1,19 @@
 .home_banner{
-    margin-top: 200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: min(1500px, 90%);
+    margin-top: 330px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: helvetica;
     color: #0065F2;
-    padding: 0 5rem ;
     text-align: left;
-    width: 100%;
-    margin-bottom: 100px;
+    height: 100vh;
+    box-sizing: border-box;
+    
 }
 .home_banner .banner_left{
-    height: 100%;
+   
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +48,7 @@
     box-sizing: border-box;
 }
 .home_banner .banner_right {
-    height: 100%;
+    
     width: 100%;
     display: flex;
     position: relative;
@@ -53,14 +56,14 @@
 }
 .home_banner .banner_right img{
     object-fit: cover;
-    height: 300px;
-    width: 300px;
+    aspect-ratio: 1/1;
+    max-width: 300px;
     margin: auto;
     border-radius: 20px;
     position: absolute;
     top:0;
     left: 0;
-    transform: translateX(50%);
+    transform: translateX(100%) translateY(-50%);
     /*
      border-radius: 60px 30px 60px 30px;
 -webkit-mask-image: linear-gradient(black, transparent);
@@ -72,12 +75,265 @@
 }
 
 .Futures_container{
+    width: min(1500px, 90%);
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    justify-content :space-around;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
     align-items: start;
-    gap: 15px;
-}
-.Futures_card {
+    gap: 2rem;
+    margin: 0px auto 60px;
     
+}
+.Futures_container .Futures_card {
+    transition: all 0.8s ease;
+    transform: translateY(-50px);
+    opacity: 0;
+   
+    color: #0065F2;
+    font-family: helvetica;
+    h1{
+        margin-top: 0;
+        margin-bottom: 16px;
+        margin-left: 60px;
+        text-align: left;
+    }
+    img{
+        float: left;
+        aspect-ratio: 1/1;
+        width: 50px;
+        height: 50px;
+        filter: brightness(0) saturate(100%) invert(24%) sepia(99%) saturate(7497%) hue-rotate(199deg) brightness(97%) contrast(101%);
+
+    }
+    p{
+        text-align: justify;
+    }
+}
+@media (max-width: 1600px)  {
+    .home_banner .banner_right img{
+        max-width: 250px;    
+    }
+}
+@media (max-width: 1300px)  {
+    .home_banner .banner_right img{
+        max-width: 200px;    
+    }
+    .home_banner{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 992px)  {
+    .home_banner .banner_right img{
+        max-width: 160px;    
+    }
+    .Shortinfo2 {
+    grid-template-columns: 1fr !important;
+  }
+  .imageBlock {
+    margin-top: 1rem;
+  }
+
+}
+@media (max-width: 768px)  {
+    .home_banner .banner_right {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;   
+        gap: 1rem; 
+        img{
+            transition: none;
+        }     
+    }
+    .home_banner .banner_right img{
+        max-width: -webkit-fill-available;  
+        position: static;
+      
+        
+         
+    }
+    .home_banner{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+       
+        margin-top: 200px;
+    }
+}
+
+.Shortinfo2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: min(1500px, 90%);
+  margin: 60px auto;
+    color: #0065F2;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+.textBlock {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.h2_custom {
+  
+  font-weight: 600;
+}
+.imageBlock {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@keyframes appear {
+    from{
+        
+      /*  scale: 0.5;
+      clip-path: inset(100% 100% 0 0); 
+        */
+        transform:  translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+      /*  clip-path: inset(0 0 0 0);
+       scale: 1;
+      */
+     
+      transform:  translateX(0);
+
+    }
+}
+
+.view{
+
+}
+.block{
+    margin:  150px auto ;
+    animation: appear linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.elomelo{
+    
+    
+}
+.Panel_Imageleft_TextSlide_Right{
+    display: flex;
+    
+    flex-direction: row;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left{
+    flex-basis: 35%;
+    display: flex;
+    position: relative;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 0px 20px 20px 0px;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+.Panel_Imageleft_TextSlide_Right .panel_left .img_bg{
+    position: absolute;
+    top: 0;
+    transform: translateY(40%);
+    max-width: 90%;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left .img_cover{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-30%);
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.Panel_Imageleft_TextSlide_Right .panel_right{
+    flex-basis: 65%;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right h1{
+    color: #0065F2;
+    text-align: left;
+    padding: 0  min(5rem, 8%) ;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_container{
+    display: grid;
+    grid-template-columns: 1fr;   
+    gap: 1rem; 
+    padding: min(5rem, 8%); 
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element{
+    display: flex;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: translateY(-50px);
+    gap: 2rem;
+}
+
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element img{
+     filter: brightness(0) saturate(100%) invert(24%) sepia(99%) saturate(7497%) hue-rotate(199deg) brightness(97%) contrast(101%);
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element h5{
+    background-color:  #0065F2;
+    height: 1px;
+    
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element p{
+    
+}
+
+@media (max-width: 992px){
+    .Panel_Imageleft_TextSlide_Right{
+        flex-direction: column-reverse;
+    }
+    .Panel_Imageleft_TextSlide_Right .panel_left .img_bg{
+        position: relative;
+        max-width:  100%;
+        transform: none;
+        margin-bottom: 100px;
+    }
+    .Panel_Imageleft_TextSlide_Right .panel_left .img_cover{
+        position: absolute;
+        transform: none;
+    }
+}
+.WideHeadLineWithPhotobg{
+    background-image: url('../../../public/assets/zakład.png');
+    height: 500px;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.WideHeadLineWithPhoto{
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+.WideHeadLineWithPhoto .WideHeadLineWithPhotoOverlay{
+    width: min(1500px, 90%);
+    margin: auto;
+    color: #0065F2;
+
+    .textBlock {
+    font-size: 1rem;
+    line-height: 1.6;
+    }
+    .h2_custom {
+    
+    font-weight: 600;
+    }
 }
