@@ -90,7 +90,7 @@ function Banner(){
             Straty ciepła w instalacjach przemysłowych to kosztowny problem – mamy na to sposób! Zaprojektujemy i wyprodukujemy materace izolacyjne, które zwiększą efektywność Twoich systemów.
           </h5>
           <div className={style.banner_left_cta}>
-            <button>Dowiedz się więcej</button>
+            <a href='/AboutUs'>Dowiedz się więcej</a>
             <p>Poznaj nasze rozwiązania i zmniejsz emisję CO2 już teraz!</p>
           </div>
         </div>
@@ -268,7 +268,7 @@ function WideHeadLineWithPhoto(){
             <li>Zapewniamy fachowe wsparcie na każdym etapie współpracy </li>
           </ul>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-            <Button variant="outline-primary">{t("shortinfo2.button")}</Button>
+            <Button variant="outline-danger">{t("shortinfo2.button")}</Button>
           </div>
         </div>
         </div>
@@ -318,51 +318,51 @@ function Panel_Imageleft_TextSlide_Right(){
             <div>
               <img src='assets\icons\icons8-experience-50_1.svg'></img>
               <h5></h5>
-              <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+              <p>Od 1994 roku produkujemy najlepsze izolacje, które skutecznie chronią przed stratami ciepła. Zamów i przekonaj się o ich niezrównanej wydajności.</p>
             </div>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets/icons/icons8-quality-48.svg'></img>
             <h5></h5>
-            <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+            <p>Nasze materace izolacyjne spełniają rygorystyczne standardy ISO 9001, zapewniając doskonałą ochronę termiczną. Sprawdź, jak dobrze działają w Twojej instalacji.</p>
             </div>
             
           </div>
           <div className={style.text_element}>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-durability-64.svg'></img>
               <h5></h5>
-              <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+              <p>Tworzymy izolacje termiczne, które zatrzymują ciepło na lata, dzięki zaawansowanym materiałom i precyzji. Zamów i poczuj różnicę w efektywności energetycznej.</p>
             </div>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-design-50.svg'></img>
             <h5></h5>
-            <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+            <p>Projektujemy izolacje w technologii CAD 3D, idealnie dopasowane do Twoich potrzeb. Przekonaj się, jak skutecznie poprawiają wydajność Twoich urządzeń.</p>
             </div>
             
           </div>
           <div className={style.text_element}>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-eco-driving-indicator-50.svg'></img>
               <h5></h5>
-              <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+              <p>Nasze izolacje minimalizują straty energii i emisję CO2, wspierając Twój zrównoważony rozwój. Zamów i zobacz, jak mogą zoptymalizować Twoje instalacje.</p>
             </div>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-services-50.svg'></img>
             <h5></h5>
-            <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+            <p>Zapewniamy projektowanie, produkcję, sprzedaż i montaż izolacji – wszystko w jednym miejscu. Skontaktuj się i skorzystaj z naszej pełnej obsługi.</p>
             </div>
             
           </div>
           <div className={style.text_element}>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-worldwide-50.svg'></img>
               <h5></h5>
-              <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+              <p>Realizujemy projekty w Polsce i za granicą, zawsze z dbałością o szczegóły. Zamów i doświadcz naszej międzynarodowej jakości.</p>
             </div>
             <div>
-              <img src='assets\icons\icons8-experience-50_1.svg'></img>
+              <img src='assets\icons\icons8-3d-design-66.svg'></img>
             <h5></h5>
-            <p>Produkujemy najlepsze izolacje termiczne. Zamów a sam się przekonasz jakie one są super. Jak dobrze ciepło trzymają</p>
+            <p>Wykorzystujemy nowoczesne technologie, takie jak CAD 3D, aby tworzyć izolacje o najwyższej wydajności. Przekonaj się, jak innowacyjność wspiera Twój biznes.</p>
             </div>
             
           </div>

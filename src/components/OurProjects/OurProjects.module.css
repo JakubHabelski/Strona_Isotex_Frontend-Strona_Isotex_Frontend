@@ -1,6 +1,6 @@
 .ourProjectsContainer {
   margin: 0 auto;
-  max-width: 1500px;
+  width: min(1500px, 90%);
 }
 .tabContent {
   width: 300px;
@@ -25,9 +25,10 @@
 .tabContainer .tab .tabContent {
   position: relative;
   height: 300px;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid #ccc;
   transition: transform 0.3s ease;
   padding: 20px;

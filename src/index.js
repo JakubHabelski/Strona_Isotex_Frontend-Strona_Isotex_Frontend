@@ -34,13 +34,14 @@ import ShopManager from './pages/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
 
+
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <CartProvider>
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
       <Route path='/AboutUs' element={<AboutUs/>} />
 
       ## Fiber

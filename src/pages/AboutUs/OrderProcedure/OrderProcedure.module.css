@@ -1,0 +1,34 @@
+.OrderProcedure{
+    width: min(1500px, 90%);
+    margin: 200px auto 0;
+    height: 200px;
+    
+    position: relative;
+
+}
+.OrderProcedure .OrderStep{
+
+}
+.OrderProcedure .OrderStep{
+    
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: translateY(-200px);
+    transition: all 0.5s ease;
+    opacity: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    h5{
+        color: red;
+    }
+    p{
+        text-align: justify;
+        
+    }
+    
+    
+}
