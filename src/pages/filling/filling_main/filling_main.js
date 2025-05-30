@@ -16,7 +16,8 @@ function Filling_Info() {
 
     return (
         <>
-            <Card className={`bg-dark text-white ${style.card_extra}`}>
+        <div style={{marginTop: "200px"}}>
+<Card className={`bg-dark text-white ${style.card_extra}`}>
                 <Card.Img src="/assets/materials/Fillings/IMG_2112.jpg" alt="Card image" className={`${style.card_img_extra}`} />
                 <Card.ImgOverlay className={style.card_img_overlay_extra}>
                     <h1 className={style.card_title_extra}>{t('fillingInfo.title')}</h1>
@@ -79,6 +80,8 @@ function Filling_Info() {
                     
                 </div>
             </section>
+        </div>
+            
         </>
     )
 }

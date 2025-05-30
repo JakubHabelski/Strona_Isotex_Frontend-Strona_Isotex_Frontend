@@ -11,6 +11,7 @@ export default function OrderProcedure(){
         const stepWidth = containerWidth / OrderSteps.length;
         let h5_height= 0;
         let p_height = 0;
+        
         OrderSteps.forEach((OrderSteps) =>{
             console.log(OrderSteps.children[0].getBoundingClientRect().height)
             if(OrderSteps.children[0].getBoundingClientRect().height>h5_height){
@@ -26,16 +27,20 @@ export default function OrderProcedure(){
             OrderSteps.children[0].style.height= `${h5_height}px`;
             OrderSteps.children[1].style.height= `${p_height}px`;
         })
+            
         
         const observer = new IntersectionObserver((entries) =>{
             entries.forEach((entry) =>{
                 if(entry.isIntersecting){
                     const index = Array.from(OrderSteps).indexOf(entry.target);
-                    entry.target.style.transform = `translateX(${stepWidth * index}px) translateY(-200px)`;
+                    
+                    entry.target.style.transform = `translateX(0)`;
                     //OrderStep.style.transitionDelay = `${index * 200}ms`;
                     entry.target.style.opacity = 1;
                     entry.target.style.zIndex = OrderSteps.length- index;
-                    entry.target.style.transition = `all ${index *0.5}s ease`                    
+                    entry.target.style.transition = `all ${index *0.5}s ease`
+                    
+
                 }
             })
         },

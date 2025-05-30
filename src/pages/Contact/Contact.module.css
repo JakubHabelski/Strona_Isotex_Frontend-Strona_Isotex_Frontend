@@ -1,3 +1,6 @@
+.contactUsContainer{
+    margin-top: 200px;
+}
 .contactUsContent{
     display: flex;
     padding: 2rem;

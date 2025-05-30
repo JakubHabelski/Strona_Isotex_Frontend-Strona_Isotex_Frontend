@@ -1,4 +1,12 @@
 .MainPageShopLinksContainer{
+  background-color:  #f8f9fa;
+  height: 100%;
+  border-radius: 12px;
+  margin-top: 50px;
+  
+}
+.MainPageShopProducts{
+  padding-left: 50px;
   
 }
 
@@ -37,6 +45,7 @@
   }
   .MainPageShopLinks .subcategorylist .listitem{
     display: flex;
+    background-color: "#f8f9fa"
   }
   .MainPageShopLinks .subcategorylist .bar{
     width: 32px;
@@ -74,9 +83,9 @@
 }
 .MainCategoryList{
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .MainCategoryCard:hover{
   box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 0.5);
@@ -165,4 +174,19 @@
     object-fit: contain;
     border-radius: 8px;
 
+  }
+
+  @media (max-width: 992px) {
+    .MainCategoryList{
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    }
+    .MainPageShopProducts{
+      padding-left: calc(var(--bs-gutter-x) * .5);
+     
+    }
+    .MainPageShopRow{
+      flex-direction: column;
+    }
+    
   }

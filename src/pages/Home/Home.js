@@ -13,6 +13,8 @@ function Banner(){
   const { t } = useTranslation();
 
   useEffect(() => {
+    console.log("Banner useEffect fired");
+  // ...reszta kodu
     const imgs = document.querySelectorAll(`.${style.banner_right_img}`);
     const rotate = [-5, 10, -10, 5];
     let transformY = [];
@@ -45,7 +47,33 @@ function Banner(){
         transformX = ['50%', '150%', '50%', '150%'];
       }
 
+
+      const observer = new IntersectionObserver((entries) =>{
+        entries.forEach((entry, index) =>{
+          if(entry.isIntersecting){
+            const imgIndex = Array.from(imgs).indexOf(entry.target);
+            const rotation = rotate[imgIndex % rotate.length];
+            const yOffset = transformY[imgIndex % transformY.length];
+            const xOffset = transformX[imgIndex % transformX.length];
+            entry.target.style.transform = `translate(${xOffset}, ${yOffset}) rotate(${rotation}deg)`;
+            if(mediaMax768px.matches){
+            entry.target.style.transform = `none`;
+          }
+            entry.target.style.zIndex = zIndex[imgIndex];
+          }
+        })
+      },
+      {
+        threshold: 0.9
+      }
+    )
+
+    imgs.forEach((img) =>{
+      observer.observe(img)
+    })
       // Ustaw style dla obrazków
+
+      /*
       if (imgs.length > 0) {
         imgs.forEach((img, index) => {
           const rotation = rotate[index % rotate.length];
@@ -58,7 +86,9 @@ function Banner(){
           img.style.zIndex = zIndex[index];
         });
       }
+        */
     };
+    
 
     // Wywołaj na start
     handleResize();

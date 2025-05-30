@@ -54,15 +54,16 @@
 .AboutUsContainer .ImagesSlider:nth-child(even){
      .LeftSlide{
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-    padding: 1rem;
-    margin: 2rem 100px 2rem 0;;
+    padding: 2rem;
+    margin: 5rem 100px 5rem 0;
      }
     
 }
 .AboutUsContainer .ImagesSlider:nth-child(odd){
      .RightSlide{
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-    padding: 1rem;
+    padding: 2rem;
+    margin: 5rem 0 5rem 100px;;
      }
     
 }
@@ -106,4 +107,27 @@
 
   
 }
+
+.CTA {
+width: min(1500px, 90%);
+  margin: 100px auto;
+  padding: 20px;
+  
+  text-align: center;
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
+
+.CTA h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.CTA p {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 

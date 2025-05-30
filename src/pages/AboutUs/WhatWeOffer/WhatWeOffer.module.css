@@ -1,0 +1,94 @@
+.WhatWeOfferBG {
+  position: relative; /* Dla pozycjonowania zdjęcia w tle */
+}
+
+.WhatWeOfferBG img {
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.5);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.WhatWeOfferContainer {
+  width: min(1500px, 90%);
+  margin: auto;
+  color: white;
+  padding: 60px 20px; /* Dodane odstępy dla lepszej czytelności */
+  text-align: left; /* Wyśrodkowanie dla elegancji */
+}
+
+.WhatWeOfferContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform: translateY(20px);
+}
+
+.WhatWeOfferContainer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+   /* Ograniczenie szerokości dla lepszej czytelności */
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform: translateY(20px);
+  
+}
+
+.WhatWeOfferContainer ul {
+  list-style: none; /* Usunięcie domyślnych kropek */
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Wyrównanie listy do lewej dla lepszej struktury */
+   /* Ograniczenie szerokości listy */
+  /* Wyśrodkowanie listy */
+}
+
+.WhatWeOfferContainer ul li {
+  position: relative; /* Dla pozycjonowania znacznika */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Odstęp między punktami */
+  padding-left: 40px; /* Miejsce na znacznik/ikonę */
+  color: #e6e6e6; /* Lekko jaśniejszy odcień dla tekstu, aby poprawić kontrast */
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform: translateY(20px);
+}
+
+.WhatWeOfferContainer ul li strong {
+  color: #ffffff; /* Białe dla pogrubionego tekstu (np. "Pomiary") */
+}
+
+.WhatWeOfferContainer ul li::before {
+  content: '\2714'; /* Symbol "checkmark" jako znacznik */
+  position: absolute;
+  left: 0;
+  color: #0065f2; /* Kolor pasujący do brandingu isoTex */
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .WhatWeOfferContainer h1 {
+    font-size: 2rem;
+  }
+
+  .WhatWeOfferContainer p {
+    font-size: 1rem;
+  }
+
+  .WhatWeOfferContainer ul li {
+    font-size: 0.9rem;
+    padding-left: 35px;
+  }
+
+  .WhatWeOfferContainer ul li::before {
+    font-size: 1rem;
+  }
+}

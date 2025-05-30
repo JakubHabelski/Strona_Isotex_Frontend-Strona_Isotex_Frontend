@@ -24,6 +24,9 @@ function MainPageShopMain() {
   const [cartItems, setCartItems] = useLocalStorage("cartItems", []);
   const [toastMessage, setToastMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const [productsLoading, setProductsLoading] = useState(false);
+  const [subcategoriesLoading, setSubcategoriesLoading] = useState(false);
+
 
   const listRefs = useRef({});
   const navigate = useNavigate();
@@ -71,6 +74,7 @@ function MainPageShopMain() {
   // Fetch subcategories and products when category or subcategory changes
   useEffect(() => {
     if (selectedCategory) {
+      setSubcategoriesLoading(true);
       axios
         .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
           params: { CategoryId: selectedCategory.key },
@@ -79,19 +83,26 @@ function MainPageShopMain() {
           setSubcategories(response.data);
           if (!selectedSubcategory) setProducts([]);
         })
-        .catch(() => setSubcategories([]));
+        .catch(() => setSubcategories([]))
+        .finally(() => setSubcategoriesLoading(false));
     } else {
       setSubcategories([]);
       setProducts([]);
+      setSubcategoriesLoading(false);
     }
   }, [selectedCategory]);
 
   useEffect(() => {
     if (selectedSubcategory) {
+      setProductsLoading(true);
       axios
         .get(`${apiUrl}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
         .then((response) => setProducts(response.data))
-        .catch(() => setProducts([]));
+        .catch(() => setProducts([]))
+        .finally(() => setProductsLoading(false));
+    } else {
+      setProducts([]);
+      setProductsLoading(false);
     }
   }, [selectedSubcategory, i18n.language]);
 
@@ -104,11 +115,17 @@ function MainPageShopMain() {
   const handleCategorySelect = (key, label) => {
     setSelectedCategory({ key, label });
     setSelectedSubcategory(null);
+    setProducts([]);
   };
 
-  // Handle subcategory selection
-  const handleSubcategorySelect = (key) => {
-    setSelectedSubcategory(key);
+  const handleSubcategorySelect = (subKey, catKey) => {
+    setProductsLoading(true);
+    if (selectedCategory?.key !== catKey) {
+      setSelectedCategory({ key: catKey, label: categories.find(c => c.key === catKey)?.label });
+      setSelectedSubcategory(subKey);
+    } else {
+      setSelectedSubcategory(subKey);
+    }
   };
 
   // Handle image modal
@@ -126,10 +143,8 @@ function MainPageShopMain() {
 
   // Add product to cart
   const addToCart = (product) => {
-    setCartItems((prev) => [
-      ...prev,
-      { id: product.id, price: product.price, name: product.name },
-    ]);
+    console.log("addToCart:",product)
+    setCartItems({ id: product.id, price: product.price, name: product.name });
     setToastMessage(t("cart.added", { name: product.name }));
     setShowToast(true);
   };
@@ -167,21 +182,14 @@ function MainPageShopMain() {
           <div key={subcategory.key} className={style.listitem}>
             <div className={style.bar}></div>
             <p
-              onClick={() => handleSubcategorySelect(subcategory.key)}
+              onClick={() => handleSubcategorySelect(subcategory.key, category.key)}
               style={{cursor: "pointer"}}
-            >{subcategory.label}
+            >
+              {subcategory.label}
             </p>
-            
-           {/* <Image
-              src="/assets/icons/right-arrow.png"
-              alt="Arrow"
-              width={32}
-              height={32}
-              onClick={() => navigate(`/Sklep/${subcategory.key}`)}
-            /> */}
           </div>
         ))}
-      </div>
+              </div>
     </div>
   );
 
@@ -205,7 +213,7 @@ function MainPageShopMain() {
         <Card.Img
           variant="top"
           src={product.imageUrl}
-          style={{ padding: "5em", objectFit: "cover" }}
+          style={{  objectFit: "cover" }}
           onClick={() => handleImageClick(product.imageUrl, product.name)}
         />
       </div>
@@ -228,8 +236,11 @@ function MainPageShopMain() {
   );
 
   return (
-    <div style ={{display: "flex", flexDirection: "row"}}>
-      <Col xs={12} md={2} className={style.MainPageShopLinksContainer} style={{ position: "sticky", top: "150px" }}>
+    <>
+    <ImageCarousel />
+    <div className={style.MainPageShopContainer}>
+      <Row style={{minHeight: "500px", marginBottom: "100px"}} className={style.MainPageShopRow}>
+      <Col xs={12} lg={3} className={style.MainPageShopLinksContainer}>
         {loading ? (
           <div>
             <Spinner animation="border" role="status" />
@@ -239,10 +250,11 @@ function MainPageShopMain() {
           categories.map(renderCategory)
         )}
         
+        
       </Col>
-      <Col xs={12} md={10}>
-        <div style={{ width: "100%", padding: "20px" }}>
-          <ImageCarousel />
+      <Col xs={12} lg={9} className={style.MainPageShopProducts}>
+        <div style={{ width: "100%", padding: "0 20px 0"}}>
+          
           <Breadcrumb>
             <Breadcrumb.Item
               href="#"
@@ -265,7 +277,16 @@ function MainPageShopMain() {
             )}
             {selectedSubcategory && (
               <Breadcrumb.Item active>
-                {subcategories.find((sub) => sub.id === selectedSubcategory)?.LabelEN || selectedSubcategory}
+                {
+                  subcategories.find((sub) => sub.id === selectedSubcategory)
+                    ? subcategories.find((sub) => sub.id === selectedSubcategory)[i18n.language === "en" ? "LabelEN" : "LabelPL"]
+                    : (
+                      <span style={{ display: "inline-flex", alignItems: "center" }}>
+                        <Spinner animation="border" size="sm" role="status" style={{ marginRight: 8 }} />
+                        <span style={{ color: "black" }}>Loading...</span>
+                      </span>
+                    )
+                }
               </Breadcrumb.Item>
             )}
           </Breadcrumb>
@@ -276,14 +297,30 @@ function MainPageShopMain() {
                 : null}
             </h5>
             <div className={style.MainCategoryList}>
-              {selectedSubcategory && products.length > 0 ? (
-                products.map(renderProduct)
+              {selectedSubcategory ? (
+                productsLoading ? (
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
+                    <Spinner animation="border" role="status" />
+                    <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
+                  </div>
+                ) : products.length > 0 ? (
+                  products.map(renderProduct)
+                ) : (
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
+                    <span style={{ color: "black", marginLeft: 8 }}>Brak produktów</span>
+                  </div>
+                )
+              ) : subcategoriesLoading ? (
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
+                  <Spinner animation="border" role="status" />
+                  <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
+                </div>
               ) : subcategories.length > 0 ? (
                 subcategories.map((subcat) => (
                   <div
                     className={style.MainCategoryCard}
                     key={subcat.id}
-                    onClick={() => handleSubcategorySelect(subcat.id)}
+                    onClick={() => handleSubcategorySelect(subcat.id, selectedCategory?.key)}
                   >
                     <div className={style.CardText}>
                       <h5>{getTranslatedLabel(subcat)}</h5>
@@ -292,13 +329,14 @@ function MainPageShopMain() {
                     <img src={subcat.photo_url} alt={getTranslatedLabel(subcat)} />
                   </div>
                 ))
-              ) : (
-                <div />
-              )}
+              ) : null}
             </div>
           </div>
         </div>
       </Col>
+
+      </Row>
+      
       <Modal show={showModal} onHide={handleCloseModal} centered size="xl" className={style.modal_custom}>
         <Modal.Header closeButton>
           <Modal.Title>{modalTitle}</Modal.Title>
@@ -313,6 +351,7 @@ function MainPageShopMain() {
         </Toast>
       </ToastContainer>
     </div>
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Toast, ToastContainer } from "react-bootstrap";
+import { Container, Row, Col, Button, Toast, ToastContainer, Spinner } from "react-bootstrap";
 import Footer from "../../components/Footer";
 import NavbarMain from "../../components/Navbar/Navbar";
 import { useLocalStorage } from "../../utils/localStorage";
@@ -34,7 +34,8 @@ function Cart_List() {
 
         const fetchProducts = async () => {
             try {
-                const ids = cartItems.map(item => item.id).join(",");
+                let ids = cartItems.map(item => item.id).join(",");
+                ids = ids.replace(/^,/,'')
                 console.log("Fetching products for IDs:", ids); // Debugowanie
                 const res = await axios.get(`${apiUrl}/products/multiple?ids=${ids}&locale=${i18n.language}`);
                 console.log("API response:", res.data); // Debugowanie
@@ -75,11 +76,14 @@ function Cart_List() {
     const orderSum = products.reduce((acc, product) => acc + product.price * product.quantity, 0);
 
     return (
-        <Container className="py-5">
+        <Container className="py-5" style={{marginTop:"200px"}}>
             <h2 className="mb-4">{t("cart.title")}</h2>
 
             {loading ? (
-                <p>{t("cart.loading")}</p>
+                <>                
+               {/*<p>{t("cart.loading")}</p>*/} 
+                <Spinner animation="border" variant="danger" />
+                </>
             ) : error ? (
                 <p>{error}</p>
             ) : cartItems.length === 0 ? (

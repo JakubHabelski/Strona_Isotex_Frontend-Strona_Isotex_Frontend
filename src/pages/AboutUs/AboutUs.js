@@ -1,4 +1,4 @@
-import { Container, Row } from 'react-bootstrap'
+import { Button, Container, Row } from 'react-bootstrap'
 import Footer from '../../components/Footer'
 import Navbar_v2 from '../../components/Navbar_v2/Navbar'
 import style from './AboutUs.module.css'
@@ -7,6 +7,8 @@ import SimpleBanner from '../../components/SimpleBanner/SimpleBanner'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import OrderProcedure from './OrderProcedure/OrderProcedure'
+import WhatWeOffer from './WhatWeOffer/WhatWeOffer'
+import { useNavigate } from 'react-router-dom'
 
 
 function HoverImage() {
@@ -92,7 +94,7 @@ function AboutUsPage(){
                 IsoTex – Eksperci w izolacjach termicznych od 1994 roku
               </h2>
               <p>
-                Od 1994 roku produkujemy wysokiej jakości izolacje termiczne, które skutecznie chronią przed stratami ciepła. Nasze materace izolacyjne są projektowane z użyciem technologii CAD 3D, co gwarantuje idealne dopasowanie do Twoich instalacji.
+              Od 1994 roku produkujemy wysokiej jakości izolacje termiczne, które skutecznie chronią przed stratami ciepła. Nasze materace izolacyjne są projektowane z dbałością o każdy detal, aby zapewnić optymalną wydajność Twoich instalacji.             
               </p>
             </div>
             <div className={style.RightSlide}>
@@ -109,7 +111,7 @@ function AboutUsPage(){
                   Kompleksowe rozwiązania dla Twojego przemysłu
                 </h2>
                 <p>
-                  W isoTex nie tylko produkujemy izolacje, ale także oferujemy profesjonalny montaż na miejscu. Dzięki projektowaniu w CAD 3D nasze materace zapewniają precyzyjne dopasowanie i minimalizują straty ciepła w instalacjach przemysłowych.
+                  W isoTex nie tylko produkujemy izolacje, ale także oferujemy profesjonalny montaż na miejscu. Dzięki projektowaniu w technologii CAD 3D nasze materace zapewniają precyzyjne dopasowanie i minimalizują straty ciepła w instalacjach przemysłowych.
                 </p>
               </div>
             </div>
@@ -121,7 +123,7 @@ function AboutUsPage(){
                 Zobowiązanie do zrównoważonego rozwoju
               </h2>
               <p>
-                Nasze materace izolacyjne, projektowane w technologii CAD 3D, pomagają unikać strat ciepła, wspierając efektywność energetyczną. Produkujemy i montujemy izolacje, które redukują emisję CO2, dbając o środowisko i Twój biznes.
+                Nasze izolacje termiczne pomagają unikać strat ciepła, wspierając efektywność energetyczną i redukując emisję CO2. Produkujemy i montujemy rozwiązania, które dbają o środowisko i Twój biznes.
               </p>
             </div>
             <div className={style.RightSlide}>
@@ -140,14 +142,22 @@ function AboutUsPage(){
 
 
 export default function AboutUs(){
+  const navigate = useNavigate();
+  
     return(
         <>
         <Navbar_v2/>
         
         <AboutUsPage/>
         <OrderProcedure></OrderProcedure>
-        
-        
+        <WhatWeOffer></WhatWeOffer>
+        <div className={style.CTA}>
+          <h2>Chcesz dowiedzieć się więcej?</h2>
+          <p>
+            Skontaktuj się z nami, aby omówić, jak nasze nowoczesne rozwiązania mogą zwiększyć efektywność Twoich instalacji.
+          </p>
+          <Button variant='outline-danger' onClick={() => navigate("/kontakt")}>Napisz do nas</Button>
+        </div>
         <Footer/>
         </>
         

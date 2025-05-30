@@ -3,6 +3,7 @@
   position: relative;
   overflow-x: hidden;
   border-radius: 12px; /* Zaokrąglone rogi */
+  margin-top: 200px;
 }
 
 .slider {
@@ -56,7 +57,7 @@
 .overlay h2 {
   width: 50%;
   text-align: left;
-  font-size: 5rem;
+  font-size: clamp(1.8rem, 5vw, 5rem);
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -66,7 +67,7 @@
 
 .overlay p {
   width: 50%;
-  font-size: 1.2rem;
+  font-size: clamp(0.7rem, calc(1vw + 0.1rem), 1.2rem);
   margin: 10px 0 0;
   font-weight: lighter;
 }
@@ -120,4 +121,33 @@
 
 .dot.active {
   background-color: #717171;
+}
+.MainPageShopContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 992px){
+  .slide{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .slideImage{
+    width: 100%;
+    height: 50%;
+  }
+  .overlay{
+    justify-content: flex-start;
+
+    h2, p{
+      width: 100%;
+    }
+    p{
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+  }
+  .MainPageShopContainer{
+    display: block;
+  }
+
 }

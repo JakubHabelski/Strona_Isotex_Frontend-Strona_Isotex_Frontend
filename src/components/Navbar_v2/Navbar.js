@@ -36,16 +36,20 @@ export default function Navbar_v2() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-
   const menuData = [
     { path: "/", name: "Home" },
-    { path: "/AboutUs", name: t("navbar.about") },
+    {
+      name: t("navbar.about"),
+      dropdown: [
+        { path: "/AboutUs", name: t("navbar.about") },
+        { path: "/AboutUs/Technology", name: t("navbar.technology") },
+      ]
+    },
     { path: "/fabrics", name: t("navbar.technicalFabrics") },
     { path: "/wypelnienia", name: t("navbar.fillings") },
     { path: "/kontakt", name: t("navbar.contact") },
     { path: "/MainPageShop", name: t("navbar.shop") },
-  ]
-
+  ];
 
   return (
     <>
@@ -61,18 +65,37 @@ export default function Navbar_v2() {
     <Navbar expand="lg" className={styles.Navbar_v2}>
       <Container>
         <Navbar.Brand href="/" className={styles.Brand}>
-        <img src="/assets/logo.jpeg" alt="Logo" width="100" height="auto" />
+        <img src="/assets/logo_black.png" alt="Logo" width="auto" height="100px" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={styles.Navbar_Collapse}>
           <Nav className={`${styles.navCentered} ms-auto`}>
-            {
-              menuData.map((item, index) => (
+           {menuData.map((item, index) =>
+              item.dropdown ? (
+                <NavDropdown
+                  title={
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={() => navigate("/AboutUs")}
+                    >
+                      {item.name}
+                    </span>
+                  }
+                  id={`nav-dropdown-${index}`}
+                  key={index}
+                >
+                  {item.dropdown.map((subitem, subindex) => (
+                    <NavDropdown.Item href={subitem.path} key={subindex}>
+                      {subitem.name}
+                    </NavDropdown.Item>
+                  ))}
+                </NavDropdown>
+              ) : (
                 <Nav.Link key={index} href={item.path}>
                   <div className={styles.list_item}>{item.name}</div>
                 </Nav.Link>
-              ))
-            }          
+              )
+            )}        
             </Nav>
             <Nav.Link onClick={() => navigate(`/Sklep/koszyk`)}>
                             <BsCart size={24} />

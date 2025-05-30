@@ -33,6 +33,9 @@ import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
 import ShopManager from './pages/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
+import Technology from './pages/AboutUs/Technology/Technology';
+import ScrollToTop from './utils/ScrollToTop';
+import Fastenings from './pages/Fastenings/Fastenings';
 
 
 const root = document.getElementById("root");
@@ -40,9 +43,10 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <CartProvider>
   <BrowserRouter>
+  <ScrollToTop/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path='/AboutUs' element={<AboutUs/>} />
+      
 
       ## Fiber
       <Route path='/fabrics' element={<Fabrics />} />
@@ -54,11 +58,16 @@ ReactDOM.createRoot(root).render(
       <Route path='/wypelnienia/welna-ceramiczna' element={<Ceramic_wool />} />
       <Route path='/wypelnienia/mata-szklana' element={<Glass_Mat/>} />
 
+      ## Fastenings
+      <Route path='/Fastenings' element={<Fastenings/>} />
+
       ## Contact
       <Route path="/kontakt" element={<Contact />} />
       <Route path="/joinus" element={<JoinUsPage />} />
 
       ## About
+      <Route path='/AboutUs' element={<AboutUs/>} />
+      <Route path='/AboutUs/Technology' element={<Technology/>} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/certyfikaty" element={<CertificatePage/>} />
       

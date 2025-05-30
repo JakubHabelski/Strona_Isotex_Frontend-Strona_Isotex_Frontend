@@ -35,6 +35,7 @@ footer {
     position: relative;
     height: 40vh;
     overflow: hidden;
+    margin-top: 200px;
   }
   
   .hero-image {

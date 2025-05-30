@@ -1,4 +1,4 @@
-import { Button, Col, Container, Form, Row, Toast, ToastContainer } from "react-bootstrap";
+import { Button, Col, Container, Form, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
 import Footer from "../../components/Footer";
 import NavbarMain from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
@@ -37,7 +37,8 @@ function SendOrder() {
 
         const fetchProducts = async () => {
             try {
-                const ids = cartItems.map(item => item.id).join(",");
+                let ids = cartItems.map(item => item.id).join(",");
+                ids = ids.replace(/^,/,'')
                 console.log("Fetching products for IDs:", ids); // Debugowanie
                 const res = await axios.get(`${apiUrl}/products/multiple?ids=${ids}&locale=${i18n.language}`);
                 console.log("API response:", res.data); // Debugowanie
@@ -158,7 +159,7 @@ function SendOrder() {
     return (
         <>
         
-        <Container className="py-5">
+        <Container className="py-5" style={{marginTop:"200px"}}>
             <h1 className="mb-4 text-center">{t("order.title")}</h1>
             <Row className="g-5">
                 {/* FORMULARZ */}
@@ -218,7 +219,10 @@ function SendOrder() {
                     <div className="p-4 border rounded shadow-sm bg-white">
                         <h4>{t("order.summary")}</h4>
                         {loading ? (
-                            <p>{t("cart.loading")}</p>
+                            <>                
+                            {/*<p>{t("cart.loading")}</p>*/} 
+                            <Spinner animation="border" variant="danger" />
+                            </>
                         ) : error ? (
                             <p>{t("errors.apiFailed")}</p>
                         ) : products.length === 0 ? (
