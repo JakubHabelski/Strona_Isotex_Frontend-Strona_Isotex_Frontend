@@ -88,7 +88,7 @@ export default function Technology() {
             <ul>
               <li><strong>Materiały zewnętrzne:</strong> Wełna mineralna, teflon, silikon i inne (szczegóły na podstronie <Link to="/fabrics">Materiały</Link>).</li>
               <li><strong>Wypełnienia:</strong> Wełna ceramiczna, folia aluminiowa i inne rozwiązania (zobacz <Link to="/wypelnienia">Wypełnienia</Link>).</li>
-              <li><strong>Zapięcia:</strong> Haki, rzepy, paski – dla łatwego montażu i demontażu (dowiedz się więcej na <Link to="/zapięcia">Zapięcia</Link>).</li>
+              <li><strong>Zapięcia:</strong> Haki, rzepy, paski – dla łatwego montażu i demontażu (dowiedz się więcej na <Link to="/Fastenings">Zapięcia</Link>).</li>
             </ul>
           </div>
         </div>

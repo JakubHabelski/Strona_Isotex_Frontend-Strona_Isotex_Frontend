@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./OurProjects.module.css";
 import { useTranslation } from "react-i18next";
+import { Button, Modal } from "react-bootstrap";
 
 export default function OurProjects() {
   const turbineRef = useRef(null);
@@ -13,7 +14,23 @@ export default function OurProjects() {
   const exchangerBtnRef = useRef(null);
   const productionBtnRef = useRef(null);
 
+  const [showModal, setShowModal] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
+
   const { t } = useTranslation();
+
+    const handleImageClick = (imageUrl, title) => {
+    setModalImage(imageUrl);
+    setModalTitle(title);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setModalImage("");
+    setModalTitle("");
+  };
 
   const tabs = [turbineRef, valvesRef, exchangerRef, productionRef];
   const buttons = [
@@ -29,6 +46,7 @@ export default function OurProjects() {
       ref: turbineRef,
       buttonRef: turbineBtnRef,
       buttonText: t("OurProjects.buttons.turbines"),
+      
       images: [
         {
           src: "assets/OurProjects/Turbine/TurbinaParowa/Obraz 147.jpg",
@@ -47,13 +65,8 @@ export default function OurProjects() {
           alt: "Turbina",
           title: "Turbina parowa",
           description: "Tu znajdziesz więcej informacji o turbinach.",
-        },
-        {
-          src: "assets/OurProjects/Turbine/TurbinaParowa/Obraz 151.jpg",
-          alt: "Turbina",
-          title: "Turbina parowa",
-          description: "Tu znajdziesz więcej informacji o turbinach.",
-        },
+        }
+        
       ],
     },
     {
@@ -237,17 +250,34 @@ export default function OurProjects() {
                     className={style.tabImg}
                     src={image.src}
                     alt={image.alt}
+                    onClick={() => handleImageClick(image.src, image.src)}
                   />
+                  {/*
                   <div className={style.tabOverlay}>
                     <h3>{image.title}</h3>
                     <p>{image.description}</p>
                   </div>
+                  */}
                 </div>
               ))}
             </div>
           ))}
         </div>
+        <Button 
+          variant="outline-danger"
+          style={{margin:"50px auto", width:"100%"}}
+          >
+          Kliknij aby zobaczyć naszą galerię
+        </Button>
       </div>
+      <Modal show={showModal} onHide={handleCloseModal} centered size="xl" className={style.modal_custom}>
+        <Modal.Header closeButton>
+          <Modal.Title>{modalTitle}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img src={modalImage} alt="Product" className={style.modal_custom_img} />
+        </Modal.Body>
+      </Modal>
     </>
   );
 }

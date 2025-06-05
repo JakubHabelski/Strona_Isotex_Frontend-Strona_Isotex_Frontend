@@ -70,32 +70,36 @@ export default function Navbar_v2() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={styles.Navbar_Collapse}>
           <Nav className={`${styles.navCentered} ms-auto`}>
-           {menuData.map((item, index) =>
-              item.dropdown ? (
-                <NavDropdown
-                  title={
-                    <span
-                      style={{ cursor: "pointer" }}
-                      onClick={() => navigate("/AboutUs")}
-                    >
-                      {item.name}
-                    </span>
-                  }
-                  id={`nav-dropdown-${index}`}
-                  key={index}
-                >
-                  {item.dropdown.map((subitem, subindex) => (
-                    <NavDropdown.Item href={subitem.path} key={subindex}>
-                      {subitem.name}
-                    </NavDropdown.Item>
-                  ))}
-                </NavDropdown>
-              ) : (
-                <Nav.Link key={index} href={item.path}>
-                  <div className={styles.list_item}>{item.name}</div>
-                </Nav.Link>
-              )
-            )}        
+            <Nav.Link href="/">
+          <div className={styles.list_item}>{t("Home")}</div>
+        </Nav.Link>
+        <NavDropdown
+          title={
+            <span style={{ cursor: "pointer" }} onClick={() => navigate("/AboutUs")}>
+              {t("navbar.about")}
+            </span>
+          }
+          id="nav-dropdown-about"
+        >
+          <NavDropdown.Item href="/AboutUs">
+            {t("navbar.about")}
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/AboutUs/Technology">
+            {t("navbar.technology")}
+          </NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link href="/fabrics">
+          <div className={styles.list_item}>{t("navbar.technicalFabrics")}</div>
+        </Nav.Link>
+        <Nav.Link href="/wypelnienia">
+          <div className={styles.list_item}>{t("navbar.fillings")}</div>
+        </Nav.Link>
+        <Nav.Link href="/kontakt">
+          <div className={styles.list_item}>{t("navbar.contact")}</div>
+        </Nav.Link>
+        <Nav.Link href="/MainPageShop">
+          <div className={styles.list_item}>{t("navbar.shop")}</div>
+        </Nav.Link>
             </Nav>
             <Nav.Link onClick={() => navigate(`/Sklep/koszyk`)}>
                             <BsCart size={24} />

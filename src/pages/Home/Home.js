@@ -15,6 +15,7 @@ function Banner(){
   useEffect(() => {
     console.log("Banner useEffect fired");
   // ...reszta kodu
+    const banner_left = document.querySelectorAll(`.${style.banner_left}`)
     const imgs = document.querySelectorAll(`.${style.banner_right_img}`);
     const rotate = [-5, 10, -10, 5];
     let transformY = [];
@@ -70,6 +71,17 @@ function Banner(){
 
     imgs.forEach((img) =>{
       observer.observe(img)
+    })
+
+    const banner_left_observer = new IntersectionObserver((entries) =>{
+      entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+          entry.target.style.scale =1.2;
+        }
+      })
+    })
+    banner_left.forEach((e) =>{
+      banner_left_observer.observe(e)
     })
       // Ustaw style dla obrazków
 
