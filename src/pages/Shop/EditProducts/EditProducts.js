@@ -185,8 +185,8 @@ const handleChange = (event) => {
 
     return(
         <>
-        <Table striped bordered hover>
-            <thead>
+        <Table striped bordered hover style={{marginTop: "200px"}}>
+            <thead style={{position: "sticky", top: "181px"}}>
                 <tr>
                 <th>id</th>
                 <th>Nazwa PL</th>

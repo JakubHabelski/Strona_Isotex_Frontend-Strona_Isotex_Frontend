@@ -1,6 +1,6 @@
 import { ListGroup } from "react-bootstrap";
-import Footer from "../../components/Footer";
-import Navbar_v2 from "../../components/Navbar_v2/Navbar";
+import Footer from "../../../components/Footer";
+import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 
 
 function ShopManagerPage(){

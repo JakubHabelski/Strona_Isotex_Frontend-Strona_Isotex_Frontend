@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import style from "./OurProjects.module.css";
 import { useTranslation } from "react-i18next";
 import { Button, Modal } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export default function OurProjects() {
   const turbineRef = useRef(null);
@@ -17,6 +18,8 @@ export default function OurProjects() {
   const [showModal, setShowModal] = useState(false);
   const [modalImage, setModalImage] = useState("");
   const [modalTitle, setModalTitle] = useState("");
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -266,6 +269,7 @@ export default function OurProjects() {
         <Button 
           variant="outline-danger"
           style={{margin:"50px auto", width:"100%"}}
+          onClick={() => navigate('/ProjectsGallery')}
           >
           Kliknij aby zobaczyć naszą galerię
         </Button>

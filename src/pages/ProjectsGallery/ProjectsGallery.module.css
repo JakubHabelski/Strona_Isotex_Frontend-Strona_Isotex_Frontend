@@ -1,0 +1,27 @@
+.RealizationsContainer{
+    
+    margin: 200px auto 0;
+    width: min(1500px, 90%);
+}
+.RealizationsGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    
+
+    img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}
+
+ .modal_custom_img{
+    width: min(1500px, 100%);
+
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+
+  }

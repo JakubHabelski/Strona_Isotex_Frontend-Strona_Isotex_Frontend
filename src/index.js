@@ -30,12 +30,14 @@ import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_or
 import AddProduct from './pages/Shop/AddProduct/AddProduct';
 import EditProducts from './pages/Shop/EditProducts/EditProducts';
 import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
-import ShopManager from './pages/ShopManager/ShopManager';
+import ShopManager from './pages/Shop/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
 import Technology from './pages/AboutUs/Technology/Technology';
 import ScrollToTop from './utils/ScrollToTop';
 import Fastenings from './pages/Fastenings/Fastenings';
+import ProjectsGallery from './pages/ProjectsGallery/ProjectsGallery';
+import ManageCategories from './pages/Shop/ManageCategories/ManageCategories';
 
 
 const root = document.getElementById("root");
@@ -70,6 +72,9 @@ ReactDOM.createRoot(root).render(
       <Route path='/AboutUs/Technology' element={<Technology/>} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/certyfikaty" element={<CertificatePage/>} />
+
+      ## Projects Gallery
+      <Route path='/ProjectsGallery' element={<ProjectsGallery/>} />
       
       ## Shop
       <Route path='/ShopManager' element={<ShopManager/>} />
@@ -83,6 +88,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/check-order-form' element={<Check_order_form/>} />
       <Route path='/AddProduct' element={<AddProduct></AddProduct>} />
       <Route path='/EditProducts' element={<EditProducts/>} />
+      <Route path='/ManageCategories' element={<ManageCategories/>} />
 
 
       ## Test

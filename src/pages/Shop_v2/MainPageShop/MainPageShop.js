@@ -61,6 +61,7 @@ function MainPageShopMain() {
             };
           })
         );
+        console.log(categoriesWithSub)
         setCategories(categoriesWithSub);
         setShowLists(categoriesWithSub.reduce((acc, cat) => ({ ...acc, [cat.key]: false }), {}));
         setLoading(false);

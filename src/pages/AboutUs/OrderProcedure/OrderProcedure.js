@@ -38,7 +38,7 @@ export default function OrderProcedure(){
                     //OrderStep.style.transitionDelay = `${index * 200}ms`;
                     entry.target.style.opacity = 1;
                     entry.target.style.zIndex = OrderSteps.length- index;
-                    entry.target.style.transition = `all ${index *0.5}s ease`
+                    entry.target.style.transition = `all ${index *1}s ease`
                     
 
                 }

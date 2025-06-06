@@ -49,7 +49,7 @@ function OrderInfo(){
     return(
         <>
 
-
+        <div style={{marginTop:"200px"}}>
         <Form onSubmit={handleSubmit} className={style.CustomerInfo} style={{marginTop: "32px"}}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Podaj id zamówienia:</Form.Label>
@@ -114,6 +114,8 @@ function OrderInfo(){
         <div>
         
         </div>
+        </div>
+        
         
 
         
