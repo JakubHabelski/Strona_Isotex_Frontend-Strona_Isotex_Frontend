@@ -38,6 +38,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import Fastenings from './pages/Fastenings/Fastenings';
 import ProjectsGallery from './pages/ProjectsGallery/ProjectsGallery';
 import ManageCategories from './pages/Shop/ManageCategories/ManageCategories';
+import ManageSubCategories from './pages/Shop/ManageSubCategories/ManageSubCategories';
 
 
 const root = document.getElementById("root");
@@ -89,6 +90,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/AddProduct' element={<AddProduct></AddProduct>} />
       <Route path='/EditProducts' element={<EditProducts/>} />
       <Route path='/ManageCategories' element={<ManageCategories/>} />
+      <Route path='/ManageSubCategories' element={<ManageSubCategories/>} />
 
 
       ## Test

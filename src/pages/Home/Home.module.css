@@ -25,7 +25,7 @@
 .banner_left  h1 {
     font-weight: bold;
     text-align: left;
-    font-size: clamp(1.8rem, 5vw, 5rem);
+    font-size: clamp(1.8rem, 3vw, 5rem);
 }
 .home_banner .banner_left .banner_left_cta{
     margin-top: 2rem;
@@ -137,8 +137,11 @@
     }
 }
 @media (max-width: 1600px)  {
+    .home_banner .banner_left{
+        padding: 2rem;
+    }
     .home_banner .banner_right img{
-        max-width: 250px;    
+        max-width: 200px;    
     }
 }
 @media (max-width: 1300px)  {

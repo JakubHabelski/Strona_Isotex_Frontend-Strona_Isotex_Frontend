@@ -41,7 +41,7 @@ function Banner(){
         transformY = ['-100%', '-100%', '0%', '0%'];
         transformX = ['50%', '150%', '50%', '150%'];
       } else if(mediaMax1600px.matches){
-        transformY = ['-100%', '-100%', '0%', '0%'];
+        transformY = ['-80%', '-80%', '20%', '20%'];
         transformX = ['50%', '150%', '50%', '150%'];
       } else {
         transformY = ['-100%', '-100%', '0%', '0%'];

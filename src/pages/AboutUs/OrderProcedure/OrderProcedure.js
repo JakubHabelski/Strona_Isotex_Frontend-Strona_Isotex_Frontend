@@ -6,6 +6,7 @@ import style from './OrderProcedure.module.css'
 export default function OrderProcedure(){
     const procedureRef = useRef(null);
     useEffect(() =>{
+        const OrderProcedure = document.querySelectorAll(`.${style.OrderProcedure}`)
         const OrderSteps = document.querySelectorAll(`.${style.OrderStep}`)
         const containerWidth = procedureRef.current.getBoundingClientRect().width;
         const stepWidth = containerWidth / OrderSteps.length;
@@ -29,27 +30,25 @@ export default function OrderProcedure(){
         })
             
         
-        const observer = new IntersectionObserver((entries) =>{
-            entries.forEach((entry) =>{
-                if(entry.isIntersecting){
-                    const index = Array.from(OrderSteps).indexOf(entry.target);
-                    
-                    entry.target.style.transform = `translateX(0)`;
-                    //OrderStep.style.transitionDelay = `${index * 200}ms`;
-                    entry.target.style.opacity = 1;
-                    entry.target.style.zIndex = OrderSteps.length- index;
-                    entry.target.style.transition = `all ${index *1}s ease`
-                    
-
-                }
-            })
-        },
-            {
-                threshold: 0.9
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+            if(entry.isIntersecting){
+                let delay = 0;
+                OrderSteps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.style.transform = 'translateX(0)';
+                    step.style.opacity = 1;
+                    step.style.zIndex = OrderSteps.length - index;
+                    step.style.transition = `all 0.8s cubic-bezier(.77,0,.18,1)`;
+                }, delay);
+                delay += 500;
+                });
+                observer.disconnect(); // animuj tylko raz
             }
-        )
+            });
+        }, { threshold: 0.2 });
 
-        OrderSteps.forEach((OrderStep) =>{
+        OrderSteps.forEach((OrderStep) => {
             observer.observe(OrderStep);
         })
 

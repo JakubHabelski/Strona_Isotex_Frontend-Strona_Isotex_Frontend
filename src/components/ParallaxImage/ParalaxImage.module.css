@@ -43,11 +43,11 @@
     border-radius: 10px;
   }
   .parallax__text h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vh, 5rem);
     text-align: left;
   }
   .parallax__text p {
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 2vh, 2rem);
     text-align: left;
     
   }

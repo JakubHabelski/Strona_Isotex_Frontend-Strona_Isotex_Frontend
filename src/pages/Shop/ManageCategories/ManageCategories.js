@@ -45,7 +45,8 @@ const [categoryFrom, setCategoryForm] = useState({
         }
 
         try {
-            await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
+            await axios.post('http://localhost:8080/Category_API/AddCategory', formData, {
+            //await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

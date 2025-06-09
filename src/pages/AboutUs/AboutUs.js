@@ -61,24 +61,27 @@ function AboutUsPage(){
   useEffect(() => {
     const LeftSlide = document.querySelectorAll(`.${style.LeftSlide}`);
     const RightSlide = document.querySelectorAll(`.${style.RightSlide}`);
+    const ImagesSlider = document.querySelectorAll(`.${style.ImagesSlider}`)
+
+    console.log('style.LeftSlide:', style.LeftSlide);
+    console.log('style.RightSlide:', style.RightSlide);
+
+    RightSlide.forEach(el => console.log('RightSlide element:', el.className));
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains(style.LeftSlide)) {
-            entry.target.style.transform = 'translateX(0)';
-            entry.target.style.opacity = 1;
-          }
-          if (entry.target.classList.contains(style.RightSlide)) {
-            entry.target.style.transform = 'translateX(0)';
-            entry.target.style.opacity = 1;
-          }
-        }
+        if(entry.isIntersecting){
+          entry.target.children[0].style.opacity = 1;
+          entry.target.children[0].style.transform = "translateX(0)"
+          entry.target.children[1].style.opacity = 1;
+          entry.target.children[1].style.transform = "translateX(0)"
+      }
       });
-    }, { threshold: 0.9 });
+    }, { threshold: 0.5 });
 
-    LeftSlide.forEach((el) => observer.observe(el));
-    RightSlide.forEach((el) => observer.observe(el));
+    ImagesSlider.forEach((el) => observer.observe(el));
+   // LeftSlide.forEach((el) => observer.observe(el));
+   // RightSlide.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);

@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Dla linków do podstron
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import style from './Technology.module.css';
 import Navbar_v2 from '../../../components/Navbar_v2/Navbar';
 import Footer from '../../../components/Footer';
 import { Button } from 'react-bootstrap';
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Technology() {
 
