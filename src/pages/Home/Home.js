@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar_v2 from '../../components/Navbar_v2/Navbar';
 import Footer from '../../components/Footer';
 import style from './Home.module.css'
@@ -146,72 +146,151 @@ function Banner(){
     </>
   )
 }
-function Futures(){
+
+function WhatWeOfferBanner(){
   const { t } = useTranslation();
 
+  return(
+    <>
+    <div className={style.WhatWeOfferBanner}>
+      <div className={style.WhatWeOfferBannerText}>
+        <p>W naszej ofercie znajdą Państwo szeroki wybór wysokiej jakości produktów, w tym nowoczesne materace izolacyjne, doskonałej jakości materace izo-standard, które spełniają najwyższe standardy izolacji termicznej i akustycznej, a także trwałe tkaniny techniczne oraz kompleksowy zestaw akcesoriów niezbędnych do realizacji różnorodnych projektów.</p>
+        <p>Oferujemy także profesjonalne usługi wycinania w tkaninach oraz w innych materiałach z wykorzystaniem zaawansowanej technologii CNC, zapewniając precyzję i efektywność na każdym etapie produkcji. Nasze rozwiązania są projektowane z myślą o potrzebach klientów, oferując niezawodność i dostosowanie do specyficznych wymagań, co czyni nas liderem w branży izolacji i technik specjalnych.</p>
+        <Button variant='outline-warning' style={{float:'right'}}>{t("shortinfo2.button")}</Button>
+      </div>
+    </div>
+    </>
+  )
+}
+function Catalog(){
+
+  return(
+    <>
+    <div className={style.CatalogContainerBG}>
+      <div className={style.CatalogContainer}>
+        <div className={style.CatalogText}>
+          <h1>Zobacz nasz najnowszy katalog!</h1>
+          <p>Oferujemy Państwu nowoczesne systemy izolacji, w tym: wysokiej jakości materace izolacyjne, materace IZO-standard spełniające najwyższe standardy, trwałe tkaniny techniczne oraz szeroki wybór akcesoriów. Zapraszamy do zapoznania się z naszą ofertą i odkrycia niezawodnych rozwiązań dostosowanych do Państwa potrzeb.</p>
+          <Button variant='outline-danger'>Pobierz</Button>
+        </div>
+        <img src='/assets\KATALOG_ISOTEX_GROUP_page-0001.jpg' className={style.CatalogImage}></img>
+      </div>
+    </div>
+    
+    
+    
+    </>
+  )
+}
+
+function Futures() {
+  const { t } = useTranslation(); // Zakładam, że useTranslation jest zdefiniowane
+  const cardRefs = useRef([]);
 
   useEffect(() => {
-    const Futures_cards = document.querySelectorAll(`.${style.Futures_card}`);
-
     const observer = new IntersectionObserver(
       (entries) => {
-        // Sortuj entries po kolejności w DOM
         const visibleEntries = entries
           .filter(entry => entry.isIntersecting)
           .sort((a, b) => {
-            return Array.from(Futures_cards).indexOf(a.target) - Array.from(Futures_cards).indexOf(b.target);
+            return cardRefs.current.indexOf(a.target) - cardRefs.current.indexOf(b.target);
           });
 
         visibleEntries.forEach((entry, idx) => {
           setTimeout(() => {
             entry.target.style.opacity = 1;
-            entry.target.style.setProperty('transform', 'none', 'important');
-          }, idx * 300); // 300ms odstępu między kolejnymi kartami
+            entry.target.style.transform = 'none'; // Usunąłem 'important', bo nie jest tu potrzebne
+          }, idx * 300);
         });
       },
-      { threshold: 0.9 }
+      { threshold: 0.5 }
     );
 
-    Futures_cards.forEach((Futures_card) => {
-      observer.observe(Futures_card);
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
     });
 
-    // Cleanup
     return () => observer.disconnect();
   }, []);
 
-
-  return(
+  return (
     <>
-      <div className={style.Futures_container}>
-        <div className={style.Futures_card}>
-          <img src='assets\icons\icons8-quality-48.svg'></img>
-          <h1>
-          Jakość
-          </h1>
+      <h1 className={style.Futures_H1}>Co nas wyróżnia?</h1>
+      <div className={style.Futures_container}>        
+        <div
+          ref={(el) => (cardRefs.current[0] = el)}
+          className={style.Futures_card}
+        >
+          <img src="assets/icons/icons8-quality-48.svg" alt="Jakość" />
+          <h1>Jakość</h1>
           <p>
-            Nasze izolacje termiczne spełniają rygorystyczne standardy, co potwierdzają certyfikaty ISO 9001. Wykorzystujemy najlepsze materiały, takie jak wełna mineralna, szklana i ceramiczna, aby zapewnić trwałość i efektywność. Dzięki temu nasze produkty gwarantują niezawodność nawet w najtrudniejszych warunkach przemysłowych.
+            Nasze izolacje termiczne spełniają rygorystyczne standardy, co potwierdzają certyfikaty ISO 9001. Wykorzystujemy najlepsze materiały, takie jak wełna mineralna, szklana i ceramiczna, aby zapewnić trwałość i efektywność. Dzięki temu nasze produkty gwarantują niezawodność nawet w najtrudnych warunkach przemysłowych.
           </p>
         </div>
-        <div className={style.Futures_card}>
-          <img src='assets\icons\icons8-technology-50_1.svg'></img>
-          <h1>
-          Technologia
-          </h1>
+        <div
+          ref={(el) => (cardRefs.current[1] = el)}
+          className={style.Futures_card}
+        >
+          <img src="assets/icons/icons8-technology-50_1.svg" alt="Technologia" />
+          <h1>Technologia</h1>
           <p>
-          Korzystamy z projektowania CAD 3D, co pozwala na precyzyjne dostosowanie izolacji do Twoich potrzeb. Nasze zaawansowane procesy produkcyjne wykorzystują wysokiej jakości materiały, takie jak wełna mineralna, silikon i teflon, zapewniając bezpieczeństwo i wydajność. Stosujemy także technologie odnawialne, minimalizując wpływ na środowisko i zwiększając efektywność energetyczną Twoich instalacji.
+            Korzystamy z projektowania CAD 3D, co pozwala na precyzyjne dostosowanie izolacji do Twoich potrzeb. Nasze zaawansowane procesy produkcyjne wykorzystują wysokiej jakości materiały, takie jak wełna mineralna, silikon i teflon, zapewniając bezpieczeństwo i wydajność. Stosujemy także technologie odnawialne, minimalizując wpływ na środowisko i zwiększając efektywność energetyczną Twoich instalacji.
           </p>
         </div>
-        <div className={style.Futures_card}>
-          <img src='assets\icons\icons8-experience-50_1.svg'></img>
-          <h1>
-          Doświadczenie
-          </h1>
+        <div
+          ref={(el) => (cardRefs.current[2] = el)}
+          className={style.Futures_card}
+        >
+          <img src="assets/icons/icons8-experience-50_1.svg" alt="Doświadczenie" />
+          <h1>Doświadczenie</h1>
           <p>
-           Od 1994 roku zdobywamy wiedzę, która przekłada się na doskonałe izolacje termiczne. Przez ponad 30 lat zrealizowaliśmy projekty w Polsce i za granicą, zyskując zaufanie klientów na całym świecie. Nasze doświadczenie pozwala nam oferować rozwiązania idealnie dopasowane do specyficznych wymagań każdej branży.
+            Od 1994 roku zdobywamy wiedzę, która przekłada się na doskonałe izolacje termiczne. Przez ponad 30 lat zrealizowaliśmy projekty w Polsce i za granicą, zyskując zaufanie klientów na całym świecie. Nasze doświadczenie pozwala nam oferować rozwiązania idealnie dopasowane do specyficznych wymagań każdej branży.
           </p>
         </div>
       </div>
+    </>
+  );
+}
+
+function OurProducts(){
+
+  return(
+    <>
+    <div className={style.OurProductsBG}>
+      <div className={style.OurProducts}>
+        <h1>Nasze produkty</h1>
+        <div className={style.OurProductsGrid}>
+          <div className={style.GridProduct}>
+            <div className={style.GridProductText}>
+              <h2>Materace izolacyjne</h2>
+              <p>Wysokiej jakości materace izolacyjne zapewniające doskonałą ochronę termiczną i akustyczną, dostosowane do potrzeb przemysłu.</p>
+            </div>
+            <img src="/assets/Linkedin/1615967129156.jpg" alt="Materace izolacyjne" />
+          </div>
+          <div className={style.GridProduct}>
+            <div className={style.GridProductText}>
+              <h2>Tkaniny</h2>
+              <p>Trwałe i odporne tkaniny techniczne, idealne do specjalistycznych zastosowań w izolacji i ochronie przemysłowej.</p>
+            </div>
+            <img src="/assets/materials/fabrics/glass.jpg" alt="Tkaniny" />
+          </div>
+          <div className={style.GridProduct}>
+            <div className={style.GridProductText}>
+              <h2>Wypełnienia</h2>
+              <p>Wypełnienia z wełny mineralnej i szklanej, oferujące doskonałą izolację i bezpieczeństwo w wymagających warunkach.</p>
+            </div>
+            <img src="/assets/materials/Fillings/welna-mineralna/welna_szklana.jpg" alt="Wypełnienia" />
+          </div>
+          <div className={style.GridProduct}>
+            <div className={style.GridProductText}>
+              <h2>Akcesoria</h2>
+              <p>Kompleksowy zestaw akcesoriów, wspierający instalację i utrzymanie izolacji na najwyższym poziomie.</p>
+            </div>
+            <img src="/assets/whatsapp/IMG-20250528-WA0018.jpg" alt="Akcesoria" />
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   )
 }
@@ -425,11 +504,18 @@ function Home() {
     <>
     <Navbar_v2></Navbar_v2>
     <Banner></Banner>
+    <WhatWeOfferBanner/>
     <Futures></Futures>
+    <Catalog/>
+    {/*
+    
     <WideHeadLineWithPhoto></WideHeadLineWithPhoto>
        
     <Panel_Imageleft_TextSlide_Right></Panel_Imageleft_TextSlide_Right>
+    */}
+    
     <OurProjects></OurProjects>
+    <OurProducts/>
     <ParallaxImage></ParallaxImage>
     <OurTeam></OurTeam>
     <JoinUs></JoinUs>

@@ -105,6 +105,14 @@
     gap: 2rem;
     margin: 0px auto 60px;
     
+    
+    
+}
+.Futures_H1{
+    width: min(1500px, 90%);
+    margin: 50px auto;
+    color: red;
+    
 }
 .Futures_container .Futures_card {
     transition: all 0.8s ease;
@@ -372,4 +380,83 @@
     
     font-weight: 600;
     }
+}
+.WhatWeOfferBanner{
+    background-color: #E3001B;
+    color: #ffffff;
+    .WhatWeOfferBannerText{
+        width: min(1500px, 90%);
+        margin: 100px auto;
+    }
+}
+.CatalogContainerBG{
+    background-color: #547081;
+}
+.CatalogContainer{
+    width: min(1500px, 90%);
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    
+
+    .CatalogText{
+        margin-right: 2rem;
+    }
+
+    h1{
+    color:white;
+    text-align: left;    
+    }
+    p{
+        color:white;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        /*
+        transform: skew(-25deg);
+        */      
+    }
+}
+.OurProductsBG {
+  background-color: #547081;
+}
+
+.OurProducts {
+  width: min(1500px, 90%);
+  margin: 100px auto;
+}
+
+.OurProducts h1 {
+  color: white;
+}
+
+.OurProductsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.GridProduct {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.GridProductText {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.GridProductText h2 {
+  font-weight: 700;
+}
+
+.GridProduct img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Zachowuje proporcje 1:1 (kwadrat), możesz zmienić np. na 16/9 */
+  object-fit: cover; /* Przycina, jeśli proporcje się różnią */
 }

@@ -193,6 +193,20 @@ function MainPageShopMain() {
               </div>
     </div>
   );
+  const renderCategory2 = (category) => (
+    <div key={category.key} className={style.MainPageShopLinks}>
+      <div className={style.MainCategoryCard} onClick={() => handleCategorySelect(category.key, category.label)}>
+        <div className={style.CardText}>
+            <h5>{category.label}</h5>
+            
+          </div>
+          <img src={category.icon}  />        
+        
+      </div>
+              
+    </div>
+    
+  );
 
   // Render product card
   const renderProduct = (product) => (
@@ -241,6 +255,8 @@ function MainPageShopMain() {
     <ImageCarousel />
     <div className={style.MainPageShopContainer}>
       <Row style={{minHeight: "500px", marginBottom: "100px"}} className={style.MainPageShopRow}>
+      {
+      /*
       <Col xs={12} lg={3} className={style.MainPageShopLinksContainer}>
         {loading ? (
           <div>
@@ -253,7 +269,9 @@ function MainPageShopMain() {
         
         
       </Col>
-      <Col xs={12} lg={9} className={style.MainPageShopProducts}>
+      */}
+      
+      <Col  className={style.MainPageShopProducts}>
         <div style={{ width: "100%", padding: "0 20px 0"}}>
           
           <Breadcrumb>
@@ -292,11 +310,14 @@ function MainPageShopMain() {
             )}
           </Breadcrumb>
           <div>
-            <h5 style={{ fontWeight: "lighter", margin: "20px 0" }}>
+           <div style={{display: "grid",
+                        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+                        gap: "1rem",
+                        justifyContent: "space-between"}}>
               {subcategories.length > 0 && subcategories[0].categoryShowDTO
                 ? getTranslatedLabel(subcategories[0].categoryShowDTO)
-                : null}
-            </h5>
+                : categories.map(renderCategory2)}
+            </div>
             <div className={style.MainCategoryList}>
               {selectedSubcategory ? (
                 productsLoading ? (

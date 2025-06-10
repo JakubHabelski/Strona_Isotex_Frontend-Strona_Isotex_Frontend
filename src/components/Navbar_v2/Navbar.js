@@ -81,10 +81,10 @@ export default function Navbar_v2() {
           }
           id="nav-dropdown-about"
         >
-          <NavDropdown.Item href="/AboutUs">
+          <NavDropdown.Item href="/AboutUs" style={{fontWeight: "800"}}>
             {t("navbar.about")}
           </NavDropdown.Item>
-          <NavDropdown.Item href="/AboutUs/Technology">
+          <NavDropdown.Item href="/AboutUs/Technology" style={{fontWeight: "800"}}>
             {t("navbar.technology")}
           </NavDropdown.Item>
         </NavDropdown>
