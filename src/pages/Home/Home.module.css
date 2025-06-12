@@ -77,7 +77,7 @@
 .home_banner .banner_right img{
     object-fit: cover;
     aspect-ratio: 1/1;
-    max-width: 300px;
+    max-width: 250px;
     margin: auto;
     border-radius: 20px;
     position: absolute;

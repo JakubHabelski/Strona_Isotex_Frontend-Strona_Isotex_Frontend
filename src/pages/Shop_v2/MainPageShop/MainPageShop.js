@@ -52,7 +52,7 @@ function MainPageShopMain() {
             return {
               key: cat.id,
               icon: cat.icon_url,
-              image: "/assets/materials/fabrics/glass/Silikon_szary.jpg",
+              image: cat.photo_url,
               label: getTranslatedLabel(cat),
               subcategories: subRes.data.map((sub) => ({
                 key: sub.id,
@@ -200,7 +200,7 @@ function MainPageShopMain() {
             <h5>{category.label}</h5>
             
           </div>
-          <img src={category.icon}  />        
+          <img src={category.image}  />        
         
       </div>
               

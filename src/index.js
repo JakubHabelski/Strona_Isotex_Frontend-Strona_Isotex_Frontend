@@ -78,7 +78,6 @@ ReactDOM.createRoot(root).render(
       <Route path='/ProjectsGallery' element={<ProjectsGallery/>} />
       
       ## Shop
-      <Route path='/ShopManager' element={<ShopManager/>} />
       <Route path="/Sklep" element={<Shop />} />
       <Route path="/Sklep/:category" element={<Product_List />} />
       <Route path="/Sklep/:category/:item" element={<ProductDetail />} />
@@ -87,11 +86,14 @@ ReactDOM.createRoot(root).render(
       <Route path='/success' element={<Success_payment/>}/>
       <Route path='/check-order' element={<Check_order/>} />
       <Route path='/check-order-form' element={<Check_order_form/>} />
+
+      ## Shop Manager\
+      <Route path='/ShopManager' element={<ShopManager/>} />      
       <Route path='/AddProduct' element={<AddProduct></AddProduct>} />
       <Route path='/EditProducts' element={<EditProducts/>} />
       <Route path='/ManageCategories' element={<ManageCategories/>} />
       <Route path='/ManageSubCategories' element={<ManageSubCategories/>} />
-
+      
 
       ## Test
       <Route path='/home' element={<Home/>} />

@@ -100,6 +100,13 @@ function Banner(){
       }
         */
     };
+
+    const setTransformTo0 = () =>{
+      imgs.forEach((img)=>{
+        img.style.transform = 'translate(0)';
+      })
+    }
+    setTransformTo0();
     
 
     // Wywołaj na start
@@ -110,12 +117,14 @@ function Banner(){
     mediaMax1300px.addEventListener('change', handleResize);
     mediaMax992px.addEventListener('change', handleResize);
     mediaMax768px.addEventListener('change', handleResize);
+    mediaMax768px.addEventListener('change', setTransformTo0);
     // Sprzątanie
     return () => {
       mediaMax1600px.removeEventListener('change', handleResize);
       mediaMax1300px.removeEventListener('change', handleResize);
       mediaMax992px.removeEventListener('change', handleResize);
       mediaMax768px.removeEventListener('change', handleResize);
+
     };
   }, []);
 
@@ -171,7 +180,7 @@ function Catalog(){
         <div className={style.CatalogText}>
           <h1>Zobacz nasz najnowszy katalog!</h1>
           <p>Oferujemy Państwu nowoczesne systemy izolacji, w tym: wysokiej jakości materace izolacyjne, materace IZO-standard spełniające najwyższe standardy, trwałe tkaniny techniczne oraz szeroki wybór akcesoriów. Zapraszamy do zapoznania się z naszą ofertą i odkrycia niezawodnych rozwiązań dostosowanych do Państwa potrzeb.</p>
-          <Button variant='outline-danger'>Pobierz</Button>
+          <Button href='/assets/KATALOG_ISOTEX_GROUP.pdf' variant='outline-danger'>Pobierz</Button>
         </div>
         <img src='/assets\KATALOG_ISOTEX_GROUP_page-0001.jpg' className={style.CatalogImage}></img>
       </div>
