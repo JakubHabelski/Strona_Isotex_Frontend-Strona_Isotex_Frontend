@@ -1,9 +1,9 @@
 import { Button, Form } from "react-bootstrap";
-import Footer from "../../../components/Footer";
-import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import Footer from "../../../../components/Footer";
+import Navbar_v2 from "../../../../components/Navbar_v2/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { supabase } from '../../../utils/supabase';
+import { supabase } from '../../../../utils/supabase';
 import style from "./AddProduct.module.css"
 
 function AddProductform(){

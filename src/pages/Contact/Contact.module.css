@@ -1,5 +1,11 @@
 .contactUsContainer{
     margin-top: 200px;
+    form{
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
 }
 .contactUsContent{
     display: flex;
@@ -13,12 +19,7 @@
     width: 50%;
     height: 600px;
 }
-form{
-    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 1rem;
 
-}
 @media screen and (max-width: 992px) {
     .contactUsContent{
         flex-direction: column;

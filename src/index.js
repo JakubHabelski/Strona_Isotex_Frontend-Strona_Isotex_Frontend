@@ -27,8 +27,6 @@ import Success_payment from './pages/Shop/Success_payment/Success_payment';
 import CertificatePage from './pages/Certificate/CertifikatePage';
 import Check_order from './pages/Shop/Check_order/Check_order';
 import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_order_form';
-import AddProduct from './pages/Shop/AddProduct/AddProduct';
-import EditProducts from './pages/Shop/EditProducts/EditProducts';
 import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
 import ShopManager from './pages/Shop/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
@@ -37,8 +35,11 @@ import Technology from './pages/AboutUs/Technology/Technology';
 import ScrollToTop from './utils/ScrollToTop';
 import Fastenings from './pages/Fastenings/Fastenings';
 import ProjectsGallery from './pages/ProjectsGallery/ProjectsGallery';
-import ManageCategories from './pages/Shop/ManageCategories/ManageCategories';
-import ManageSubCategories from './pages/Shop/ManageSubCategories/ManageSubCategories';
+import AddProduct from './pages/Shop/ShopManager/AddProduct/AddProduct';
+import EditProducts from './pages/Shop/ShopManager/EditProducts/EditProducts';
+import ManageCategories from './pages/Shop/ShopManager/ManageCategories/ManageCategories';
+import ManageSubCategories from './pages/Shop/ShopManager/ManageSubCategories/ManageSubCategories';
+import EditCategory from './pages/Shop/ShopManager/EditCategory/EditCategory';
 
 
 const root = document.getElementById("root");
@@ -93,6 +94,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/EditProducts' element={<EditProducts/>} />
       <Route path='/ManageCategories' element={<ManageCategories/>} />
       <Route path='/ManageSubCategories' element={<ManageSubCategories/>} />
+      <Route path='/EditCategory' element={<EditCategory/>} />
       
 
       ## Test

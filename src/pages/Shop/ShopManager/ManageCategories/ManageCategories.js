@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
-import Footer from "../../../components/Footer";
-import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import Footer from "../../../../components/Footer";
+import Navbar_v2 from "../../../../components/Navbar_v2/Navbar";
 import style from './ManageCategories.module.css'
 import { useState } from "react";
 import { form } from "motion/react-client";
