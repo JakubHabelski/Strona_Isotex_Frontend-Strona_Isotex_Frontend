@@ -22,7 +22,8 @@ export default function EditCategory(){
     const handleShow = () => setShow(true);
 
     useEffect(() =>{
-        axios.get(`${apiUrl}/Category_API/GetCategories`)
+        axios.get(`http://localhost:8080/Category_API/GetCategories`)
+        //axios.get(`${apiUrl}/Category_API/GetCategories`)
         .then(async(response) =>{
             console.log(response.data)
             setCategores(response.data);
