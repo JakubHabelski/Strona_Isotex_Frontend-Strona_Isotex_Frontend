@@ -40,19 +40,18 @@ export default function EditCategory(){
         })
     }
     const handleChange = (event) => {
-        const { name, value, files } = event.target;
+        const { name, value} = event.target;
 
         setFormData((prevData) => ({
             ...prevData,
-            [name]: name === 'photo_url' ? files[0] : value
+            [name]: value
         }));
         console.log(formData)
     };
     function handleImage(e) {
-        const file = e.target.files[0];
         setFormData((prevData) => ({
             ...prevData,
-            photo: file
+            photo: e.target.files[0]
         }));
     }
     async function handleSubmit(e) {
@@ -71,7 +70,7 @@ export default function EditCategory(){
     }
 
     try {
-        await axios.post('http://localhost:8080/Category_API/EditCategory', formDataSubmit, {
+        await axios.put('http://localhost:8080/Category_API/EditCategory', formDataSubmit, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

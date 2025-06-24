@@ -12,7 +12,7 @@ import axios from "axios";
 
 export default function ManageCategories(){
 
-const [categoryFrom, setCategoryForm] = useState({
+    const [categoryFrom, setCategoryForm] = useState({
         LabelPL: "",
         LabelEN: "",
         icon: null

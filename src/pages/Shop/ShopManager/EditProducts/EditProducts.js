@@ -50,8 +50,8 @@ function EditProductsList(){
 
 
 
-    const request = `${apiUrl}/Product_API/updateProduct`;
-
+    //const request = `${apiUrl}/Product_API/updateProduct`;
+    const request = `http://localhost:8080/Product_API/updateProduct`;
     const [formData, setFormData] = useState({
       id: "",
       name_pl: "",
@@ -62,7 +62,7 @@ function EditProductsList(){
       category: "",
       subCategory: "",
       stock_quantity: "",
-      photo: ''
+      photo: null
     })
 
     useEffect(()=>{
@@ -72,40 +72,46 @@ function EditProductsList(){
     }, {apiUrl})
 
 
-    const handleEditClick = async (product) => {
-    setShow(true);
-    setEditRow(product.id);
+    const handleEditClick = (product) => {
+        setShow(true);
+        setEditRow(product.id);
 
-    // Załóżmy, że product.category i product.subcategory to obiekty
-    // Wyciągnij klucz/enum/value do selecta (np. en, value lub inny unikalny identyfikator)
-    const categoryValue = product.category?.en || product.category; // lub inny klucz, zależnie od struktury
-    const subCategoryValue = product.subcategory?.value || product.subcategory; // analogicznie
+        const categoryValue = product.category?.en || product.category;
+        const subCategoryValue = product.subcategory?.value || product.subcategory;
 
-    setselectedCategory(categoryValue);
-    setSelectedSubCategory(subCategoryValue);
+        setselectedCategory(categoryValue);
+        setSelectedSubCategory(subCategoryValue);
 
-    setFormData({
-        id: product.id,
-        name_pl: product.translations[0].name,
-        name_en: product.translations[1].name,
-        description_pl: product.translations[0].description,
-        description_en: product.translations[1].description,
-        price: product.price,
-        category: categoryValue,
-        subCategory: subCategoryValue,
-        stock_quantity: product.stock_quantity,
-        photo: product.image_url
-    });
+        setFormData({
+            id: product.id,
+            name_pl: product.translations[0].name,
+            name_en: product.translations[1].name,
+            description_pl: product.translations[0].description,
+            description_en: product.translations[1].description,
+            price: product.price,
+            category: categoryValue,
+            subCategory: subCategoryValue,
+            stock_quantity: product.stock_quantity,
+            photo: null, // ZAWSZE null na start!
+            oldPhotoUrl: product.image_url // zapamiętaj stary URL
+        });
     };
 
-const handleChange = (event) => {
-    const { name, value, files } = event.target;
+    const handleImage = (e) => {
+        setFormData((prev) => ({
+            ...prev,
+            photo: e.target.files[0] || null
+        }));
+    };
 
-    setFormData((prevData) => ({
-        ...prevData,
-        [name]: name === 'photo' ? files[0] : value
-    }));
-};
+    const handleChange = (event) => {
+        const { name, value} = event.target;
+
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
 
 
     const handleSelectChange = (event) => {
@@ -124,38 +130,14 @@ const handleChange = (event) => {
     const handleSubCategoryChange = (event) => {
     setSelectedSubCat(event.target.value);
     };
-    const handleUpload = async () => {
-        const file = formData.photo;
-        if (!file || typeof file === "string") {
-            // Nie ma nowego pliku do uploadu
-            return null;
-        }
-
-        const fileName = `${Date.now()}_${file.name}`;
-
-        const { data, error } = await supabase.storage
-            .from('teststrony')
-            .upload(fileName, file);
-
-        if (error) {
-            console.error("Upload failed", error);
-            return null;
-        }
-
-        const publicUrl = supabase.storage
-            .from('teststrony')
-            .getPublicUrl(fileName).data.publicUrl;
-        console.log("publicUrl: ", publicUrl)
-        return publicUrl;
-    };
 
     const handleSubmit = async (event) => {
+        event.preventDefault();
 
-        const imageUrl = await handleUpload();
-       
+        
 
         const productData = {
-            id : parseInt(formData.id),
+            id: parseInt(formData.id),
             name_pl: formData.name_pl,
             name_en: formData.name_en,
             description_pl: formData.description_pl,
@@ -164,19 +146,36 @@ const handleChange = (event) => {
             category: selectedCat,
             subCategory: selectedSubCat,
             stock_quantity: parseInt(formData.stock_quantity),
-          //  photoUrl: imageUrl // <- Wysyłasz tylko URL
+          
         };
-            if (imageUrl) {
-            productData.photoUrl = imageUrl;
-        }
-        console.log("productData: "+productData)
+
+        const formDataPost = new FormData();
+        formDataPost.append("dto",new Blob([JSON.stringify({
+                id: parseInt(formData.id),
+                name_pl: formData.name_pl,
+                name_en: formData.name_en,
+                description_pl: formData.description_pl,
+                description_en: formData.description_en,
+                price: parseFloat(formData.price),
+                category: selectedCat,
+                subCategory: selectedSubCat,
+                stock_quantity: parseInt(formData.stock_quantity),
+            }),
+            ],
+            { type: "application/json" }
+        )
+        );
+
+        if (formData.photo) {
+            formDataPost.append("photo", formData.photo);
+            }
+
         try {
-            await axios.put(request, productData, {
-                headers: {
-                    "Content-Type": "application/json"
-                }
+            await axios.put(request, formDataPost, {
+                headers: { "Content-Type": "multipart/form-data" }
             });
-            console.log("Produkt dodany.");
+            console.log("Produkt zaktualizowany.");
+            setShow(false);
         } catch (error) {
             console.error("Błąd wysyłki:", error);
         }
@@ -294,7 +293,7 @@ const handleChange = (event) => {
                       </Form.Group>
                         <Form.Group controlId="formFile" className="mb-3">
                             <Form.Label>Zdjęcie</Form.Label>
-                            <Form.Control type="file" name="photo" onChange={handleChange} />
+                            <Form.Control type="file" name="photo" onChange={handleImage} />
                             {typeof formData.photo === "string" && formData.photo && (
                                 <div style={{marginTop: 8}}>
                                 <img src={formData.photo} alt="Aktualne zdjęcie" style={{maxWidth: 150}} />
