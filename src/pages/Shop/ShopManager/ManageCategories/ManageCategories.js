@@ -10,11 +10,15 @@ import axios from "axios";
 
 
 
+
 export default function ManageCategories(){
+    
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const [categoryFrom, setCategoryForm] = useState({
         LabelPL: "",
         LabelEN: "",
+        LabelDE: "",
         icon: null
     });
 
@@ -38,14 +42,15 @@ export default function ManageCategories(){
         const formData = new FormData();
         formData.append('dto', new Blob([JSON.stringify({
             LabelPL: categoryFrom.LabelPL,
-            LabelEN: categoryFrom.LabelEN
+            LabelEN: categoryFrom.LabelEN,
+            LabelDE: categoryFrom.LabelDE
         })], { type: 'application/json' }));
         if (categoryFrom.icon) {
             formData.append('icon', categoryFrom.icon);
         }
 
         try {
-            await axios.post('http://localhost:8080/Category_API/AddCategory', formData, {
+            await axios.post(`${apiUrl}/Category_API/AddCategory`, formData, {
             //await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -58,7 +63,10 @@ export default function ManageCategories(){
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <>
+        <Navbar_v2></Navbar_v2>
+        <div className={style.ManageCategoriesForm}>
+            <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
                 <Form.Label>Dodaj Kategorię</Form.Label>
                 <Form.Control
@@ -67,19 +75,37 @@ export default function ManageCategories(){
                     onChange={handleChangeCategory}
                     value={categoryFrom.LabelPL}
                 />
+            </Form.Group>
+            <Form.Group className="mb-3">
                 <Form.Control
                     name="LabelEN"
                     placeholder="Kategoria w języku Angielskim"
                     onChange={handleChangeCategory}
                     value={categoryFrom.LabelEN}
                 />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Control
+                    name="LabelDE"
+                    placeholder="Kategoria w języku niemieckim"
+                    onChange={handleChangeCategory}
+                    value={categoryFrom.LabelDE}
+                />
+            </Form.Group>
+            <Form.Group className="mb-3">
                 <Form.Control
                     type="file"
                     onChange={handleImage}
                 />
                 {categoryFrom.icon && <p>Selected file: {categoryFrom.icon.name}</p>}
-                <Button type="submit" variant="primary">Submit</Button>
+                
             </Form.Group>
+            <Button type="submit" variant="primary">Submit</Button>
         </Form>
+        </div>
+        
+        <Footer/>
+        </>
+        
     );
 }

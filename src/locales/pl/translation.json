@@ -1007,23 +1007,284 @@
         },
         "Button" : "Atest higieniczny"
       }
-  }
+  },
   
+  "Banner": {
+    "title": "Kompleksowe rozwiązania w zakresie izolacji termicznych",
+    "description": "Straty ciepła w instalacjach przemysłowych to kosztowny problem – mamy na to sposób! Zaprojektujemy i wyprodukujemy materace izolacyjne, które zwiększą efektywność Twoich systemów.",
+    "learn_more": "Dowiedz się więcej",
+    "cta_text": "Poznaj nasze rozwiązania i zmniejsz emisję CO2 już teraz!",
+    "image_alt_a": "Materace izolacyjne – oferta A",
+    "image_alt_b": "Materace izolacyjne – oferta B",
+    "image_alt_c": "Materace izolacyjne – oferta C",
+    "image_alt_d": "Materace izolacyjne – oferta D"
+  },
+  "WhatWeOfferBanner": {
+    "paragraph1": "W naszej ofercie znajdą Państwo szeroki wybór wysokiej jakości produktów, w tym nowoczesne materace izolacyjne, doskonałej jakości materace izo-standard, które spełniają najwyższe standardy izolacji termicznej i akustycznej, a także trwałe tkaniny techniczne oraz kompleksowy zestaw akcesoriów niezbędnych do realizacji różnorodnych projektów.",
+    "paragraph2": "Oferujemy także profesjonalne usługi wycinania w tkaninach oraz w innych materiałach z wykorzystaniem zaawansowanej technologii CNC, zapewniając precyzję i efektywność na każdym etapie produkcji. Nasze rozwiązania są projektowane z myślą o potrzebach klientów, oferując niezawodność i dostosowanie do specyficznych wymagań, co czyni nas liderem w branży izolacji i technik specjalnych."
+  },
+  "Catalog": {
+    "title": "Zobacz nasz najnowszy katalog!",
+    "description": "Oferujemy Państwu nowoczesne systemy izolacji, w tym: wysokiej jakości materace izolacyjne, materace IZO-standard spełniające najwyższe standardy, trwałe tkaniny techniczne oraz szeroki wybór akcesoriów. Zapraszamy do zapoznania się z naszą ofertą i odkrycia niezawodnych rozwiązań dostosowanych do Państwa potrzeb.",
+    "download_button": "Pobierz",
+    "image_alt": "Okładka katalogu ISOTEX GROUP"
+  },
+  "Features": {
+    "title": "Co nas wyróżnia?",
+    "card1": {
+      "title": "Jakość",
+      "description": "Nasze izolacje termiczne spełniają rygorystyczne standardy, co potwierdzają certyfikaty ISO 9001. Wykorzystujemy najlepsze materiały, takie jak wełna mineralna, szklana i ceramiczna, aby zapewnić trwałość i efektywność. Dzięki temu nasze produkty gwarantują niezawodność nawet w najtrudniejszych warunkach przemysłowych.",
+      "image_alt": "Ikona jakości"
+    },
+    "card2": {
+      "title": "Technologia",
+      "description": "Korzystamy z projektowania CAD 3D, co pozwala na precyzyjne dostosowanie izolacji do Twoich potrzeb. Nasze zaawansowane procesy produkcyjne wykorzystują wysokiej jakości materiały, takie jak wełna mineralna, silikon i teflon, zapewniając bezpieczeństwo i wydajność. Stosujemy także technologie odnawialne, minimalizując wpływ na środowisko i zwiększając efektywność energetyczną Twoich instalacji.",
+      "image_alt": "Ikona technologii"
+    },
+    "card3": {
+      "title": "Doświadczenie",
+      "description": "Od 1994 roku zdobywamy wiedzę, która przekłada się na doskonałe izolacje termiczne. Przez ponad 30 lat zrealizowaliśmy projekty w Polsce i za granicą, zyskując zaufanie klientów na całym świecie. Nasze doświadczenie pozwala nam oferować rozwiązania idealnie dopasowane do specyficznych wymagań każdej branży.",
+      "image_alt": "Ikona doświadczenia"
+    }
+  },
+  "OurProducts": {
+      "title": "Nasze produkty",
+      "product1": {
+        "title": "Materace izolacyjne",
+        "description": "Wysokiej jakości materace izolacyjne zapewniające doskonałą ochronę termiczną i akustyczną, dostosowane do potrzeb przemysłu.",
+        "image_alt": "Materace izolacyjne"
+      },
+      "product2": {
+        "title": "Tkaniny",
+        "description": "Trwałe i odporne tkaniny techniczne, idealne do specjalistycznych zastosowań w izolacji i ochronie przemysłowej.",
+        "image_alt": "Tkaniny techniczne"
+      },
+      "product3": {
+        "title": "Wypełnienia",
+        "description": "Wypełnienia z wełny mineralnej i szklanej, oferujące doskonałą izolację i bezpieczeństwo w wymagających warunkach.",
+        "image_alt": "Wypełnienia z wełny"
+      },
+      "product4": {
+        "title": "Akcesoria",
+        "description": "Kompleksowy zestaw akcesoriów, wspierający instalację i utrzymanie izolacji na najwyższym poziomie.",
+        "image_alt": "Akcesoria do izolacji"
+      }
+    },
+    "Parallax": {
+      "title": "Szukasz niezawodnego partnera do realizacji Twojego projektu?",
+      "description": "Isotex Group od początku działalności stawia na jakość i innowacyjność w dziedzinie izolacji termicznych. Nasza firma posiada liczne certyfikaty potwierdzające najwyższe standardy, gwarantując profesjonalne wykonanie i bezpieczeństwo na każdym etapie projektu.",
+      "button_text": "Zobacz nasze certyfikaty",
+      "image_alt": "Obraz paralaksy"
+    },
+    "Team": {
+      "title": "Nasz zespół",
+      "member1": {
+        "name": "Ilona Żurawa",
+        "position": "CEO Isotex Group",
+        "image_alt": "Ilona Żurawa"
+      },
+      "member2": {
+        "name": "Rafał Ofiera",
+        "position": "Kierownik produkcji",
+        "image_alt": "Rafał Ofiera"
+      },
+      "member3": {
+        "name": "Łukasz Dymarczyk",
+        "position": "Kierownik produkcji",
+        "image_alt": "Łukasz Dymarczyk"
+      }
+    },
+    "AboutUsPage": {
+      "title": "Poznaj bliżej firmę Isotex Group",
+      "section1": {
+        "title": "IsoTex – Eksperci w izolacjach termicznych od 1994 roku",
+        "description": "Od 1994 roku produkujemy wysokiej jakości izolacje termiczne, które skutecznie chronią przed stratami ciepła. Nasze materace izolacyjne są projektowane z dbałością o każdy detal, aby zapewnić optymalną wydajność Twoich instalacji.",
+        "image_alt": "Izolacje termiczne Isotex"
+      },
+      "section2": {
+        "title": "Kompleksowe rozwiązania dla Twojego przemysłu",
+        "description": "W isoTex nie tylko produkujemy izolacje, ale także oferujemy profesjonalny montaż na miejscu. Dzięki projektowaniu w technologii CAD 3D nasze materace zapewniają precyzyjne dopasowanie i minimalizują straty ciepła w instalacjach przemysłowych.",
+        "image_alt": "Montaż izolacji Isotex"
+      },
+      "section3": {
+        "title": "Zobowiązanie do zrównoważonego rozwoju",
+        "description": "Nasze izolacje termiczne pomagają unikać strat ciepła, wspierając efektywność energetyczną i redukując emisję CO2. Produkujemy i montujemy rozwiązania, które dbają o środowisko i Twój biznes.",
+        "image_alt": "Zrównoważone izolacje Isotex"
+      }
+    },
+    "AboutUs": {
+      "cta": {
+        "title": "Chcesz dowiedzieć się więcej?",
+        "description": "Skontaktuj się z nami, aby omówić, jak nasze nowoczesne rozwiązania mogą zwiększyć efektywność Twoich instalacji.",
+        "button": "Napisz do nas"
+      }
+    },
+    "OrderProcedure": {
+      "title": "Procedura wykonania zamówienia w Isotex Group",
+      "step1": {
+        "title": "Zapoznanie się z ofertą",
+        "description": "Poznaj naszą szeroką gamę materaców izolacyjnych i usług. Skontaktuj się z nami, aby otrzymać szczegółowe informacje o produktach i ich zastosowaniach."
+      },
+      "step2": {
+        "title": "Pomiary i konsultacja",
+        "description": "Nasi specjaliści przeprowadzą dokładne pomiary Twojej instalacji i doradzą najlepsze rozwiązania. Wykorzystujemy technologię CAD 3D do precyzyjnego projektowania."
+      },
+      "step3": {
+        "title": "Przygotowanie projektu i wyceny",
+        "description": "Na podstawie pomiarów przygotujemy indywidualny projekt izolacji i przedstawimy szczegółową wycenę. Dostosujemy się do Twoich potrzeb i budżetu."
+      },
+      "step4": {
+        "title": "Złożenie zamówienia",
+        "description": "Po akceptacji projektu możesz złożyć zamówienie. Oferujemy szybką realizację dzięki zaawansowanym procesom produkcyjnym."
+      },
+      "step5": {
+        "title": "Produkcja i montaż",
+        "description": "Po złożeniu zamówienia przystępujemy do produkcji materaców izolacyjnych. Po zakończeniu produkcji dostarczamy je pod wskazany adres lub przeprowadzamy profesjonalny montaż na miejscu."
+      }
+    },
+    "WhatWeOffer": {
+      "title": "Kompleksowa obsługa na każdym etapie",
+      "description": "W isoTex Group zapewniamy kompleksową obsługę, aby dostarczyć Ci najlepsze rozwiązania w zakresie izolacji termicznych. Od pierwszego kontaktu po finalny montaż – wspieramy Cię w każdym kroku, dbając o jakość i efektywność Twoich instalacji. W ramach naszej usługi oferujemy:",
+      "list": {
+        "item1": {
+          "title": "Pomiary:",
+          "description": "Przeprowadzamy szczegółowe pomiary Twojej instalacji, aby zapewnić idealne dopasowanie izolacji."
+        },
+        "item2": {
+          "title": "Indywidualny projekt:",
+          "description": "Tworzymy spersonalizowany projekt, który odpowiada specyficznym wymaganiom Twojego systemu."
+        },
+        "item3": {
+          "title": "Dobór odpowiednich komponentów:",
+          "description": "Wybieramy najlepsze rozwiązania i materiały, aby zagwarantować trwałość i efektywność."
+        },
+        "item4": {
+          "title": "Produkcja:",
+          "description": "Realizujemy produkcję materaców izolacyjnych z zachowaniem najwyższych standardów jakości."
+        },
+        "item5": {
+          "title": "Montaż:",
+          "description": "Nasi specjaliści przeprowadzają profesjonalny montaż na miejscu, zapewniając bezproblemową instalację."
+        }
+      },
+      "button": "Dowiedz się więcej",
+      "image_alt": "Obraz kompleksowej obsługi Isotex Group"
+    },
+    "Technology": {
+      "hero": {
+        "title": "Technologia w isoTex – Precyzja i innowacje",
+        "description": "W isoTex Group łączymy wieloletnie doświadczenie z nowoczesnymi technologiami, aby dostarczać izolacje termiczne najwyższej jakości. Poznaj nasz proces produkcji i dowiedz się, jak tworzymy materace izolacyjne, które spełniają najbardziej wymagające standardy."
+      },
+      "section1": {
+        "title": "Nasz proces produkcji – Krok po kroku",
+        "description": "Każdy projekt w isoTex Group jest realizowany z dbałością o szczegóły, aby zapewnić najlepsze rezultaty. Nasz proces produkcji obejmuje następujące etapy:",
+        "list": {
+          "item1": {
+            "title": "Przyjmowanie zamówienia:",
+            "description": "Rozpoczynamy od przyjęcia zamówienia i szczegółowej analizy potrzeb klienta."
+          },
+          "item2": {
+            "title": "Projektowanie zgodnie z wytycznymi:",
+            "description": "Tworzymy indywidualny projekt, uwzględniając specyficzne wymagania instalacji, korzystając z technologii CAD 3D."
+          },
+          "item3": {
+            "title": "Produkcja z precyzją:",
+            "description": "Gotowy projekt trafia na produkcję, gdzie wykorzystujemy nowoczesne technologie, takie jak cutter do wycinania szablonów, co gwarantuje najwyższą precyzję."
+          }
+        },
+        "image_alt": "Proces produkcji IsoTex"
+      },
+      "section2": {
+        "title": "Materiały i komponenty – Jakość w każdym detalu",
+        "description": "Do produkcji naszych materaców izolacyjnych używamy starannie wyselekcjonowanych materiałów, wypełnień i zapięć, aby zapewnić trwałość i efektywność. Oferujemy szeroki wybór komponentów, takich jak:",
+        "list": {
+          "item1": {
+            "title": "Materiały zewnętrzne:",
+            "description": "Wełna mineralna, teflon, silikon i inne.",
+            "link": "Materiały"
+          },
+          "item2": {
+            "title": "Wypełnienia:",
+            "description": "Wełna ceramiczna, folia aluminiowa i inne rozwiązania.",
+            "link": "Wypełnienia"
+          },
+          "item3": {
+            "title": "Zapięcia:",
+            "description": "Haki, rzepy, paski – dla łatwego montażu i demontażu.",
+            "link": "Zapięcia"
+          }
+        },
+        "image_alt": "Materiały IsoTex"
+      },
+      "section3": {
+        "title": "Cutter – Gwarancja precyzji",
+        "description": "W isoTex Group stawiamy na nowoczesne technologie, aby zapewnić najwyższą jakość. Używamy cuttera do wycinania szablonów, co pozwala nam osiągnąć niezrównaną precyzję i powtarzalność w produkcji materaców izolacyjnych.",
+        "image_alt": "Cutter IsoTex"
+      },
+      "cta": {
+        "title": "Chcesz dowiedzieć się więcej o naszej technologii?",
+        "description": "Skontaktuj się z nami, aby omówić, jak nasze nowoczesne rozwiązania mogą zwiększyć efektywność Twoich instalacji.",
+        "button": "Napisz do nas"
+      }
+    },
+    "Fastenings": {
+      "hero": {
+        "title": "Zapięcia w isoTex – Dopasowane do Twoich potrzeb",
+        "description": "W isoTex Group stosujemy różne typy zapięć, aby nasze materace izolacyjne były łatwe w montażu i demontażu, a jednocześnie trwałe w każdych warunkach. Poznaj nasze rozwiązania i dowiedz się, jak dobieramy zapięcia w zależności od zastosowania."
+      },
+      "types": {
+        "type1": {
+          "title": "Rzepy",
+          "image_alt": "Rzepy IsoTex"
+        },
+        "type2": {
+          "title": "Klamry",
+          "image_alt": "Klamry IsoTex"
+        },
+        "type3": {
+          "title": "Haki",
+          "image_alt": "Haki IsoTex"
+        }
+      },
+      "slider1": {
+        "title": "Rzepy – Prostota i wygoda",
+        "description": "Rzepy stosujemy w temperaturach do 180°C, gdzie zapewniają najprostszy i najszybszy montaż oraz demontaż. To idealne rozwiązanie dla instalacji wymagających częstego dostępu.",
+        "image_alt": "Rzepy w akcji"
+      },
+      "slider2": {
+        "title": "Klamry – Wytrzymałość w trudnych warunkach",
+        "description": "Klamry wykorzystujemy, gdy temperatura przekracza 180°C, aby uniknąć uszkodzenia rzepów. Są idealne do instalacji na zewnątrz, gdzie rzepy mogą stracić przyczepność pod wpływem deszczu.",
+        "image_alt": "Klamry w instalacji"
+      },
+      "slider3": {
+        "title": "Haki – Specjalistyczne rozwiązanie dla turbin",
+        "description": "Haki stosujemy głównie w materacach na turbiny. Sąsiadujące materace są spinane drutem, co gwarantuje stabilność i precyzyjne dopasowanie w wymagających instalacjach.",
+        "image_alt": "Haki w materacach na turbiny"
+      }
+    },
+    "ContactUs": {
+      "title": "Skontaktuj się z nami!",
+      "form": {
+        "email": {
+          "label": "Adres e-mail",
+          "placeholder": "Wpisz adres e-mail"
+        },
+        "topic": {
+          "label": "Temat",
+          "placeholder": "Wpisz temat"
+        },
+        "message": {
+          "label": "Wiadomość",
+          "placeholder": "Wpisz wiadomość"
+        },
+        "submit_button": "Wyślij"
+      },
+      "map": {
+        "title": "Mapa lokalizacji IsoTex Group"
+      }
+    }
+     
 
-
-
-
-
-    
-
-             
-
-
-
-          
-          
-
-
-    
+   
   }
   

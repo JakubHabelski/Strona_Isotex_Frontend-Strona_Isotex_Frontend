@@ -1008,9 +1008,281 @@
         },
         "Button" : "Hygienic Certificate"
       }
-    }
-  
-  
+    },
+    "Banner": {
+      "title": "Comprehensive solutions for thermal insulation",
+      "description": "Heat losses in industrial installations are a costly problem – we have a solution! We will design and manufacture insulation mattresses that increase the efficiency of your systems.",
+      "learn_more": "Learn more",
+      "cta_text": "Discover our solutions and reduce CO2 emissions now!",
+      "image_alt_a": "Insulation mattresses – offer A",
+      "image_alt_b": "Insulation mattresses – offer B",
+      "image_alt_c": "Insulation mattresses – offer C",
+      "image_alt_d": "Insulation mattresses – offer D"
+    },
+    "WhatWeOfferBanner": {
+      "paragraph1": "Our offer includes a wide range of high-quality products, including modern insulation mattresses, top-quality izo-standard mattresses that meet the highest standards of thermal and acoustic insulation, as well as durable technical fabrics and a comprehensive set of accessories necessary for various projects.",
+      "paragraph2": "We also provide professional cutting services for fabrics and other materials using advanced CNC technology, ensuring precision and efficiency at every stage of production. Our solutions are designed with customer needs in mind, offering reliability and customization to specific requirements, making us a leader in the insulation and special techniques industry."
+    },
+    "Catalog": {
+        "title": "Check out our latest catalog!",
+        "description": "We offer modern insulation systems, including: high-quality insulation mattresses, IZO-standard mattresses meeting the highest standards, durable technical fabrics, and a wide range of accessories. We invite you to explore our offer and discover reliable solutions tailored to your needs.",
+        "download_button": "Download",
+        "image_alt": "ISOTEX GROUP catalog cover"
+      },
+    "Features": {
+      "title": "What sets us apart?",
+      "card1": {
+        "title": "Quality",
+        "description": "Our thermal insulations meet strict standards, as confirmed by ISO 9001 certificates. We use the best materials, such as mineral wool, glass wool, and ceramic wool, to ensure durability and efficiency. This guarantees the reliability of our products even in the most demanding industrial conditions.",
+        "image_alt": "Quality icon"
+      },
+      "card2": {
+        "title": "Technology",
+        "description": "We utilize 3D CAD design, allowing precise customization of insulation to your needs. Our advanced manufacturing processes use high-quality materials like mineral wool, silicone, and Teflon, ensuring safety and performance. We also apply renewable technologies, minimizing environmental impact and enhancing the energy efficiency of your installations.",
+        "image_alt": "Technology icon"
+      },
+      "card3": {
+        "title": "Experience",
+        "description": "Since 1994, we have been gaining expertise that translates into excellent thermal insulations. Over the past 30 years, we have completed projects in Poland and abroad, earning the trust of clients worldwide. Our experience allows us to offer solutions perfectly tailored to the specific requirements of every industry.",
+        "image_alt": "Experience icon"
+      }
+    },
+    "OurProducts": {
+      "title": "Our products",
+      "product1": {
+        "title": "Insulation mattresses",
+        "description": "High-quality insulation mattresses providing excellent thermal and acoustic protection, tailored to industrial needs.",
+        "image_alt": "Insulation mattresses"
+      },
+      "product2": {
+        "title": "Fabrics",
+        "description": "Durable and resistant technical fabrics, ideal for specialized applications in insulation and industrial protection.",
+        "image_alt": "Technical fabrics"
+      },
+      "product3": {
+        "title": "Fillings",
+        "description": "Fillings made of mineral and glass wool, offering excellent insulation and safety in demanding conditions.",
+        "image_alt": "Wool fillings"
+      },
+      "product4": {
+        "title": "Accessories",
+        "description": "A comprehensive set of accessories supporting the installation and maintenance of insulation at the highest level.",
+        "image_alt": "Insulation accessories"
+      }
+    },
+    "Parallax": {
+      "title": "Looking for a reliable partner to carry out your project?",
+      "description": "Since its inception, Isotex Group has focused on quality and innovation in the field of thermal insulation. Our company holds numerous certificates confirming the highest standards, ensuring professional execution and safety at every stage of the project.",
+      "button_text": "View our certificates",
+      "image_alt": "Parallax image"
+    },
+    "Team": {
+      "title": "Our team",
+      "member1": {
+        "name": "Ilona Żurawa",
+        "position": "CEO of Isotex Group",
+        "image_alt": "Ilona Żurawa"
+      },
+      "member2": {
+        "name": "Rafał Ofiera",
+        "position": "Production Manager",
+        "image_alt": "Rafał Ofiera"
+      },
+      "member3": {
+        "name": "Łukasz Dymarczyk",
+        "position": "Production Manager",
+        "image_alt": "Łukasz Dymarczyk"
+      }
+    },
+    "AboutUsPage": {
+      "title": "Get to know Isotex Group better",
+      "section1": {
+        "title": "IsoTex – Experts in thermal insulation since 1994",
+        "description": "Since 1994, we have been producing high-quality thermal insulations that effectively protect against heat loss. Our insulation mattresses are designed with attention to every detail to ensure optimal performance of your installations.",
+        "image_alt": "Isotex thermal insulation"
+      },
+      "section2": {
+        "title": "Comprehensive solutions for your industry",
+        "description": "At IsoTex, we not only produce insulation but also offer professional on-site installation. Thanks to 3D CAD design, our mattresses ensure precise fit and minimize heat loss in industrial installations.",
+        "image_alt": "Isotex insulation installation"
+      },
+      "section3": {
+        "title": "Commitment to sustainability",
+        "description": "Our thermal insulations help prevent heat loss, supporting energy efficiency and reducing CO2 emissions. We produce and install solutions that care for the environment and your business.",
+        "image_alt": "Isotex sustainable insulation"
+      }
+    },
+    "AboutUs": {
+      "cta": {
+        "title": "Want to learn more?",
+        "description": "Contact us to discuss how our modern solutions can improve the efficiency of your installations.",
+        "button": "Write to us"
+      }
+    },
+    "OrderProcedure": {
+      "title": "Order execution process at Isotex Group",
+      "step1": {
+        "title": "Exploring our offer",
+        "description": "Discover our wide range of insulation mattresses and services. Contact us to receive detailed information about our products and their applications."
+      },
+      "step2": {
+        "title": "Measurements and consultation",
+        "description": "Our specialists will conduct precise measurements of your installation and advise on the best solutions. We use 3D CAD technology for accurate design."
+      },
+      "step3": {
+        "title": "Project preparation and quotation",
+        "description": "Based on the measurements, we will prepare a customized insulation project and provide a detailed quotation. We adapt to your needs and budget."
+      },
+      "step4": {
+        "title": "Placing the order",
+        "description": "After project approval, you can place your order. We offer fast execution thanks to advanced manufacturing processes."
+      },
+      "step5": {
+        "title": "Production and installation",
+        "description": "Once the order is placed, we begin producing the insulation mattresses. After production, we deliver them to the specified address or perform professional on-site installation."
+      }
+    },
+    "WhatWeOffer": {
+      "title": "Comprehensive support at every stage",
+      "description": "At IsoTex Group, we provide comprehensive support to deliver the best thermal insulation solutions. From the first contact to the final installation, we assist you every step of the way, ensuring the quality and efficiency of your installations. Our services include:",
+      "list": {
+        "item1": {
+          "title": "Measurements:",
+          "description": "We conduct detailed measurements of your installation to ensure a perfect fit for the insulation."
+        },
+        "item2": {
+          "title": "Customized design:",
+          "description": "We create a personalized design that meets the specific requirements of your system."
+        },
+        "item3": {
+          "title": "Selection of components:",
+          "description": "We choose the best solutions and materials to guarantee durability and efficiency."
+        },
+        "item4": {
+          "title": "Production:",
+          "description": "We manufacture insulation mattresses while maintaining the highest quality standards."
+        },
+        "item5": {
+          "title": "Installation:",
+          "description": "Our specialists perform professional on-site installation, ensuring a seamless process."
+        }
+      },
+      "button": "Learn more",
+      "image_alt": "Image of Isotex Group comprehensive support"
+    },
+     "Technology": {
+      "hero": {
+        "title": "Technology at IsoTex – Precision and Innovation",
+        "description": "At IsoTex Group, we combine years of experience with modern technologies to deliver top-quality thermal insulation. Learn about our production process and discover how we create insulation mattresses that meet the most demanding standards."
+      },
+      "section1": {
+        "title": "Our Production Process – Step by Step",
+        "description": "Every project at IsoTex Group is executed with attention to detail to ensure the best results. Our production process includes the following stages:",
+        "list": {
+          "item1": {
+            "title": "Order Acceptance:",
+            "description": "We start by accepting the order and conducting a detailed analysis of the client's needs."
+          },
+          "item2": {
+            "title": "Design According to Specifications:",
+            "description": "We create a customized design, taking into account the specific requirements of the installation, using 3D CAD technology."
+          },
+          "item3": {
+            "title": "Precision Production:",
+            "description": "The finalized design goes into production, where we use modern technologies, such as a cutter for template cutting, ensuring the highest precision."
+          }
+        },
+        "image_alt": "IsoTex Production Process"
+      },
+      "section2": {
+        "title": "Materials and Components – Quality in Every Detail",
+        "description": "We use carefully selected materials, fillings, and fastenings to produce our insulation mattresses, ensuring durability and efficiency. We offer a wide range of components, such as:",
+        "list": {
+          "item1": {
+            "title": "Outer Materials:",
+            "description": "Mineral wool, Teflon, silicone, and others.",
+            "link": "Materials"
+          },
+          "item2": {
+            "title": "Fillings:",
+            "description": "Ceramic wool, aluminum foil, and other solutions.",
+            "link": "Fillings"
+          },
+          "item3": {
+            "title": "Fastenings:",
+            "description": "Hooks, Velcro, straps – for easy installation and removal.",
+            "link": "Fastenings"
+          }
+        },
+        "image_alt": "IsoTex Materials"
+      },
+      "section3": {
+        "title": "Cutter – Guarantee of Precision",
+        "description": "At IsoTex Group, we rely on modern technologies to ensure the highest quality. We use a cutter for template cutting, enabling unparalleled precision and repeatability in the production of insulation mattresses.",
+        "image_alt": "IsoTex Cutter"
+      },
+      "cta": {
+        "title": "Want to learn more about our technology?",
+        "description": "Contact us to discuss how our modern solutions can enhance the efficiency of your installations.",
+        "button": "Write to us"
+      }
+    },
+    "Fastenings": {
+      "hero": {
+        "title": "Fastenings at IsoTex – Tailored to Your Needs",
+        "description": "At IsoTex Group, we use various types of fastenings to ensure our insulation mattresses are easy to install and remove while remaining durable in all conditions. Learn about our solutions and how we select fastenings based on the application."
+      },
+      "types": {
+        "type1": {
+          "title": "Velcro",
+          "image_alt": "IsoTex Velcro"
+        },
+        "type2": {
+          "title": "Buckles",
+          "image_alt": "IsoTex Buckles"
+        },
+        "type3": {
+          "title": "Hooks",
+          "image_alt": "IsoTex Hooks"
+        }
+      },
+      "slider1": {
+        "title": "Velcro – Simplicity and Convenience",
+        "description": "We use Velcro for temperatures up to 180°C, offering the simplest and fastest installation and removal. This is the ideal solution for installations requiring frequent access.",
+        "image_alt": "Velcro in action"
+      },
+      "slider2": {
+        "title": "Buckles – Durability in Harsh Conditions",
+        "description": "Buckles are used when temperatures exceed 180°C to prevent damage to Velcro. They are ideal for outdoor installations where Velcro may lose adhesion due to rain.",
+        "image_alt": "Buckles in installation"
+      },
+      "slider3": {
+        "title": "Hooks – Specialized Solution for Turbines",
+        "description": "Hooks are primarily used in turbine mattresses. Adjacent mattresses are connected with wire, ensuring stability and precise fit in demanding installations.",
+        "image_alt": "Hooks in turbine mattresses"
+      }
+    } ,
+    "ContactUs": {
+      "title": "Contact us!",
+      "form": {
+        "email": {
+          "label": "Email address",
+          "placeholder": "Enter email address"
+        },
+        "topic": {
+          "label": "Subject",
+          "placeholder": "Enter subject"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter message"
+        },
+        "submit_button": "Send"
+      },
+      "map": {
+        "title": "IsoTex Group location map"
+      }
+    }    
   
  
     

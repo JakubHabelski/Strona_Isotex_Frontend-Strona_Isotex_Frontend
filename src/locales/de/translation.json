@@ -1,0 +1,1260 @@
+{
+    "header": {
+      "title": "Willkommen bei IsoTex"
+    },
+    "button": {
+      "more": "Erfahren Sie mehr"
+    },
+    "modal": {
+      "title": "Änderung des Firmenstandorts",
+      "text": "Wir informieren Sie, dass die IsoTex Group ihren Standort geändert hat. Alle unsere Dienstleistungen und Produkte bleiben unverändert.",
+      "address": "Neue Adresse: ul. Daszyńskiego 9a, 56-500 Syców",
+      "phone": "Telefon: +48 600 511 029",
+      "email": "E-Mail: info@isotex-poland.com",
+      "btn": "Erfahren Sie mehr"
+    },
+    "shortinfo": {
+      "experience": "Erfahrung. Wir haben fast 30 Jahre Erfahrung in der Branche.",
+      "technology": "Technologie. Wir produzieren effiziente und sichere Produkte.",
+      "quality": "Qualität. Wir bieten hochwertige Dämmstoffe an. Wir besitzen das ISO 9001-Zertifikat.",
+      "complexity": "Umfassend. Wir beschäftigen uns mit dem Verkauf, der Planung, der Produktion und der Montage von Dämmstoffen."
+    },
+    "shortinfo3": {
+      "title": "Was uns auszeichnet",
+      "item1": {
+        "title": "Erfahrung",
+        "desc": "Wir haben fast 30 Jahre Erfahrung in der Branche."
+      },
+      "item2": {
+        "title": "Technologie",
+        "desc": "Wir produzieren effiziente und sichere Produkte."
+      },
+      "item3": {
+        "title": "Qualität",
+        "desc": "Wir bieten hochwertige Dämmstoffe an. Wir besitzen das ISO 9001-Zertifikat."
+      },
+      "item4": {
+        "title": "Umfassend",
+        "desc": "Wir beschäftigen uns mit dem Verkauf, der Planung, der Produktion und der Montage von Dämmstoffen."
+      }
+    },
+    "HoverImage": {
+      "WhatWeDo": "Was machen wir?"
+    },
+    "OurClients": {
+      "Clients": "Unsere Kunden"
+    },
+    "accordion": {
+      "item1": {
+        "title": "Wie sieht die Zusammenarbeit mit der Firma IsoTex aus?",
+        "body": "Die Zusammenarbeit mit der Firma IsoTex besteht aus mehreren Phasen. Zunächst führen unsere Mitarbeiter Messungen der Anlagen und Geräte beim Kunden durch. Auf Basis der gewonnenen Ergebnisse wird ein individuelles Projekt sowie ein Kostenvoranschlag für die Herstellung einer Schutzummantelung erstellt. Wenn der Kunde zustimmt, kann mit der Herstellung der Dämmung begonnen werden. Nach der Fertigung erfolgt die Montage an den Rohrleitungen oder Maschinen. Wir bieten spezialisierte Unterstützung in jeder Phase. Wir beraten, welche Lösungen im jeweiligen Fall am besten geeignet sind, und helfen bei der Optimierung der Investitionskosten."
+      },
+      "item2": {
+        "title": "Produktion von Dämmelementen",
+        "body": "Die Produktion von Dämmelementen ist der Hauptbereich der Tätigkeit der Firma IsoTex. Wir stellen vor allem verschiedene Arten von Dämmungen, Ummantelungen und Matratzen her. Ihre Hauptaufgabe ist der Schutz von Geräten wie Motoren, Turbinen und anderen Anlagen. Für ihre Herstellung verwenden wir nur hochwertige Materialien, die hervorragende wärmedämmende Eigenschaften besitzen und flexibel sind.\nAm häufigsten verwenden wir Stoffe aus Glas- oder Keramikfasern, da diese resistent gegen hohe Temperaturen sind, eine angemessene Dichtheit gewährleisten und flexibel sind. Zur Herstellung von industriellen Dämmprodukten verwenden wir auch Beschichtungsmaterialien wie Silikon, Aluminiumfolie oder Teflon. Wir spezialisieren uns auf die Herstellung von Dämmungen für Armaturen, Rohre, Maschinen und deren Komponenten sowie andere Geräte, die während des Betriebs große Mengen an Wärme erzeugen."
+      }
+    },
+    "hoverImage": {
+      "image1": {
+        "short": "Rohrdämmung",
+        "full": "Wir spezialisieren uns auf die Herstellung von Wärmedämmungen. Ihre Hauptaufgabe ist der Schutz von Anlagen und Geräten, die in der Industrie eingesetzt werden, vor Wärmeverlusten. In unserem Angebot finden Sie vor allem: Rohrwärmedämmungen, Rohrleitungsdämmungen, Hochtemperatur-Wärmedämmungen."
+      },
+      "image2": {
+        "short": "Armaturendämmung",
+        "full": "Wir beschäftigen uns mit dem Verkauf von flexiblen Polyurethanschäumen, die in der Herstellung von Polstermöbeln und Matratzen verwendet werden. In unserem Sortiment haben wir Schäume mit unterschiedlichen Dichten (T und HR):\n niedrig – von 14 bis 23 kg/m³,\n mittel – von 23 bis 29 kg/m³,\n hoch – ab 29 kg/m³."
+      },
+      "image3": {
+        "short": "Turbinendämmung",
+        "full": "Ein Teil der von unserer Firma angebotenen Dienstleistungen betrifft die Herstellung von Turbinendämmungen. In unserem Angebot finden Sie vor allem Dämmmatratzen. Die Dämmung von Energieturbinen mit wiederverwendbaren Matratzen zeichnet sich durch mehrere Vorteile aus. Diese Technologie ist:\n erneuerbar,\n trocken,\n sauber."
+      },
+      "image4": {
+        "short": "Dämmung von Motoren, Maschinen und Geräten",
+        "full": "Unsere Firma produziert auch Dämmungen für Motoren, Maschinen und Geräte. In unserem Sortiment finden Sie Dämmmatratzen. Ihre Hauptaufgabe ist der thermische Schutz der genannten Elemente und der Schutz vor Beschädigungen. Die von uns hergestellten Dämmungen sind:\n an die Form der Geräte angepasst,\n flexibel,\n effektiv."
+      }
+    },
+    "shortinfo2": {
+      "heading": "Hersteller von Wärmedämmungen",
+      "paragraph": "Der Hersteller von Wärmedämmungen IsoTex befindet sich in Komorów in der Woiwodschaft Niederschlesien. Der Hauptbereich unserer Tätigkeit umfasst die Produktion, den Verkauf und die Montage von Elementen, die zum Schutz von Industrieanlagen und -geräten vor Wärmeverlusten dienen. In dieser Branche bieten wir seit fast 30 Jahren Dienstleistungen an. Wir haben unsere Tätigkeit im Jahr 1994 aufgenommen.\n\nWir laden Sie ein, unsere Dienstleistungen in Anspruch zu nehmen!\n\nWir gewährleisten einen umfassenden Service – unser Tätigkeitsbereich umfasst den Verkauf, die Planung, die Produktion und die Montage von Dämmungen. Die angewandte Technologie sorgt dafür, dass die in unserem Werk hergestellten Produkte effizient und sicher im täglichen Gebrauch sind. Kunden können auch auf fachkundige Unterstützung in jeder Phase der Zusammenarbeit zählen.",
+      "button": "Erfahren Sie mehr",
+      "imageAlt": "Hersteller von Wärmedämmungen IsoTex"
+    },
+    "navbar": {
+      "about": "Über uns",
+      "insulations": "Wärmedämmungen",
+      "products": "Dämmprodukte",
+      "cooperation": "Zusammenarbeit",
+      "technology": "Technologie",
+      "faq": "FAQ",
+      "foam": "Polyurethanschaum",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "shop": "Shop",
+      "technicalFabrics": "Technische Stoffe",
+      "fillings": "Füllungen",
+      "gaskets": "Hochtemperatur-Dichtungen"
+    },
+    "carousel": {
+      "title1": "Wärmedämmungen",
+      "text1": "Wir beschäftigen uns mit der Produktion und dem Verkauf von Wärmedämmungen. Dazu gehören z. B. Rohrleitungsdämmungen.",
+      "title2": "Polyurethanschäume",
+      "text2": "In unserem Angebot finden Sie flexible Polyurethanschäume. Dazu gehören T-Schäume und hochelastische HR-Schäume.",
+      "title3": "Kontakt",
+      "text3": "Interessierte, die unsere Produkte kaufen oder unsere Dienstleistungen nutzen möchten, laden wir ein, Kontakt mit unseren Mitarbeitern aufzunehmen."
+    },
+    "footer": {
+      "visitUs": "Besuchen Sie uns",
+      "address": "ISOTEX GROUP Ilona Żurawa",
+      "email": "info@isotex-poland.com",
+      "regulationsPolicies": "Regularien und Richtlinien",
+      "qualityPolicy": "Qualitätsrichtlinie",
+      "hygienicCertificate": "Hygienisches Zertifikat",
+      "certifications": "Zertifikate",
+      "certificationPL": "PN-EN ISO 9001:2015 (PL)",
+      "certificationDE": "PN-EN ISO 9001:2015 (DE)",
+      "certificationFR": "PN-EN ISO 9001:2015 (FR)",
+      "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
+      "allRightsReserved": "Alle Rechte vorbehalten"
+    },
+    "fabrics": {
+      "glassFabrics": "Glasgewebe",
+      "glassFabricsDescription": "Glasgewebe sind das Hauptmaterial, das bei der Herstellung von Wärmedämmungen verwendet wird. Sie zeichnen sich durch eine hohe Temperaturbeständigkeit von bis zu 550°C aus, sind nicht brennbar und widerstandsfähig gegen die meisten Chemikalien. Dank ihrer Struktur gewährleisten sie Haltbarkeit und Flexibilität, was eine präzise Anpassung der Dämmung an verschiedene Elemente von Industrieanlagen wie Rohrleitungen, Ventile oder Turbinen ermöglicht.",
+      "aramidFabrics": "Aramid-Gewebe",
+      "aramidFabricsDescription": "Aramid-Gewebe (z. B. aus Kevlar®-Fasern) zeichnen sich durch eine außergewöhnliche mechanische Festigkeit bei gleichzeitiger Beständigkeit gegen hohe Temperaturen aus. Sie finden Anwendung in Dämmungen, die eine hohe Abrieb-, Reiß- und Vibrationsfestigkeit erfordern. Sie eignen sich hervorragend für stark beanspruchte Bereiche und kombinieren thermischen Schutz mit mechanischer Haltbarkeit.",
+      "cutParts": "Ausschnitte und gestanzte Teile",
+      "cutPartsDescription": "Ausschnitte und gestanzte Teile aus technischen Stoffen sind ein Schlüsselelement bei der Herstellung individuell angepasster Wärmedämmungen. Durch präzises Schneiden von Materialien wie Glas- oder Aramid-Gewebe ist es möglich, Elemente zu schaffen, die perfekt an die Form von Turbinen, Ventilen, Bögen und anderen unregelmäßigen Industriekomponenten angepasst sind. Die auf Maß und Form optimierten Ausschnitte gewährleisten effektiven Wärmeschutz, einfache Montage und ein ästhetisches Finish der fertigen Dämmmatratzen."
+    },
+    "fillings": {
+      "mineralWool": "Mineralwolle",
+      "mineralWoolDescription": "Mineralwolle sind Dämmstoffe aus Mineralfasern wie Glas- oder Steinwolle. Sie zeichnen sich durch hervorragende thermische und akustische Eigenschaften aus, was sie zur idealen Wahl für die Dämmung von Gebäuden, Rohren oder Industrieanlagen macht. Dank ihrer faserigen Struktur sind sie feuerfest und nicht brennbar, was die Sicherheit erhöht.",
+      "ceramicWool": "Keramikwolle",
+      "ceramicWoolDescription": "Keramikwolle sind Materialien mit hoher Temperaturbeständigkeit, die in der industriellen Dämmung eingesetzt werden. Sie zeichnen sich durch hervorragende thermische und akustische Eigenschaften aus, was sie zur idealen Wahl für die Dämmung von Öfen, Kesseln oder anderen Geräten macht, die unter extremen Bedingungen arbeiten. Dank ihrer faserigen Struktur gewährleisten sie eine effektive Schalldämpfung und minimieren Wärmeverluste.",
+      "glassMat": "Glasmatten",
+      "glassMatDescription": "Glasmatten sind Dämmstoffe aus Glasfasern, die sich durch hervorragende thermische und akustische Eigenschaften auszeichnen. Sie sind leicht, flexibel und leicht zu verarbeiten, was sie ideal für die Dämmung von Gebäuden, Rohren oder Industrieanlagen macht. Dank ihrer faserigen Struktur sind sie feuerfest und nicht brennbar, was die Sicherheit erhöht."
+    },
+    "fabrics_info": {
+      "fabricsTitle": "Glas- und Aramid-Gewebe",
+      "generalDescription": "Technische Stoffe sind spezialisierte Materialien mit außergewöhnlichen mechanischen, thermischen und chemischen Eigenschaften. Sie finden Anwendung in vielen Industriezweigen – von der Energiewirtschaft bis zur Automobilindustrie – und gewährleisten effektive Wärmedämmung, Schutz vor hohen Temperaturen und Haltbarkeit auch unter extremen Arbeitsbedingungen."
+    },
+    "glass_info": {
+      "generalCharacteristics": "Glasgewebe – Allgemeine Merkmale",
+      "generalDescription": "Glasgewebe sind Materialien aus Glasfasern, die sich durch eine außergewöhnliche Beständigkeit gegen hohe Temperaturen, Feuer und Chemikalien auszeichnen. Dank dieser Eigenschaften finden sie breite Anwendung in der Industrie, z. B. bei der Herstellung von Wärmedämmungen, Schweißschutzvorhängen und anderen Materialien, die vor extremen Bedingungen schützen.",
+      "typesOfFibers": "Arten von Glasfasern",
+      "eGlassFiber": "E-Glasfaser",
+      "eGlassFiberDescription": "E-Glasfasern sind Materialien, die eine hohe Beständigkeit gegen Temperaturen von bis zu 550°C bieten. Dank ihrer elektrischen Eigenschaften finden sie breite Anwendung in elektrischen und industriellen Dämmungen.",
+      "texturedAndSmoothFibers": "Texturierte und glatte Fasern",
+      "filamentFibers": "Filamentfasern",
+      "filamentFibersDescription": "Glatte, lange, durchgehende Fasern, die sich durch hohe mechanische Festigkeit und Temperaturbeständigkeit auszeichnen.",
+      "texturedFibers": "Texturierte Fasern",
+      "texturedFibersDescription": "Fasern, die durch Texturierung (Verdrehen) eine größere Volumen, Flexibilität und wärmedämmende Eigenschaften erhalten. Die zwischen den Fasern eingeschlossene Luft wirkt als zusätzliche Wärmebarriere.",
+      "productionProcess": "Herstellungsprozess",
+      "productionProcessDescription": "Glasgewebe werden durch das Weben von Glasfasern hergestellt, die texturiert oder filamentartig sein können, und bilden ein haltbares Gewebe, das gegen hohe Temperaturen beständig ist. Ihre mechanische Festigkeit wird durch die Verwendung hochwertiger Glasgarne und einen kontrollierten Herstellungsprozess erreicht.",
+      "coatings": "Beschichtungen und Überzüge",
+      "coatingsDescription": "Glasgewebe können mit verschiedenen Substanzen beschichtet werden, um ihre Eigenschaften zu verbessern.",
+      "siliconeCoating": "Silikonbeschichtung",
+      "graySiliconeCoating": "Gewebe mit grauer Silikonbeschichtung",
+      "siliconeCoatingDescription": "Die Silikonbeschichtung wird häufig verwendet, um die Beständigkeit gegen hohe Temperaturen, Wasser, Öle und Chemikalien zu erhöhen. Das mit Silikon beschichtete Material weist auch antistatische Eigenschaften und Feuerbeständigkeit auf.",
+      "vermiculiteCoating": "Vermikulit-Beschichtung",
+      "vermiculiteCoatingDescription": "Vermikulit ist ein natürliches Mineral, das als Schutzbeschichtung verwendet wird. Es erhöht die Beständigkeit des Materials gegen hohe Temperaturen und Chemikalien.",
+      "aluminumCoating": "Aluminiumbeschichtung",
+      "aluminumCoatingDescription": "Glasgewebe können mit Aluminium beschichtet werden, was ihre Beständigkeit gegen hohe Temperaturen und den Schutz vor Wärmestrahlung verbessert.",
+      "yellowSiliconeCoating": "Gewebe mit gelber Silikonbeschichtung",
+      "properties": "Eigenschaften von Glasgeweben",
+      "temperatureResistance": "Temperaturbeständigkeit",
+      "temperatureResistanceDescription": "Glasgewebe zeichnen sich durch eine hohe Beständigkeit gegen Temperaturen von bis zu 550°C (für Standard-E-Glasgewebe) aus, bei einigen speziellen Geweben sogar bis zu 1000°C.",
+      "chemicalResistance": "Chemische Beständigkeit",
+      "chemicalResistanceDescription": "Glasgewebe sind resistent gegen viele Chemikalien, was sie zu einem idealen Material für den Einsatz in schwierigen industriellen Bedingungen macht, wo der Kontakt mit aggressiven Chemikalien häufig ist.",
+      "flexibilityAndStrength": "Flexibilität und mechanische Festigkeit",
+      "flexibilityAndStrengthDescription": "Dank der Verwendung texturierter Fasern bieten Glasgewebe hohe Flexibilität und mechanische Festigkeit, was besonders in Anwendungen wichtig ist, die Widerstand gegen Stöße und mechanische Schäden erfordern.",
+      "application": "Anwendung von Glasgeweben",
+      "applicationDescription": "Glasgewebe finden breite Anwendung in vielen Industriezweigen, wie z. B.:",
+      "thermalInsulation": "Wärmedämmung",
+      "thermalInsulationDescription": "Wärmedämmprodukte aus E-Glasfasern werden zur Herstellung von Wärmeschutzvorhängen verwendet, die Geräte und Anlagen vor hohen Temperaturen schützen. Glasgewebe werden für die Herstellung von Wärmedämmdecken, Schutzvorhängen, Hülsen oder Dichtungen verwendet.",
+      "metalurgicalEnergyIndustry": "Metallurgische und Energiewirtschaft",
+      "metalurgicalEnergyIndustryDescription": "Sie werden bei der Herstellung von Schutzmaterialien für Turbinen, Ventile, Rohrleitungen und andere Industrieanlagen verwendet, die eine hohe Temperaturbeständigkeit erfordern.",
+      "fireProtection": "Brandschutz",
+      "fireProtectionDescription": "Glasgewebe werden als Basismaterial für die Herstellung von Brandschutzvorhängen verwendet, einschließlich Schutzkleidung, Löschdecken und Schutzvorhängen für Industriemaschinen.",
+      "summary": "Zusammenfassung",
+      "summaryDescription": "Glasgewebe sind aufgrund ihrer Beständigkeit gegen hohe Temperaturen, Flexibilität, mechanischen Festigkeit und chemischen Beständigkeit unverzichtbare Materialien in vielen Industriezweigen, von der Herstellung von Wärmedämmstoffen bis hin zu Schutzvorhängen unter schwierigen Arbeitsbedingungen."
+    },
+    "aramid_info": {
+      "generalCharacteristics": "Aramid-Gewebe – Allgemeine Merkmale",
+      "generalDescription": "Aramid-Gewebe sind technische Materialien aus Aramidfasern wie Kevlar® oder Twaron®, die sich durch außergewöhnliche mechanische Festigkeit, Schnitt-, Abrieb- und Temperaturbeständigkeit auszeichnen. Ihre hervorragenden physikalisch-chemischen Eigenschaften machen sie in den anspruchsvollsten industriellen und schützenden Anwendungen unverzichtbar.",
+      "aramidTypes": "Arten von Aramidfasern",
+      "kevlar": "Kevlar®",
+      "kevlarDescription": "Eine der bekanntesten Aramidfasern, geschätzt für ihre extrem hohe Zugfestigkeit und Temperaturbeständigkeit. Sie findet Anwendung u. a. in Schutzausrüstung, der Luftfahrt- und Automobilindustrie.",
+      "twaron": "Twaron®",
+      "twaronDescription": "Europäisches Äquivalent zu Kevlar® mit sehr ähnlichen Eigenschaften. Häufig in der Herstellung von Verbundwerkstoffen und persönlicher Schutzausrüstung verwendet.",
+      "productionProcess": "Herstellungsprozess von Aramid-Geweben",
+      "productionProcessDescription": "Aramid-Gewebe entstehen durch das Weben von Aramidfasern in verschiedenen Webarten wie Leinwand-, Köper- oder Satinbindungen. Je nach Anwendung können sie auch verstärkt, laminiert oder mit zusätzlichen Schutzschichten (z. B. Neopren, Silikon, PTFE) beschichtet werden.",
+      "coatingsAndModifications": "Beschichtungen und Modifikationen",
+      "silicone": "Silikon",
+      "siliconeDescription": "Erhöht die Beständigkeit gegen Witterungseinflüsse und Chemikalien.",
+      "aluminum": "Aluminium",
+      "aluminumDescription": "Die Aluminiumbeschichtung verbessert die Reflexion von Infrarot-Wärmestrahlung.",
+      "siliconeCoatedAramid": "Aramid-Gewebe mit Silikonbeschichtung",
+      "aluminumCoatedAramid": "Aramid-Gewebe mit Aluminiumbeschichtung",
+      "properties": "Eigenschaften von Aramid-Geweben",
+      "thermalResistance": "Temperaturbeständigkeit",
+      "thermalResistanceDescription": "Aramid-Gewebe halten Temperaturen von ca. 500°C stand, bei kurzfristigem Kontakt sogar mehr. Sie schmelzen nicht, sondern verkohlen, was sie ideal für Brandschutzanwendungen macht.",
+      "mechanicalResistance": "Mechanische Beständigkeit",
+      "mechanicalResistanceDescription": "Sie sind extrem widerstandsfähig gegen Zug, Risse, Schnitte und Abrieb – sie übertreffen Glasgewebe in dieser Hinsicht deutlich.",
+      "chemicalResistance": "Chemische Beständigkeit",
+      "chemicalResistanceDescription": "Sie sind widerstandsfähig gegen die meisten organischen Lösungsmittel und industriellen Chemikalien.",
+      "lowWeight": "Geringes Gewicht",
+      "lowWeightDescription": "Trotz hoher Festigkeit sind Aramid-Gewebe leicht, was ihren Einsatz in mobilen Anwendungen und Schutzkleidung ermöglicht.",
+      "applications": "Anwendung von Aramid-Geweben",
+      "defenseAndRescue": "Verteidigungs- und Rettungsindustrie",
+      "defenseAndRescueDescription": "Kugelsichere Westen, Helme, Feuerwehranzüge.",
+      "thermalAndFireProtection": "Wärme- und Brandschutz",
+      "thermalAndFireProtectionDescription": "Schweißhandschuhe, Brandschutzvorhänge, Turbinenschutz.",
+      "automotiveAndAviation": "Automobil- und Luftfahrtindustrie",
+      "automotiveAndAviationDescription": "Verbundwerkstoffe, Verkleidungen, strukturelle Verstärkungen.",
+      "industrialInsulation": "Industrielle Dämmung",
+      "industrialInsulationDescription": "Wärmeschutzhüllen, Dichtungen, feuerfeste Materialien.",
+      "summary": "Zusammenfassung",
+      "summaryDescription": "Aramid-Gewebe gehören dank ihrer einzigartigen Eigenschaften – insbesondere ihrer Beständigkeit gegen Temperaturen, Schnitte und mechanische Schäden – zu den modernsten technischen Materialien. Sie finden nicht nur in der Schwerindustrie, sondern auch in militärischen, medizinischen und luftfahrttechnischen Anwendungen Verwendung."
+    },
+    "fillingInfo": {
+      "title": "Füllungen in Dämmmatratzen: Wichtige Materialien und ihre Anwendung",
+      "description": "Dämmmatratzen sind effektive Lösungen, die in der Industrie verwendet werden, um Anlagen vor Wärmeverlusten zu schützen und die Sicherheit von Menschen und Geräten zu gewährleisten. Eine Schlüsselrolle für ihre Wirksamkeit spielt das Füllmaterial, das für die wärmedämmenden Eigenschaften, die Feuerbeständigkeit sowie die chemische und mechanische Beständigkeit des gesamten Systems verantwortlich ist.",
+      "mainFunctions": "Hauptfunktionen der Füllungen in Dämmmatratzen",
+      "thermalInsulation": "Wärmedämmung - ",
+      "thermalInsulationDesc": "Die Hauptfunktion der Füllung ist die Begrenzung von Wärmeverlusten. Hochtemperatur-Industrieanlagen wie Rohrleitungen, Turbinen, Ventile oder Wärmetauscher erfordern eine effektive Barriere, die vor dem Verlust von Wärmeenergie schützt. Eine gute Füllung hält die Prozesstemperatur aufrecht, verbessert die Energieeffizienz und senkt die Betriebskosten.",
+      "highTemperatureProtection": "Schutz vor hohen Temperaturen - ",
+      "highTemperatureProtectionDesc": "Füllungen müssen beständig gegen extreme Temperaturen sein – sowohl langfristig als auch kurzfristig (Spitzenwerte). Je nach Anwendung können Materialien verwendet werden, die Temperaturen von mehreren Hundert bis über tausend Grad Celsius standhalten.",
+      "fireSafety": "Sicherheit und Brandschutz - ",
+      "fireSafetyDesc": "Dank ihrer nicht brennbaren und verkohlenden Eigenschaften tragen Füllungen dazu bei, Menschen und Geräte im Falle eines Systemausfalls vor Feuer und hohen Temperaturen zu schützen.",
+      "chemicalMechanicalResistance": "Chemische und mechanische Beständigkeit - ",
+      "chemicalMechanicalResistanceDesc": "In vielen industriellen Umgebungen ist die Beständigkeit gegen Feuchtigkeit, Öle, Chemikalien, Vibrationen oder Abrieb entscheidend. Die richtige Wahl des Füllmaterials ermöglicht die Anpassung der Matratze an schwierige Arbeitsbedingungen.",
+      "flexibility": "Flexibilität und Anpassung an die Form - ",
+      "flexibilityDesc": "Füllungen müssen gut an das zu dämmende Element anliegen – unabhängig davon, ob es sich um ein Ventil, einen Rohrbogen oder eine andere unregelmäßige Form handelt. Dank ihrer geeigneten Struktur können sie leicht geformt und angepasst werden, was die Montage und Demontage der Dämmung, z. B. bei Inspektionen, erleichtert.",
+      "mainTypes": "Haupttypen von Füllungen: ",
+      "mineralWools": "Mineralwolle",
+      "mineralWoolsDesc": "Mineralwolle sind Materialien aus anorganischen Fasern wie Glas oder Basalt. Dank ihrer porösen Struktur begrenzen sie hervorragend den Wärmefluss und dämpfen gleichzeitig Geräusche. Sie sind nicht brennbar, was sie unverzichtbar macht, wo Brandsicherheit wichtig ist – im Bauwesen, in Rohrleitungen und Industrieanlagen.",
+      "ceramicWools": "Keramikwolle",
+      "ceramicWoolsDesc": "Keramikwolle wird dort eingesetzt, wo andere Materialien den Temperaturen nicht standhalten – in Öfen, Kesseln oder Feuerzonen. Sie sind beständig gegen extreme Bedingungen und bieten eine effektive Wärmebarriere auch über 1000°C. Ihre leichte, faserige Struktur ermöglicht eine gute Anpassung an unregelmäßige Oberflächen und reduziert gleichzeitig Geräusche.",
+      "glassMats": "Glasmatten",
+      "glassMatsDesc": "Glasmatten sind leichte, flexible Materialien aus feinen Glasfasern. Sie eignen sich für Anwendungen, die eine einfache Montage und Bearbeitung erfordern, z. B. bei der Dämmung von Kanälen, Geräten oder Gebäudeelementen. Dank ihrer Feuerbeständigkeit und guten Schalldämpfungseigenschaften sind sie eine vielseitige Lösung in vielen Branchen."
+    },
+    "mineralWoolInfo": {
+      "characteristics": {
+        "title": "Mineralwolle – Allgemeine Merkmale",
+        "description": "Mineralwolle ist ein Dämmstoff, der aus Mineralfasern wie Glas- oder Steinwolle besteht. Sie zeichnet sich durch hervorragende wärmedämmende, akustische und temperaturbeständige Eigenschaften aus, was sie in Bauwesen, Industrie und anderen Bereichen, wo ein hoher Schutz vor Wärme, Lärm und Feuer erforderlich ist, weit verbreitet macht."
+      },
+      "types": {
+        "title": "Arten von Mineralwolle",
+        "description": "Mineralwolle gibt es in zwei Haupttypen:",
+        "glassWool": {
+          "title": "Glaswolle: ",
+          "description": "Ein Produkt aus geschmolzenem Glas, das zu Fasern verarbeitet wird und hervorragende Dämmeigenschaften bietet. Sie ist relativ leicht und einfach zu verarbeiten."
+        },
+        "rockWool": {
+          "title": "Steinwolle (Basaltwolle): ",
+          "description": "Hergestellt aus natürlichen Basaltsteinen, bietet sie etwas bessere wärmedämmende und akustische Eigenschaften als Glaswolle sowie eine höhere Temperaturbeständigkeit."
+        }
+      },
+      "comparisonCard": {
+        "title": "Visueller Vergleich von Glas- und Stein-Mineralwolle"
+      },
+      "comparison": {
+        "title": "Vergleich von Glas- und Steinwolle",
+        "table": {
+          "feature": "Merkmal",
+          "glassWool": "Glaswolle",
+          "rockWool": "Steinwolle (Basaltwolle)",
+          "thermalInsulation": {
+            "feature": "Wärmedämmung",
+            "glassWool": "Bessere Wärmedämmung.",
+            "rockWool": "Etwas schlechtere Wärmedämmung, aber bessere Feuerbeständigkeit."
+          },
+          "compressionResistance": {
+            "feature": "Druckfestigkeit",
+            "glassWool": "Geringere Widerstandsfähigkeit, anfälliger für Kompression.",
+            "rockWool": "Höhere Widerstandsfähigkeit, besser für Anwendungen mit hohem Druck."
+          },
+          "acousticInsulation": {
+            "feature": "Schalldämmung",
+            "glassWool": "Sehr gut, besser bei der Dämpfung höherer Frequenzen.",
+            "rockWool": "Dämpft Geräusche gut, aber weniger effektiv bei höheren Frequenzen."
+          },
+          "vaporPermeability": {
+            "feature": "Dampfdurchlässigkeit",
+            "glassWool": "Besser bei geringeren Dichten.",
+            "rockWool": "Niedriger, besser in Bereichen, die eine dichte Dämmung erfordern."
+          },
+          "fireResistance": {
+            "feature": "Feuerbeständigkeit",
+            "glassWool": "Feuerbeständig, hält bis zu 500°C stand.",
+            "rockWool": "Höhere Feuerbeständigkeit, hält bis zu 1000°C stand, schmilzt nicht."
+          },
+          "weight": {
+            "feature": "Gewicht",
+            "glassWool": "Leichter, einfacher zu transportieren.",
+            "rockWool": "Schwerer, haltbarer, aber schwieriger zu installieren."
+          },
+          "moistureResistance": {
+            "feature": "Feuchtigkeitsbeständigkeit",
+            "glassWool": "Weniger feuchtigkeitsbeständig, kann bei Kontakt mit Wasser beschädigt werden.",
+            "rockWool": "Bessere Feuchtigkeitsbeständigkeit, nimmt kein Wasser auf, widerstandsfähiger gegen Schimmel."
+          },
+          "application": {
+            "feature": "Anwendung",
+            "glassWool": "Wärme- und Schalldämmung im Bauwesen.",
+            "rockWool": "Industrielle Dämmung, Brandschutz, in Öfen und Kesseln."
+          }
+        },
+        "mobile": {
+          "thermalInsulation": {
+            "feature": "Wärmedämmung",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Bessere Wärmedämmung.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Etwas schlechtere Wärmedämmung, aber bessere Feuerbeständigkeit."
+          },
+          "compressionResistance": {
+            "feature": "Druckfestigkeit",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Geringere Widerstandsfähigkeit, anfälliger für Kompression.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Höhere Widerstandsfähigkeit, besser für Anwendungen mit hohem Druck."
+          },
+          "acousticInsulation": {
+            "feature": "Schalldämmung",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Sehr gut, besser bei der Dämpfung höherer Frequenzen.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Dämpft Geräusche gut, aber weniger effektiv bei höheren Frequenzen."
+          },
+          "vaporPermeability": {
+            "feature": "Dampfdurchlässigkeit",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Besser bei geringeren Dichten.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Niedriger, besser in Bereichen, die eine dichte Dämmung erfordern."
+          },
+          "fireResistance": {
+            "feature": "Feuerbeständigkeit",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Feuerbeständig, hält bis zu 500°C stand.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Höhere Feuerbeständigkeit, hält bis zu 1000°C stand, schmilzt nicht."
+          },
+          "weight": {
+            "feature": "Gewicht",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Leichter, einfacher zu transportieren.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Schwerer, haltbarer, aber schwieriger zu installieren."
+          },
+          "moistureResistance": {
+            "feature": "Feuchtigkeitsbeständigkeit",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Weniger feuchtigkeitsbeständig, kann bei Kontakt mit Wasser beschädigt werden.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Bessere Feuchtigkeitsbeständigkeit, nimmt kein Wasser auf, widerstandsfähiger gegen Schimmel."
+          },
+          "application": {
+            "feature": "Anwendung",
+            "glassWoolTitle": "Glaswolle: ",
+            "glassWool": "Wärme- und Schalldämmung im Bauwesen.",
+            "rockWoolTitle": "Steinwolle: ",
+            "rockWool": "Industrielle Dämmung, Brandschutz, in Öfen und Kesseln."
+          }
+        }
+      },
+      "production": {
+        "title": "Herstellungsprozess von Mineralwolle",
+        "description": "Mineralwolle entsteht durch das Schmelzen von mineralischen Rohstoffen in Hochtemperaturöfen, gefolgt von der Verarbeitung zu feinen Fasern. Diese Fasern werden dann zu Matten, Platten oder Granulaten geformt, die als Dämmstoffe verwendet werden können. Die Herstellung von Mineralwolle erfordert eine präzise Steuerung von Temperatur und Zeit, um optimale Materialeigenschaften zu gewährleisten."
+      },
+      "coatings": {
+        "title": "Beschichtung und Überzüge",
+        "description": "Mineralwolle kann mit verschiedenen Substanzen beschichtet werden, um ihre Eigenschaften zu verbessern:",
+        "aluminum": {
+          "title": "Aluminiumbeschichtung - ",
+          "description": "Wird verwendet, um die Feuchtigkeitsbeständigkeit des Materials zu erhöhen, seine Dämmeigenschaften zu verbessern und die Beständigkeit gegen Chemikalien zu erhöhen."
+        },
+        "glassFiber": {
+          "title": "Glasfaserbeschichtung - ",
+          "description": "Erhöht die mechanische Festigkeit des Materials und schützt vor mechanischen Schäden."
+        },
+        "aluminumCard": {
+          "title": "Mineralwolle mit Aluminiumbeschichtung"
+        },
+        "glassFiberCard": {
+          "title": "Mineralwolle mit Glasfaserbeschichtung"
+        }
+      },
+      "properties": {
+        "title": "Eigenschaften von Mineralwolle",
+        "description": "Mineralwolle verfügt über eine Reihe vorteilhafter Eigenschaften, die sie zu einem der am häufigsten verwendeten Dämmstoffe machen:",
+        "highTemperature": {
+          "title": "Beständigkeit gegen hohe Temperaturen: ",
+          "description": "Mineralwolle zeigt eine sehr hohe Beständigkeit gegen Feuer, was sie zu einem hervorragenden Material für den Brandschutz macht. Je nach Art der Wolle kann die Temperaturbeständigkeit von 350°C bis zu 1000°C betragen."
+        },
+        "thermalInsulation": {
+          "title": "Wärmedämmung: ",
+          "description": "Dank ihrer Faserstruktur isoliert Mineralwolle effektiv vor Wärme, was die Heizkosten in Gebäuden senkt und Industriegeräte vor Überhitzung schützt."
+        },
+        "acousticInsulation": {
+          "title": "Schalldämmung: ",
+          "description": "Das Material dämpft Geräusche effektiv, was es ideal für den Einsatz im Bauwesen macht, insbesondere in mehrstöckigen Gebäuden und Industrieanlagen, wo Lärm ein Problem sein kann."
+        },
+        "chemicalResistance": {
+          "title": "Chemische Beständigkeit: ",
+          "description": "Mineralwolle ist resistent gegen viele Chemikalien, was sie in schwierigen industriellen Bedingungen einsetzbar macht, wo der Kontakt mit aggressiven Chemikalien üblich ist."
+        }
+      },
+      "applications": {
+        "title": "Anwendung von Mineralwolle",
+        "description": "Mineralwolle wird in vielen Branchen weit verbreitet eingesetzt:",
+        "buildingInsulation": {
+          "title": "Baudämmung: ",
+          "description": "Sie wird im Bauwesen sowohl in Wohn- als auch in Industriegebäuden häufig als Dämmstoff für Wände, Dächer, Böden und Rohre verwendet. Mineralwolle verbessert die Energieeffizienz von Gebäuden erheblich."
+        },
+        "industrialInsulation": {
+          "title": "Industrielle Dämmung: ",
+          "description": "Wird in der Industrie zur Dämmung von Geräten wie Kesseln, Öfen, Rohrleitungen oder Reaktoren verwendet, wo hohe Temperaturen auftreten. Dank ihrer Feuerbeständigkeit schützt das Material effektiv vor Überhitzung und reduziert das Brandrisiko."
+        },
+        "acousticInsulation": {
+          "title": "Schalldämmung: ",
+          "description": "Wird zur Geräuschdämpfung in Büros, Produktionshallen, Konferenzräumen oder anderen Objekten verwendet, wo die Kontrolle des Lärmpegels erforderlich ist."
+        },
+        "fireProtection": {
+          "title": "Brandschutz: ",
+          "description": "Mineralwolle wird bei der Herstellung von Schutzkleidung, Brandschutzdecken und anderen Brandschutzmaterialien eingesetzt."
+        }
+      },
+      "summary": {
+        "title": "Zusammenfassung",
+        "description": "Mineralwolle ist ein äußerst vielseitiges Material, das dank seiner Feuerbeständigkeit, hohen Dämmeigenschaften und chemischen Beständigkeit in verschiedenen Branchen weit verbreitet ist. Vom Bauwesen bis zur Industrie ist sie unverzichtbar für die Schaffung effektiver Dämm- und Brandschutzsysteme und gehört zu den wichtigsten Dämmstoffen auf dem Markt."
+      }
+    },
+    "ceramicWoolInfo": {
+      "characteristics": {
+        "title": "Keramikwolle – Allgemeine Merkmale",
+        "description": "Keramikwolle ist ein hochtemperaturbeständiger Dämmstoff aus Keramikfasern, meist auf Basis von Aluminiumoxid und Siliziumdioxid. Dank ihrer außergewöhnlichen Beständigkeit gegen extreme Temperaturen und sehr guten Wärmedämmeigenschaften findet sie Anwendung in den anspruchsvollsten industriellen Bedingungen, wie Öfen, Kesseln oder Energieanlagen.",
+        "description2": "Das Material ist leicht, flexibel und leicht formbar, was es für schwer zugängliche Stellen oder unregelmäßige Oberflächen geeignet macht. Es ist beständig gegen thermische Schocks, leitet keine Wärme und reagiert nicht mit den meisten Chemikalien."
+      },
+      "properties": {
+        "title": "Eigenschaften von Keramikwolle",
+        "highTemperature": {
+          "title": "Beständigkeit gegen extreme Temperaturen: ",
+          "description": "Keramikwolle kann in Temperaturen von 800°C bis zu 1400°C arbeiten, je nach chemischer Zusammensetzung. Sie ist nicht brennbar und schmilzt nicht, was sie ideal für feuer- und wärmeintensive Anwendungen macht."
+        },
+        "lowConductivity": {
+          "title": "Geringe Wärmeleitfähigkeit: ",
+          "description": "Dank ihrer faserigen Struktur hält sie Wärme in Geräten und Anlagen zurück und reduziert Energieverluste."
+        },
+        "chemicalResistance": {
+          "title": "Chemische Beständigkeit: ",
+          "description": "Das Material reagiert nicht mit den meisten Säuren, Basen und Industriegasen, was es für aggressive industrielle Umgebungen geeignet macht."
+        },
+        "lightweight": {
+          "title": "Leichtigkeit und einfache Montage: ",
+          "description": "Keramikwolle ist deutlich leichter als traditionelle feuerfeste Materialien, was Transport, Bearbeitung und Montage erleichtert."
+        },
+        "thermalShock": {
+          "title": "Beständigkeit gegen thermische Schocks: ",
+          "description": "Sie wird bei plötzlichen Temperaturänderungen nicht beschädigt, was in Anlagen mit zyklischem Erhitzen und Abkühlen entscheidend ist."
+        }
+      },
+      "forms": {
+        "title": "Verfügbare Formen und Beschichtungen",
+        "description": "Keramikwolle ist in vielen Formen erhältlich: als Matten, Schnüre, Papier, Decken oder vakuumgeformte Module. Je nach Bedarf kann das Material auch mit speziellen Schutzschichten überzogen werden, z. B.:",
+        "aluminum": {
+          "title": "Aluminiumbeschichtungen: ",
+          "description": "Verbessern die Ästhetik, erhöhen die Feuchtigkeitsbeständigkeit und reflektieren Wärmestrahlung."
+        },
+        "technicalFabrics": {
+          "title": "Technische Stoffe: ",
+          "description": "Wie Beschichtungen aus Glasfasern oder Siliziumfasern, die vor mechanischen Schäden schützen und die Haltbarkeit des Produkts erhöhen."
+        }
+      },
+      "applications": {
+        "title": "Anwendung von Keramikwolle",
+        "description": "Keramikwolle findet überall dort Anwendung, wo eine effektive Dämmung unter extremen Bedingungen erforderlich ist:",
+        "energyIndustry": {
+          "title": "Energiewirtschaft: ",
+          "description": "Zur Dämmung von Turbinen, Kesseln, Dampfrohrleitungen und Verbrennungskammern."
+        },
+        "metallurgy": {
+          "title": "Hüttenwesen und Metallurgie: ",
+          "description": "Zum Auskleiden von Schmelzöfen, Gießereien, Transportwegen für geschmolzene Metalle."
+        },
+        "petrochemical": {
+          "title": "Petrochemische und chemische Industrie: ",
+          "description": "Zur Dämmung von Tanks und Reaktoren, die hohen Temperaturen und chemischen Einflüssen ausgesetzt sind."
+        },
+        "heatingDevices": {
+          "title": "Herstellung von Heizgeräten: ",
+          "description": "In Kesseln, Laboröfen, industriellen Trocknern oder Heizgeräten."
+        },
+        "fireProtection": {
+          "title": "Brandschutz: ",
+          "description": "In passiven Brandschutzsystemen, feuerfesten Türen, Wärmebarrieren."
+        }
+      },
+      "summary": {
+        "title": "Zusammenfassung",
+        "description": "Keramikwolle ist ein technologisch fortschrittlicher Dämmstoff, der für die anspruchsvollsten industriellen Anwendungen entwickelt wurde. Dank ihrer Beständigkeit gegen extreme Temperaturen, thermische Schocks und chemische Einflüsse bietet sie nicht nur Wärmeschutz, sondern auch betriebliche Sicherheit. Ihre Vielseitigkeit, Leichtigkeit und einfache Montage machen sie zu einer beliebten Wahl für Dämmkomponenten in vielen Industriezweigen."
+      }
+    },
+    "glassMatInfo": {
+      "characteristics": {
+        "title": "Glasmatten – Eigenschaften, Anwendungen und Vorteile",
+        "description": "Glasmatten sind Dämmstoffe aus feinen Glasfasern, die eine kompakte, flexible Struktur bilden, die an Watte oder Gewebe erinnert. Sie zeichnen sich durch geringe Dichte, gute Temperaturbeständigkeit und hervorragende akustische Dämmeigenschaften aus. Dank ihrer Leichtigkeit und einfachen Verarbeitung finden sie breite Anwendung sowohl im Bauwesen als auch in der Industrie."
+      },
+      "properties": {
+        "title": "Charakteristik und Eigenschaften",
+        "description": "Glasmatten zeichnen sich durch eine Reihe vorteilhafter Eigenschaften aus:",
+        "highTemperature": {
+          "title": "Beständigkeit gegen hohe Temperaturen: ",
+          "description": "Glasmatten halten Temperaturen von 500–600°C stand, was sie für die Wärmedämmung in industriellen Umgebungen geeignet macht."
+        },
+        "nonFlammability": {
+          "title": "Nichtbrennbarkeit: ",
+          "description": "Glasfasern sind nicht brennbar, und ihre Struktur verhindert die Ausbreitung von Feuer."
+        },
+        "flexibility": {
+          "title": "Flexibilität und Formbarkeit: ",
+          "description": "Die Matten lassen sich leicht zuschneiden und an unregelmäßige Formen anpassen, was die Montage erheblich erleichtert."
+        },
+        "chemicalResistance": {
+          "title": "Chemische Beständigkeit: ",
+          "description": "Das Material ist beständig gegen viele aggressive Chemikalien, einschließlich Öle, Lösungsmittel und Dämpfe."
+        },
+        "biologicalResistance": {
+          "title": "Beständigkeit gegen biologische Korrosion: ",
+          "description": "Die Matten verrotten nicht, werden durch Feuchtigkeit nicht abgebaut und bieten keinen Nährboden für Schimmel."
+        },
+        "acousticInsulation": {
+          "title": "Schalldämmung: ",
+          "description": "Die faserige Struktur ermöglicht eine effektive Schallabsorption und Lärmreduktion."
+        }
+      },
+      "comparison": {
+        "title": "Vergleich der Arten von Glasmatten",
+        "table": {
+          "type": "Art der Matte",
+          "description": "Beschreibung",
+          "binder": "Bindemittel",
+          "applications": "Typische Anwendungen",
+          "csm": {
+            "type": "Matte aus geschnittenen Fasern (CSM)",
+            "description": "Zufällig angeordnete kurze Glasfasern, mit Bindemittel verbunden",
+            "binder": "Emulsion / Pulver",
+            "applications": "Verbundwerkstoffe mit Harzen, Automobilteile, technische Abdeckungen"
+          },
+          "emulsion": {
+            "type": "Emulsionsmatte",
+            "description": "CSM mit Emulsion – flexibler und leichter formbar",
+            "binder": "Emulsion",
+            "applications": "Dämmungen in der Automobilindustrie, Elemente mit komplizierten Formen"
+          },
+          "powder": {
+            "type": "Pulvermatte",
+            "description": "CSM mit Pulver – steifer, stabil bei großen Flächen",
+            "binder": "Pulver",
+            "applications": "Wärmedämmabdeckungen, z. B. für Kessel, Turbinen, Rohrleitungen"
+          },
+          "needle": {
+            "type": "Nadelmatte (needle mat)",
+            "description": "Mechanisch verbundene Fasern ohne Bindemittel – elastisch, haltbar",
+            "binder": "Kein",
+            "applications": "Akustische und thermische Dämmung in Industrie und Gebäuden"
+          },
+          "coated": {
+            "type": "Matte mit Aluminium-/Gewebebeschichtung",
+            "description": "Mit Aluminiumfolie oder technischem Gewebe beschichtet – beständig gegen Beschädigungen",
+            "binder": "Verschiedene",
+            "applications": "Dämmmatratzen, Motorabdeckungen, Ventile, Turbinen"
+          },
+          "loose": {
+            "type": "Lose / locker gebundene Matte",
+            "description": "Leichte Struktur ohne oder mit minimalem Bindemittel",
+            "binder": "Kein oder sehr wenig",
+            "applications": "Füllungen für Matratzen, Schallschutztrennwände"
+          },
+          "automotive": {
+            "type": "Matte für die Automobilindustrie",
+            "description": "Verstärkte CSM-Matte für anspruchsvolle Bedingungen",
+            "binder": "Emulsion / Pulver",
+            "applications": "Wärme- und Schalldämmung in Fahrzeugen"
+          }
+        },
+        "mobile": {
+          "csm": {
+            "type": "Matte aus geschnittenen Fasern (CSM)",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "Zufällig angeordnete kurze Glasfasern, mit Bindemittel verbunden",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Emulsion / Pulver",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Verbundwerkstoffe mit Harzen, Automobilteile, technische Abdeckungen"
+          },
+          "emulsion": {
+            "type": "Emulsionsmatte",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "CSM mit Emulsion – flexibler und leichter formbar",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Emulsion",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Dämmungen in der Automobilindustrie, Elemente mit komplizierten Formen"
+          },
+          "powder": {
+            "type": "Pulvermatte",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "CSM mit Pulver – steifer, stabil bei großen Flächen",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Pulver",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Wärmedämmabdeckungen, z. B. für Kessel, Turbinen, Rohrleitungen"
+          },
+          "needle": {
+            "type": "Nadelmatte (needle mat)",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "Mechanisch verbundene Fasern ohne Bindemittel – elastisch, haltbar",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Kein",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Akustische und thermische Dämmung in Industrie und Gebäuden"
+          },
+          "coated": {
+            "type": "Matte mit Aluminium-/Gewebebeschichtung",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "Mit Aluminiumfolie oder technischem Gewebe beschichtet – beständig gegen Beschädigungen",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Verschiedene",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Dämmmatratzen, Motorabdeckungen, Ventile, Turbinen"
+          },
+          "loose": {
+            "type": "Lose / locker gebundene Matte",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "Leichte Struktur ohne oder mit minimalem Bindemittel",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Kein oder sehr wenig",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Füllungen für Matratzen, Schallschutztrennwände"
+          },
+          "automotive": {
+            "type": "Matte für die Automobilindustrie",
+            "descriptionTitle": "Beschreibung: ",
+            "description": "Verstärkte CSM-Matte für anspruchsvolle Bedingungen",
+            "binderTitle": "Bindemittel: ",
+            "binder": "Emulsion / Pulver",
+            "applicationsTitle": "Typische Anwendungen: ",
+            "applications": "Wärme- und Schalldämmung in Fahrzeugen"
+          }
+        }
+      },
+      "advantages": {
+        "title": "Vorteile der Verwendung von Glasmatten",
+        "lightweight": {
+          "title": "Leichtigkeit und einfache Montage ",
+          "description": "Glasmatten sind leicht, was Transport und Installation erleichtert. Sie lassen sich leicht zuschneiden und an Formen anpassen, was die Montage auch an schwer zugänglichen Stellen beschleunigt."
+        },
+        "flexibility": {
+          "title": "Hohe Flexibilität und Anpassung an Formen ",
+          "description": "Sie sind sehr flexibel und passen sich gut an unregelmäßige Oberflächen, Ventile oder Rohre an. Sie gewährleisten eine dichte Dämmung ohne Wärmebrücken."
+        },
+        "durability": {
+          "title": "Hohe Haltbarkeit und Beständigkeit gegen äußere Einflüsse ",
+          "description": "Beständig gegen mechanische Schäden, Feuchtigkeit, Schimmel und die meisten Chemikalien. Sie behalten ihre Dämmeigenschaften über lange Zeit, auch unter schwierigen industriellen Bedingungen."
+        },
+        "fireSafety": {
+          "title": "Brandsicherheit ",
+          "description": "Nicht brennbar (Klasse A1), schmelzen nicht leicht und geben keine schädlichen Gase ab. Sie eignen sich dort, wo Brandschutz erforderlich ist."
+        },
+        "noiseReduction": {
+          "title": "Fähigkeit zur Lärmdämpfung ",
+          "description": "Dank ihrer faserigen Struktur absorbieren sie Geräusche effektiv. Sie werden in Schallschutztrennwänden, zur Schalldämmung von Maschinen, Lüftungskanälen oder Trennwänden verwendet."
+        }
+      },
+      "summary": {
+        "title": "Zusammenfassung",
+        "description": "Glasmatten sind ein vielseitiger Dämmstoff, der hohe Dämmwirksamkeit, Feuer- und Chemikalienbeständigkeit sowie einfache Verarbeitung vereint. Ihre Anwendung in Industrie und Bauwesen ermöglicht die Schaffung langlebiger, effizienter und sicherer Dämmsysteme. Sie sind auch eine hervorragende Füllung für Dämmmatratzen, die in Bereichen mit hohen Temperaturen und Lärm eingesetzt werden."
+      }
+    },
+    "productCategoryList": {
+      "title": "Liste der Produktkategorien:",
+      "main_cat": {
+        "fabrics": "Gewebe",
+        "fillings": "Füllungen",
+        "services": "Dienstleistungen"
+      },
+      "fabrics": {
+        "title": "Gewebe",
+        "glassFabric": "Glasgewebe",
+        "aramidFabric": "Aramid-Gewebe"
+      },
+      "fillings": {
+        "title": "Füllungen",
+        "mineralWool": "Mineralwolle",
+        "ceramicWool": "Keramikwolle",
+        "glassMat": "Glasmatten"
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "measurement": "Messungen",
+        "project": "Projekt",
+        "mattressProduction": "Matratzenproduktion",
+        "installation": "Dämmmontage"
+      }
+    },
+    "MainPageShop": {
+      "LeftBar": {
+        "Category": {
+          "Fabrics": "Gewebe",
+          "Fillings": "Füllungen",
+          "Services": "Dienstleistungen"
+        },
+        "fabrics": {
+          "title": "Gewebe",
+          "glassFabric": "Glasgewebe",
+          "aramidFabric": "Aramid-Gewebe"
+        },
+        "fillings": {
+          "title": "Füllungen",
+          "mineralWool": "Mineralwolle",
+          "ceramicWool": "Keramikwolle",
+          "glassMat": "Glasmatten"
+        },
+        "services": {
+          "title": "Dienstleistungen",
+          "measurement": "Messungen",
+          "project": "Projekt",
+          "mattressProduction": "Matratzenproduktion",
+          "installation": "Dämmmontage"
+        }
+      }
+    },
+    "language": {
+      "pl": "Polnisch",
+      "en": "Englisch"
+    },
+    "products": {
+      "title": "Produkte: {{category}}",
+      "price": "Preis: {{price}} PLN",
+      "outOfStock": "Nicht auf Lager",
+      "unavailable": "Nicht verfügbar",
+      "addToCart": "In den Warenkorb",
+      "productsCount_0": "Keine Produkte",
+      "productsCount_1": "{{count}} Produkt",
+      "productsCount_2": "{{count}} Produkte",
+      "productsCount_3": "{{count}} Produkte",
+      "productsCount_4": "{{count}} Produkte",
+      "productsCount_5": "{{count}} Produkte",
+      "productsCount_plural": "{{count}} Produkte"
+    },
+    "cart": {
+      "title": "Ihr Warenkorb",
+      "empty": "Ihr Warenkorb ist leer",
+      "product": "Produkt",
+      "quantity": "Menge im Warenkorb",
+      "pricePerUnit": "Preis pro Stück",
+      "remove": "Entfernen",
+      "summary": "Zusammenfassung",
+      "total": "Gesamt zu zahlen",
+      "proceedToShipping": "Zum Versand fortfahren",
+      "currency": "PLN",
+      "added": "Zum Warenkorb hinzugefügt: {{name}}"
+    },
+    "categories": {
+      "CERAMIC_WOOL": "Keramikwolle",
+      "GLASS_FABRIC": "Glasgewebe",
+      "MINERAL_WOOL": "Mineralwolle",
+      "PROJECT": "Projekt",
+      "MATTRESS_PRODUCTION": "Matratzenproduktion",
+      "GLASS_MAT": "Glasmatte",
+      "MEASUREMENT": "Messungen",
+      "ARAMID_FABRIC": "Aramid-Gewebe",
+      "INSTALLATION": "Montage"
+    },
+    "errors": {
+      "apiFailed": "Produkte konnten nicht abgerufen werden"
+    },
+    "order": {
+      "title": "Bestellformular",
+      "customerDetails": "Kundendaten",
+      "name": "Vor- und Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "nip": "Steuernummer",
+      "regon": "REGON",
+      "shippingDetails": "Versanddaten",
+      "street": "Straße",
+      "homenr": "Hausnummer",
+      "city": "Stadt",
+      "postcode": "Postleitzahl",
+      "summary": "Bestellübersicht",
+      "quantity": "Menge",
+      "price": "Preis",
+      "total": "Gesamtsumme",
+      "submit": "Bestellung absenden",
+      "success": "Bestellung erfolgreich abgeschickt!"
+    },
+    "VideoHeader": {
+      "description": "Wärmedämmungen"
+    },
+    "OurProjects": {
+      "title": "Unsere Projekte",
+      "buttons": {
+        "turbines": "Turbinen",
+        "valves": "Ventile",
+        "exchangers": "Wärmetauscher",
+        "production": "Produktion"
+      }
+    },
+    "JoinUs": {
+      "title": "Schließen Sie sich uns an",
+      "description": "Wenn Sie an einer Arbeit in unserem Unternehmen interessiert sind, kontaktieren Sie uns!",
+      "button": "Bewerben"
+    },
+    "JoinUsPageForm": {
+      "Title": "Schließen Sie sich uns an",
+      "SubTitle": "Wenn Sie an einer Arbeit in unserem Unternehmen interessiert sind, kontaktieren Sie uns!",
+      "SubSubTitle": "Wir werden Sie innerhalb von 7 Werktagen kontaktieren.",
+      "formBasicName": {
+        "Name": "Vor- und Nachname",
+        "NamePlaceholder": "Geben Sie Ihren Vor- und Nachnamen ein",
+        "ProvideName": "Bitte geben Sie Ihren Vor- und Nachnamen an"
+      },
+      "formBasicEmail": {
+        "Email": "E-Mail-Adresse",
+        "EmailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "ProvideEmail": "Bitte geben Sie Ihre E-Mail-Adresse an"
+      },
+      "formBasicPhone": {
+        "Phone": "Telefonnummer",
+        "PhonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
+        "ProvidePhone": "Bitte geben Sie Ihre Telefonnummer an"
+      },
+      "formBasicCV": {
+        "CV": "Lebenslauf",
+        "CVPlaceholder": "Datei auswählen",
+        "ProvideCV": "Bitte geben Sie Ihren Lebenslauf an"
+      },
+      "formBasicPrivacyPolicy": {
+        "DataProcessingConsent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten durch die ISOTEX GROUP Ilona Żurawa zum Zwecke der Rekrutierung zu.",
+        "LearnMore": "Erfahren Sie mehr",
+        "DataProcessingConsentFeedback": "Bitte stimmen Sie der Verarbeitung Ihrer personenbezogenen Daten durch die ISOTEX GROUP Ilona Żurawa zum Zwecke der Rekrutierung zu."
+      },
+      "formBasicSubmit": {
+        "Submit": "Absenden"
+      },
+      "Modal": {
+        "Title": "Informationen zur Verarbeitung personenbezogener Daten",
+        "Body": "Der Verwalter Ihrer personenbezogenen Daten ist die ISOTEX GROUP Ilona Żurawa mit Sitz in Syców, ul. Daszyńskiego 9a, 56-500 Syców. Ihre personenbezogenen Daten werden zum Zwecke der Rekrutierung für die Stelle, auf die Sie sich bewerben, verarbeitet. Sie haben das Recht, auf den Inhalt Ihrer Daten zuzugreifen und diese zu korrigieren. Die Angabe der Daten ist freiwillig, aber für die Durchführung des Rekrutierungsprozesses erforderlich.",
+        "PrivacyPolicy": "Datenschutzrichtlinie"
+      }
+    },
+    "PrivacyPolicy": {
+      "title": "DATENSCHUTZRICHTLINIE DER WEBSITE www.isotex-poland.com",
+      "introduction": {
+        "p1": "Der Schutz der Privatsphäre der Nutzer ist für die ISOTEX GROUP Ilona Żurawa besonders wichtig. Aus diesem Grund wird den Nutzern der Website www.isotex-poland.com ein hoher Standard beim Schutz der Privatsphäre garantiert. Die ISOTEX GROUP Ilona Żurawa als Datenverwalter sorgt für die Sicherheit der von den Nutzern bereitgestellten Daten.",
+        "p2": "Ziel des Verwalters ist es auch, die Nutzer ordnungsgemäß über die Rechte und Pflichten im Zusammenhang mit der Verarbeitung personenbezogener Daten zu informieren, insbesondere im Hinblick auf die Bestimmungen der Datenschutzverordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27.04.2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr sowie zur Aufhebung der Richtlinie 95/46/EG (im Folgenden „DSGVO“). Daher informiert der Verwalter in diesem Dokument, unter Berücksichtigung des Schutzes der Privatsphäre der Nutzer der Website, über die rechtlichen Grundlagen der Verarbeitung personenbezogener Daten, die von den Nutzern im Zusammenhang mit der Nutzung der Website www.isotex-poland.com (im Folgenden „Website“) bereitgestellt werden, die Methoden der Erhebung, Verarbeitung und des Schutzes personenbezogener Daten sowie die Rechte der Nutzer.",
+        "p3": "Nutzer ist jede natürliche Person, deren Daten betroffen sind und die die Website www.isotex-poland.com oder die über die Website verfügbaren elektronischen Dienste nutzt.",
+        "p4": "Verwalter der personenbezogenen Daten, die von den Nutzern auf der Website www.isotex-poland.com bereitgestellt werden, ist die ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, Steuernummer 9111824789 (im Folgenden „Verwalter“)."
+      },
+      "userConsent": {
+        "title": "ZUSTIMMUNG DES NUTZERS",
+        "p1": "Die Nutzung der Website www.isotex-poland.com durch den Nutzer bedeutet, dass der Nutzer akzeptiert, dass der Verwalter personenbezogene Daten gemäß dieser Datenschutzrichtlinie sammelt und verwendet.",
+        "p2": "Personenbezogene Daten des Nutzers der Website werden vom Verwalter auf Basis seiner Zustimmung verarbeitet, in einigen in diesem Dokument beschriebenen Fällen im Rahmen des berechtigten Interesses des Verwalters. Der Nutzer hat das Recht, seine zuvor erteilte Zustimmung jederzeit zu widerrufen. Der Widerruf der Zustimmung berührt nicht die Rechtmäßigkeit der Verarbeitung, die auf Basis der Zustimmung vor ihrem Widerruf erfolgte.",
+        "p3": "Falls diese Datenschutzrichtlinie geändert wird und der Nutzer die Website weiterhin nutzt, wird dies als Zustimmung zu den aktuellen Bedingungen der Datenschutzrichtlinie angesehen."
+      },
+      "personalData": {
+        "title": "PERSONENBEZOGENE DATEN, DIE VOM VERWALTER VERARBEITET WERDEN",
+        "acquisition": {
+          "title": "Erhebung personenbezogener Daten",
+          "p1": "Der Verwalter erhebt personenbezogene Daten direkt vom Nutzer über die Website, durch die dort verfügbaren Funktionen und Kommunikationswerkzeuge sowie durch das Senden von Nachrichten an den Verwalter über diese.",
+          "p2": "Die Bereitstellung personenbezogener Daten durch den Nutzer ist freiwillig."
+        },
+        "types": {
+          "title": "Arten der verarbeiteten personenbezogenen Daten",
+          "p1": "Der Verwalter sammelt über die Website die folgenden personenbezogenen Daten des Nutzers:",
+          "li1": "Vor- und Nachname;",
+          "li2": "E-Mail-Adresse;",
+          "li3": "Telefonnummer;",
+          "li4": "Inhalt der Nachricht;",
+          "li5": "Betreff der Nachricht."
+        }
+      },
+      "purposes": {
+        "title": "ZWECKE DER VERARBEITUNG PERSONENBEZOGENER DATEN",
+        "p1": "Die Art und Weise der Verarbeitung der Daten des Nutzers durch den Verwalter hängt von der Art der Nutzung der Website und ihrer Funktionen ab. Der Verwalter verarbeitet die personenbezogenen Daten des Nutzers zu folgenden Zwecken:",
+        "communication": {
+          "title": "Kommunikation mit dem Nutzer.",
+          "p1": "Der Verwalter verwendet die personenbezogenen Daten des Nutzers, um in personalisierter Weise mit ihm zu kommunizieren. Die an den Nutzer übermittelten Informationen betreffen angebotene Produkte oder Dienstleistungen, Datensicherheit, Netzwerkaktualisierungen, Erinnerungen, aber auch vorgeschlagene Angebote des Verwalters oder seiner Partner. Die Kommunikation mit dem Nutzer betrifft auch den Kundenservice. Personenbezogene Daten werden verwendet, um dem Nutzer zu helfen, technische Probleme zu lösen und auf seine Beschwerden oder Reklamationen zu reagieren."
+        },
+        "electronicOffers": {
+          "title": "Vorstellung von Handelsangeboten an den Nutzer auf elektronischem Weg.",
+          "p1": "Der Zweck der Verwendung der personenbezogenen Daten des Nutzers, die er über die Kommunikationsfunktionen und -werkzeuge der Website bereitgestellt hat, ist die Durchführung von Marketingkommunikation durch den Verwalter im Rahmen seiner Geschäftstätigkeit, insbesondere die Vorstellung von Handelsangeboten an den Nutzer auf elektronischem Weg."
+        },
+        "phoneOffers": {
+          "title": "Vorstellung von Handelsangeboten an den Nutzer im Telefonkontakt.",
+          "p1": "Der Zweck der Verwendung der personenbezogenen Daten des Nutzers, die er über die Kommunikationsfunktionen und -werkzeuge der Website bereitgestellt hat, ist die Durchführung von Marketingkommunikation durch den Verwalter im Rahmen seiner Geschäftstätigkeit, insbesondere durch die Vorstellung von Handelsangeboten an den Nutzer im Telefonkontakt."
+        },
+        "newsletter": {
+          "title": "Versand von Informationen an den Nutzer auf elektronischem Weg im Rahmen der Anmeldung zum Newsletter des Verwalters.",
+          "p1": "Der Zweck der Verwendung der personenbezogenen Daten des Nutzers, die im Rahmen des Anmeldeformulars für den Newsletter des Verwalters auf der Website bereitgestellt wurden, ist die Information des Nutzers per E-Mail über neue Produkte, Dienstleistungen, Werbeaktionen oder Veranstaltungen des Verwalters oder seiner Partner."
+        },
+        "comments": {
+          "title": "Ermöglichung des Sendens von Kommentaren oder Meinungen durch den Nutzer.",
+          "p1": "Der Verwalter verwendet die personenbezogenen Daten des Nutzers, um ihm das Kommentieren/Meinungsäußern über die Tätigkeit, Dienstleistungen oder Produkte des Verwalters oder mit ihm zusammenarbeitender Unternehmen zu ermöglichen."
+        },
+        "additional": {
+          "p1": "Der Verwalter kann die personenbezogenen Daten des Nutzers, die über die Website erhoben wurden, auch zu folgenden Zwecken verarbeiten:",
+          "li1": "zum Abschluss und zur Erfüllung eines möglichen Vertrags zwischen dem Nutzer und dem Verwalter sowie zur Betreuung des Nutzers als Kunde des Verwalters gemäß Art. 6 Abs. 1 lit. b) DSGVO;",
+          "li2": "zur Durchführung finanzieller",
+          "li3": "zum Zwecke der Durchführung von Marketingmaßnahmen des Verwalters im Rahmen des berechtigten Interesses des Verwalters im Sinne von Art. 6 Abs. 1 lit. f) DSGVO sowie in Übereinstimmung mit den gegenüber dem Verwalter abgegebenen Willenserklärungen bezüglich der Marketingkommunikation. Einwilligungen, die im Bereich der Marketingkommunikation erteilt wurden z. B. für den Versand von Handelsinformationen auf elektronischem Wege oder für telefonische Kontaktaufnahme zu Zwecken des Direktmarketings), können jederzeit widerrufen werden, ohne dass dies die Rechtmäßigkeit der Verarbeitung berührt, die auf Basis der Einwilligung vor deren Widerruf erfolgte;",
+        "li4": "zur Erfüllung der gesetzlichen Verpflichtungen des Verwalters gegenüber dem Nutzer, wie sie in der DSGVO im Sinne von Art. 6 Abs. 1 lit. c) DSGVO definiert sind."
+        },
+
+        "sharing": {
+            "title": "WEITERGABE PERSONENBEZOGENER DATEN",
+            "p1": "Die personenbezogenen Daten des Nutzers werden vom Verwalter nicht an Dritte weitergegeben."
+        },
+        "userRights": {
+            "title": "RECHTE DES NUTZERS",
+            "rights": {
+            "title": "Rechte des Nutzers",
+            "p1": "Der Nutzer hat in jeder Phase der Verarbeitung seiner Daten eine Reihe von Rechten, die es ihm ermöglichen, Zugang zu seinen Daten zu erhalten, die Richtigkeit der Datenverarbeitung zu überprüfen, Korrekturen vorzunehmen sowie das Recht, Widerspruch gegen die Verarbeitung einzulegen, die Löschung der Daten, die Einschränkung der Verarbeitung oder die Datenübertragung zu verlangen.",
+            "p2": "Falls der Nutzer von seinen Rechten als betroffene Person Gebrauch machen möchte, kann er sich mit dem Verwalter über folgende Kontaktdaten in Verbindung setzen: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+            },
+            "complaint": {
+            "title": "Recht auf Beschwerde bei einer Aufsichtsbehörde",
+            "p1": "Der Nutzer, dessen personenbezogene Daten vom Verwalter verarbeitet werden, hat das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde für Datenschutzangelegenheiten einzureichen (Präsident des Amtes für den Schutz personenbezogener Daten)."
+            }
+        },
+        "cookies": {
+            "title": "COOKIES",
+            "p1": "Der Verwalter informiert, dass während der Nutzung der Website auf dem Endgerät des Nutzers Codefragmente, sogenannte „Cookies“, gespeichert werden, die Textdateien sind, die HTTP-Anfragen an den Server des Verwalters entsprechen. Cookies werden von jedem Browser installiert, mit dem der Nutzer die Website besucht. Die auf der Website verwendeten Cookies dienen folgenden Zwecken:",
+            "li1": "Aufrechterhaltung der technischen Korrektheit und Kontinuität der Sitzung zwischen dem Server der Website und dem Endgerät des Nutzers;",
+            "li2": "Optimierung der Nutzung der Webseiten der Website durch den Nutzer und Anpassung ihrer Darstellung auf dem Endgerät des Nutzers;",
+            "li3": "Gewährleistung der Sicherheit bei der Nutzung der Website;",
+            "li4": "Erhebung von Statistiken über die Besuche der Webseiten der Website, die zur Verbesserung ihrer Struktur und Inhalte beitragen;",
+            "li5": "Anzeige von Inhalten auf dem Endgerät des Nutzers, die an seine Präferenzen angepasst sind.",
+            "p2": "Detaillierte Informationen zu den vom Verwalter verwendeten Cookies sowie deren Verwaltung finden Sie in der Cookie-Richtlinie."
+        },
+        "other": {
+            "title": "WEITERE WICHTIGE INFORMATIONEN",
+            "security": {
+            "title": "Schutz der Sicherheit personenbezogener Daten",
+            "p1": "Der Verwalter führt geeignete Maßnahmen ein, um die Sicherheit der personenbezogenen Daten des Nutzers zu gewährleisten. Die sichere Nutzung der Website wird durch angewandte Systeme und Verfahren gewährleistet, die vor unbefugtem Zugriff und der Offenlegung von Daten gegenüber unerwünschten Personen schützen. Darüber hinaus werden die vom Verwalter eingesetzten Systeme und Prozesse regelmäßig überwacht, um potenzielle Bedrohungen zu erkennen. Die vom Verwalter erhobenen personenbezogenen Daten werden in Computersystemen gespeichert, deren Zugang streng eingeschränkt ist."
+            },
+            "storage": {
+            "title": "Speicherung personenbezogener Daten",
+            "p1": "Die Dauer der Speicherung der personenbezogenen Daten der Nutzer hängt von den Zwecken der Datenverarbeitung durch den Verwalter ab.",
+            "p2": "Der Verwalter speichert personenbezogene Daten für den Zeitraum, der zur Erreichung der festgelegten Zwecke erforderlich ist, nämlich:",
+            "li1": "im Falle der Erbringung einer Dienstleistung oder der Lieferung eines Produkts für den Nutzer – für den Zeitraum, der für die Erfüllung der vom Nutzer bestellten Dienstleistung oder die Lieferung des Produkts durch den Verwalter erforderlich ist.",
+            "p3": "In jedem der oben genannten Fälle können die Daten nach Ablauf des erforderlichen Verarbeitungszeitraums nur zur Geltendmachung von Ansprüchen im Zusammenhang mit den Beziehungen zwischen den Parteien bis zur endgültigen rechtlichen Klärung dieser Ansprüche verarbeitet werden."
+            },
+            "changes": {
+            "title": "Änderungen der Datenschutzrichtlinie",
+            "p1": "Um die in dieser Datenschutzrichtlinie enthaltenen Informationen zu aktualisieren und ihre Übereinstimmung mit den geltenden gesetzlichen Vorschriften zu gewährleisten, kann diese Datenschutzrichtlinie geändert werden. Im Falle einer Änderung des Inhalts der Datenschutzrichtlinie wird das Datum ihrer Aktualisierung am Ende des Textes geändert. Um Informationen über den Schutz personenbezogener Daten zu erhalten, empfiehlt der Verwalter den Nutzern, sich regelmäßig mit den Bestimmungen der Datenschutzrichtlinie vertraut zu machen."
+            },
+            "contact": {
+            "title": "Kontaktinformationen",
+            "p1": "Um jegliche Informationen zu dieser Datenschutzrichtlinie zu erhalten, kann der Nutzer den Verwalter personenbezogener Daten kontaktieren: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, unter Verwendung der folgenden Kontaktdaten: isotex.biuro@wp.pl.",
+            "p2": "Darüber hinaus besteht die Möglichkeit, per Post unter der Adresse Kontakt aufzunehmen: Komorów 9A, 56-500 Syców."
+            },
+            "update": {
+            "p1": "Die letzte Aktualisierung dieses Dokuments erfolgte am 12.01.2023."
+            }
+        }
+        },
+        "CertificatePage": {
+        "OurCerts": "Unsere Zertifikate",
+        "ISO90012015": {
+            "Certdesc": "ISO 9001:2015 ist eine internationale Norm, die Anforderungen an ein Qualitätsmanagementsystem (QMS) festlegt. Das ISO 9001:2015-Zertifikat ist weltweit anerkannt und weit verbreitet.\nDas ISO 9001:2015-System enthält Leitlinien zur Entwicklung von Grundsätzen und Verfahren, die notwendig sind, um Produkte und Dienstleistungen bereitzustellen, die die Bedürfnisse der Kunden sowie gesetzliche Anforderungen erfüllen. Es beschreibt verschiedene Bereiche, die ein effektives Qualitätsmanagement beeinflussen, wie Kundenorientierung, Engagement der obersten Leitung und der Mitarbeiter, Planung, Umsetzung und Überwachung von Prozessen sowie deren kontinuierliche Verbesserung.\nOrganisationen, die das ISO 9001:2015-Zertifikat besitzen, garantieren, dass ihre angebotenen Produkte und Dienstleistungen festgelegte Anforderungen erfüllen, was zu einer Erweiterung des potenziellen Kundenstamms führt.\nDas ISO 9001:2015-System ist mit anderen Managementsystemen, wie ISO 14001:2015, kompatibel. Durch die Anpassung der Struktur von ISO 9001:2015 an die Anforderungen des Dokuments Annex SL wird die Integration von Managementsystemen effizienter.",
+            "MoreInfo": {
+            "desc": "Weitere Informationen zur Norm ISO 9001:2015 finden Sie hier: "
+            }
+        },
+        "Hygienic_Certificate": {
+            "CartName": "Hygienisches Zertifikat B.BK",
+            "Certdesc": "Das hygienische Zertifikat NIZP-PZH-BBK bestätigt, dass unsere Dämmmatratzen gesundheitlich unbedenklich sind und in Umgebungen mit hohen Hygienestandards eingesetzt werden können. Das vom Nationalen Institut für Öffentliche Gesundheit – Staatliches Hygieneinstitut ausgestellte Zertifikat garantiert, dass unsere Produkte keine schädlichen Substanzen abgeben und sicher in Bereichen wie Industrieanlagen, Lebensmittel- oder Pharmaindustrie verwendet werden können.\n",
+            "MoreInfo": {
+            "desc": "Weitere Informationen zum hygienischen Zertifikat finden Sie hier: "
+            },
+            "Button": "Hygienisches Zertifikat"
+        }
+        }},
+        "Banner": {
+          "title": "Umfassende Lösungen für Wärmedämmung",
+          "description": "Wärmeverluste in industriellen Anlagen sind ein kostspieliges Problem – wir haben die Lösung! Wir entwerfen und produzieren Dämmmatratzen, die die Effizienz Ihrer Systeme steigern.",
+          "learn_more": "Erfahren Sie mehr",
+          "cta_text": "Entdecken Sie unsere Lösungen und reduzieren Sie jetzt Ihre CO2-Emissionen!",
+          "image_alt_a": "Dämmmatratzen – Angebot A",
+          "image_alt_b": "Dämmmatratzen – Angebot B",
+          "image_alt_c": "Dämmmatratzen – Angebot C",
+          "image_alt_d": "Dämmmatratzen – Angebot D"
+        },
+        "WhatWeOfferBanner": {
+          "paragraph1": "Unser Angebot umfasst eine breite Palette hochwertiger Produkte, darunter moderne Dämmmatratzen, erstklassige Izo-Standard-Matratzen, die höchste Standards für thermische und akustische Dämmung erfüllen, sowie langlebige technische Stoffe und ein umfassendes Set an Zubehör, das für die Umsetzung verschiedenster Projekte erforderlich ist.",
+          "paragraph2": "Wir bieten auch professionelle Schneidedienstleistungen für Stoffe und andere Materialien mit fortschrittlicher CNC-Technologie an, die Präzision und Effizienz in jeder Produktionsphase gewährleisten. Unsere Lösungen sind auf die Bedürfnisse der Kunden zugeschnitten und bieten Zuverlässigkeit sowie Anpassung an spezifische Anforderungen, was uns zum Marktführer in der Dämm- und Spezialtechnikbranche macht."
+        },
+        "Catalog": {
+          "title": "Entdecken Sie unseren neuesten Katalog!",
+          "description": "Wir bieten moderne Dämmsysteme, darunter: hochwertige Dämmmatratzen, IZO-Standard-Matratzen, die höchste Standards erfüllen, langlebige technische Stoffe sowie eine breite Auswahl an Zubehör. Wir laden Sie ein, unser Angebot zu erkunden und zuverlässige Lösungen zu entdecken, die auf Ihre Bedürfnisse zugeschnitten sind.",
+          "download_button": "Herunterladen",
+          "image_alt": "Titelbild des ISOTEX GROUP Katalogs"
+        },
+      "Features": {
+        "title": "Was zeichnet uns aus?",
+        "card1": {
+          "title": "Qualität",
+          "description": "Unsere Wärmedämmungen erfüllen strenge Standards, wie durch ISO 9001-Zertifikate bestätigt. Wir verwenden die besten Materialien, wie Mineralwolle, Glaswolle und Keramikwolle, um Langlebigkeit und Effizienz zu gewährleisten. Dadurch garantieren unsere Produkte Zuverlässigkeit selbst unter den anspruchsvollsten industriellen Bedingungen.",
+          "image_alt": "Qualitätssymbol"
+        },
+        "card2": {
+          "title": "Technologie",
+          "description": "Wir nutzen 3D-CAD-Design, das eine präzise Anpassung der Dämmung an Ihre Bedürfnisse ermöglicht. Unsere fortschrittlichen Fertigungsprozesse verwenden hochwertige Materialien wie Mineralwolle, Silikon und Teflon, um Sicherheit und Leistung zu gewährleisten. Wir setzen auch auf erneuerbare Technologien, um die Umweltbelastung zu minimieren und die Energieeffizienz Ihrer Anlagen zu steigern.",
+          "image_alt": "Technologiesymbol"
+        },
+        "card3": {
+          "title": "Erfahrung",
+          "description": "Seit 1994 sammeln wir Fachwissen, das sich in hervorragenden Wärmedämmungen widerspiegelt. In über 30 Jahren haben wir Projekte in Polen und im Ausland umgesetzt und das Vertrauen von Kunden weltweit gewonnen. Unsere Erfahrung ermöglicht es uns, Lösungen anzubieten, die perfekt auf die spezifischen Anforderungen jeder Branche zugeschnitten sind.",
+          "image_alt": "Erfahrungssymbol"
+        }
+      },
+      "OurProducts": {
+        "title": "Unsere Produkte",
+        "product1": {
+          "title": "Dämmmatratzen",
+          "description": "Hochwertige Dämmmatratzen, die hervorragenden thermischen und akustischen Schutz bieten und an die Bedürfnisse der Industrie angepasst sind.",
+          "image_alt": "Dämmmatratzen"
+        },
+        "product2": {
+          "title": "Stoffe",
+          "description": "Langlebige und widerstandsfähige technische Stoffe, ideal für spezialisierte Anwendungen in der Dämmung und im industriellen Schutz.",
+          "image_alt": "Technische Stoffe"
+        },
+        "product3": {
+          "title": "Füllungen",
+          "description": "Füllungen aus Mineral- und Glaswolle, die hervorragende Dämmung und Sicherheit unter anspruchsvollen Bedingungen bieten.",
+          "image_alt": "Wollfüllungen"
+        },
+        "product4": {
+          "title": "Zubehör",
+          "description": "Ein umfassendes Zubehörset, das die Installation und Wartung von Dämmungen auf höchstem Niveau unterstützt.",
+          "image_alt": "Dämmzubehör"
+        }
+      },
+      "Parallax": {
+        "title": "Suchen Sie einen zuverlässigen Partner für die Umsetzung Ihres Projekts?",
+        "description": "Seit ihrer Gründung setzt die Isotex Group auf Qualität und Innovation im Bereich der Wärmedämmung. Unser Unternehmen verfügt über zahlreiche Zertifikate, die höchste Standards bestätigen, und garantiert eine professionelle Ausführung und Sicherheit in jeder Projektphase.",
+        "button_text": "Unsere Zertifikate ansehen",
+        "image_alt": "Parallax-Bild"
+      },
+      "Team": {
+        "title": "Unser Team",
+        "member1": {
+          "name": "Ilona Żurawa",
+          "position": "Geschäftsführerin der Isotex Group",
+          "image_alt": "Ilona Żurawa"
+        },
+        "member2": {
+          "name": "Rafał Ofiera",
+          "position": "Produktionsleiter",
+          "image_alt": "Rafał Ofiera"
+        },
+        "member3": {
+          "name": "Łukasz Dymarczyk",
+          "position": "Produktionsleiter",
+          "image_alt": "Łukasz Dymarczyk"
+        }
+      },
+      "AboutUsPage": {
+        "title": "Lernen Sie die Isotex Group besser kennen",
+        "section1": {
+          "title": "IsoTex – Experten für Wärmedämmung seit 1994",
+          "description": "Seit 1994 produzieren wir hochwertige Wärmedämmungen, die effektiv vor Wärmeverlusten schützen. Unsere Dämmmatratzen werden mit größter Sorgfalt für jedes Detail entworfen, um die optimale Leistung Ihrer Anlagen zu gewährleisten.",
+          "image_alt": "Isotex Wärmedämmung"
+        },
+        "section2": {
+          "title": "Umfassende Lösungen für Ihre Industrie",
+          "description": "Bei IsoTex produzieren wir nicht nur Dämmungen, sondern bieten auch professionelle Installationen vor Ort an. Dank 3D-CAD-Design sorgen unsere Matratzen für präzise Passform und minimieren Wärmeverluste in industriellen Anlagen.",
+          "image_alt": "Isotex Dämmungsinstallation"
+        },
+        "section3": {
+          "title": "Engagement für Nachhaltigkeit",
+          "description": "Unsere Wärmedämmungen helfen, Wärmeverluste zu vermeiden, fördern die Energieeffizienz und reduzieren CO2-Emissionen. Wir produzieren und installieren Lösungen, die die Umwelt und Ihr Unternehmen schonen.",
+          "image_alt": "Isotex nachhaltige Dämmung"
+        }
+      },
+      "AboutUs": {
+        "cta": {
+          "title": "Möchten Sie mehr erfahren?",
+          "description": "Kontaktieren Sie uns, um zu besprechen, wie unsere modernen Lösungen die Effizienz Ihrer Anlagen steigern können.",
+          "button": "Schreiben Sie uns"
+        }
+      },
+      "OrderProcedure": {
+        "title": "Bestellabwicklungsprozess bei der Isotex Group",
+        "step1": {
+          "title": "Kennenlernen unseres Angebots",
+          "description": "Entdecken Sie unser breites Sortiment an Dämmmatratzen und Dienstleistungen. Kontaktieren Sie uns, um detaillierte Informationen über unsere Produkte und deren Anwendungen zu erhalten."
+        },
+        "step2": {
+          "title": "Messungen und Beratung",
+          "description": "Unsere Spezialisten führen präzise Messungen Ihrer Anlage durch und beraten Sie zu den besten Lösungen. Wir nutzen 3D-CAD-Technologie für genaues Design."
+        },
+        "step3": {
+          "title": "Projektvorbereitung und Kostenvoranschlag",
+          "description": "Auf Basis der Messungen erstellen wir ein individuelles Dämmprojekt und unterbreiten Ihnen ein detailliertes Angebot. Wir passen uns an Ihre Bedürfnisse und Ihr Budget an."
+        },
+        "step4": {
+          "title": "Bestellung aufgeben",
+          "description": "Nach Freigabe des Projekts können Sie Ihre Bestellung aufgeben. Wir bieten eine schnelle Umsetzung dank fortschrittlicher Fertigungsprozesse."
+        },
+        "step5": {
+          "title": "Produktion und Installation",
+          "description": "Nach Auftragserteilung beginnen wir mit der Produktion der Dämmmatratzen. Nach Abschluss der Produktion liefern wir sie an die angegebene Adresse oder führen eine professionelle Installation vor Ort durch."
+        }
+      },
+      "WhatWeOffer": {
+        "title": "Umfassende Betreuung in jeder Phase",
+        "description": "Bei der IsoTex Group bieten wir umfassende Unterstützung, um Ihnen die besten Lösungen für Wärmedämmung zu liefern. Vom ersten Kontakt bis zur finalen Installation begleiten wir Sie bei jedem Schritt und sorgen für Qualität und Effizienz Ihrer Anlagen. Unsere Dienstleistungen umfassen:",
+        "list": {
+          "item1": {
+            "title": "Messungen:",
+            "description": "Wir führen detaillierte Messungen Ihrer Anlage durch, um eine perfekte Passform der Dämmung zu gewährleisten."
+          },
+          "item2": {
+            "title": "Individuelles Design:",
+            "description": "Wir erstellen ein personalisiertes Design, das den spezifischen Anforderungen Ihres Systems entspricht."
+          },
+          "item3": {
+            "title": "Auswahl der Komponenten:",
+            "description": "Wir wählen die besten Lösungen und Materialien, um Langlebigkeit und Effizienz zu garantieren."
+          },
+          "item4": {
+            "title": "Produktion:",
+            "description": "Wir fertigen Dämmmatratzen unter Einhaltung höchster Qualitätsstandards."
+          },
+          "item5": {
+            "title": "Installation:",
+            "description": "Unsere Spezialisten führen eine professionelle Installation vor Ort durch und sorgen für einen reibungslosen Ablauf."
+          }
+        },
+        "button": "Erfahren Sie mehr",
+        "image_alt": "Bild der umfassenden Betreuung der Isotex Group"
+      },
+      "Technology": {
+        "hero": {
+          "title": "Technologie bei IsoTex – Präzision und Innovation",
+          "description": "Bei der IsoTex Group kombinieren wir jahrelange Erfahrung mit modernen Technologien, um Wärmedämmungen höchster Qualität zu liefern. Erfahren Sie mehr über unseren Produktionsprozess und entdecken Sie, wie wir Dämmmatratzen herstellen, die den anspruchsvollsten Standards entsprechen."
+        },
+        "section1": {
+          "title": "Unser Produktionsprozess – Schritt für Schritt",
+          "description": "Jedes Projekt bei der IsoTex Group wird mit größter Sorgfalt umgesetzt, um die besten Ergebnisse zu erzielen. Unser Produktionsprozess umfasst folgende Phasen:",
+          "list": {
+            "item1": {
+              "title": "Auftragsannahme:",
+              "description": "Wir beginnen mit der Annahme des Auftrags und einer detaillierten Analyse der Kundenbedürfnisse."
+            },
+            "item2": {
+              "title": "Design nach Vorgaben:",
+              "description": "Wir erstellen ein individuelles Design unter Berücksichtigung der spezifischen Anforderungen der Anlage, mithilfe von 3D-CAD-Technologie."
+            },
+            "item3": {
+              "title": "Präzise Produktion:",
+              "description": "Das fertige Design geht in die Produktion, wo wir moderne Technologien wie einen Cutter zum Schneiden von Vorlagen verwenden, um höchste Präzision zu gewährleisten."
+            }
+          },
+          "image_alt": "IsoTex Produktionsprozess"
+        },
+        "section2": {
+          "title": "Materialien und Komponenten – Qualität in jedem Detail",
+          "description": "Für die Herstellung unserer Dämmmatratzen verwenden wir sorgfältig ausgewählte Materialien, Füllungen und Verschlüsse, um Langlebigkeit und Effizienz zu gewährleisten. Wir bieten eine breite Auswahl an Komponenten, wie zum Beispiel:",
+          "list": {
+            "item1": {
+              "title": "Außenmaterialien:",
+              "description": "Mineralwolle, Teflon, Silikon und andere.",
+              "link": "Materialien"
+            },
+            "item2": {
+              "title": "Füllungen:",
+              "description": "Keramikwolle, Aluminiumfolie und andere Lösungen.",
+              "link": "Füllungen"
+            },
+            "item3": {
+              "title": "Verschlüsse:",
+              "description": "Haken, Klettverschlüsse, Gurte – für einfache Montage und Demontage.",
+              "link": "Verschlüsse"
+            }
+          },
+          "image_alt": "IsoTex Materialien"
+        },
+        "section3": {
+          "title": "Cutter – Garantie für Präzision",
+          "description": "Bei der IsoTex Group setzen wir auf moderne Technologien, um höchste Qualität zu gewährleisten. Wir verwenden einen Cutter zum Schneiden von Vorlagen, der unübertroffene Präzision und Wiederholbarkeit in der Produktion von Dämmmatratzen ermöglicht.",
+          "image_alt": "IsoTex Cutter"
+        },
+        "cta": {
+          "title": "Möchten Sie mehr über unsere Technologie erfahren?",
+          "description": "Kontaktieren Sie uns, um zu besprechen, wie unsere modernen Lösungen die Effizienz Ihrer Anlagen steigern können.",
+          "button": "Schreiben Sie uns"
+        }
+      },
+      "Fastenings": {
+        "hero": {
+          "title": "Verschlüsse bei IsoTex – Maßgeschneidert für Ihre Bedürfnisse",
+          "description": "Bei der IsoTex Group verwenden wir verschiedene Verschlussarten, um sicherzustellen, dass unsere Dämmmatratzen einfach zu montieren und zu demontieren sind und gleichzeitig in allen Bedingungen langlebig bleiben. Erfahren Sie mehr über unsere Lösungen und wie wir Verschlüsse je nach Anwendung auswählen."
+        },
+        "types": {
+          "type1": {
+            "title": "Klettverschlüsse",
+            "image_alt": "IsoTex Klettverschlüsse"
+          },
+          "type2": {
+            "title": "Schnallen",
+            "image_alt": "IsoTex Schnallen"
+          },
+          "type3": {
+            "title": "Haken",
+            "image_alt": "IsoTex Haken"
+          }
+        },
+        "slider1": {
+          "title": "Klettverschlüsse – Einfachheit und Komfort",
+          "description": "Klettverschlüsse verwenden wir bei Temperaturen bis zu 180°C, da sie die einfachste und schnellste Montage und Demontage ermöglichen. Dies ist die ideale Lösung für Anlagen, die häufigen Zugang erfordern.",
+          "image_alt": "Klettverschlüsse in Aktion"
+        },
+        "slider2": {
+          "title": "Schnallen – Widerstandsfähigkeit unter schwierigen Bedingungen",
+          "description": "Schnallen setzen wir ein, wenn die Temperatur 180°C überschreitet, um Schäden an Klettverschlüssen zu vermeiden. Sie sind ideal für Außenanlagen, wo Klettverschlüsse durch Regen an Haftung verlieren können.",
+          "image_alt": "Schnallen in der Installation"
+        },
+        "slider3": {
+          "title": "Haken – Spezialisierte Lösung für Turbinen",
+          "description": "Haken verwenden wir hauptsächlich in Matratzen für Turbinen. Benachbarte Matratzen werden mit Draht verbunden, was Stabilität und präzise Passform in anspruchsvollen Anlagen gewährleistet.",
+          "image_alt": "Haken in Turbinenmatratzen"
+        }
+      },
+      "ContactUs": {
+        "title": "Kontaktieren Sie uns!",
+        "form": {
+          "email": {
+            "label": "E-Mail-Adresse",
+            "placeholder": "E-Mail-Adresse eingeben"
+          },
+          "topic": {
+            "label": "Betreff",
+            "placeholder": "Betreff eingeben"
+          },
+          "message": {
+            "label": "Nachricht",
+            "placeholder": "Nachricht eingeben"
+          },
+          "submit_button": "Senden"
+        },
+        "map": {
+          "title": "Karte des Standorts der IsoTex Group"
+        }
+      }
+                              
+      
+      }

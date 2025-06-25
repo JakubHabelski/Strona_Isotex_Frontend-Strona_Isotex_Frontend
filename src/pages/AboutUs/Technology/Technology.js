@@ -4,10 +4,11 @@ import style from './Technology.module.css';
 import Navbar_v2 from '../../../components/Navbar_v2/Navbar';
 import Footer from '../../../components/Footer';
 import { Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Technology() {
-
+    const { t } = useTranslation();
     const navigate = useNavigate();
     useEffect(() =>{
         const LeftSlide = document.querySelectorAll(`.${style.LeftSlide}`)
@@ -48,44 +49,65 @@ export default function Technology() {
       <div className={style.TechnologyContainer}>
         {/* Nagłówek */}
         <div className={style.Hero}>
-          <h1>Technologia w isoTex – Precyzja i innowacje</h1>
-          <p>
-            W isoTex Group łączymy wieloletnie doświadczenie z nowoczesnymi technologiami, aby dostarczać izolacje termiczne najwyższej jakości. Poznaj nasz proces produkcji i dowiedz się, jak tworzymy materace izolacyjne, które spełniają najbardziej wymagające standardy.
-          </p>
+          <h1>{t('Technology.hero.title')}</h1>
+          <p>{t('Technology.hero.description')}</p>
         </div>
 
         {/* Sekcja 1: Proces produkcji */}
         <div className={style.ImagesSlider}>
           <div className={style.LeftSlide}>
-            <h2>Nasz proces produkcji – Krok po kroku</h2>
-            <p>
-              Każdy projekt w isoTex Group jest realizowany z dbałością o szczegóły, aby zapewnić najlepsze rezultaty. Nasz proces produkcji obejmuje następujące etapy:
-            </p>
+            <h2>{t('Technology.section1.title')}</h2>
+            <p>{t('Technology.section1.description')}</p>
             <ul>
-              <li><strong>Przyjmowanie zamówienia:</strong> Rozpoczynamy od przyjęcia zamówienia i szczegółowej analizy potrzeb klienta.</li>
-              <li><strong>Projektowanie zgodnie z wytycznymi:</strong> Tworzymy indywidualny projekt, uwzględniając specyficzne wymagania instalacji, korzystając z technologii CAD 3D.</li>
-              <li><strong>Produkcja z precyzją:</strong> Gotowy projekt trafia na produkcję, gdzie wykorzystujemy nowoczesne technologie, takie jak cutter do wycinania szablonów, co gwarantuje najwyższą precyzję.</li>
+              <li>
+                <strong>{t('Technology.section1.list.item1.title')}</strong>{' '}
+                {t('Technology.section1.list.item1.description')}
+              </li>
+              <li>
+                <strong>{t('Technology.section1.list.item2.title')}</strong>{' '}
+                {t('Technology.section1.list.item2.description')}
+              </li>
+              <li>
+                <strong>{t('Technology.section1.list.item3.title')}</strong>{' '}
+                {t('Technology.section1.list.item3.description')}
+              </li>
             </ul>
           </div>
           <div className={style.RightSlide}>
-            <img src="/assets/CAD1.jpg" alt="Proces produkcji IsoTex" />
+            <img
+              src="/assets/CAD1.jpg"
+              alt={t('Technology.section1.image_alt')}
+            />
           </div>
         </div>
 
         {/* Sekcja 2: Materiały i komponenty */}
         <div className={style.ImagesSlider}>
           <div className={style.LeftSlide}>
-            <img src="/assets/whatsapp/IMG-20250528-WA0017.jpg" alt="Materiały IsoTex" />
+            <img
+              src="/assets/whatsapp/IMG-20250528-WA0017.jpg"
+              alt={t('Technology.section2.image_alt')}
+            />
           </div>
           <div className={style.RightSlide}>
-            <h2>Materiały i komponenty – Jakość w każdym detalu</h2>
-            <p>
-              Do produkcji naszych materaców izolacyjnych używamy starannie wyselekcjonowanych materiałów, wypełnień i zapięć, aby zapewnić trwałość i efektywność. Oferujemy szeroki wybór komponentów, takich jak:
-            </p>
+            <h2>{t('Technology.section2.title')}</h2>
+            <p>{t('Technology.section2.description')}</p>
             <ul>
-              <li><strong>Materiały zewnętrzne:</strong> Wełna mineralna, teflon, silikon i inne (szczegóły na podstronie <Link to="/fabrics">Materiały</Link>).</li>
-              <li><strong>Wypełnienia:</strong> Wełna ceramiczna, folia aluminiowa i inne rozwiązania (zobacz <Link to="/wypelnienia">Wypełnienia</Link>).</li>
-              <li><strong>Zapięcia:</strong> Haki, rzepy, paski – dla łatwego montażu i demontażu (dowiedz się więcej na <Link to="/Fastenings">Zapięcia</Link>).</li>
+              <li>
+                <strong>{t('Technology.section2.list.item1.title')}</strong>{' '}
+                {t('Technology.section2.list.item1.description')}{' '}
+                <Link to="/fabrics">{t('Technology.section2.list.item1.link')}</Link>
+              </li>
+              <li>
+                <strong>{t('Technology.section2.list.item2.title')}</strong>{' '}
+                {t('Technology.section2.list.item2.description')}{' '}
+                <Link to="/wypelnienia">{t('Technology.section2.list.item2.link')}</Link>
+              </li>
+              <li>
+                <strong>{t('Technology.section2.list.item3.title')}</strong>{' '}
+                {t('Technology.section2.list.item3.description')}{' '}
+                <Link to="/Fastenings">{t('Technology.section2.list.item3.link')}</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -93,23 +115,22 @@ export default function Technology() {
         {/* Sekcja 3: Precyzja dzięki technologii */}
         <div className={style.ImagesSlider}>
           <div className={style.LeftSlide}>
-            <h2>Cutter – Gwarancja precyzji</h2>
-            <p>
-              W isoTex Group stawiamy na nowoczesne technologie, aby zapewnić najwyższą jakość. Używamy cuttera do wycinania szablonów, co pozwala nam osiągnąć niezrównaną precyzję i powtarzalność w produkcji materaców izolacyjnych.
-            </p>
+            <h2>{t('Technology.section3.title')}</h2>
+            <p>{t('Technology.section3.description')}</p>
           </div>
           <div className={style.RightSlide}>
-            <img src="/assets/cutter.png" alt="Cutter IsoTex" />
+            <img
+              src="/assets/cutter.png"
+              alt={t('Technology.section3.image_alt')}
+            />
           </div>
         </div>
 
         {/* Sekcja CTA */}
         <div className={style.CTA}>
-          <h2>Chcesz dowiedzieć się więcej o naszej technologii?</h2>
-          <p>
-            Skontaktuj się z nami, aby omówić, jak nasze nowoczesne rozwiązania mogą zwiększyć efektywność Twoich instalacji.
-          </p>
-          <Button variant='outline-danger'>Napisz do nas</Button>
+          <h2>{t('Technology.cta.title')}</h2>
+          <p>{t('Technology.cta.description')}</p>
+          <Button variant="outline-danger">{t('Technology.cta.button')}</Button>
         </div>
       </div>
       <Footer></Footer>

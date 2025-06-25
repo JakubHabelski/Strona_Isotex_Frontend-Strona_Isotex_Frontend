@@ -15,6 +15,7 @@ function LanguageSwitcher() {
       
       <Button onClick={() => changeLanguage('pl')} size="sm" variant="light" disabled={i18n.language === "pl"}>PL</Button>
       <Button onClick={() => changeLanguage('en')} size="sm" variant="light" disabled={i18n.language === "en"}>EN</Button>
+      <Button onClick={() => changeLanguage('de')} size="sm" variant="light" disabled={i18n.language === "de"}>DE</Button>
     </div>
   );
 }

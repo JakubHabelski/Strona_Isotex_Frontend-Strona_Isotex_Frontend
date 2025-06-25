@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react'
 import style from './OrderProcedure.module.css'
+import { useTranslation } from 'react-i18next';
 
 
 
 export default function OrderProcedure(){
+    const { t } = useTranslation();
     const procedureRef = useRef(null);
     useEffect(() =>{
         const OrderProcedure = document.querySelectorAll(`.${style.OrderProcedure}`)
@@ -61,27 +63,27 @@ export default function OrderProcedure(){
 
      return(
         <>
-        <h1>Procedura wykonania zamówienia w Isotex Group</h1>
-        <div ref={procedureRef}  className={style.OrderProcedure}>
+        <h1>{t('OrderProcedure.title')}</h1>
+        <div ref={procedureRef} className={style.OrderProcedure}>
             <div className={style.OrderStep}>
-                <h5>Zapoznanie się z ofertą</h5>
-                <p>Poznaj naszą szeroką gamę materaców izolacyjnych i usług. Skontaktuj się z nami, aby otrzymać szczegółowe informacje o produktach i ich zastosowaniach.</p>
+            <h5>{t('OrderProcedure.step1.title')}</h5>
+            <p>{t('OrderProcedure.step1.description')}</p>
             </div>
             <div className={style.OrderStep}>
-                <h5>Pomiary i konsultacja</h5>
-                <p>Nasi specjaliści przeprowadzą dokładne pomiary Twojej instalacji i doradzą najlepsze rozwiązania. Wykorzystujemy technologię CAD 3D do precyzyjnego projektowania.</p>
+            <h5>{t('OrderProcedure.step2.title')}</h5>
+            <p>{t('OrderProcedure.step2.description')}</p>
             </div>
             <div className={style.OrderStep}>
-                <h5>Przygotowanie projektu i wyceny</h5>
-                <p>Na podstawie pomiarów przygotujemy indywidualny projekt izolacji i przedstawimy szczegółową wycenę. Dostosujemy się do Twoich potrzeb i budżetu.</p>
+            <h5>{t('OrderProcedure.step3.title')}</h5>
+            <p>{t('OrderProcedure.step3.description')}</p>
             </div>
             <div className={style.OrderStep}>
-                <h5>Złożenie zamówienia</h5>
-                <p>Po akceptacji projektu możesz złożyć zamówienie. Oferujemy szybką realizację dzięki zaawansowanym procesom produkcyjnym.</p>
+            <h5>{t('OrderProcedure.step4.title')}</h5>
+            <p>{t('OrderProcedure.step4.description')}</p>
             </div>
             <div className={style.OrderStep}>
-                <h5>Produkcja i montaż</h5>
-                <p>Po złożeniu zamówienia przystępujemy do produkcji materaców izolacyjnych. Po zakończeniu produkcji dostarczamy je pod wskazany adres lub przeprowadzamy profesjonalny montaż na miejscu.</p>
+            <h5>{t('OrderProcedure.step5.title')}</h5>
+            <p>{t('OrderProcedure.step5.description')}</p>
             </div>
         </div>
         </>

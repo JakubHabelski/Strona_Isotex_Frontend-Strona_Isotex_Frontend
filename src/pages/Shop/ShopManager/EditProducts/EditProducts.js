@@ -50,14 +50,16 @@ function EditProductsList(){
 
 
 
-    //const request = `${apiUrl}/Product_API/updateProduct`;
-    const request = `http://localhost:8080/Product_API/updateProduct`;
+    const request = `${apiUrl}/Product_API/updateProduct`;
+   // const request = `http://localhost:8080/Product_API/updateProduct`;
     const [formData, setFormData] = useState({
       id: "",
       name_pl: "",
       name_en: "",
+      name_de: "",
       description_pl: "",
       description_en: "",
+      description_de: "",
       price: "",
       category: "",
       subCategory: "",
@@ -70,7 +72,7 @@ function EditProductsList(){
         .then(res => setProducts(res.data))
         .then(console.log(products))
     }, {apiUrl})
-
+    console.log(products)
 
     const handleEditClick = (product) => {
         setShow(true);
@@ -86,8 +88,10 @@ function EditProductsList(){
             id: product.id,
             name_pl: product.translations[0].name,
             name_en: product.translations[1].name,
+            name_de: product.translations[2].name,
             description_pl: product.translations[0].description,
             description_en: product.translations[1].description,
+            description_de: product.translations[2].description,
             price: product.price,
             category: categoryValue,
             subCategory: subCategoryValue,
@@ -134,28 +138,17 @@ function EditProductsList(){
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        
-
-        const productData = {
-            id: parseInt(formData.id),
-            name_pl: formData.name_pl,
-            name_en: formData.name_en,
-            description_pl: formData.description_pl,
-            description_en: formData.description_en,
-            price: parseFloat(formData.price),
-            category: selectedCat,
-            subCategory: selectedSubCat,
-            stock_quantity: parseInt(formData.stock_quantity),
-          
-        };
+  
 
         const formDataPost = new FormData();
         formDataPost.append("dto",new Blob([JSON.stringify({
                 id: parseInt(formData.id),
                 name_pl: formData.name_pl,
                 name_en: formData.name_en,
+                name_de: formData.name_de,
                 description_pl: formData.description_pl,
                 description_en: formData.description_en,
+                description_de: formData.description_de,
                 price: parseFloat(formData.price),
                 category: selectedCat,
                 subCategory: selectedSubCat,
@@ -190,8 +183,10 @@ function EditProductsList(){
                 <th>id</th>
                 <th>Nazwa PL</th>
                 <th>Nazwa EN</th>
+                <th>Nazwa DE</th>
                 <th>Opis PL</th>
                 <th>Opis EN</th>
+                <th>Opis DE</th>
                 <th>Cena</th>
                 <th>Stan magazynowy</th>
                 <th>Kategoria</th>
@@ -207,8 +202,10 @@ function EditProductsList(){
                             <td>{product.id}</td>
                             <td>{product.translations[0].name}</td>
                             <td>{product.translations[1].name}</td>
+                            <td>{product.translations[2].name}</td>
                             <td>{product.translations[0].description}</td>
                             <td>{product.translations[1].description}</td>
+                            <td>{product.translations[2].description}</td>
                             <td>{product.price}</td>
                             <td>{product.stock_quantity}</td>
                             <td>
@@ -251,12 +248,20 @@ function EditProductsList(){
                           <Form.Control type="text" placeholder="Nazwa" name="name_en" value={formData.name_en} onChange={handleChange} required/>
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                          <Form.Label>Nazwa niemiecka</Form.Label>
+                          <Form.Control type="text" placeholder="Nazwa" name="name_de" value={formData.name_de} onChange={handleChange} required/>
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                           <Form.Label>Opis Polski</Form.Label>
                           <Form.Control type="text" placeholder="Opis" name="description_pl" value={formData.description_pl} onChange={handleChange} required/>
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                           <Form.Label>Opis Angielski</Form.Label>
                           <Form.Control type="text" placeholder="Opis" name="description_en" value={formData.description_en} onChange={handleChange} required/>
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                          <Form.Label>Opis nimiecki</Form.Label>
+                          <Form.Control type="text" placeholder="Opis" name="description_de" value={formData.description_de} onChange={handleChange} required/>
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                           <Form.Label>Cena</Form.Label>

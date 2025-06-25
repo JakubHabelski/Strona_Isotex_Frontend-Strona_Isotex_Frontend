@@ -33,7 +33,11 @@ function MainPageShopMain() {
   const { t, i18n } = useTranslation();
 
   // Helper to get translated label
-  const getTranslatedLabel = (item) => (i18n.language === "en" ? item.LabelEN : item.LabelPL);
+  const getTranslatedLabel = (item) => {
+    if (i18n.language === "en") return item.LabelEN;
+    if (i18n.language === "de") return item.LabelDE;
+    return item.LabelPL;
+  };
 
   // Fetch categories and their subcategories
   useEffect(() => {
@@ -42,6 +46,7 @@ function MainPageShopMain() {
       .get(`${apiUrl}/Category_API/GetCategories`)
       .then(async (response) => {
         const categoriesData = response.data;
+        console.log(categoriesData)
         const categoriesWithSub = await Promise.all(
           categoriesData.map(async (cat) => {
             const subRes = await axios
@@ -249,6 +254,8 @@ function MainPageShopMain() {
       </Button>
     </Card>
   );
+
+  console.log(categories)
 
   return (
     <>

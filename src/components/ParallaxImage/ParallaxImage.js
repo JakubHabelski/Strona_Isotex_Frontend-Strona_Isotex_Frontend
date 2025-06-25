@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
 import style from "./ParalaxImage.module.css";
 import { Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 export default function ParallaxImage() {
+  const { t } = useTranslation();
+
   const parallaxRef = useRef(null);
   const imageRef = useRef(null);
   const overlayRef = useRef(null);
@@ -59,20 +62,18 @@ export default function ParallaxImage() {
     <div className={style.parallax} ref={parallaxRef}>
       <img
         src="/assets/Parallax/1.jpeg"
-        alt="Parallax"
+        alt={t('Parallax.image_alt')}
         className={style.parallax__image}
         ref={imageRef}
       />
-      <div
-        className={style.parallax__overlay}
-        ref={overlayRef}
-        
-      />
+      <div className={style.parallax__overlay} ref={overlayRef} />
       <div className={style.parallax__text} ref={textRef}>
-        <h1>Szukasz niezawodnego partnera do realizacji Twojego projektu?</h1>
-        <p>Isotex Group od początku działalności stawia na jakość i innowacyjność w dziedzinie izolacji termicznych. Nasza firma posiada liczne certyfikaty potwierdzające najwyższe standardy, gwarantując profesjonalne wykonanie i bezpieczeństwo na każdym etapie projektu.</p>
+        <h1>{t('Parallax.title')}</h1>
+        <p>{t('Parallax.description')}</p>
         <Button variant="outline-danger" className={style.parallax__button}>
-            <a href="/certyfikaty" className={style.parallax__button_link}>Zobacz nasze certyfikaty</a>
+          <a href="/certyfikaty" className={style.parallax__button_link}>
+            {t('Parallax.button_text')}
+          </a>
         </Button>
       </div>
     </div>

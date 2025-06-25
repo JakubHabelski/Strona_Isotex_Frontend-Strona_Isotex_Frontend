@@ -68,7 +68,7 @@ export default function ManageSubCategories(){
         console.log(formData.get('categoryId'))
 
         try{
-            await axios.post(`http://localhost:8080/Category_API/AddSubCategory`, formData, {
+            await axios.post(`${apiUrl}/Category_API/AddSubCategory`, formData, {
              headers: {
                     'Content-Type': 'multipart/form-data'
                 }

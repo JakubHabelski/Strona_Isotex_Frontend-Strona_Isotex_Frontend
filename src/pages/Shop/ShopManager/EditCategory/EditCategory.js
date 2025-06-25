@@ -15,6 +15,7 @@ export default function EditCategory(){
         id: '',
         LabelPL: '',
         LabelEN: '',
+        LabelDE: '',
         photo: null
     })
 
@@ -22,7 +23,7 @@ export default function EditCategory(){
     const handleShow = () => setShow(true);
 
     useEffect(() =>{
-        axios.get(`http://localhost:8080/Category_API/GetCategories`)
+        axios.get(`${apiUrl}/Category_API/GetCategories`)
         //axios.get(`${apiUrl}/Category_API/GetCategories`)
         .then(async(response) =>{
             console.log(response.data)
@@ -37,6 +38,7 @@ export default function EditCategory(){
             id: cat.id,
             LabelPL: cat.LabelPL,
             LabelEN: cat.LabelEN,
+            LabelDE: cat.LabelDE,
         })
     }
     const handleChange = (event) => {
@@ -62,7 +64,8 @@ export default function EditCategory(){
     formDataSubmit.append('dto', new Blob([JSON.stringify({
         id: formData.id, // Dodaj ID jeśli backend go potrzebuje
         LabelPL: formData.LabelPL,
-        LabelEN: formData.LabelEN
+        LabelEN: formData.LabelEN,
+        LabelDE: formData.LabelDE
     })], { type: 'application/json' }));
 
     if (formData.photo) {
@@ -70,7 +73,7 @@ export default function EditCategory(){
     }
 
     try {
-        await axios.put('http://localhost:8080/Category_API/EditCategory', formDataSubmit, {
+        await axios.put(`${apiUrl}/Category_API/EditCategory`, formDataSubmit, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -100,6 +103,7 @@ export default function EditCategory(){
                             <th>ID</th>
                             <th>Nazwa polska</th>
                             <th>Nazwa Angielska</th>
+                            <th>Nazwa niemiecka</th>
                             <th>zdjęcie</th>
                             <th></th>
                         </tr>
@@ -108,6 +112,7 @@ export default function EditCategory(){
                                 <td>{cat.id} </td>
                                 <td>{cat.LabelPL}</td>
                                 <td>{cat.LabelEN}</td>
+                                <td>{cat.LabelDE}</td>
                                 <td style={{width: "50%"}}><img src={cat.photo_url}></img></td>
                                 <td>
                                     <Button 
@@ -153,6 +158,17 @@ export default function EditCategory(){
                     type="text"
                     name="LabelEN"
                     value={formData.LabelEN}
+                    onChange={handleChange} 
+                    required
+                >
+                </Form.Control>
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Nazwa niemiecka</Form.Label>
+                <Form.Control 
+                    type="text"
+                    name="LabelDE"
+                    value={formData.LabelDE}
                     onChange={handleChange} 
                     required
                 >

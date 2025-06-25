@@ -17,7 +17,7 @@ export default function AddProduct() {
 
 function AddProductForm() {
   const apiUrl = process.env.REACT_APP_API_URL;
-  const request = "http://localhost:8080/Product_API/addproduct";
+  //const request = "http://localhost:8080/Product_API/addproduct";
 
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
@@ -26,8 +26,10 @@ function AddProductForm() {
   const [form, setForm] = useState({
     name_pl: "",
     name_en: "",
+    name_de: "",
     description_pl: "",
     description_en: "",
+    description_de: "",
     price: "",
     category: "",
     subCategory: "",
@@ -80,8 +82,10 @@ function AddProductForm() {
           JSON.stringify({
             name_pl: form.name_pl,
             name_en: form.name_en,
+            name_de: form.name_de,
             description_pl: form.description_pl,
             description_en: form.description_en,
+            description_de: form.description_de,
             price: parseFloat(form.price),
             category: form.category,
             subCategory: form.subCategory,
@@ -96,7 +100,7 @@ function AddProductForm() {
     }
 
     try {
-      await axios.post(request, formData, {
+      await axios.post(`${apiUrl}/Product_API/addproduct`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Produkt dodany.");
@@ -130,6 +134,16 @@ function AddProductForm() {
           />
         </Form.Group>
         <Form.Group className="mb-3">
+          <Form.Label>Nazwa Niemiecka</Form.Label>
+          <Form.Control
+            type="text"
+            name="name_de"
+            value={form.name_de}
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
           <Form.Label>Opis Polski</Form.Label>
           <Form.Control
             type="text"
@@ -145,6 +159,16 @@ function AddProductForm() {
             type="text"
             name="description_en"
             value={form.description_en}
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Opis Niemiecki</Form.Label>
+          <Form.Control
+            type="text"
+            name="description_de"
+            value={form.description_de}
             onChange={handleChange}
             required
           />

@@ -17,12 +17,19 @@ function Product_Detail_Get() {
     const [product_list, setProductName] = useLocalStorage("cartItems", []);
     const apiUrl = process.env.REACT_APP_API_URL;
     const { t, i18n } = useTranslation();
+
+
     useEffect(() => {
-      axios.get(`${apiUrl}/product/${item}`)
+      axios.get(`${apiUrl}/product/${item}`, {
+        headers: {
+          "Accept-Language": i18n.language // np. "pl", "en", "de"
+        }
+      })
         .then(res => setProduct(res.data))
         .catch(err => console.error(err));
-    }, [item]);
-  
+    }, [item, i18n.language]);
+    
+    console.log(product)
     
     // ProductList_Get (fragment)
     const addToCart = (product) => {

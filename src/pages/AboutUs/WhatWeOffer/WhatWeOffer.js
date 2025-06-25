@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react"
 import style from "./WhatWeOffer.module.css"
 import { Button } from "react-bootstrap"
+import { useTranslation } from "react-i18next";
 
 
 export default function WhatWeOffer() {
     const containerRef = useRef(null);
-
+    const { t } = useTranslation();
     useEffect(() => {
         const WhatWeOfferContainer = containerRef.current;
         if (!WhatWeOfferContainer) return;
@@ -41,34 +42,38 @@ export default function WhatWeOffer() {
     return (
         <>
             <div className={style.WhatWeOfferBG}>
-                <img src="assets/Linkedin/1626864710604.jpg" alt="" />
+                <img
+                    src="assets/Linkedin/1626864710604.jpg"
+                    alt={t('WhatWeOffer.image_alt')}
+                />
                 <div className={style.WhatWeOfferContainer} ref={containerRef}>
-                    <h1>
-                        Kompleksowa obsługa na każdym etapie
-                    </h1>
-                    <p>
-                        W isoTex Group zapewniamy kompleksową obsługę, aby dostarczyć Ci najlepsze rozwiązania w zakresie izolacji termicznych. Od pierwszego kontaktu po finalny montaż – wspieramy Cię w każdym kroku, dbając o jakość i efektywność Twoich instalacji. W ramach naszej usługi oferujemy:
-                    </p>
+                    <h1>{t('WhatWeOffer.title')}</h1>
+                    <p>{t('WhatWeOffer.description')}</p>
                     <ul>
-                        <li>
-                            <strong>Pomiary: </strong>Przeprowadzamy szczegółowe pomiary Twojej instalacji, aby zapewnić idealne dopasowanie izolacji.
-                        </li>
-                        <li>
-                            <strong>Indywidualny projekt: </strong>Tworzymy spersonalizowany projekt, który odpowiada specyficznym wymaganiom Twojego systemu.
-                        </li>
-                        <li>
-                            <strong>Dobór odpowiednich komponentów: </strong>Wybieramy najlepsze rozwiązania i materiały, aby zagwarantować trwałość i efektywność.
-                        </li>
-                        <li>
-                            <strong>Produkcja: </strong>Realizujemy produkcję materaców izolacyjnych z zachowaniem najwyższych standardów jakości.
-                        </li>
-                        <li>
-                            <strong>Montaż: </strong>Nasi specjaliści przeprowadzają profesjonalny montaż na miejscu, zapewniając bezproblemową instalację.
-                        </li>
+                    <li>
+                        <strong>{t('WhatWeOffer.list.item1.title')}</strong>{' '}
+                        {t('WhatWeOffer.list.item1.description')}
+                    </li>
+                    <li>
+                        <strong>{t('WhatWeOffer.list.item2.title')}</strong>{' '}
+                        {t('WhatWeOffer.list.item2.description')}
+                    </li>
+                    <li>
+                        <strong>{t('WhatWeOffer.list.item3.title')}</strong>{' '}
+                        {t('WhatWeOffer.list.item3.description')}
+                    </li>
+                    <li>
+                        <strong>{t('WhatWeOffer.list.item4.title')}</strong>{' '}
+                        {t('WhatWeOffer.list.item4.description')}
+                    </li>
+                    <li>
+                        <strong>{t('WhatWeOffer.list.item5.title')}</strong>{' '}
+                        {t('WhatWeOffer.list.item5.description')}
+                    </li>
                     </ul>
-                    <Button variant="danger">Dowiedz się więcej</Button>
+                    <Button variant="danger">{t('WhatWeOffer.button')}</Button>
                 </div>
-            </div>
+                </div>
         </>
     )
 }

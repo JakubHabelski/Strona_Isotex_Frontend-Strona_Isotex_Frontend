@@ -1,8 +1,14 @@
 .ManageCategoriesContainer{
     width: min(1500px, 90%);
     margin: 200px auto 200px;
+
+    
 }
 .AddCategory{
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
     padding: 2rem;
 }
+.ManageCategoriesForm{
+        width: min(1500px, 90%);
+        margin: 200px auto;
+    }

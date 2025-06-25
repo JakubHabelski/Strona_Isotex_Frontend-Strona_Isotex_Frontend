@@ -26,6 +26,9 @@ function ShopManagerPage(){
         <ListGroup.Item>
             <a href="/EditCategory"> Edycja kategorii </a>
         </ListGroup.Item>
+        <ListGroup.Item>
+            <a href="/EditSubCategory"> Edycja podkategorii </a>
+        </ListGroup.Item>
     </ListGroup>
     </div>
     )
