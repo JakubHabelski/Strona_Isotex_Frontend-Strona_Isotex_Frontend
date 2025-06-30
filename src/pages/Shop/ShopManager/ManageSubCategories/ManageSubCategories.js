@@ -20,6 +20,7 @@ export default function ManageSubCategories(){
         category_id: selectedCategory,
         LabelPL: "",
         LabelEN: "",
+        LabelDE: "",
         photo: null
     })
 
@@ -60,6 +61,7 @@ export default function ManageSubCategories(){
         formData.append('dto', new Blob([JSON.stringify({
             LabelPL: subCategoryForm.LabelPL,
             LabelEN: subCategoryForm.LabelEN,
+            LabelDE: subCategoryForm.LabelDE,
             category_id: subCategoryForm.category_id
         })], {type: 'application/json'}));
         if(subCategoryForm.photo){
@@ -108,9 +110,16 @@ export default function ManageSubCategories(){
                     <Form.Label>Nazwa Angielska</Form.Label>
                     <Form.Control 
                         name="LabelEN"
-                        placeholder="Podkategoria w języku Polskim"
+                        placeholder="Podkategoria w języku Angielskim"
                         onChange={handleChangeSubCategory}
                         value={subCategoryForm.LabelEN}    
+                    />
+                    <Form.Label>Nazwa niemiecka</Form.Label>
+                    <Form.Control 
+                        name="LabelDE"
+                        placeholder="Podkategoria w języku niemieckim"
+                        onChange={handleChangeSubCategory}
+                        value={subCategoryForm.LabelDE}    
                     />
                     <Form.Label>Zdjęcie</Form.Label>
                     <Form.Control 
