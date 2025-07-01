@@ -2,6 +2,7 @@ import { error } from "ajv/dist/vocabularies/applicator/dependencies";
 import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { Form } from "react-bootstrap";
+import ParallaxImage from "../../components/ParallaxImage/ParallaxImage";
 
 
 export default function TestPage() { 
@@ -127,6 +128,7 @@ export default function TestPage() {
         <p>Ładowanie...</p>
       )}
     </div>
+    <ParallaxImage/>
         </>
     )
 }

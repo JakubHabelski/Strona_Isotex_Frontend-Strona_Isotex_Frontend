@@ -85,12 +85,6 @@ export default function OurProjects() {
           description: "Tu znajdziesz więcej informacji o zaworach.",
         },
         {
-          src: "assets/OurProjects/Valves/1.jpeg",
-          alt: "Zawór",
-          title: "Zawór",
-          description: "Tu znajdziesz więcej informacji o zaworach.",
-        },
-        {
           src: "assets/OurProjects/Valves/2.jpeg",
           alt: "Zawór",
           title: "Zawór",
@@ -98,12 +92,6 @@ export default function OurProjects() {
         },
         {
           src: "assets/OurProjects/Valves/3.jpeg",
-          alt: "Zawór",
-          title: "Zawór",
-          description: "Tu znajdziesz więcej informacji o zaworach.",
-        },
-        {
-          src: "assets/OurProjects/Valves/4.jpeg",
           alt: "Zawór",
           title: "Zawór",
           description: "Tu znajdziesz więcej informacji o zaworach.",
@@ -134,18 +122,6 @@ export default function OurProjects() {
           title: "Wymiennik",
           description: "Tu znajdziesz więcej informacji o wymiennikach.",
         },
-        {
-          src: "assets/OurProjects/Exchanger/4.jpeg",
-          alt: "Wymiennik",
-          title: "Wymiennik",
-          description: "Tu znajdziesz więcej informacji o wymiennikach.",
-        },
-        {
-          src: "assets/OurProjects/Exchanger/5.jpeg",
-          alt: "Wymiennik",
-          title: "Wymiennik",
-          description: "Tu znajdziesz więcej informacji o wymiennikach.",
-        },
       ],
     },
     {
@@ -153,19 +129,7 @@ export default function OurProjects() {
       ref: productionRef,
       buttonRef: productionBtnRef,
       buttonText: t("OurProjects.buttons.production"),
-      images: [
-        {
-          src: "assets/OurProjects/Production/1.jpg",
-          alt: "Produkcja",
-          title: "Produkcja",
-          description: "Tu znajdziesz więcej informacji o produkcji.",
-        },
-        {
-          src: "assets/OurProjects/Production/2.jpg",
-          alt: "Produkcja",
-          title: "Produkcja",
-          description: "Tu znajdziesz więcej informacji o produkcji.",
-        },
+      images: [       
         {
           src: "assets/OurProjects/Production/3.jpg",
           alt: "Produkcja",

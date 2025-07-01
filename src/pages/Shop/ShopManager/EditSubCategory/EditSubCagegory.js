@@ -11,6 +11,8 @@ export default function EditSubCagegory(){
     const [openedCatId, setOpenedCatId] = useState(null);
     const [subcategories, setSubcategories] = useState({}); // { [catId]: [subcat, ...] }
     const [show, setShow] = useState(false);
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [deleteSubId, setDeleteSubId] = useState(null);
 
     const [formData, setFormData] = useState({
         id: '',
@@ -22,6 +24,13 @@ export default function EditSubCagegory(){
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleCloseDeleteModal = () => setShowDeleteModal(false);
+    const handleShowDeleteModal = (subId) => {
+        setDeleteSubId(subId);
+        setShowDeleteModal(true);
+    };
+
 
     // Pobierz kategorie
     useEffect(() =>{
@@ -175,7 +184,7 @@ export default function EditSubCagegory(){
                                                         </Button>
                                                         <Button
                                                             variant="outline-danger"
-                                                            onClick={() => handleDelete(sub.id)}
+                                                            onClick={() => handleShowDeleteModal(sub.id)}
                                                             style={{ marginLeft: '10px' }}
                                                         >
                                                             Usuń
@@ -253,6 +262,27 @@ export default function EditSubCagegory(){
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+      <Modal show={showDeleteModal} onHide={handleCloseDeleteModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Button
+            variant="outline-danger"
+            onClick={() => handleDelete(deleteSubId)}
+            style={{ marginLeft: '10px' }}
+        >
+            Usuń
+        </Button>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseDeleteModal}>
+            Anuluj
           </Button>
         </Modal.Footer>
       </Modal>
