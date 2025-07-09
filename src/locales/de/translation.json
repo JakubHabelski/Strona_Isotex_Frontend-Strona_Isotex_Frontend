@@ -1254,6 +1254,16 @@
         "map": {
           "title": "Karte des Standorts der IsoTex Group"
         }
+      },
+      "LocationChangeModal": {
+        "title": "Änderung des Firmenstandorts",
+        "description": "Wir möchten Sie darüber informieren, dass die Isotex Group ihren Standort geändert hat. Alle unsere Dienstleistungen und Produkte bleiben unverändert.",
+        "contact": {
+          "address": "Neue Adresse: Daszyńskiego 9a, 56-500 Syców",
+          "phone": "Telefon: +48 600 511 029",
+          "email": "E-Mail: info@isotex-poland.com"
+        },
+        "button": "Erfahren Sie mehr"
       }
                               
       

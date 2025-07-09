@@ -8,6 +8,7 @@ import OurProjects from '../../components/OurProjects/OurProjects';
 import JoinUs from '../../components/JoinUs/JoinUs';
 import OurTeam from '../../components/OurTeam/OutTeam';
 import ParallaxImage from '../../components/ParallaxImage/ParallaxImage';
+import LocationChangeModal from '../../components/LocationChangeModal/LocationChangeModal';
 
 function Banner(){
   const { t } = useTranslation();
@@ -548,6 +549,8 @@ function Home() {
     <OurTeam></OurTeam>
     <JoinUs></JoinUs>
     <Footer></Footer>
+
+    <LocationChangeModal/>
     </>
     
 );

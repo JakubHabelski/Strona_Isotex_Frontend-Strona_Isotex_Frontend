@@ -47,7 +47,7 @@
     text-align: left;
   }
   .parallax__text p {
-    font-size: clamp(0.7rem, 2vh, 2rem);
+    font-size: clamp(0.7rem, 1.5rem, 2rem);
     text-align: left;
     
   }

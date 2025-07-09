@@ -75,7 +75,7 @@ export default function Navbar_v2() {
         </Nav.Link>
         <NavDropdown
           title={
-            <span style={{ cursor: "pointer" }} onClick={() => navigate("/AboutUs")}>
+            <span style={{ cursor: "pointer" }}>
               {t("navbar.about")}
             </span>
           }

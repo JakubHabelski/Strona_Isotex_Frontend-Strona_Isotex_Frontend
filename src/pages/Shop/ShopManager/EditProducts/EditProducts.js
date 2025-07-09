@@ -18,10 +18,20 @@ function EditProductsList(){
     const [subcategories, setSubcategories] = useState([]);
     const [selectedCat, setSelectedCat] = useState('');
     const [selectedSubCat, setSelectedSubCat] = useState('');
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [openedCatId, setOpenedCatId] = useState(null);
+    const [deleteSubId, setDeleteSubId] = useState(null);
+
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
+
+    const handleCloseDeleteModal = () => setShowDeleteModal(false);
+    const handleShowDeleteModal = (subId) => {
+        setDeleteSubId(subId);
+        setShowDeleteModal(true);
+    };
     
 
 
@@ -47,6 +57,18 @@ function EditProductsList(){
         });
     }
     }, [selectedCat]);
+
+    async function handleDelete(id) {
+        try {
+            //await axios.delete(`${apiUrl}/Product_API/deleteProduct?id=${id}`);
+            await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`);
+            console.log('Produkt usunięta pomyślnie');
+            // Aktualizuj stan subcategories
+            
+        } catch (error) {
+            console.error('Błąd przy usuwaniu Produktu:', error);
+        }
+    }
 
 
 
@@ -225,6 +247,13 @@ function EditProductsList(){
                             <td style={{maxWidth: "500px"}}><img src={product.image_url} style={{maxWidth:"-webkit-fill-available"}}></img></td>
                             <td>
                                 <Button onClick={() => handleEditClick(product)}>Edytuj</Button>
+                                <Button
+                                    variant="outline-danger"
+                                    onClick={() => handleShowDeleteModal(product.id)}
+                                    style={{ marginLeft: '10px' }}
+                                >
+                                    Usuń
+                                </Button>
                                 
                             </td>
                         </tr>
@@ -315,6 +344,27 @@ function EditProductsList(){
             Close
           </Button>
           
+        </Modal.Footer>
+      </Modal>
+
+
+       <Modal show={showDeleteModal} onHide={handleCloseDeleteModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Button
+            variant="outline-danger"
+            onClick={() => handleDelete(deleteSubId)}
+            style={{ marginLeft: '10px' }}
+        >
+            Usuń
+        </Button>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseDeleteModal}>
+            Anuluj
+          </Button>
         </Modal.Footer>
       </Modal>
         </>

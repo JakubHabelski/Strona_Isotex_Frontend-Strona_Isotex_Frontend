@@ -57,15 +57,15 @@ function HoverImage() {
 function AboutUsPage() {
   const { t } = useTranslation();
 
-  useEffect(() => {
+useEffect(() => {
+  // Najpierw przewiń do góry
+  window.scrollTo(0, 0);
+
+  // Odłóż start IntersectionObservera o jedną klatkę
+  const timeout = setTimeout(() => {
     const LeftSlide = document.querySelectorAll(`.${style.LeftSlide}`);
     const RightSlide = document.querySelectorAll(`.${style.RightSlide}`);
     const ImagesSlider = document.querySelectorAll(`.${style.ImagesSlider}`);
-
-    console.log('style.LeftSlide:', style.LeftSlide);
-    console.log('style.RightSlide:', style.RightSlide);
-
-    RightSlide.forEach((el) => console.log('RightSlide element:', el.className));
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -83,8 +83,12 @@ function AboutUsPage() {
 
     ImagesSlider.forEach((el) => observer.observe(el));
 
+    // Sprzątanie
     return () => observer.disconnect();
-  }, []);
+  }, 0); // lub np. 50ms jeśli masz dużo obrazków
+
+  return () => clearTimeout(timeout);
+}, []);
 
   return (
     <>
