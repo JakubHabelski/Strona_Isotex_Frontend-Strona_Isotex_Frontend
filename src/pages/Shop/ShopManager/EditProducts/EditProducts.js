@@ -32,6 +32,11 @@ function EditProductsList(){
         setDeleteSubId(subId);
         setShowDeleteModal(true);
     };
+    const fetchProducts = () => {
+        axios.get(`${apiUrl}/list`)
+            .then(res => setProducts(res.data))
+            .catch(err => console.error(err));
+    };
     
 
 
@@ -61,7 +66,15 @@ function EditProductsList(){
     async function handleDelete(id) {
         try {
             //await axios.delete(`${apiUrl}/Product_API/deleteProduct?id=${id}`);
-            await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`);
+            await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
+                .then(res => {
+                    if(res.status==200){
+                        console.log("elomelo "+ res.data)
+                        fetchProducts(); // odśwież listę po usunięciu
+                        setShowDeleteModal(false); // zamknij modal
+                    }
+                })
+                
             console.log('Produkt usunięta pomyślnie');
             // Aktualizuj stan subcategories
             
@@ -89,11 +102,9 @@ function EditProductsList(){
       photo: null
     })
 
-    useEffect(()=>{
-        axios.get(`${apiUrl}/list`)
-        .then(res => setProducts(res.data))
-        .then(console.log(products))
-    }, {apiUrl})
+    useEffect(() => {
+        fetchProducts();
+    }, [apiUrl]);
     console.log(products)
 
     const handleEditClick = (product) => {

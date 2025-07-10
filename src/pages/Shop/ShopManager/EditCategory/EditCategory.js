@@ -4,13 +4,16 @@ import Navbar_v2 from "../../../../components/Navbar_v2/Navbar";
 import style from './EditCategory.module.css'
 import axios from "axios";
 import { Button, Form, Modal, Table } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 export default function EditCategory(){
 
     const apiUrl = process.env.REACT_APP_API_URL;
     const [categories, setCategores] = useState([]);
     const [show, setShow] = useState(false);
-
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [DeleteCatID, setDeleteCatId] = useState(null);
+    const [subcategoriesByCat, setSubcategoriesByCat] = useState([]);
     const [formData, setFormData] = useState({
         id: '',
         LabelPL: '',
@@ -18,9 +21,17 @@ export default function EditCategory(){
         LabelDE: '',
         photo: null
     })
+    const [productsbysubcat, setproductsbysubcat] = useState(new Map())
+    const { i18n } = useTranslation();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleCloseDeleteModal = () => setShowDeleteModal(false);
+    const handleShowDeleteModal = (Id) => {
+        setDeleteCatId(Id);
+        setShowDeleteModal(true);
+    };
 
     useEffect(() =>{
         axios.get(`${apiUrl}/Category_API/GetCategories`)
@@ -30,6 +41,34 @@ export default function EditCategory(){
             setCategores(response.data);
         })
     }, [])
+    // Fetch subcategories by selected category
+    useEffect(() => {
+        if (DeleteCatID) {
+        axios
+            .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+            params: { CategoryId: DeleteCatID },
+            })
+            .then((response) => setSubcategoriesByCat(response.data))
+            .catch((error) => setSubcategoriesByCat([]));
+        }
+    }, [DeleteCatID, apiUrl]);
+
+    // 2. Pobierz produkty po zmianie subcategoriesByCat
+    useEffect(() => {
+        if (subcategoriesByCat.length > 0) {
+            subcategoriesByCat.forEach(subcat => {
+                axios
+                    .get(`${apiUrl}/products/subcategory/${subcat.id}/${i18n.language}`)
+                    .then((response) => {
+                        setproductsbysubcat(prev => {
+                            const newMap = new Map(prev);
+                            newMap.set(subcat.id, response.data);
+                            return newMap;
+                        });
+                    });
+            });
+        }
+    }, [subcategoriesByCat, apiUrl, i18n.language]);
 
     const editcat = (cat) =>{
         handleShow();
@@ -85,6 +124,17 @@ export default function EditCategory(){
     }
 }
 
+    async function DeleteCategory(id) {
+        try {
+            //await axios.delete(`${apiUrl}/Category_API/DeleteCategory?id=${id}`);
+            console.log(id)
+            await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
+            
+        } catch (error) {
+            
+        }
+    }
+
 
 
 
@@ -120,6 +170,12 @@ export default function EditCategory(){
                                         onClick={() =>editcat(cat)}
                                     >
                                         Edytuj
+                                    </Button>
+                                    <Button
+                                        variant="outline-danger"
+                                        onClick={() => handleShowDeleteModal(cat.id)}
+                                    >
+                                        Usuń
                                     </Button>
                                 </td>
                             </tr>    
@@ -191,6 +247,35 @@ export default function EditCategory(){
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showDeleteModal} onHide={handleCloseDeleteModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Usuwanie kategorii</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>            
+            {subcategoriesByCat.map((sub) =>(
+                <>
+                <p>Podkategoria: {sub.LabelPL}</p>
+                <p>Prodkuty w podkategorii: </p>
+                {productsbysubcat.get(sub.id)?.map(prod => (
+                <div key={prod.id}>{prod.name}</div>
+                ))}
+                </>              
+            ))}
+          <Button
+            variant="outline-danger"
+            onClick={() => DeleteCategory(DeleteCatID)}
+            style={{ marginLeft: '10px' }}
+        >
+            Usuń
+        </Button>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseDeleteModal}>
+            Anuluj
           </Button>
         </Modal.Footer>
       </Modal>
