@@ -65,8 +65,8 @@ function EditProductsList(){
 
     async function handleDelete(id) {
         try {
-            //await axios.delete(`${apiUrl}/Product_API/deleteProduct?id=${id}`);
-            await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
+            await axios.delete(`${apiUrl}/Product_API/deleteProduct?id=${id}`)
+            //await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
                 .then(res => {
                     if(res.status==200){
                         console.log("elomelo "+ res.data)

@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar_v2/Navbar";
 import Footer from "../../../components/Footer";
-import { Breadcrumb, Button, Card, Col, Image, Modal, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
+import { Breadcrumb, Button, Card, Col, Image, Modal, Placeholder, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
 import style from "./MainPageShop.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -17,15 +17,18 @@ function MainPageShopMain() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [showLists, setShowLists] = useState({});
-  const [loading, setLoading] = useState(true);
   const [modalImage, setModalImage] = useState("");
   const [modalTitle, setModalTitle] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [cartItems, setCartItems] = useLocalStorage("cartItems", []);
   const [toastMessage, setToastMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
-  const [productsLoading, setProductsLoading] = useState(false);
+  const [categoriesLoading, setCcategoriesLoading] = useState(false);
   const [subcategoriesLoading, setSubcategoriesLoading] = useState(false);
+  const [productsLoading, setProductsLoading] = useState(false);
+  const [pendingCat, setPendingCat] = useState([]);
+  const [pendingSubCat, setPendingSubCat] = useState([])
+  const [pendingProducts, setPendingProducts] = useState([]);
 
 
   const listRefs = useRef({});
@@ -39,14 +42,17 @@ function MainPageShopMain() {
     return item.LabelPL;
   };
 
+
   // Fetch categories and their subcategories
   useEffect(() => {
-    setLoading(true);
+    setCcategoriesLoading(true);
     axios
       .get(`${apiUrl}/Category_API/GetCategories`)
       .then(async (response) => {
+        if (!Array.isArray(response.data)) {
+          throw new Error("Dane kategorii nie są tablicą");
+        }
         const categoriesData = response.data;
-        console.log(categoriesData)
         const categoriesWithSub = await Promise.all(
           categoriesData.map(async (cat) => {
             const subRes = await axios
@@ -62,20 +68,50 @@ function MainPageShopMain() {
               subcategories: subRes.data.map((sub) => ({
                 key: sub.id,
                 label: getTranslatedLabel(sub),
+                photo_url: sub.photo_url,
+                product_count: sub.product_count || 0,
               })),
             };
           })
         );
-        console.log(categoriesWithSub)
-        setCategories(categoriesWithSub);
+        setPendingCat(categoriesWithSub); // Zapisz do pendingCat zamiast categories
         setShowLists(categoriesWithSub.reduce((acc, cat) => ({ ...acc, [cat.key]: false }), {}));
-        setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching categories:", error);
-        setLoading(false);
+        console.error("Błąd podczas pobierania kategorii:", error);
+        setPendingCat([]);
+        setCcategoriesLoading(false);
       });
   }, [i18n.language]);
+
+  // Load category images
+  useEffect(() => {
+    if (pendingCat.length > 0) {
+      let loaded = 0;
+      const total = pendingCat.length;
+      pendingCat.forEach((cat) => {
+        if (cat.image) { // Sprawdź, czy photo_url istnieje
+          const img = new window.Image();
+          img.src = cat.image;
+          img.onload = img.onerror = () => {
+            loaded += 1;
+            if (loaded === total) {
+              setCategories(pendingCat);
+              setCcategoriesLoading(false);
+              setPendingCat([]);
+            }
+          };
+        } else {
+          loaded += 1;
+          if (loaded === total) {
+            setCategories(pendingCat);
+            setCcategoriesLoading(false);
+            setPendingCat([]);
+          }
+        }
+      });
+    }
+  }, [pendingCat]);
 
   // Fetch subcategories and products when category or subcategory changes
   useEffect(() => {
@@ -86,31 +122,71 @@ function MainPageShopMain() {
           params: { CategoryId: selectedCategory.key },
         })
         .then((response) => {
-          setSubcategories(response.data);
-          if (!selectedSubcategory) setProducts([]);
+          setPendingSubCat(response.data);
+          if (!pendingSubCat) setProducts([]);
         })
         .catch(() => setSubcategories([]))
-        .finally(() => setSubcategoriesLoading(false));
+       /// .finally(() => setSubcategoriesLoading(false));
     } else {
       setSubcategories([]);
       setProducts([]);
-      setSubcategoriesLoading(false);
+     // setSubcategoriesLoading(false);
     }
   }, [selectedCategory]);
+
+  useEffect(() =>{
+    if(pendingSubCat.length > 0){
+      let loaded = 0;
+      pendingSubCat.forEach((subCat) =>{
+        const img = new window.Image();
+        img.src = subCat.photo_url;
+        img.onload = img.onerror = () =>{
+          loaded += 1;
+          if(loaded === pendingSubCat.length){
+            setSubcategories(pendingSubCat);
+            setSubcategoriesLoading(false);
+            setPendingSubCat([]);
+          }
+        }
+      })
+    }
+  }, [pendingSubCat])
 
   useEffect(() => {
     if (selectedSubcategory) {
       setProductsLoading(true);
       axios
         .get(`${apiUrl}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
-        .then((response) => setProducts(response.data))
-        .catch(() => setProducts([]))
-        .finally(() => setProductsLoading(false));
+        .then((response) => {
+          setPendingProducts(response.data);
+        })
+        .catch(() => {
+          setProducts([]);
+          setProductsLoading(false);
+        });
     } else {
       setProducts([]);
       setProductsLoading(false);
     }
   }, [selectedSubcategory, i18n.language]);
+
+  useEffect(() => {
+    if (pendingProducts.length > 0) {
+      let loaded = 0;
+      pendingProducts.forEach((product) => {
+        const img = new window.Image();
+        img.src = product.imageUrl;
+        img.onload = img.onerror = () => {
+          loaded += 1;
+          if (loaded === pendingProducts.length) {
+            setProducts(pendingProducts);
+            setProductsLoading(false);
+            setPendingProducts([]); // czyść tymczasowy stan
+          }
+        };
+      });
+    }
+  }, [pendingProducts]);
 
   // Toggle subcategory list visibility
   const toggleList = (key) => {
@@ -255,7 +331,101 @@ function MainPageShopMain() {
     </Card>
   );
 
-  console.log(categories)
+  // Renderuje siatkę kategorii (gdy nie wybrano subkategorii)
+  function renderCategoriesGrid() {
+    return (
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+        gap: "1rem",
+        justifyContent: "space-between"
+      }}>
+        {categories.map(renderCategory2)}
+      </div>
+    );
+  }
+
+  // Renderuje siatkę subkategorii (gdy wybrano kategorię, ale nie subkategorię)
+  function renderSubcategoriesGrid() {
+    return (
+      <div className={style.MainCategoryList}>
+        {subcategories.map((subcat) => (
+          <div
+            className={style.MainCategoryCard}
+            key={subcat.id}
+            onClick={() => handleSubcategorySelect(subcat.id, selectedCategory?.key)}
+          >
+            <div className={style.CardText}>
+              <h5>{getTranslatedLabel(subcat)}</h5>
+              <p>Ilość produktów: {subcat.product_count}</p>
+            </div>
+            <img src={subcat.photo_url} alt={getTranslatedLabel(subcat)} />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // Renderuje produkty (gdy wybrano subkategorię)
+  function renderProductsList() {
+    return (
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+        gap: "1rem",
+        justifyContent: "space-between"
+      }}>
+        {productsLoading ? (
+          Array.from({ length: pendingProducts.length }).map((_, idx) => (
+            <Card
+              key={idx}
+              className={`${style.card}`}
+              style={{ backgroundColor: "#f8f9fa", border: "none" }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "lightgray",
+                  borderRadius: "var(--bs-border-radius)",
+                  aspectRatio: "1/1",
+                }}
+              >
+                <Placeholder  animation="glow">
+                      <div style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}>
+                        <Placeholder xs={12} style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}/>
+                      </div>
+                       
+                    </Placeholder>
+              </div>
+              <Card.Body>
+                <Placeholder as={Card.Title} animation="glow">
+                  <Placeholder xs={12} />
+                </Placeholder>
+                <Placeholder as={Card.Text} animation="glow">
+                  <Placeholder xs={12} />
+                </Placeholder>
+              </Card.Body>
+              <Placeholder.Button variant="primary" xs={6} style={{ margin: "15px" }} />
+            </Card>
+          ))
+        ) : products.length > 0 ? (
+          products.map(renderProduct)
+        ) : (
+          <div style={{
+            gridColumn: "1/-1",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: 200
+          }}>
+            <span style={{ color: "black", marginLeft: 8 }}>Brak produktów</span>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -317,49 +487,50 @@ function MainPageShopMain() {
             )}
           </Breadcrumb>
           <div>
-           <div style={{display: "grid",
-                        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-                        gap: "1rem",
-                        justifyContent: "space-between"}}>
-              {subcategories.length > 0 && subcategories[0].categoryShowDTO
-                ? getTranslatedLabel(subcategories[0].categoryShowDTO)
-                : categories.map(renderCategory2)}
-            </div>
-            <div className={style.MainCategoryList}>
-              {selectedSubcategory ? (
-                productsLoading ? (
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
-                    <Spinner animation="border" role="status" />
-                    <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
-                  </div>
-                ) : products.length > 0 ? (
-                  products.map(renderProduct)
-                ) : (
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
-                    <span style={{ color: "black", marginLeft: 8 }}>Brak produktów</span>
-                  </div>
-                )
-              ) : subcategoriesLoading ? (
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
-                  <Spinner animation="border" role="status" />
-                  <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
-                </div>
-              ) : subcategories.length > 0 ? (
-                subcategories.map((subcat) => (
-                  <div
-                    className={style.MainCategoryCard}
-                    key={subcat.id}
-                    onClick={() => handleSubcategorySelect(subcat.id, selectedCategory?.key)}
-                  >
+          {/* Kategorie (gdy nie wybrano kategorii) */}
+          {!selectedCategory && (
+            categoriesLoading ? (
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
+                <Spinner animation="border" role="status" />
+                <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
+              </div>
+            ) : (
+              renderCategoriesGrid()
+            )
+          )}
+
+          {/* Subkategorie (gdy wybrano kategorię, ale nie subkategorię) */}
+          {selectedCategory && !selectedSubcategory && (
+            subcategoriesLoading
+              ? 
+              <div className={style.MainCategoryList}>
+                {Array.from({length: pendingSubCat.length}).map((_, idx) => (
+                  <div key={idx} className={style.MainCategoryCard}>
                     <div className={style.CardText}>
-                      <h5>{getTranslatedLabel(subcat)}</h5>
-                      <p>Ilość produktów: {subcat.product_count}</p>
+                      <Placeholder as={Card.Title} animation="glow">
+                        <Placeholder xs={12}/>
+                      </Placeholder>
+                      <Placeholder as={Card.Text} animation="glow">
+                        <Placeholder xs={12}/>
+                        <Placeholder xs={12}/>
+                        <Placeholder xs={12}/>
+                      </Placeholder>
                     </div>
-                    <img src={subcat.photo_url} alt={getTranslatedLabel(subcat)} />
+                    <Placeholder  animation="glow">
+                      <div style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}>
+                        <Placeholder xs={12} style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}/>
+                      </div>
+                       
+                    </Placeholder>
+                    
                   </div>
-                ))
-              ) : null}
-            </div>
+                ))}
+              </div>
+              : renderSubcategoriesGrid()
+        )}
+
+          {/* Produkty (gdy wybrano subkategorię) */}
+          {selectedSubcategory && renderProductsList()}
           </div>
         </div>
       </Col>

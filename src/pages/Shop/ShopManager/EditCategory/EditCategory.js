@@ -126,9 +126,9 @@ export default function EditCategory(){
 
     async function DeleteCategory(id) {
         try {
-            //await axios.delete(`${apiUrl}/Category_API/DeleteCategory?id=${id}`);
+            await axios.delete(`${apiUrl}/Category_API/DeleteCategory?id=${id}`);
             console.log(id)
-            await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
+           // await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
             
         } catch (error) {
             
@@ -256,15 +256,23 @@ export default function EditCategory(){
           <Modal.Title>Usuwanie kategorii</Modal.Title>
         </Modal.Header>
         <Modal.Body>            
-            {subcategoriesByCat.map((sub) =>(
-                <>
-                <p>Podkategoria: {sub.LabelPL}</p>
-                <p>Prodkuty w podkategorii: </p>
-                {productsbysubcat.get(sub.id)?.map(prod => (
-                <div key={prod.id}>{prod.name}</div>
+            {subcategoriesByCat.map((sub) => (
+                <div key={sub.id} className={style.subcategoryBlock} style={{marginBottom: "2rem", padding: "1rem", border: "1px solid #eee", borderRadius: "8px"}}>
+                    <h5 style={{marginBottom: "0.5rem"}}>Podkategoria: {sub.LabelPL}</h5>
+                    <div style={{marginBottom: "0.5rem", fontWeight: "bold"}}>
+                    Produkty w podkategorii ({productsbysubcat.get(sub.id)?.length || 0}):
+                    </div>
+                    <ul style={{marginLeft: "1.5rem"}}>
+                    {productsbysubcat.get(sub.id)?.length > 0 ? (
+                        productsbysubcat.get(sub.id).map(prod => (
+                        <li key={prod.id}>{prod.name}</li>
+                        ))
+                    ) : (
+                        <li style={{color: "#888"}}>Brak produktów</li>
+                    )}
+                    </ul>
+                </div>
                 ))}
-                </>              
-            ))}
           <Button
             variant="outline-danger"
             onClick={() => DeleteCategory(DeleteCatID)}

@@ -8,5 +8,12 @@
         max-height: 300px;
         object-fit: contain;
     }
+    .subcategoryBlock {
+        background: #fafbfc;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #eee;
+        border-radius: 8px;
+}
     
 }
