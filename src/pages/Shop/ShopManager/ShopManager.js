@@ -18,6 +18,9 @@ function ShopManagerPage(){
            <a href="/check-order"> Sprawdzanie zamówienia</a>
         </ListGroup.Item>
         <ListGroup.Item>
+           <a href="/OrdersList"> Wszystkie zamówienia</a>
+        </ListGroup.Item>
+        <ListGroup.Item>
             <a href="/ManageCategories"> Dodawanie kategorii</a>
         </ListGroup.Item>
         <ListGroup.Item>

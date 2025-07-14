@@ -131,6 +131,7 @@ export default function TestPage() {
         <p>Ładowanie...</p>
       )}
     </div>
+    <img src="/assets/materials/fabrics/aramid/odpornosc-mechaniczna.jpg" alt="obraz"></img>
     <ParallaxImage/>
         </>
     )

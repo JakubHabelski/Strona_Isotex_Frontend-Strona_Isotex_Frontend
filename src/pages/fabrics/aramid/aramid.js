@@ -73,7 +73,7 @@ function Aramid_Info() {
                                 <Image src="/assets/materials/fabrics/glass/termometr.jpg" className="card_img_glass" />
                             </Col>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/assets/materials/fabrics/aramid/odpornosc-mechaniczna.jpg" className="card_img_glass" />
+                                <Image src="/assets/materials/fabrics/elomelo.jpg" className="card_img_glass" />
                             </Col>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Image src="/assets/materials/fabrics/glass/chemia.jpg" className="card_img_glass" />

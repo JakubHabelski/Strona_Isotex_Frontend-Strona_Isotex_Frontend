@@ -1,0 +1,110 @@
+.container {
+  margin-top: 200px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.emptyMessage {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.orderTable {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orderTable th,
+.orderTable td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.orderTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.orderTable td {
+  color: #555;
+}
+
+.detailsButton {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.detailsButton:hover {
+  background-color: #0056b3;
+}
+
+.detailsRow {
+  background-color: #f9f9f9;
+}
+
+.productTable {
+  margin: 10px 0;
+  border: none;
+  background-color: transparent;
+}
+
+.productTable th,
+.productTable td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.productTable th {
+  font-weight: 500;
+  color: #444;
+  font-size: 14px;
+}
+
+.productTable td {
+  font-size: 14px;
+  color: #555;
+}
+
+.productImage {
+  max-width: 300px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .orderTable th,
+  .orderTable td,
+  .productTable th,
+  .productTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .productImage {
+    max-width: 300px;
+  }
+  .detailsButton {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

@@ -41,6 +41,7 @@ import ManageCategories from './pages/Shop/ShopManager/ManageCategories/ManageCa
 import ManageSubCategories from './pages/Shop/ShopManager/ManageSubCategories/ManageSubCategories';
 import EditCategory from './pages/Shop/ShopManager/EditCategory/EditCategory';
 import EditSubCagegory from './pages/Shop/ShopManager/EditSubCategory/EditSubCagegory';
+import OrdersList from './pages/Shop/OrdersList/OrdersList';
 
 
 const root = document.getElementById("root");
@@ -97,6 +98,7 @@ ReactDOM.createRoot(root).render(
       <Route path='/ManageSubCategories' element={<ManageSubCategories/>} />
       <Route path='/EditCategory' element={<EditCategory/>} />
       <Route path='/EditSubCategory' element={<EditSubCagegory/>} />
+      <Route path='/OrdersList' element={<OrdersList/>} />
       
 
       ## Test
