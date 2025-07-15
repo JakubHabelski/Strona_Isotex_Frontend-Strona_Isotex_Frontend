@@ -47,7 +47,7 @@ function MainPageShopMain() {
   useEffect(() => {
     setCcategoriesLoading(true);
     axios
-      .get(`${apiUrl}/Category_API/GetCategories`)
+      .get(`/api/Category_API/GetCategories`)
       .then(async (response) => {
         if (!Array.isArray(response.data)) {
           throw new Error("Dane kategorii nie są tablicą");
@@ -56,7 +56,7 @@ function MainPageShopMain() {
         const categoriesWithSub = await Promise.all(
           categoriesData.map(async (cat) => {
             const subRes = await axios
-              .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+              .get(`api/Category_API/GetSubCategoriesByCategory`, {
                 params: { CategoryId: cat.id },
               })
               .catch(() => ({ data: [] }));
@@ -118,7 +118,7 @@ function MainPageShopMain() {
     if (selectedCategory) {
       setSubcategoriesLoading(true);
       axios
-        .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+        .get(`api/Category_API/GetSubCategoriesByCategory`, {
           params: { CategoryId: selectedCategory.key },
         })
         .then((response) => {
@@ -156,7 +156,7 @@ function MainPageShopMain() {
     if (selectedSubcategory) {
       setProductsLoading(true);
       axios
-        .get(`${apiUrl}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
+        .get(`api/products/subcategory/${selectedSubcategory}/${i18n.language}`)
         .then((response) => {
           setPendingProducts(response.data);
         })
