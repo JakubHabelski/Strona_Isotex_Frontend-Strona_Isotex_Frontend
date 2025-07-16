@@ -50,7 +50,7 @@ export default function ManageCategories(){
         }
 
         try {
-            await axios.post(`${apiUrl}/Category_API/AddCategory`, formData, {
+            await axios.post(`/api/Category_API/AddCategory`, formData, {
             //await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'

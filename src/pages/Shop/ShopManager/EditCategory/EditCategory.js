@@ -34,8 +34,8 @@ export default function EditCategory(){
     };
 
     useEffect(() =>{
-        axios.get(`${apiUrl}/Category_API/GetCategories`)
-        //axios.get(`${apiUrl}/Category_API/GetCategories`)
+        axios.get(`/api/Category_API/GetCategories`)
+        //axios.get(`/api/Category_API/GetCategories`)
         .then(async(response) =>{
             console.log(response.data)
             setCategores(response.data);
@@ -45,7 +45,7 @@ export default function EditCategory(){
     useEffect(() => {
         if (DeleteCatID) {
         axios
-            .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+            .get(`/api/Category_API/GetSubCategoriesByCategory`, {
             params: { CategoryId: DeleteCatID },
             })
             .then((response) => setSubcategoriesByCat(response.data))
@@ -58,7 +58,7 @@ export default function EditCategory(){
         if (subcategoriesByCat.length > 0) {
             subcategoriesByCat.forEach(subcat => {
                 axios
-                    .get(`${apiUrl}/products/subcategory/${subcat.id}/${i18n.language}`)
+                    .get(`/api/products/subcategory/${subcat.id}/${i18n.language}`)
                     .then((response) => {
                         setproductsbysubcat(prev => {
                             const newMap = new Map(prev);
@@ -112,7 +112,7 @@ export default function EditCategory(){
     }
 
     try {
-        await axios.put(`${apiUrl}/Category_API/EditCategory`, formDataSubmit, {
+        await axios.put(`/api/Category_API/EditCategory`, formDataSubmit, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -126,7 +126,7 @@ export default function EditCategory(){
 
     async function DeleteCategory(id) {
         try {
-            await axios.delete(`${apiUrl}/Category_API/DeleteCategory?id=${id}`);
+            await axios.delete(`/api/Category_API/DeleteCategory?id=${id}`);
             console.log(id)
            // await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
             

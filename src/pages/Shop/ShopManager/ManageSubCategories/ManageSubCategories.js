@@ -25,7 +25,7 @@ export default function ManageSubCategories(){
     })
 
     useEffect(() =>{
-        axios.get(`${apiUrl}/Category_API/GetCategories`)
+        axios.get(`/api/Category_API/GetCategories`)
             .then(async(response) =>{
                 const categoriesData = response.data;
                 console.log(categoriesData)
@@ -70,7 +70,7 @@ export default function ManageSubCategories(){
         console.log(formData.get('categoryId'))
 
         try{
-            await axios.post(`${apiUrl}/Category_API/AddSubCategory`, formData, {
+            await axios.post(`/api/Category_API/AddSubCategory`, formData, {
              headers: {
                     'Content-Type': 'multipart/form-data'
                 }

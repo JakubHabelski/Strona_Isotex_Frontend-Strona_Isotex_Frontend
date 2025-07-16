@@ -26,11 +26,11 @@ function ProductsList() {
   const [product_list, setProductName] = useLocalStorage("product_list", [])
   console.log({product_list});
   const apiUrl = process.env.REACT_APP_API_URL;
-  console.log(`${apiUrl}/list`)
+  console.log(`/api/list`)
 
   // Pobranie danych o produktach z API
   useEffect(() => {
-    fetch(`${apiUrl}/list`)
+    fetch(`/api/list`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

@@ -24,7 +24,7 @@ export default function TestPage() {
 
     useEffect(() => {
       //axios.get('http://192.168.68.103:8080/Category_API/GetCategories')
-      axios.get(`${apiUrl}/Category_API/GetCategories`)
+      axios.get(`/api/Category_API/GetCategories`)
         .then((response) => {
           console.log(response.data);
           setCategories(response.data);
@@ -39,7 +39,7 @@ export default function TestPage() {
 
     useEffect(() =>{
       //axios.get('http://192.168.68.103:8080/Category_API/GetSubCategories')
-      axios.get(`${apiUrl}/Category_API/GetSubCategories`)
+      axios.get(`/api/Category_API/GetSubCategories`)
         .then((response) =>{
           console.log(response.data)
           setSubcategories(response.data)
@@ -52,7 +52,7 @@ export default function TestPage() {
 
     useEffect(() =>{
       //if(selectedCat){axios.get('http://192.168.68.103:8080/Category_API/GetSubCategoriesByCategory', {
-      if(selectedCat){axios.get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+      if(selectedCat){axios.get(`/api/Category_API/GetSubCategoriesByCategory`, {
         params:{
           CategoryId: selectedCat
         }

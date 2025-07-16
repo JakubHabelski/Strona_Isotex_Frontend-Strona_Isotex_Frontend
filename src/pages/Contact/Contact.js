@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next"
 function ContactUs() {
     const { t } = useTranslation();
     const apiUrl = process.env.REACT_APP_API_URL;
-    const request = `${apiUrl}/contact`;
+    const request = `/api/contact`;
 
 
     const [formData, setFormData] = useState({

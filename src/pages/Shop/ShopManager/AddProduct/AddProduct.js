@@ -40,7 +40,7 @@ function AddProductForm() {
   // Fetch categories
   useEffect(() => {
     axios
-      .get(`${apiUrl}/Category_API/GetCategories`)
+      .get(`/api/Category_API/GetCategories`)
       .then((response) => setCategories(response.data))
       .catch((error) => console.error("Błąd podczas pobierania kategorii:", error));
   }, [apiUrl]);
@@ -49,7 +49,7 @@ function AddProductForm() {
   useEffect(() => {
     if (form.category) {
       axios
-        .get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+        .get(`/api/Category_API/GetSubCategoriesByCategory`, {
           params: { CategoryId: form.category },
         })
         .then((response) => setSubcategoriesByCat(response.data))
@@ -100,7 +100,7 @@ function AddProductForm() {
     }
 
     try {
-      await axios.post(`${apiUrl}/Product_API/addproduct`, formData, {
+      await axios.post(`/api/Product_API/addproduct`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Produkt dodany.");

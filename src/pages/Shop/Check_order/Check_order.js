@@ -27,7 +27,7 @@ function OrderInfo(){
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const res = await axios.get(`${apiUrl}/test_api/getOrder/${form_order_id}`);
+        const res = await axios.get(`/api/test_api/getOrder/${form_order_id}`);
         if (res.data && Object.keys(res.data).length > 0) {
         SetOrderInfo(res.data);
         setShowCustomerInfo(true);

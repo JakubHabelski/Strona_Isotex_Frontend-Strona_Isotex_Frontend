@@ -12,7 +12,7 @@ export default function OrdersList() {
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}/getOrders`)
+      .get(`/api/getOrders`)
       .then((response) => {
         console.log("Dane zamówień:", response.data);
         setAllOrders(response.data);

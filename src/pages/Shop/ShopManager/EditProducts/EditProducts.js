@@ -33,7 +33,7 @@ function EditProductsList(){
         setShowDeleteModal(true);
     };
     const fetchProducts = () => {
-        axios.get(`${apiUrl}/list`)
+        axios.get(`/api/list`)
             .then(res => setProducts(res.data))
             .catch(err => console.error(err));
     };
@@ -41,7 +41,7 @@ function EditProductsList(){
 
 
     useEffect(() => {
-    axios.get(`${apiUrl}/Category_API/GetCategories`)
+    axios.get(`/api/Category_API/GetCategories`)
         .then((response) => {
         setCategories(response.data);
         })
@@ -51,7 +51,7 @@ function EditProductsList(){
     }, []);
     useEffect(() => {
     if (selectedCat) {
-        axios.get(`${apiUrl}/Category_API/GetSubCategoriesByCategory`, {
+        axios.get(`/api/Category_API/GetSubCategoriesByCategory`, {
         params: { CategoryId: selectedCat }
         })
         .then((response) => {
@@ -65,7 +65,7 @@ function EditProductsList(){
 
     async function handleDelete(id) {
         try {
-            await axios.delete(`${apiUrl}/Product_API/deleteProduct?id=${id}`)
+            await axios.delete(`/api/Product_API/deleteProduct?id=${id}`)
             //await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
                 .then(res => {
                     if(res.status==200){
@@ -85,7 +85,7 @@ function EditProductsList(){
 
 
 
-    const request = `${apiUrl}/Product_API/updateProduct`;
+    const request = `/api/Product_API/updateProduct`;
    // const request = `http://localhost:8080/Product_API/updateProduct`;
     const [formData, setFormData] = useState({
       id: "",

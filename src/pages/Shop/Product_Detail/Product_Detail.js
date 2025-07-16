@@ -20,7 +20,7 @@ function Product_Detail_Get() {
 
 
     useEffect(() => {
-      axios.get(`${apiUrl}/product/${item}`, {
+      axios.get(`/api/product/${item}`, {
         headers: {
           "Accept-Language": i18n.language // np. "pl", "en", "de"
         }

@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
 import axios from "axios";
 import { useLocalStorage } from "../../../utils/localStorage";
+import { Helmet } from "react-helmet";
 
 function MainPageShopMain() {
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -429,6 +430,29 @@ function MainPageShopMain() {
 
   return (
     <>
+    <Helmet>
+                <title>Isotex Group - Sklep z Tkaninami i Matami Izolacyjnymi</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+    </Helmet>
     <ImageCarousel />
     <div className={style.MainPageShopContainer}>
       <Row style={{minHeight: "500px", marginBottom: "100px"}} className={style.MainPageShopRow}>

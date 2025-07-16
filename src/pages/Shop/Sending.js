@@ -40,7 +40,7 @@ function SendOrder() {
                 let ids = cartItems.map(item => item.id).join(",");
                 ids = ids.replace(/^,/,'')
                 console.log("Fetching products for IDs:", ids); // Debugowanie
-                const res = await axios.get(`${apiUrl}/products/multiple?ids=${ids}&locale=${i18n.language}`);
+                const res = await axios.get(`/api/products/multiple?ids=${ids}&locale=${i18n.language}`);
                 console.log("API response:", res.data); // Debugowanie
                 const fetchedProducts = res.data
                     .filter(product => cartItems.some(item => item.id === product.id))
@@ -136,7 +136,7 @@ function SendOrder() {
         };
 
         try {
-            const response = await axios.post(`${apiUrl}/PayU_API/Create_an_Order`, formDataWithProducts, {
+            const response = await axios.post(`/api/PayU_API/Create_an_Order`, formDataWithProducts, {
                 headers: { "Content-Type": "application/json" }
             });
             console.log("Odpowiedź z serwera:", response.data);

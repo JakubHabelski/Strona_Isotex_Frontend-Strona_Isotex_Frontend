@@ -15,7 +15,7 @@ function JoinUsPageForm() {
     const [fullscreen, setFullscreen] = useState('md-down');
 
     const apiUrl = process.env.REACT_APP_API_URL;
-    const request = `${apiUrl}/apply`;
+    const request = `/api/Contact_API/apply`;
 
     const [formData, setFormData] = useState({
         name : '',
@@ -35,7 +35,8 @@ function JoinUsPageForm() {
     console.log(formData)
 
     const handleSubmit = async (event) => {
-      
+      event.preventDefault(); // Zatrzymaj domyślne zachowanie formularza
+      event.stopPropagation(); // Zatrzymaj propagację zdarzenia
   
       const data = new FormData();
       data.append('name', formData.name);

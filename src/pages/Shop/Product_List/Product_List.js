@@ -36,7 +36,7 @@ function ProductList_Get() {
 
     console.log("Api URL:", apiUrl); // Debugging line
     useEffect(() => {
-        axios.get(`${apiUrl}/products/subcategory/${category}/${i18n.language}`)
+        axios.get(`/api/products/subcategory/${category}/${i18n.language}`)
             .then(res => setProducts(res.data))
             .then(console.log(products))
             .catch(err => console.error(err));
