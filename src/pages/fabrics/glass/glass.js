@@ -5,12 +5,36 @@ import styles from '../../Shop/Shop.module.css';
 import { useTranslation } from 'react-i18next'; // Import i18n
 import './glass.css';
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import { Helmet } from "react-helmet";
 
 function Glass_Info() {
     const { t } = useTranslation(); // Hook do tłumaczenia
 
     return(
         <>
+        <Helmet>
+                <title>{t("page_titles.fabrics.glass")}</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+            </Helmet>
             <main className="Main_Glass">
             <section className="glass-fabric">
             <div className="container">

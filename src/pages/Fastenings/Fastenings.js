@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import Navbar_v2 from '../../components/Navbar_v2/Navbar';
 import style from './Fastenings.module.css'
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 
 function FasteningsInfo(){
@@ -68,7 +69,32 @@ function FasteningsInfo(){
   }, []);
 
   return(
+    
     <>
+    
+    <Helmet>
+                <title>{t("page_titles.Fastenings")}</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+            </Helmet>
     <div className={style.FasteningsInfoContainer}>
       <div className={style.Hero}>
         <h1>{t('Fastenings.hero.title')}</h1>

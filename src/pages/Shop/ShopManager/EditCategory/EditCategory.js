@@ -5,9 +5,10 @@ import style from './EditCategory.module.css'
 import axios from "axios";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 export default function EditCategory(){
-
+    
     const apiUrl = process.env.REACT_APP_API_URL;
     const [categories, setCategores] = useState([]);
     const [show, setShow] = useState(false);
@@ -22,7 +23,7 @@ export default function EditCategory(){
         photo: null
     })
     const [productsbysubcat, setproductsbysubcat] = useState(new Map())
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -143,6 +144,29 @@ export default function EditCategory(){
 
     return(
         <>
+        <Helmet>
+          <title>{t("page_titles.Shop.ShopManager.EditCategory")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+        </Helmet>
         <Navbar_v2/>
         <div className={style.EditCategoryContainer}>
             

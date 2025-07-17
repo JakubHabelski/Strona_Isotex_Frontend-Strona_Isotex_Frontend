@@ -8,6 +8,7 @@ import styles from './Product_list.module.css';
 import { useLocalStorage } from "../../../utils/localStorage";
 import { useTranslation } from "react-i18next"; // Dodajemy hook i18next
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import { Helmet } from "react-helmet";
 
 function ProductList_Get() {
     const { category } = useParams();
@@ -58,6 +59,29 @@ function ProductList_Get() {
 
     return (
         <>
+        <Helmet>
+          <title>{t("page_titles.Shop.Product_Detail")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+      </Helmet>
             <h1>{t('products.title', { category: translatedCategory })}</h1>
 
             <div className={styles.grid_container}>

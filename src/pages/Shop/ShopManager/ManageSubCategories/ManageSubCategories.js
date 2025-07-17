@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
+import { Helmet } from 'react-helmet';
 
 export default function ManageSubCategories(){
     const apiUrl = process.env.REACT_APP_API_URL;
@@ -84,7 +85,29 @@ export default function ManageSubCategories(){
 
     return(
         <>
-
+        <Helmet>
+          <title>{t("page_titles.Shop.ShopManager.ManageSubCategories")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+        </Helmet>
         <Form onSubmit={handleSubmit}>
             <Form.Group className='mb-3'>
                 <Form.Label>Dodaj podkategorię</Form.Label>

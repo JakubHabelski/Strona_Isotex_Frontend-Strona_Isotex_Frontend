@@ -5,6 +5,8 @@ import style from './ManageCategories.module.css'
 import { useState } from "react";
 import { form } from "motion/react-client";
 import axios from "axios";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -14,7 +16,7 @@ import axios from "axios";
 export default function ManageCategories(){
     
     const apiUrl = process.env.REACT_APP_API_URL;
-
+    const {t} = useTranslation();
     const [categoryFrom, setCategoryForm] = useState({
         LabelPL: "",
         LabelEN: "",
@@ -64,6 +66,29 @@ export default function ManageCategories(){
 
     return (
         <>
+        <Helmet>
+          <title>{t("page_titles.Shop.ShopManager.ManageCategories")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+        </Helmet>
         <Navbar_v2></Navbar_v2>
         <div className={style.ManageCategoriesForm}>
             <Form onSubmit={handleSubmit}>

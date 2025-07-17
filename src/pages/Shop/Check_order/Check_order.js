@@ -6,11 +6,12 @@ import { Button, Form, Table } from "react-bootstrap";
 import style from "./Check_order.module.css"
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 
 function OrderInfo(){
    // const { orderid } = useParams();
-    const { i18n } = useTranslation();
+    const {t, i18n } = useTranslation();
 
     const [OrderInfo, SetOrderInfo] = useState({});
     const [form_order_id, Setfrom_order_id] = useState("");
@@ -48,7 +49,29 @@ function OrderInfo(){
 
     return(
         <>
-
+        <Helmet>
+                <title>{t("page_titles.Shop.Check_order")}</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+            </Helmet>
         <div style={{marginTop:"200px"}}>
         <Form onSubmit={handleSubmit} className={style.CustomerInfo} style={{marginTop: "32px"}}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

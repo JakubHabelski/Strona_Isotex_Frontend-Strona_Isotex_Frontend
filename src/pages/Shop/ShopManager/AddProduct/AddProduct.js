@@ -4,10 +4,36 @@ import Navbar_v2 from "../../../../components/Navbar_v2/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import style from "./AddProduct.module.css";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 export default function AddProduct() {
+  const {t} = useTranslation();
   return (
     <>
+    <Helmet>
+          <title>{t("page_titles.Shop.ShopManager.AddProduct")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+      </Helmet>
       <Navbar_v2 />
       <AddProductForm />
       <Footer />
@@ -111,6 +137,7 @@ function AddProductForm() {
 
   return (
     <>
+    
       <h1>Dodaj produkt</h1>
       <Form onSubmit={handleSubmit} className={style.AddProductForm}>
         <Form.Group className="mb-3">

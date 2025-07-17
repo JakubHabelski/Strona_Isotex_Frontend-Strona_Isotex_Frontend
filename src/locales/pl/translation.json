@@ -1,4 +1,54 @@
 {
+  "page_titles": {
+    "home" : "Isotex Group - Izolacje Termiczne",
+    "AboutUs":{
+      "AboutUs": "Isotex Group - O nas",
+      "OrderProcedure": "",
+      "Technology": "Isotex Group - Technologia"      
+    },
+    "Certificate": "Isotex Group - Certyfikaty",
+    "Contact": "Isotex Group - Kontakt",
+    "fabrics":{
+      "aramid": "Isotex Group - Tkaniny Aramidowe",
+      "glass": "Isotex Group - Tkaniny Szklane",
+      "main_fabrics": "Isotex Group - Tkaniny"
+    },
+    "Fastenings": "Isotex Group - Zapięcia",
+    "filling":{
+      "ceramic_wool": "Isotex Group - Wełny Ceramiczne",
+      "glass_mat": "Isotex Group - Maty Szklane",
+      "mineral_wool" : "Isotex Group - Wełny Mineralne",
+      "filling": "Isotex Group - Wypełnienia"
+    },
+    "JoinUsPage" : "Isotex Group - Dołącz do nas",
+    "PrivacyPolicy": "Isotex Group - Polityka prywatności",
+    "Shop": {
+      "Check_order": "Sprawdzanie Zamówienia",
+      "Mattress": "",
+      "OrderList": "Lista wszystkich zamówień",
+      "Product_Detail": "Isotex Group - Szczegóły produktu",
+      "Product_List": "Lista wszystkich produktów",
+      "ShopManager" : {
+        "ShopManager": "zarządzanie sklepem",
+        "AddProduct": "Dodawanie produktów",
+        "EditCategory": "Edycja kategorii",
+        "EditProducts": "Edycja produktów",
+        "EditSubCategory": "Edytcja podkategorii",
+        "ManageCategories": "Dodawanie kateogrii",
+        "ManageSubCategories": "Dodawanie podkategorii"
+      },
+      "Success_payment": "Zakup udany",
+      "Cart": "Isotex Group - Koszyk",
+      "Sending" : "Isotex Group - Podsumowanie zamówienia",
+      "Shop_v2":{
+        "MainPageShop": "Isotex Group - Sklep"
+      },
+      "TestPage":{
+
+      }
+    }
+  },
+
     "header": {
       "title": "Witamy w IsoTex"
     },

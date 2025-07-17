@@ -132,6 +132,7 @@ function ProductsList() {
 function Shop() {
   return (
     <>
+    
     <NavbarMain></NavbarMain>
     <ProductsList></ProductsList>
     <Footer></Footer>

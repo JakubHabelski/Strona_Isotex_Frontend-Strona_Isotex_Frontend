@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'; // Importujemy hook i18n
 import Filling_List from "../../../components/filling_list/filling_list"
 import FabricsList from "../../../components/fabrics_list/fabrics_list"
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import { Helmet } from "react-helmet";
 
 function redirectToPage(page) {
     window.location.href = page; // względna ścieżka w Twojej aplikacji
@@ -16,6 +17,7 @@ function Filling_Info() {
 
     return (
         <>
+        
         <div style={{marginTop: "200px"}}>
 <Card className={`bg-dark text-white ${style.card_extra}`}>
                 <Card.Img src="/assets/whatsapp/IMG-20250528-WA0069.jpg" alt="Card image" className={`${style.card_img_extra}`} />
@@ -87,8 +89,33 @@ function Filling_Info() {
 }
 
 export default function Filling() {
+     const { t } = useTranslation();
+    
     return (
         <>
+        <Helmet>
+                <title>{t("page_titles.filling.filling")}</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+            </Helmet>
             <Navbar_v2></Navbar_v2>
             <Filling_Info />
             <Footer />

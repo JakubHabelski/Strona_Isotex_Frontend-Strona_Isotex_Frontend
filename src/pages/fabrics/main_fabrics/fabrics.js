@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import FabricsList from '../../../components/fabrics_list/fabrics_list';
 import Footer from '../../../components/Footer';
 import NavbarMain from '../../../components/Navbar/Navbar';
@@ -48,8 +49,32 @@ function Fabrics_Info() {
 
 
  function Fabrics() {
+  const { t } = useTranslation();
     return(
         <>
+        <Helmet>
+                <title>{t("page_titles.fabrics.main_fabrics")}</title>
+                <link rel="icon" type="image/png" href="/assets/logo.png" />
+                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+                <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Isotex Group Sklep",
+                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Isotex Group",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                            }
+                        }
+                    }
+                `}</script>
+            </Helmet>
         <Navbar_v2></Navbar_v2>
         <Fabrics_Info/>
         

@@ -1,4 +1,51 @@
 {
+  "page_titles": {
+  "home": "Isotex Group - Thermal Insulation",
+  "AboutUs": {
+    "AboutUs": "Isotex Group - About Us",
+    "OrderProcedure": "",
+    "Technology": "Isotex Group - Technology"
+  },
+  "Certificate": "Isotex Group - Certificates",
+  "Contact": "Isotex Group - Contact",
+  "fabrics": {
+    "aramid": "Isotex Group - Aramid Fabrics",
+    "glass": "Isotex Group - Glass Fabrics",
+    "main_fabrics": "Isotex Group - Fabrics"
+  },
+  "Fastenings": "Isotex Group - Fastenings",
+  "filling": {
+    "ceramic_wool": "Isotex Group - Ceramic Wool",
+    "filling_main": "Isotex Group - Fillings",
+    "glass_mat": "Isotex Group - Glass Mats",
+    "mineral_wool": "Isotex Group - Mineral Wool"
+  },
+  "JoinUsPage": "Isotex Group - Join Us",
+  "PrivacyPolicy": "Isotex Group - Privacy Policy",
+  "Shop": {
+    "Check_order": "Check Order",
+    "Mattress": "",
+    "OrderList": "List of All Orders",
+    "Product_Detail": "",
+    "Product_List": "Isotex Group - Product Details",
+    "ShopManager": {
+      "ShopManager": "Shop Management",
+      "AddProduct": "Add Products",
+      "EditCategory": "Edit Category",
+      "EditProducts": "Edit Products",
+      "EditSubCategory": "Edit Subcategory",
+      "ManageCategories": "Manage Categories",
+      "ManageSubCategories": "Manage Subcategories"
+    },
+    "Success_payment": "Purchase Successful",
+    "Cart": "Isotex Group - Cart",
+    "Sending": "Isotex Group - Order Summary",
+    "Shop_v2": {
+      "MainPageShop": "Isotex Group - Shop"
+    },
+    "TestPage": {}
+  }
+},
     "header": {
       "title": "Welcome to IsoTex"
     },

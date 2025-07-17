@@ -4,12 +4,14 @@ import { Button, Table } from "react-bootstrap";
 import styles from "./OrdersList.module.css";
 import Footer from "../../../components/Footer";
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 export default function OrdersList() {
   const apiUrl = process.env.REACT_APP_API_URL || "http://testfunkcjonalonscisklepu.pl/api";
   const [allOrders, setAllOrders] = useState([]);
   const [showOrderDetails, setShowOrderDetails] = useState(new Map());
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     axios
       .get(`/api/getOrders`)
@@ -38,6 +40,29 @@ export default function OrdersList() {
 
   return (
     <>
+    <Helmet>
+        <title>{t("page_titles.Shop.OrderList")}</title>
+        <link rel="icon" type="image/png" href="/assets/logo.png" />
+        <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+        <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+        <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">{`
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Isotex Group Sklep",
+                "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Isotex Group",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                    }
+                }
+            }
+        `}</script>
+    </Helmet>
     <Navbar_v2/>
     <div className={styles.container}>
       <h2 className={styles.title}>Lista zamówień</h2>

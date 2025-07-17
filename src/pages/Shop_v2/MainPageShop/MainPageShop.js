@@ -308,10 +308,13 @@ function MainPageShopMain() {
         }}
       >
         <Card.Img
-          variant="top"
-          src={product.imageUrl}
-          style={{  objectFit: "cover" }}
-          onClick={() => handleImageClick(product.imageUrl, product.name)}
+            variant="top"
+            src={`/api/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
+            alt={product.name}
+            className="img-fluid"
+            style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
+            loading="lazy"
+            onClick={() => handleImageClick(product.imageUrl, product.name)}
         />
       </div>
       <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
@@ -417,7 +420,7 @@ function MainPageShopMain() {
           <div style={{
             gridColumn: "1/-1",
             display: "flex",
-            alignItems: "center",
+            alignItems: "center",  
             justifyContent: "center",
             minHeight: 200
           }}>
@@ -431,7 +434,7 @@ function MainPageShopMain() {
   return (
     <>
     <Helmet>
-                <title>Isotex Group - Sklep z Tkaninami i Matami Izolacyjnymi</title>
+                <title>{t("page_titles.Shop.Shop_v2.MainPageShop")}</title>
                 <link rel="icon" type="image/png" href="/assets/logo.png" />
                 <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
                 <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
@@ -566,7 +569,13 @@ function MainPageShopMain() {
           <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={modalImage} alt="Product" className={style.modal_custom_img} />
+          <img 
+            src={modalImage} 
+            alt={modalTitle} 
+            className={style.modal_custom_img} 
+            style={{ maxWidth: '100%', height: 'auto', maxHeight: '70vh' }} 
+            loading="lazy"
+        />
         </Modal.Body>
       </Modal>
       <ToastContainer position="top-end" className="p-3" style={{ marginTop: "50px" }}>

@@ -5,11 +5,13 @@ import axios from "axios";
 import { Button, Form, FormControl, Modal, Table } from "react-bootstrap";
 import { supabase } from "../../../../utils/supabase";
 import style from "../AddProduct/AddProduct.module.css"
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 
 function EditProductsList(){
     const apiUrl = process.env.REACT_APP_API_URL;
-
+    const {t} = useTranslation();
     const [products, setProducts] = useState([]);
     const [editRow, setEditRow] = useState(null);
     const [selectedCategory, setselectedCategory] = useState("");
@@ -210,6 +212,29 @@ function EditProductsList(){
 
     return(
         <>
+        <Helmet>
+          <title>{t("page_titles.Shop.ShopManager.EditProducts")}</title>
+          <link rel="icon" type="image/png" href="/assets/logo.png" />
+          <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
+          <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+          <meta name="robots" content="index, follow" />
+          <script type="application/ld+json">{`
+              {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": "Isotex Group Sklep",
+                  "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
+                  "publisher": {
+                      "@type": "Organization",
+                      "name": "Isotex Group",
+                      "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
+                      }
+                  }
+              }
+          `}</script>
+        </Helmet>
         <Table striped bordered hover style={{marginTop: "200px"}}>
             <thead style={{position: "sticky", top: "181px"}}>
                 <tr>
