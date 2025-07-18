@@ -7,10 +7,11 @@ import { supabase } from "../../../../utils/supabase";
 import style from "../AddProduct/AddProduct.module.css"
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import apiURL from '../../../../config';
 
 
 function EditProductsList(){
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const {t} = useTranslation();
     const [products, setProducts] = useState([]);
     const [editRow, setEditRow] = useState(null);
@@ -35,7 +36,7 @@ function EditProductsList(){
         setShowDeleteModal(true);
     };
     const fetchProducts = () => {
-        axios.get(`/api/list`)
+        axios.get(`${apiURL}/list`)
             .then(res => setProducts(res.data))
             .catch(err => console.error(err));
     };
@@ -43,7 +44,7 @@ function EditProductsList(){
 
 
     useEffect(() => {
-    axios.get(`/api/Category_API/GetCategories`)
+    axios.get(`${apiURL}/Category_API/GetCategories`)
         .then((response) => {
         setCategories(response.data);
         })
@@ -53,7 +54,7 @@ function EditProductsList(){
     }, []);
     useEffect(() => {
     if (selectedCat) {
-        axios.get(`/api/Category_API/GetSubCategoriesByCategory`, {
+        axios.get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
         params: { CategoryId: selectedCat }
         })
         .then((response) => {
@@ -67,7 +68,7 @@ function EditProductsList(){
 
     async function handleDelete(id) {
         try {
-            await axios.delete(`/api/Product_API/deleteProduct?id=${id}`)
+            await axios.delete(`${apiURL}/Product_API/deleteProduct?id=${id}`)
             //await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
                 .then(res => {
                     if(res.status==200){
@@ -87,7 +88,7 @@ function EditProductsList(){
 
 
 
-    const request = `/api/Product_API/updateProduct`;
+    const request = `${apiURL}/Product_API/updateProduct`;
    // const request = `http://localhost:8080/Product_API/updateProduct`;
     const [formData, setFormData] = useState({
       id: "",
@@ -106,7 +107,7 @@ function EditProductsList(){
 
     useEffect(() => {
         fetchProducts();
-    }, [apiUrl]);
+    }, [apiURL]);
     console.log(products)
 
     const handleEditClick = (product) => {

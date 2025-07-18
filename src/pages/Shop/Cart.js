@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Cart.module.css";
 import Navbar_v2 from "../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
+import apiURL from '../../config';
 
 function Cart_List() {
     const { t, i18n } = useTranslation();
@@ -18,7 +19,7 @@ function Cart_List() {
     const [error, setError] = useState(null);
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const navigate = useNavigate();
 
     // Śledzimy IDs produktów, żeby wykryć dodanie/usunięcie
@@ -38,7 +39,7 @@ function Cart_List() {
                 let ids = cartItems.map(item => item.id).join(",");
                 ids = ids.replace(/^,/,'')
                 console.log("Fetching products for IDs:", ids); // Debugowanie
-                const res = await axios.get(`/api/products/multiple?ids=${ids}&locale=${i18n.language}`);
+                const res = await axios.get(`${apiURL}/products/multiple?ids=${ids}&locale=${i18n.language}`);
                 console.log("API response:", res.data); // Debugowanie
                 const fetchedProducts = res.data
                     .filter(product => cartItems.some(item => item.id === product.id))
@@ -58,7 +59,7 @@ function Cart_List() {
         };
 
         fetchProducts();
-    }, [cartItemIds, i18n.language, apiUrl, t]); // Zależność od cartItemIds, nie cartItems
+    }, [cartItemIds, i18n.language, apiURL, t]); // Zależność od cartItemIds, nie cartItems
 
     // Synchronizacja products.quantity z cartItems.quantity
     useEffect(() => {

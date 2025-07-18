@@ -6,10 +6,11 @@ import axios from 'axios';
 import { Accordion, Button, Card, Form, Modal, Table, useAccordionButton } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
+import apiURL from '../../../../config';
 
 export default function EditSubCagegory(){
     const {t} = useTranslation();
-    const apiUrl = process.env.REACT_APP_API_URL;
+    //const apiUrl = process.env.REACT_APP_API_URL;
     const [categories, setCategores] = useState([]);
     const [openedCatId, setOpenedCatId] = useState(null);
     const [subcategories, setSubcategories] = useState({}); // { [catId]: [subcat, ...] }
@@ -37,7 +38,7 @@ export default function EditSubCagegory(){
 
     // Pobierz kategorie
     useEffect(() =>{
-        axios.get(`/api/Category_API/GetCategories`)
+        axios.get(`${apiURL}/Category_API/GetCategories`)
         .then((response) =>{
             setCategores(response.data);
         })
@@ -46,7 +47,7 @@ export default function EditSubCagegory(){
     // Pobierz subkategorie, gdy otwierasz kategorię
     useEffect(() => {
         if (openedCatId && !subcategories[openedCatId]) {
-            axios.get(`/api/Category_API/GetSubCategoriesByCategory`, {
+            axios.get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
                 params: { CategoryId: openedCatId }
             })
             .then((response) => {
@@ -57,7 +58,7 @@ export default function EditSubCagegory(){
                 }));
             });
         }
-    }, [openedCatId, subcategories, apiUrl]);
+    }, [openedCatId, subcategories, apiURL]);
 
     function CustomToggle({ children, eventKey, onClick }) {
         const decoratedOnClick = useAccordionButton(eventKey, onClick);
@@ -115,7 +116,7 @@ export default function EditSubCagegory(){
         }
 
         try {
-            await axios.put(`/api/Category_API/EditSubCategory`, formDataSubmit, {
+            await axios.put(`${apiURL}/Category_API/EditSubCategory`, formDataSubmit, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -128,7 +129,7 @@ export default function EditSubCagegory(){
     }
     async function handleDelete(id) {
         try {
-            await axios.delete(`/api/Category_API/DeleteSubCategory?id=${id}`);
+            await axios.delete(`${apiURL}/Category_API/DeleteSubCategory?id=${id}`);
             console.log('Podkategoria usunięta pomyślnie');
             // Aktualizuj stan subcategories
             setSubcategories(prev => ({

@@ -3,11 +3,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { Form } from "react-bootstrap";
 import ParallaxImage from "../../components/ParallaxImage/ParallaxImage";
-
+import apiURL from '../../config';
 
 export default function TestPage() { 
 
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const [color, setColor] = useState("");
     const [categories, setCategories] = useState([]);
     const [subcategories, setSubcategories] = useState([]);
@@ -24,7 +24,7 @@ export default function TestPage() {
 
     useEffect(() => {
       //axios.get('http://192.168.68.103:8080/Category_API/GetCategories')
-      axios.get(`/api/Category_API/GetCategories`)
+      axios.get(`${apiURL}/Category_API/GetCategories`)
         .then((response) => {
           console.log(response.data);
           setCategories(response.data);
@@ -39,7 +39,7 @@ export default function TestPage() {
 
     useEffect(() =>{
       //axios.get('http://192.168.68.103:8080/Category_API/GetSubCategories')
-      axios.get(`/api/Category_API/GetSubCategories`)
+      axios.get(`${apiURL}/Category_API/GetSubCategories`)
         .then((response) =>{
           console.log(response.data)
           setSubcategories(response.data)
@@ -52,7 +52,7 @@ export default function TestPage() {
 
     useEffect(() =>{
       //if(selectedCat){axios.get('http://192.168.68.103:8080/Category_API/GetSubCategoriesByCategory', {
-      if(selectedCat){axios.get(`/api/Category_API/GetSubCategoriesByCategory`, {
+      if(selectedCat){axios.get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
         params:{
           CategoryId: selectedCat
         }

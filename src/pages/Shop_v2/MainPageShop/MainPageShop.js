@@ -9,9 +9,10 @@ import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
 import axios from "axios";
 import { useLocalStorage } from "../../../utils/localStorage";
 import { Helmet } from "react-helmet";
+import apiURL from '../../../config';
 
 function MainPageShopMain() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+ // const apiUrl = process.env.REACT_APP_API_URL;
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
   const [products, setProducts] = useState([]);
@@ -48,7 +49,7 @@ function MainPageShopMain() {
   useEffect(() => {
     setCcategoriesLoading(true);
     axios
-      .get(`/api/Category_API/GetCategories`)
+      .get(`${apiURL}/Category_API/GetCategories`)
       .then(async (response) => {
         if (!Array.isArray(response.data)) {
           throw new Error("Dane kategorii nie są tablicą");
@@ -57,7 +58,7 @@ function MainPageShopMain() {
         const categoriesWithSub = await Promise.all(
           categoriesData.map(async (cat) => {
             const subRes = await axios
-              .get(`api/Category_API/GetSubCategoriesByCategory`, {
+              .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
                 params: { CategoryId: cat.id },
               })
               .catch(() => ({ data: [] }));
@@ -119,7 +120,7 @@ function MainPageShopMain() {
     if (selectedCategory) {
       setSubcategoriesLoading(true);
       axios
-        .get(`api/Category_API/GetSubCategoriesByCategory`, {
+        .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
           params: { CategoryId: selectedCategory.key },
         })
         .then((response) => {
@@ -157,7 +158,7 @@ function MainPageShopMain() {
     if (selectedSubcategory) {
       setProductsLoading(true);
       axios
-        .get(`api/products/subcategory/${selectedSubcategory}/${i18n.language}`)
+        .get(`${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
         .then((response) => {
           setPendingProducts(response.data);
         })
@@ -309,7 +310,7 @@ function MainPageShopMain() {
       >
         <Card.Img
             variant="top"
-            src={`/api/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
+            src={`${apiURL}/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
             alt={product.name}
             className="img-fluid"
             style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}

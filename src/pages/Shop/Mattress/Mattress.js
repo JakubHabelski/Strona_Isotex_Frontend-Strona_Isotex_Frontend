@@ -8,7 +8,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import { Container } from 'react-bootstrap';
 import {   useLocalStorage } from "../../../utils/localStorage";
 import { Toast, ToastContainer } from 'react-bootstrap';
-
+import apiURL from '../../config';
 
 
 function ProductsList() {
@@ -25,12 +25,12 @@ function ProductsList() {
         
   const [product_list, setProductName] = useLocalStorage("product_list", [])
   console.log({product_list});
-  const apiUrl = process.env.REACT_APP_API_URL;
-  console.log(`/api/list`)
+  //const apiUrl = process.env.REACT_APP_API_URL;
+  //console.log(`/api/list`)
 
   // Pobranie danych o produktach z API
   useEffect(() => {
-    fetch(`/api/list`)
+    fetch(`${apiURL}/list`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

@@ -7,7 +7,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useTranslation } from "react-i18next"
 import { Helmet } from "react-helmet"
-
+import apiURL from '../../config';
 
 
 
@@ -15,8 +15,8 @@ import { Helmet } from "react-helmet"
 
 function ContactUs() {
     const { t } = useTranslation();
-    const apiUrl = process.env.REACT_APP_API_URL;
-    const request = `/api/contact`;
+   // const apiUrl = process.env.REACT_APP_API_URL;
+    const request = `${apiURL}/contact`;
 
 
     const [formData, setFormData] = useState({

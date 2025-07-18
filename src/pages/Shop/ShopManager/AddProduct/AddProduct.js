@@ -6,6 +6,7 @@ import axios from "axios";
 import style from "./AddProduct.module.css";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import apiURL from '../../../../config';
 
 export default function AddProduct() {
   const {t} = useTranslation();
@@ -42,7 +43,7 @@ export default function AddProduct() {
 }
 
 function AddProductForm() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+ // const apiUrl = process.env.REACT_APP_API_URL;
   //const request = "http://localhost:8080/Product_API/addproduct";
 
   const [categories, setCategories] = useState([]);
@@ -66,22 +67,22 @@ function AddProductForm() {
   // Fetch categories
   useEffect(() => {
     axios
-      .get(`/api/Category_API/GetCategories`)
+      .get(`${apiURL}/Category_API/GetCategories`)
       .then((response) => setCategories(response.data))
       .catch((error) => console.error("Błąd podczas pobierania kategorii:", error));
-  }, [apiUrl]);
+  }, [apiURL]);
 
   // Fetch subcategories by selected category
   useEffect(() => {
     if (form.category) {
       axios
-        .get(`/api/Category_API/GetSubCategoriesByCategory`, {
+        .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
           params: { CategoryId: form.category },
         })
         .then((response) => setSubcategoriesByCat(response.data))
         .catch((error) => setSubcategoriesByCat([]));
     }
-  }, [form.category, apiUrl]);
+  }, [form.category, apiURL]);
 
   function handleImage(e) {
     setForm((prev) => ({
@@ -126,7 +127,7 @@ function AddProductForm() {
     }
 
     try {
-      await axios.post(`/api/Product_API/addproduct`, formData, {
+      await axios.post(`${apiURL}/Product_API/addproduct`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Produkt dodany.");

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
-
+import apiURL from '../../config';
 
 function JoinUsPageForm() {
     const { t } = useTranslation();
@@ -15,8 +15,8 @@ function JoinUsPageForm() {
     const [show, setShow] = useState(false);
     const [fullscreen, setFullscreen] = useState('md-down');
 
-    const apiUrl = process.env.REACT_APP_API_URL;
-    const request = `/api/Contact_API/apply`;
+  //  const apiUrl = process.env.REACT_APP_API_URL;
+    const request = `${apiURL}/Contact_API/apply`;
 
     const [formData, setFormData] = useState({
         name : '',

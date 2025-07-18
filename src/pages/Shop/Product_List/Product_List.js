@@ -9,12 +9,13 @@ import { useLocalStorage } from "../../../utils/localStorage";
 import { useTranslation } from "react-i18next"; // Dodajemy hook i18next
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
+import apiURL from '../../../config';
 
 function ProductList_Get() {
     const { category } = useParams();
     const { i18n, t } = useTranslation(); // Pobieramy i18n i t
     const [products, setProducts] = useState([]);
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const [showModal, setShowModal] = useState(false);
     const [modalImage, setModalImage] = useState('');
     const [modalTitle, setModalTitle] = useState('');
@@ -35,13 +36,13 @@ function ProductList_Get() {
         setModalTitle('');
     };
 
-    console.log("Api URL:", apiUrl); // Debugging line
+    console.log("Api URL:", apiURL); // Debugging line
     useEffect(() => {
-        axios.get(`/api/products/subcategory/${category}/${i18n.language}`)
+        axios.get(`${apiURL}/products/subcategory/${category}/${i18n.language}`)
             .then(res => setProducts(res.data))
             .then(console.log(products))
             .catch(err => console.error(err));
-    }, [category, i18n.language, apiUrl]); // Dodajemy i18n.language jako zależność
+    }, [category, i18n.language, apiURL]); // Dodajemy i18n.language jako zależność
 
     // ProductList_Get (fragment)
     const addToCart = (product) => {

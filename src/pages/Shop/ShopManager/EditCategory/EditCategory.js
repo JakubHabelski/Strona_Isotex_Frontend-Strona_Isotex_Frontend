@@ -6,10 +6,11 @@ import axios from "axios";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import apiURL from '../../../../config';
 
 export default function EditCategory(){
     
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const [categories, setCategores] = useState([]);
     const [show, setShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -35,8 +36,7 @@ export default function EditCategory(){
     };
 
     useEffect(() =>{
-        axios.get(`/api/Category_API/GetCategories`)
-        //axios.get(`/api/Category_API/GetCategories`)
+        axios.get(`${apiURL}/Category_API/GetCategories`)
         .then(async(response) =>{
             console.log(response.data)
             setCategores(response.data);
@@ -46,20 +46,20 @@ export default function EditCategory(){
     useEffect(() => {
         if (DeleteCatID) {
         axios
-            .get(`/api/Category_API/GetSubCategoriesByCategory`, {
+            .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
             params: { CategoryId: DeleteCatID },
             })
             .then((response) => setSubcategoriesByCat(response.data))
             .catch((error) => setSubcategoriesByCat([]));
         }
-    }, [DeleteCatID, apiUrl]);
+    }, [DeleteCatID, apiURL]);
 
     // 2. Pobierz produkty po zmianie subcategoriesByCat
     useEffect(() => {
         if (subcategoriesByCat.length > 0) {
             subcategoriesByCat.forEach(subcat => {
                 axios
-                    .get(`/api/products/subcategory/${subcat.id}/${i18n.language}`)
+                    .get(`${apiURL}/products/subcategory/${subcat.id}/${i18n.language}`)
                     .then((response) => {
                         setproductsbysubcat(prev => {
                             const newMap = new Map(prev);
@@ -69,7 +69,7 @@ export default function EditCategory(){
                     });
             });
         }
-    }, [subcategoriesByCat, apiUrl, i18n.language]);
+    }, [subcategoriesByCat, apiURL, i18n.language]);
 
     const editcat = (cat) =>{
         handleShow();
@@ -113,7 +113,7 @@ export default function EditCategory(){
     }
 
     try {
-        await axios.put(`/api/Category_API/EditCategory`, formDataSubmit, {
+        await axios.put(`${apiURL}/Category_API/EditCategory`, formDataSubmit, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -127,7 +127,7 @@ export default function EditCategory(){
 
     async function DeleteCategory(id) {
         try {
-            await axios.delete(`/api/Category_API/DeleteCategory?id=${id}`);
+            await axios.delete(`${apiURL}/Category_API/DeleteCategory?id=${id}`);
             console.log(id)
            // await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
             

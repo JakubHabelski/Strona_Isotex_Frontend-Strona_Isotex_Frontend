@@ -9,6 +9,7 @@ import styles from "./Product_Detail.module.css";
 import { useTranslation } from "react-i18next";
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
+import apiURL from '../../../config';
 
 function Product_Detail_Get() {
     const { item } = useParams();
@@ -16,12 +17,12 @@ function Product_Detail_Get() {
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
     const [product_list, setProductName] = useLocalStorage("cartItems", []);
-    const apiUrl = process.env.REACT_APP_API_URL;
+    //const apiUrl = process.env.REACT_APP_API_URL;
     const { t, i18n } = useTranslation();
 
 
     useEffect(() => {
-      axios.get(`/api/product/${item}`, {
+      axios.get(`${apiURL}/product/${item}`, {
         headers: {
           "Accept-Language": i18n.language // np. "pl", "en", "de"
         }

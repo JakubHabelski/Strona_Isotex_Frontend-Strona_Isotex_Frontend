@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import apiURL from '../../../config';
 
 export default function OrdersList() {
   const apiUrl = process.env.REACT_APP_API_URL || "http://testfunkcjonalonscisklepu.pl/api";
@@ -14,7 +15,7 @@ export default function OrdersList() {
   const { t, i18n } = useTranslation();
   useEffect(() => {
     axios
-      .get(`/api/getOrders`)
+      .get(`${apiURL}/getOrders`)
       .then((response) => {
         console.log("Dane zamówień:", response.data);
         setAllOrders(response.data);

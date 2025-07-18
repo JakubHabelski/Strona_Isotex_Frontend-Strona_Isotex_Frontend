@@ -6,12 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
 import { Helmet } from 'react-helmet';
+import apiURL from '../../../../config';
 
 export default function ManageSubCategories(){
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const navigate = useNavigate();
     const { t, i18n } = useTranslation();
-    console.log(apiUrl)
+   
     const [categories, setCategories] = useState([])
     const [selectedCategory, setSelectedCategory] = useState('')
 
@@ -26,7 +27,7 @@ export default function ManageSubCategories(){
     })
 
     useEffect(() =>{
-        axios.get(`/api/Category_API/GetCategories`)
+        axios.get(`${apiURL}/Category_API/GetCategories`)
             .then(async(response) =>{
                 const categoriesData = response.data;
                 console.log(categoriesData)
@@ -71,7 +72,7 @@ export default function ManageSubCategories(){
         console.log(formData.get('categoryId'))
 
         try{
-            await axios.post(`/api/Category_API/AddSubCategory`, formData, {
+            await axios.post(`${apiURL}/Category_API/AddSubCategory`, formData, {
              headers: {
                     'Content-Type': 'multipart/form-data'
                 }

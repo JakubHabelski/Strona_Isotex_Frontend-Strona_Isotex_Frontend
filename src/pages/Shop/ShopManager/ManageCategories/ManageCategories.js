@@ -7,7 +7,7 @@ import { form } from "motion/react-client";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-
+import apiURL from '../../../../config';
 
 
 
@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 export default function ManageCategories(){
     
-    const apiUrl = process.env.REACT_APP_API_URL;
+   // const apiUrl = process.env.REACT_APP_API_URL;
     const {t} = useTranslation();
     const [categoryFrom, setCategoryForm] = useState({
         LabelPL: "",
@@ -52,7 +52,7 @@ export default function ManageCategories(){
         }
 
         try {
-            await axios.post(`/api/Category_API/AddCategory`, formData, {
+            await axios.post(`${apiURL}/Category_API/AddCategory`, formData, {
             //await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
