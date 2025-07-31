@@ -173,7 +173,7 @@ function EditProductsList(){
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        const token = localStorage.getItem("token");
   
 
         const formDataPost = new FormData();
@@ -201,7 +201,8 @@ function EditProductsList(){
 
         try {
             await axios.put(request, formDataPost, {
-                headers: { "Content-Type": "multipart/form-data" }
+                headers: { "Content-Type": "multipart/form-data",
+                'Authorization': `Bearer ${token}` }
             });
             console.log("Produkt zaktualizowany.");
             setShow(false);

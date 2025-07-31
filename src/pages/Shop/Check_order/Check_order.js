@@ -7,6 +7,7 @@ import style from "./Check_order.module.css"
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import apiURL from "../../../config";
 
 
 function OrderInfo(){
@@ -28,7 +29,7 @@ function OrderInfo(){
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const res = await axios.get(`/api/test_api/getOrder/${form_order_id}`);
+        const res = await axios.get(`${apiURL}/test_api/getOrder/${form_order_id}`);
         if (res.data && Object.keys(res.data).length > 0) {
         SetOrderInfo(res.data);
         setShowCustomerInfo(true);

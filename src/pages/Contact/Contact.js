@@ -8,6 +8,7 @@ import axios from "axios"
 import { useTranslation } from "react-i18next"
 import { Helmet } from "react-helmet"
 import apiURL from '../../config';
+import ReCAPTCHA from "react-google-recaptcha"
 
 
 
@@ -15,6 +16,8 @@ import apiURL from '../../config';
 
 function ContactUs() {
     const { t } = useTranslation();
+
+    const [capVal, setCapVal] = useState(null)
    // const apiUrl = process.env.REACT_APP_API_URL;
     const request = `${apiURL}/contact`;
 
@@ -88,10 +91,17 @@ function ContactUs() {
                 required
                 />
             </Form.Group>
+            <Form.Group className="mb-3">
+                <ReCAPTCHA
+                    sitekey="6LcZr5UrAAAAAAR2vs1WJqsbTYe6gr43PZF8-YJ9"
+                    onChange={(val => setCapVal(val))}
+                ></ReCAPTCHA>
+            </Form.Group>
             <Button
                 type="submit"
                 variant="outline-danger"
                 className={`${style.contactUsButton} btn`}
+                disabled={!capVal}
             >
                 {t('ContactUs.form.submit_button')}
             </Button>

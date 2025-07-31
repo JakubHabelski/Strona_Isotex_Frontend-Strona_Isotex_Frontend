@@ -40,6 +40,7 @@ export default function ManageCategories(){
     }
 
     async function handleSubmit(e) {
+        const token = localStorage.getItem("token");
         e.preventDefault();
         const formData = new FormData();
         formData.append('dto', new Blob([JSON.stringify({
@@ -55,7 +56,8 @@ export default function ManageCategories(){
             await axios.post(`${apiURL}/Category_API/AddCategory`, formData, {
             //await axios.post('http://217.154.208.129:8080/Category_API/AddCategory', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'multipart/form-data',
+                'Authorization': `Bearer ${token}`
                 }
             });
             console.log('Category added successfully');

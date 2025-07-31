@@ -10,6 +10,7 @@ import apiURL from '../../../../config';
 
 export default function AddProduct() {
   const {t} = useTranslation();
+  
   return (
     <>
     <Helmet>
@@ -100,6 +101,7 @@ function AddProductForm() {
   }
 
   async function handleSubmit(e) {
+    const token = localStorage.getItem("token");
     e.preventDefault();
     const formData = new FormData();
     formData.append(
@@ -128,7 +130,8 @@ function AddProductForm() {
 
     try {
       await axios.post(`${apiURL}/Product_API/addproduct`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { "Content-Type": "multipart/form-data", 'Authorization': `Bearer ${token}`},
+        
       });
       console.log("Produkt dodany.");
     } catch (error) {

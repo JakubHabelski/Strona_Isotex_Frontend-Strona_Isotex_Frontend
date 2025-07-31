@@ -8,12 +8,14 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import apiURL from '../../config';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function JoinUsPageForm() {
     const { t } = useTranslation();
     const [validated, setValidated] = useState(false);
     const [show, setShow] = useState(false);
     const [fullscreen, setFullscreen] = useState('md-down');
+    const [capVal, setCapVal] = useState(null)
 
   //  const apiUrl = process.env.REACT_APP_API_URL;
     const request = `${apiURL}/Contact_API/apply`;
@@ -47,9 +49,13 @@ function JoinUsPageForm() {
   
       try {
           await axios.post(request, data, {
-              headers: { "Content-Type": "multipart/form-data" }
-          });
+              
+          })
+          .then(res => {if(res.status==200){
+            window.location.reload()
+          }});
           console.log("Form submitted successfully");
+          
       } catch (error) {
           console.error("Error submitting form:", error);
       }
@@ -137,8 +143,14 @@ function JoinUsPageForm() {
               feedbackType="invalid"
             />
           </Form.Group>
+          <Form.Group className='mb-3'>
+            <ReCAPTCHA
+            sitekey="6LcZr5UrAAAAAAR2vs1WJqsbTYe6gr43PZF8-YJ9"
+            onChange={(val => setCapVal(val))}
+            />
+          </Form.Group>
   
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" disabled={!capVal}>
             {t('JoinUsPageForm.formBasicSubmit.Submit')}
           </Button>
         </Form>

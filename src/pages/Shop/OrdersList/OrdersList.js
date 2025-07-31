@@ -10,12 +10,17 @@ import apiURL from '../../../config';
 
 export default function OrdersList() {
   const apiUrl = process.env.REACT_APP_API_URL || "http://testfunkcjonalonscisklepu.pl/api";
+  const token = localStorage.getItem("token");
   const [allOrders, setAllOrders] = useState([]);
   const [showOrderDetails, setShowOrderDetails] = useState(new Map());
   const { t, i18n } = useTranslation();
   useEffect(() => {
     axios
-      .get(`${apiURL}/getOrders`)
+      .get(`${apiURL}/getOrders`, {
+             headers: {
+                'Authorization': `Bearer ${token}`
+                }
+            })
       .then((response) => {
         console.log("Dane zamówień:", response.data);
         setAllOrders(response.data);

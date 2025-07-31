@@ -98,7 +98,7 @@ export default function EditCategory(){
     }
     async function handleSubmit(e) {
     e.preventDefault();
-
+    const token = localStorage.getItem("token");
     const formDataSubmit = new FormData();
 
     formDataSubmit.append('dto', new Blob([JSON.stringify({
@@ -115,7 +115,8 @@ export default function EditCategory(){
     try {
         await axios.put(`${apiURL}/Category_API/EditCategory`, formDataSubmit, {
             headers: {
-                'Content-Type': 'multipart/form-data'
+                'Content-Type': 'multipart/form-data',
+                'Authorization': `Bearer ${token}`
             }
         });
         console.log('Category edited successfully');
