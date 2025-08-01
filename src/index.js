@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Shop from './pages/Shop/Shop';
 import Cart from './pages/Shop/Cart';
 import Sending from './pages/Shop/Sending';
 import Fabrics from './pages/fabrics/main_fabrics/fabrics';
@@ -27,7 +26,7 @@ import Success_payment from './pages/Shop/Success_payment/Success_payment';
 import CertificatePage from './pages/Certificate/CertifikatePage';
 import Check_order from './pages/Shop/Check_order/Check_order';
 import Check_order_form from './pages/Shop/Check_order/Check_order_form/Check_order_form';
-import MainPageShop from './pages/Shop_v2/MainPageShop/MainPageShop';
+import MainPageShop from './pages/Shop/MainPageShop/MainPageShop';
 import ShopManager from './pages/Shop/ShopManager/ShopManager';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Home from './pages/Home/Home';
@@ -68,7 +67,6 @@ ReactDOM.createRoot(root).render(
         <Route path="/Fastenings" element={<Fastenings />} />
 
         {/* Trasy sklepu */}
-        <Route path="/Sklep" element={<Shop />} />
         <Route path="/Sklep/:category" element={<Product_List />} />
         <Route path="/Sklep/:category/:item" element={<ProductDetail />} />
         <Route path="/Sklep/Koszyk" element={<Cart />} />

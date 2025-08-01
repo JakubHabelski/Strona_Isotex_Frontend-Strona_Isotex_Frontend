@@ -3,7 +3,6 @@ import Footer from "../../../../components/Footer";
 import Navbar_v2 from "../../../../components/Navbar_v2/Navbar";
 import axios from "axios";
 import { Button, Form, FormControl, Modal, Table } from "react-bootstrap";
-import { supabase } from "../../../../utils/supabase";
 import style from "../AddProduct/AddProduct.module.css"
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";

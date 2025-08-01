@@ -17,9 +17,11 @@ import ReCAPTCHA from "react-google-recaptcha"
 function ContactUs() {
     const { t } = useTranslation();
 
-    const [capVal, setCapVal] = useState(null)
+
+    const [capVal, setCapVal] = useState(null);
+    const [error, setError] = useState(null)
    // const apiUrl = process.env.REACT_APP_API_URL;
-    const request = `${apiURL}/contact`;
+    const request = `${apiURL}/Contact_API/contact`;
 
 
     const [formData, setFormData] = useState({
@@ -35,12 +37,22 @@ function ContactUs() {
     }
     console.log(formData)
 
-    const handleSubmit = async () =>{
+    const handleSubmit = async (event) =>{
+        let recaptchaToken;
+            try {
+                recaptchaToken = await window.grecaptcha.execute('6LcZr5UrAAAAAAR2vs1WJqsbTYe6gr43PZF8-YJ9', { action: 'contact' });
+                setCapVal(recaptchaToken);
+            } catch (err) {
+                setError(t('ContactUs.form.recaptcha.error') || 'Błąd reCAPTCHA');
+                return;
+            }
+        event.preventDefault();
         const data = new FormData();
         data.append('email', formData.email);
         data.append('topic', formData.topic);
         data.append('text', formData.text);
-
+        data.append('recaptchaToken', recaptchaToken);
+        
 
         try{
             await axios.post(request, data, {
