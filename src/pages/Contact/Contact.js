@@ -40,7 +40,7 @@ function ContactUs() {
     const handleSubmit = async (event) =>{
         let recaptchaToken;
             try {
-                recaptchaToken = await window.grecaptcha.execute('6LcZr5UrAAAAAAR2vs1WJqsbTYe6gr43PZF8-YJ9', { action: 'contact' });
+                recaptchaToken = await window.grecaptcha.execute('6Ldd1pkrAAAAAHLlNXYRTCHLbgVAVr1PLpeqCUx_', { action: 'contact' });
                 setCapVal(recaptchaToken);
             } catch (err) {
                 setError(t('ContactUs.form.recaptcha.error') || 'Błąd reCAPTCHA');
@@ -105,7 +105,7 @@ function ContactUs() {
             </Form.Group>
             <Form.Group className="mb-3">
                 <ReCAPTCHA
-                    sitekey="6LcZr5UrAAAAAAR2vs1WJqsbTYe6gr43PZF8-YJ9"
+                    sitekey="6Ldd1pkrAAAAAHLlNXYRTCHLbgVAVr1PLpeqCUx_"
                     onChange={(val => setCapVal(val))}
                 ></ReCAPTCHA>
             </Form.Group>
