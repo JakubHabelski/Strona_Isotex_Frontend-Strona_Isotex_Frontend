@@ -66,8 +66,13 @@ function EditProductsList(){
     }, [selectedCat]);
 
     async function handleDelete(id) {
+        const token = localStorage.getItem("token");
         try {
-            await axios.delete(`${apiURL}/Product_API/deleteProduct?id=${id}`)
+            await axios.delete(`${apiURL}/Product_API/deleteProduct?id=${id}`,{
+                headers:{
+                    'Authorization': `Bearer ${token}`
+                }
+            })
             //await axios.delete(`http://192.168.68.102:8080/Product_API/deleteProduct?id=${id}`)
                 .then(res => {
                     if(res.status==200){

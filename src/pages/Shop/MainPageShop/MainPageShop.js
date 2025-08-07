@@ -30,7 +30,9 @@ function MainPageShopMain() {
   const [productsLoading, setProductsLoading] = useState(false);
   const [pendingCat, setPendingCat] = useState([]);
   const [pendingSubCat, setPendingSubCat] = useState([])
-  const [pendingProducts, setPendingProducts] = useState([]);
+ // const [pendingProducts, setPendingProducts] = useState([]);
+  const [loadedImages, setLoadedImages] = useState([])
+  const [productImg, setProductImg] = useState([]);
 
 
   const listRefs = useRef({});
@@ -156,22 +158,41 @@ function MainPageShopMain() {
 
   useEffect(() => {
     if (selectedSubcategory) {
+      console.log("selectedSubcategory: " + selectedSubcategory)
       setProductsLoading(true);
       axios
         .get(`${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
         .then((response) => {
-          setPendingProducts(response.data);
-        })
-        .catch(() => {
-          setProducts([]);
+          //setPendingProducts(response.data);
+          setProducts(response.data)
+          let loaded = 0;
+          response.data.forEach((res) =>{
+            console.log(res.imageUrl)
+            // Ładuj obrazki i przypisz do tablicy productImg
+            const img = new window.Image();
+            img.src = res.imageUrl;
+            img.onload = img.onerror = () => {
+              setProductImg(prev => {
+              // Dodaj do tablicy, jeśli jeszcze nie istnieje
+              if (!prev.includes(res.imageUrl)) {
+                loaded+=1;
+                console.log(loaded)
+                if(response.data.length === loaded){
+                  console.log("bingo")
+                }
+                return [...prev, res.imageUrl];
+              }
+              return prev;
+              });
+            };
+          })          
           setProductsLoading(false);
-        });
-    } else {
-      setProducts([]);
-      setProductsLoading(false);
-    }
+        })}
+        
+    
   }, [selectedSubcategory, i18n.language]);
 
+  /*
   useEffect(() => {
     if (pendingProducts.length > 0) {
       let loaded = 0;
@@ -189,6 +210,7 @@ function MainPageShopMain() {
       });
     }
   }, [pendingProducts]);
+  */
 
   // Toggle subcategory list visibility
   const toggleList = (key) => {
@@ -310,7 +332,8 @@ function MainPageShopMain() {
       >
         <Card.Img
             variant="top"
-            src={`${apiURL}/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
+            //src={`${apiURL}/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
+            src={product.imageUrl}
             alt={product.name}
             className="img-fluid"
             style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
@@ -381,7 +404,7 @@ function MainPageShopMain() {
         justifyContent: "space-between"
       }}>
         {productsLoading ? (
-          Array.from({ length: pendingProducts.length }).map((_, idx) => (
+          Array.from({ length: products.length }).map((_, idx) => (
             <Card
               key={idx}
               className={`${style.card}`}
@@ -415,7 +438,7 @@ function MainPageShopMain() {
               <Placeholder.Button variant="primary" xs={6} style={{ margin: "15px" }} />
             </Card>
           ))
-        ) : products.length > 0 ? (
+        ) : (products.length == productImg.length) ? (
           products.map(renderProduct)
         ) : (
           <div style={{
@@ -430,6 +453,99 @@ function MainPageShopMain() {
         )}
       </div>
     );
+  }
+
+   function new_renderProductsList(){
+    console.log("Products.length: "+products.length)
+   // console.log("loadedImages: " + loadedImages)
+    return(
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+        gap: "1rem",
+        justifyContent: "space-between"
+      }}>
+    {products.length === productImg.length
+      ? products.map((product) => (
+          <Card
+            key={product.id}
+            className={`${style.card} ${product.stockQuantity === 0 ? style.outOfStock : ""}`}
+            style={{ backgroundColor: "#f8f9fa", border: "none" }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "lightgray",
+                borderRadius: "var(--bs-border-radius)",
+                aspectRatio: "1/1",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src={product.imageUrl}
+                alt={product.name}
+                className="img-fluid"
+                style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
+                loading="lazy"
+                onClick={() => handleImageClick(product.imageUrl, product.name)}
+              />
+            </div>
+            <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
+              <Card.Title>{product.name}</Card.Title>
+              <Card.Text>{product.price} PLN</Card.Text>
+              {product.stockQuantity === 0 && (
+                <span className={style.outOfStockText}>{t("products.outOfStock")}</span>
+              )}
+            </Card.Body>
+            <Button
+              variant="primary"
+              onClick={() => addToCart(product)}
+              style={{ margin: "15px" }}
+              disabled={product.stockQuantity === 0}
+            >
+              {product.stockQuantity === 0 ? t("products.unavailable") : t("products.addToCart")}
+            </Button>
+          </Card>
+        ))
+      : Array.from({ length: products.length }).map((_, idx) => (
+          <Card
+            key={idx}
+            className={`${style.card}`}
+            style={{ backgroundColor: "#f8f9fa", border: "none" }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "lightgray",
+                borderRadius: "var(--bs-border-radius)",
+                aspectRatio: "1/1",
+              }}
+            >
+              <Placeholder animation="glow">
+                <div style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" }}>
+                  <Placeholder xs={12} style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" }} />
+                </div>
+              </Placeholder>
+            </div>
+            <Card.Body>
+              <Placeholder as={Card.Title} animation="glow">
+                <Placeholder xs={12} />
+              </Placeholder>
+              <Placeholder as={Card.Text} animation="glow">
+                <Placeholder xs={12} />
+              </Placeholder>
+            </Card.Body>
+            <Placeholder.Button variant="primary" xs={6} style={{ margin: "15px" }} />
+          </Card>
+        ))
+    }
+        
+      </div>
+    )
   }
 
   return (
@@ -558,7 +674,7 @@ function MainPageShopMain() {
         )}
 
           {/* Produkty (gdy wybrano subkategorię) */}
-          {selectedSubcategory && renderProductsList()}
+          {selectedSubcategory && new_renderProductsList()}
           </div>
         </div>
       </Col>

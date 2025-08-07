@@ -129,8 +129,13 @@ export default function EditSubCagegory(){
         }
     }
     async function handleDelete(id) {
+        const token = localStorage.getItem("token");
         try {
-            await axios.delete(`${apiURL}/Category_API/DeleteSubCategory?id=${id}`);
+            await axios.delete(`${apiURL}/Category_API/DeleteSubCategory?id=${id}`,{
+                headers:{
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             console.log('Podkategoria usunięta pomyślnie');
             // Aktualizuj stan subcategories
             setSubcategories(prev => ({

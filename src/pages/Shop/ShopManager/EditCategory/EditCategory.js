@@ -97,6 +97,7 @@ export default function EditCategory(){
         }));
     }
     async function handleSubmit(e) {
+
     e.preventDefault();
     const token = localStorage.getItem("token");
     const formDataSubmit = new FormData();
@@ -127,8 +128,13 @@ export default function EditCategory(){
 }
 
     async function DeleteCategory(id) {
+        const token = localStorage.getItem("token");
         try {
-            await axios.delete(`${apiURL}/Category_API/DeleteCategory?id=${id}`);
+            await axios.delete(`${apiURL}/Category_API/DeleteCategory?id=${id}`,{
+                headers:{
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             console.log(id)
            // await axios.delete(`http://localhost:8080/Category_API/DeleteCategory?id=${id}`);
             
