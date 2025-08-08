@@ -7,6 +7,7 @@ import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import apiURL from '../../../../config';
+import imageCompression from 'browser-image-compression';
 
 export default function EditCategory(){
     
@@ -90,12 +91,25 @@ export default function EditCategory(){
         }));
         console.log(formData)
     };
-    function handleImage(e) {
-        setFormData((prevData) => ({
-            ...prevData,
-            photo: e.target.files[0]
-        }));
-    }
+
+
+      const handleImage = async (e) =>  {
+         const options = {
+            maxSizeMB: 0.5, // ~500KB
+            maxWidthOrHeight: 1920,
+            useWebWorker: true
+          };
+    
+        try{
+          const compressedFile = await imageCompression(e.target.files[0], options);
+            setFormData((prev) => ({
+            ...prev,
+            photo: compressedFile,
+          }));
+        } catch (error) {
+          console.error('Image compression error:', error);
+        }    
+      }
     async function handleSubmit(e) {
 
     e.preventDefault();

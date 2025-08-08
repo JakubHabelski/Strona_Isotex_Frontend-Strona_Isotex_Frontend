@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar_v2/Navbar";
 import Footer from "../../../components/Footer";
-import { Breadcrumb, Button, Card, Col, Image, Modal, Placeholder, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
+import { Breadcrumb, Button, Card, Col,  Modal, Placeholder, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
 import style from "./MainPageShop.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,10 @@ import axios from "axios";
 import { useLocalStorage } from "../../../utils/localStorage";
 import { Helmet } from "react-helmet";
 import apiURL from '../../../config';
+import Image from 'react-bootstrap/Image';
+import { Blurhash } from "react-blurhash";
+import ImageComponent from "../../../components/ImageComponent/ImageComponent";
+
 
 function MainPageShopMain() {
  // const apiUrl = process.env.REACT_APP_API_URL;
@@ -35,6 +39,10 @@ function MainPageShopMain() {
   const [productImg, setProductImg] = useState([]);
 
 
+  const [isLoaded, setLoaded] = useState(false);
+  const [isLoadStarted, setLoadStarted] = useState(false);
+
+
   const listRefs = useRef({});
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
@@ -44,6 +52,16 @@ function MainPageShopMain() {
     if (i18n.language === "en") return item.LabelEN;
     if (i18n.language === "de") return item.LabelDE;
     return item.LabelPL;
+  };
+
+
+  const handleLoad = () => {
+    setLoaded(true);
+  };
+
+  const handleLoadStarted = () => {
+    console.log("Started: ");
+    setLoadStarted(true);
   };
 
 
@@ -156,41 +174,40 @@ function MainPageShopMain() {
     }
   }, [pendingSubCat])
 
-  useEffect(() => {
-    if (selectedSubcategory) {
-      console.log("selectedSubcategory: " + selectedSubcategory)
-      setProductsLoading(true);
-      axios
-        .get(`${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
-        .then((response) => {
-          //setPendingProducts(response.data);
-          setProducts(response.data)
-          let loaded = 0;
-          response.data.forEach((res) =>{
-            console.log(res.imageUrl)
-            // Ładuj obrazki i przypisz do tablicy productImg
-            const img = new window.Image();
-            img.src = res.imageUrl;
-            img.onload = img.onerror = () => {
-              setProductImg(prev => {
-              // Dodaj do tablicy, jeśli jeszcze nie istnieje
-              if (!prev.includes(res.imageUrl)) {
-                loaded+=1;
-                console.log(loaded)
-                if(response.data.length === loaded){
-                  console.log("bingo")
-                }
-                return [...prev, res.imageUrl];
-              }
-              return prev;
-              });
-            };
-          })          
-          setProductsLoading(false);
-        })}
-        
-    
-  }, [selectedSubcategory, i18n.language]);
+useEffect(() => {
+  if (selectedSubcategory) {
+    console.log("selectedSubcategory: " + selectedSubcategory);
+    setProductsLoading(true);
+    axios
+      .get(`${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
+      .then((response) => {
+        const loadedImages = {};
+        const productsData = response.data;
+        let loadedCount = 0;
+
+        productsData.forEach((product) => {
+          const img = new window.Image();
+
+          img.src = product.imageUrl;
+
+          img.onload = img.onerror = () => {
+            loadedCount++;
+            loadedImages[product.id] = product.imageUrl; // Zakładam, że każdy produkt ma unikalne `id`
+
+            // Kiedy wszystkie obrazki są załadowane:
+            if (loadedCount === productsData.length) {
+              setProductImg(loadedImages); // np. { "1": "url1", "2": "url2", ... }
+              setProducts(productsData);
+              setProductsLoading(false);
+              console.log("All images loaded and assigned.");
+            }
+          };
+        });
+      });
+  }
+  console.log(productImg)
+}, [selectedSubcategory, i18n.language]);
+
 
   /*
   useEffect(() => {
@@ -337,7 +354,7 @@ function MainPageShopMain() {
             alt={product.name}
             className="img-fluid"
             style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
-            loading="lazy"
+           // loading="lazy"
             onClick={() => handleImageClick(product.imageUrl, product.name)}
         />
       </div>
@@ -465,7 +482,7 @@ function MainPageShopMain() {
         gap: "1rem",
         justifyContent: "space-between"
       }}>
-    {products.length === productImg.length
+    {products.length > 0
       ? products.map((product) => (
           <Card
             key={product.id}
@@ -488,7 +505,7 @@ function MainPageShopMain() {
                 alt={product.name}
                 className="img-fluid"
                 style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
-                loading="lazy"
+                //loading="lazy"
                 onClick={() => handleImageClick(product.imageUrl, product.name)}
               />
             </div>
@@ -544,6 +561,84 @@ function MainPageShopMain() {
         ))
     }
         
+      </div>
+    )
+  }
+
+  function new_renderProductsList_v2(){
+    return(
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+        gap: "1rem",
+        justifyContent: "space-between"
+      }}>
+        {
+           products.map((product) => (
+          <Card
+            key={product.id}
+            className={`${style.card} ${product.stockQuantity === 0 ? style.outOfStock : ""}`}
+            style={{ backgroundColor: "#f8f9fa", border: "none" }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "lightgray",
+                borderRadius: "var(--bs-border-radius)",
+                aspectRatio: "1/1",
+              }}
+            >
+              {
+                /*
+                  <Card.Img
+                variant="top"
+                src={product.imageUrl}
+                alt={product.name}
+                className="img-fluid"
+                style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
+                //loading="lazy"
+                onClick={() => handleImageClick(product.imageUrl, product.name)}
+                onLoad={handleLoad}
+                beforeLoad={handleLoadStarted}
+              />
+              {!isLoaded && isLoadStarted && (
+              // <LazyLoadComponent>
+              <Blurhash
+                hash={product.blurhash}
+                width={400}
+                height={300}
+                resolutionX={32}
+                resolutionY={32}
+                punch={1}
+                style={{zIndex:20}}
+              />
+              // </LazyLoadComponent>
+            )}
+                */
+              }
+              <ImageComponent src={product.imageUrl}/>
+            </div>
+            <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
+              <Card.Title>{product.name}</Card.Title>
+              <Card.Text>{product.price} PLN</Card.Text>
+              {product.stockQuantity === 0 && (
+                <span className={style.outOfStockText}>{t("products.outOfStock")}</span>
+              )}
+            </Card.Body>
+            <Button
+              variant="primary"
+              onClick={() => addToCart(product)}
+              style={{ margin: "15px" }}
+              disabled={product.stockQuantity === 0}
+            >
+              {product.stockQuantity === 0 ? t("products.unavailable") : t("products.addToCart")}
+            </Button>
+          </Card>
+        ))
+      
+        }
       </div>
     )
   }
@@ -631,6 +726,7 @@ function MainPageShopMain() {
             )}
           </Breadcrumb>
           <div>
+            
           {/* Kategorie (gdy nie wybrano kategorii) */}
           {!selectedCategory && (
             categoriesLoading ? (
@@ -674,7 +770,7 @@ function MainPageShopMain() {
         )}
 
           {/* Produkty (gdy wybrano subkategorię) */}
-          {selectedSubcategory && new_renderProductsList()}
+          {selectedSubcategory && new_renderProductsList_v2()}
           </div>
         </div>
       </Col>
@@ -691,7 +787,7 @@ function MainPageShopMain() {
             alt={modalTitle} 
             className={style.modal_custom_img} 
             style={{ maxWidth: '100%', height: 'auto', maxHeight: '70vh' }} 
-            loading="lazy"
+            //loading="lazy"
         />
         </Modal.Body>
       </Modal>

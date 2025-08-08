@@ -7,6 +7,7 @@ import style from "./AddProduct.module.css";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import apiURL from '../../../../config';
+import imageCompression from 'browser-image-compression';
 
 export default function AddProduct() {
   const {t} = useTranslation();
@@ -85,11 +86,22 @@ function AddProductForm() {
     }
   }, [form.category, apiURL]);
 
-  function handleImage(e) {
-    setForm((prev) => ({
-      ...prev,
-      photo: e.target.files[0],
-    }));
+  const handleImage = async (e) =>  {
+     const options = {
+        maxSizeMB: 0.5, // ~500KB
+        maxWidthOrHeight: 1920,
+        useWebWorker: true
+      };
+
+    try{
+      const compressedFile = await imageCompression(e.target.files[0], options);
+        setForm((prev) => ({
+        ...prev,
+        photo: compressedFile,
+      }));
+    } catch (error) {
+      console.error('Image compression error:', error);
+    }    
   }
 
   function handleChange(e) {
