@@ -1,91 +1,81 @@
-import Navbar from "../../../components/Navbar_v2/Navbar";
-import Footer from "../../../components/Footer";
-import { Breadcrumb, Button, Card, Col,  Modal, Placeholder, Row, Spinner, Toast, ToastContainer } from "react-bootstrap";
-import style from "./MainPageShop.module.css";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
-import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
 import axios from "axios";
-import { useLocalStorage } from "../../../utils/localStorage";
+import {
+  Breadcrumb,
+  Button,
+  Card,
+  Col,
+  Modal,
+  Placeholder,
+  Row,
+  Spinner,
+  Toast,
+  ToastContainer,
+} from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import apiURL from '../../../config';
-import Image from 'react-bootstrap/Image';
-import { Blurhash } from "react-blurhash";
+
+import Navbar from "../../../components/Navbar_v2/Navbar";
+import Footer from "../../../components/Footer";
+import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
 import ImageComponent from "../../../components/ImageComponent/ImageComponent";
 
+import { useLocalStorage } from "../../../utils/localStorage";
+import apiURL from "../../../config";
+import style from "./MainPageShop.module.css";
 
 function MainPageShopMain() {
- // const apiUrl = process.env.REACT_APP_API_URL;
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+
   const [showLists, setShowLists] = useState({});
-  const [modalImage, setModalImage] = useState("");
-  const [modalTitle, setModalTitle] = useState("");
-  const [showModal, setShowModal] = useState(false);
+  const [modal, setModal] = useState({ show: false, image: "", title: "" });
+
   const [cartItems, setCartItems] = useLocalStorage("cartItems", []);
-  const [toastMessage, setToastMessage] = useState("");
-  const [showToast, setShowToast] = useState(false);
-  const [categoriesLoading, setCcategoriesLoading] = useState(false);
-  const [subcategoriesLoading, setSubcategoriesLoading] = useState(false);
-  const [productsLoading, setProductsLoading] = useState(false);
-  const [pendingCat, setPendingCat] = useState([]);
-  const [pendingSubCat, setPendingSubCat] = useState([])
- // const [pendingProducts, setPendingProducts] = useState([]);
-  const [loadedImages, setLoadedImages] = useState([])
-  const [productImg, setProductImg] = useState([]);
+  const [toast, setToast] = useState({ show: false, message: "" });
 
-
-  const [isLoaded, setLoaded] = useState(false);
-  const [isLoadStarted, setLoadStarted] = useState(false);
-
+  const [loading, setLoading] = useState({
+    categories: false,
+    subcategories: false,
+    products: false,
+  });
 
   const listRefs = useRef({});
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  // Helper to get translated label
-  const getTranslatedLabel = (item) => {
-    if (i18n.language === "en") return item.LabelEN;
-    if (i18n.language === "de") return item.LabelDE;
-    return item.LabelPL;
-  };
+  const getTranslatedLabel = (item) =>
+    i18n.language === "en"
+      ? item.LabelEN
+      : i18n.language === "de"
+      ? item.LabelDE
+      : item.LabelPL;
 
-
-  const handleLoad = () => {
-    setLoaded(true);
-  };
-
-  const handleLoadStarted = () => {
-    console.log("Started: ");
-    setLoadStarted(true);
-  };
-
-
-  // Fetch categories and their subcategories
+  // Fetch categories with subcategories
   useEffect(() => {
-    setCcategoriesLoading(true);
+    setLoading((prev) => ({ ...prev, categories: true }));
     axios
       .get(`${apiURL}/Category_API/GetCategories`)
       .then(async (response) => {
-        if (!Array.isArray(response.data)) {
-          throw new Error("Dane kategorii nie są tablicą");
-        }
-        const categoriesData = response.data;
-        const categoriesWithSub = await Promise.all(
-          categoriesData.map(async (cat) => {
+        if (!Array.isArray(response.data)) throw new Error("Invalid categories");
+
+        const categoriesData = await Promise.all(
+          response.data.map(async (cat) => {
             const subRes = await axios
               .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
                 params: { CategoryId: cat.id },
               })
               .catch(() => ({ data: [] }));
+
             return {
               key: cat.id,
               icon: cat.icon_url,
               image: cat.photo_url,
+              blurhash: cat.blurhash,
               label: getTranslatedLabel(cat),
               subcategories: subRes.data.map((sub) => ({
                 key: sub.id,
@@ -96,145 +86,61 @@ function MainPageShopMain() {
             };
           })
         );
-        setPendingCat(categoriesWithSub); // Zapisz do pendingCat zamiast categories
-        setShowLists(categoriesWithSub.reduce((acc, cat) => ({ ...acc, [cat.key]: false }), {}));
+
+        setCategories(categoriesData);
+        setShowLists(
+          categoriesData.reduce((acc, cat) => ({ ...acc, [cat.key]: false }), {})
+        );
       })
-      .catch((error) => {
-        console.error("Błąd podczas pobierania kategorii:", error);
-        setPendingCat([]);
-        setCcategoriesLoading(false);
-      });
+      .catch((err) => {
+        console.error("Category fetch error:", err);
+        setCategories([]);
+      })
+      .finally(() =>
+        setLoading((prev) => ({ ...prev, categories: false }))
+      );
   }, [i18n.language]);
 
-  // Load category images
+  // Fetch subcategories when category changes
   useEffect(() => {
-    if (pendingCat.length > 0) {
-      let loaded = 0;
-      const total = pendingCat.length;
-      pendingCat.forEach((cat) => {
-        if (cat.image) { // Sprawdź, czy photo_url istnieje
-          const img = new window.Image();
-          img.src = cat.image;
-          img.onload = img.onerror = () => {
-            loaded += 1;
-            if (loaded === total) {
-              setCategories(pendingCat);
-              setCcategoriesLoading(false);
-              setPendingCat([]);
-            }
-          };
-        } else {
-          loaded += 1;
-          if (loaded === total) {
-            setCategories(pendingCat);
-            setCcategoriesLoading(false);
-            setPendingCat([]);
-          }
-        }
-      });
-    }
-  }, [pendingCat]);
-
-  // Fetch subcategories and products when category or subcategory changes
-  useEffect(() => {
-    if (selectedCategory) {
-      setSubcategoriesLoading(true);
-      axios
-        .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
-          params: { CategoryId: selectedCategory.key },
-        })
-        .then((response) => {
-          setPendingSubCat(response.data);
-          if (!pendingSubCat) setProducts([]);
-        })
-        .catch(() => setSubcategories([]))
-       /// .finally(() => setSubcategoriesLoading(false));
-    } else {
+    if (!selectedCategory) {
       setSubcategories([]);
       setProducts([]);
-     // setSubcategoriesLoading(false);
+      return;
     }
+
+    setLoading((prev) => ({ ...prev, subcategories: true }));
+    axios
+      .get(`${apiURL}/Category_API/GetSubCategoriesByCategory`, {
+        params: { CategoryId: selectedCategory.key },
+      })
+      .then((res) => setSubcategories(res.data))
+      .catch(() => setSubcategories([]))
+      .finally(() =>
+        setLoading((prev) => ({ ...prev, subcategories: false }))
+      );
   }, [selectedCategory]);
 
-  useEffect(() =>{
-    if(pendingSubCat.length > 0){
-      let loaded = 0;
-      pendingSubCat.forEach((subCat) =>{
-        const img = new window.Image();
-        img.src = subCat.photo_url;
-        img.onload = img.onerror = () =>{
-          loaded += 1;
-          if(loaded === pendingSubCat.length){
-            setSubcategories(pendingSubCat);
-            setSubcategoriesLoading(false);
-            setPendingSubCat([]);
-          }
-        }
-      })
-    }
-  }, [pendingSubCat])
-
-useEffect(() => {
-  if (selectedSubcategory) {
-    console.log("selectedSubcategory: " + selectedSubcategory);
-    setProductsLoading(true);
-    axios
-      .get(`${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`)
-      .then((response) => {
-        const loadedImages = {};
-        const productsData = response.data;
-        let loadedCount = 0;
-
-        productsData.forEach((product) => {
-          const img = new window.Image();
-
-          img.src = product.imageUrl;
-
-          img.onload = img.onerror = () => {
-            loadedCount++;
-            loadedImages[product.id] = product.imageUrl; // Zakładam, że każdy produkt ma unikalne `id`
-
-            // Kiedy wszystkie obrazki są załadowane:
-            if (loadedCount === productsData.length) {
-              setProductImg(loadedImages); // np. { "1": "url1", "2": "url2", ... }
-              setProducts(productsData);
-              setProductsLoading(false);
-              console.log("All images loaded and assigned.");
-            }
-          };
-        });
-      });
-  }
-  console.log(productImg)
-}, [selectedSubcategory, i18n.language]);
-
-
-  /*
+  // Fetch products when subcategory changes
   useEffect(() => {
-    if (pendingProducts.length > 0) {
-      let loaded = 0;
-      pendingProducts.forEach((product) => {
-        const img = new window.Image();
-        img.src = product.imageUrl;
-        img.onload = img.onerror = () => {
-          loaded += 1;
-          if (loaded === pendingProducts.length) {
-            setProducts(pendingProducts);
-            setProductsLoading(false);
-            setPendingProducts([]); // czyść tymczasowy stan
-          }
-        };
-      });
+    if (!selectedSubcategory) {
+      setProducts([]);
+      return;
     }
-  }, [pendingProducts]);
-  */
 
-  // Toggle subcategory list visibility
-  const toggleList = (key) => {
+    setLoading((prev) => ({ ...prev, products: true }));
+    axios
+      .get(
+        `${apiURL}/products/subcategory/${selectedSubcategory}/${i18n.language}`
+      )
+      .then((res) => setProducts(res.data))
+      .catch(() => setProducts([]))
+      .finally(() => setLoading((prev) => ({ ...prev, products: false })));
+  }, [selectedSubcategory, i18n.language]);
+
+  const toggleList = (key) =>
     setShowLists((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
 
-  // Handle category selection
   const handleCategorySelect = (key, label) => {
     setSelectedCategory({ key, label });
     setSelectedSubcategory(null);
@@ -242,99 +148,46 @@ useEffect(() => {
   };
 
   const handleSubcategorySelect = (subKey, catKey) => {
-    setProductsLoading(true);
     if (selectedCategory?.key !== catKey) {
-      setSelectedCategory({ key: catKey, label: categories.find(c => c.key === catKey)?.label });
-      setSelectedSubcategory(subKey);
-    } else {
-      setSelectedSubcategory(subKey);
+      setSelectedCategory({
+        key: catKey,
+        label: categories.find((c) => c.key === catKey)?.label,
+      });
     }
+    setSelectedSubcategory(subKey);
   };
 
-  // Handle image modal
-  const handleImageClick = (imageUrl, title) => {
-    setModalImage(imageUrl);
-    setModalTitle(title);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setModalImage("");
-    setModalTitle("");
-  };
-
-  // Add product to cart
   const addToCart = (product) => {
-    console.log("addToCart:",product)
     setCartItems({ id: product.id, price: product.price, name: product.name });
-    setToastMessage(t("cart.added", { name: product.name }));
-    setShowToast(true);
+    setToast({
+      show: true,
+      message: t("cart.added", { name: product.name }),
+    });
   };
 
-  // Update subcategory list height
-  useEffect(() => {
-    Object.entries(listRefs.current).forEach(([key, ref]) => {
-      if (ref) ref.style.maxHeight = showLists[key] ? `${ref.scrollHeight}px` : "0";
-    });
-  }, [showLists]);
-
-  // Render category list item
-  const renderCategory = (category) => (
+const renderCategoryCard = (category) => {
+  console.log("category.image", category.image, "blurhash", category.blurhash);
+  return (
     <div key={category.key} className={style.MainPageShopLinks}>
-      <div className={style.MainCategory} onClick={() => handleCategorySelect(category.key, category.label)}>
-        <Image src={category.icon} alt={category.label} width={32} height={32} />
-        <h3>{category.label}</h3>
-        <Image
-          src="/assets/icons/right-arrow.png"
-          alt="Arrow"
-          width={32}
-          height={32}
-          className={`${style.arrow} ${showLists[category.key] ? style.arrowOpen : ""}`}
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleList(category.key);
-          }}
-        />
-      </div>
       <div
-        ref={(el) => (listRefs.current[category.key] = el)}
-        className={`${style.subcategorylist} ${showLists[category.key] ? style.open : ""}`}
+        className={style.MainCategoryCard}
+        onClick={() => handleCategorySelect(category.key, category.label)}
       >
-        {category.subcategories.map((subcategory) => (
-          <div key={subcategory.key} className={style.listitem}>
-            <div className={style.bar}></div>
-            <p
-              onClick={() => handleSubcategorySelect(subcategory.key, category.key)}
-              style={{cursor: "pointer"}}
-            >
-              {subcategory.label}
-            </p>
-          </div>
-        ))}
-              </div>
-    </div>
-  );
-  const renderCategory2 = (category) => (
-    <div key={category.key} className={style.MainPageShopLinks}>
-      <div className={style.MainCategoryCard} onClick={() => handleCategorySelect(category.key, category.label)}>
         <div className={style.CardText}>
-            <h5>{category.label}</h5>
-            
-          </div>
-          <img src={category.image}  />        
-        
+          <h5>{category.label}</h5>
+        </div>
+        <ImageComponent src={category.image} blurhash={category.blurhash} />
       </div>
-              
     </div>
-    
   );
+};
 
-  // Render product card
-  const renderProduct = (product) => (
+  const renderProductCard = (product) => (
     <Card
       key={product.id}
-      className={`${style.card} ${product.stockQuantity === 0 ? style.outOfStock : ""}`}
+      className={`${style.card} ${
+        product.stockQuantity === 0 ? style.outOfStock : ""
+      }`}
       style={{ backgroundColor: "#f8f9fa", border: "none" }}
     >
       <div
@@ -347,22 +200,17 @@ useEffect(() => {
           aspectRatio: "1/1",
         }}
       >
-        <Card.Img
-            variant="top"
-            //src={`${apiURL}/Product_API/thumbnail/${product.imageUrl.split('/').pop()}`}
-            src={product.imageUrl}
-            alt={product.name}
-            className="img-fluid"
-            style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
-           // loading="lazy"
-            onClick={() => handleImageClick(product.imageUrl, product.name)}
-        />
+        <ImageComponent src={product.imageUrl} blurhash={product.blurhash} />
       </div>
-      <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
+      <Card.Body
+        onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}
+      >
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.price} PLN</Card.Text>
         {product.stockQuantity === 0 && (
-          <span className={style.outOfStockText}>{t("products.outOfStock")}</span>
+          <span className={style.outOfStockText}>
+            {t("products.outOfStock")}
+          </span>
         )}
       </Card.Body>
       <Button
@@ -371,432 +219,159 @@ useEffect(() => {
         style={{ margin: "15px" }}
         disabled={product.stockQuantity === 0}
       >
-        {product.stockQuantity === 0 ? t("products.unavailable") : t("products.addToCart")}
+        {product.stockQuantity === 0
+          ? t("products.unavailable")
+          : t("products.addToCart")}
       </Button>
     </Card>
   );
 
-  // Renderuje siatkę kategorii (gdy nie wybrano subkategorii)
-  function renderCategoriesGrid() {
-    return (
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-        gap: "1rem",
-        justifyContent: "space-between"
-      }}>
-        {categories.map(renderCategory2)}
-      </div>
-    );
-  }
-
-  // Renderuje siatkę subkategorii (gdy wybrano kategorię, ale nie subkategorię)
-  function renderSubcategoriesGrid() {
-    return (
-      <div className={style.MainCategoryList}>
-        {subcategories.map((subcat) => (
-          <div
-            className={style.MainCategoryCard}
-            key={subcat.id}
-            onClick={() => handleSubcategorySelect(subcat.id, selectedCategory?.key)}
-          >
-            <div className={style.CardText}>
-              <h5>{getTranslatedLabel(subcat)}</h5>
-              <p>Ilość produktów: {subcat.product_count}</p>
-            </div>
-            <img src={subcat.photo_url} alt={getTranslatedLabel(subcat)} />
-          </div>
-        ))}
-      </div>
-    );
-  }
-
-  // Renderuje produkty (gdy wybrano subkategorię)
-  function renderProductsList() {
-    return (
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-        gap: "1rem",
-        justifyContent: "space-between"
-      }}>
-        {productsLoading ? (
-          Array.from({ length: products.length }).map((_, idx) => (
-            <Card
-              key={idx}
-              className={`${style.card}`}
-              style={{ backgroundColor: "#f8f9fa", border: "none" }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "lightgray",
-                  borderRadius: "var(--bs-border-radius)",
-                  aspectRatio: "1/1",
-                }}
-              >
-                <Placeholder  animation="glow">
-                      <div style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}>
-                        <Placeholder xs={12} style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}/>
-                      </div>
-                       
-                    </Placeholder>
-              </div>
-              <Card.Body>
-                <Placeholder as={Card.Title} animation="glow">
-                  <Placeholder xs={12} />
-                </Placeholder>
-                <Placeholder as={Card.Text} animation="glow">
-                  <Placeholder xs={12} />
-                </Placeholder>
-              </Card.Body>
-              <Placeholder.Button variant="primary" xs={6} style={{ margin: "15px" }} />
-            </Card>
-          ))
-        ) : (products.length == productImg.length) ? (
-          products.map(renderProduct)
-        ) : (
-          <div style={{
-            gridColumn: "1/-1",
-            display: "flex",
-            alignItems: "center",  
-            justifyContent: "center",
-            minHeight: 200
-          }}>
-            <span style={{ color: "black", marginLeft: 8 }}>Brak produktów</span>
-          </div>
-        )}
-      </div>
-    );
-  }
-
-   function new_renderProductsList(){
-    console.log("Products.length: "+products.length)
-   // console.log("loadedImages: " + loadedImages)
-    return(
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-        gap: "1rem",
-        justifyContent: "space-between"
-      }}>
-    {products.length > 0
-      ? products.map((product) => (
-          <Card
-            key={product.id}
-            className={`${style.card} ${product.stockQuantity === 0 ? style.outOfStock : ""}`}
-            style={{ backgroundColor: "#f8f9fa", border: "none" }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "lightgray",
-                borderRadius: "var(--bs-border-radius)",
-                aspectRatio: "1/1",
-              }}
-            >
-              <Card.Img
-                variant="top"
-                src={product.imageUrl}
-                alt={product.name}
-                className="img-fluid"
-                style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
-                //loading="lazy"
-                onClick={() => handleImageClick(product.imageUrl, product.name)}
-              />
-            </div>
-            <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
-              <Card.Title>{product.name}</Card.Title>
-              <Card.Text>{product.price} PLN</Card.Text>
-              {product.stockQuantity === 0 && (
-                <span className={style.outOfStockText}>{t("products.outOfStock")}</span>
-              )}
-            </Card.Body>
-            <Button
-              variant="primary"
-              onClick={() => addToCart(product)}
-              style={{ margin: "15px" }}
-              disabled={product.stockQuantity === 0}
-            >
-              {product.stockQuantity === 0 ? t("products.unavailable") : t("products.addToCart")}
-            </Button>
-          </Card>
-        ))
-      : Array.from({ length: products.length }).map((_, idx) => (
-          <Card
-            key={idx}
-            className={`${style.card}`}
-            style={{ backgroundColor: "#f8f9fa", border: "none" }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "lightgray",
-                borderRadius: "var(--bs-border-radius)",
-                aspectRatio: "1/1",
-              }}
-            >
-              <Placeholder animation="glow">
-                <div style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" }}>
-                  <Placeholder xs={12} style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" }} />
-                </div>
-              </Placeholder>
-            </div>
-            <Card.Body>
-              <Placeholder as={Card.Title} animation="glow">
-                <Placeholder xs={12} />
-              </Placeholder>
-              <Placeholder as={Card.Text} animation="glow">
-                <Placeholder xs={12} />
-              </Placeholder>
-            </Card.Body>
-            <Placeholder.Button variant="primary" xs={6} style={{ margin: "15px" }} />
-          </Card>
-        ))
-    }
-        
-      </div>
-    )
-  }
-
-  function new_renderProductsList_v2(){
-    return(
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-        gap: "1rem",
-        justifyContent: "space-between"
-      }}>
-        {
-           products.map((product) => (
-          <Card
-            key={product.id}
-            className={`${style.card} ${product.stockQuantity === 0 ? style.outOfStock : ""}`}
-            style={{ backgroundColor: "#f8f9fa", border: "none" }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "lightgray",
-                borderRadius: "var(--bs-border-radius)",
-                aspectRatio: "1/1",
-              }}
-            >
-              {
-                /*
-                  <Card.Img
-                variant="top"
-                src={product.imageUrl}
-                alt={product.name}
-                className="img-fluid"
-                style={{ maxWidth: '200px', height: 'auto', objectFit: 'cover' }}
-                //loading="lazy"
-                onClick={() => handleImageClick(product.imageUrl, product.name)}
-                onLoad={handleLoad}
-                beforeLoad={handleLoadStarted}
-              />
-              {!isLoaded && isLoadStarted && (
-              // <LazyLoadComponent>
-              <Blurhash
-                hash={product.blurhash}
-                width={400}
-                height={300}
-                resolutionX={32}
-                resolutionY={32}
-                punch={1}
-                style={{zIndex:20}}
-              />
-              // </LazyLoadComponent>
-            )}
-                */
-              }
-              <ImageComponent src={product.imageUrl}/>
-            </div>
-            <Card.Body onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}>
-              <Card.Title>{product.name}</Card.Title>
-              <Card.Text>{product.price} PLN</Card.Text>
-              {product.stockQuantity === 0 && (
-                <span className={style.outOfStockText}>{t("products.outOfStock")}</span>
-              )}
-            </Card.Body>
-            <Button
-              variant="primary"
-              onClick={() => addToCart(product)}
-              style={{ margin: "15px" }}
-              disabled={product.stockQuantity === 0}
-            >
-              {product.stockQuantity === 0 ? t("products.unavailable") : t("products.addToCart")}
-            </Button>
-          </Card>
-        ))
-      
-        }
-      </div>
-    )
-  }
-
   return (
     <>
-    <Helmet>
-                <title>{t("page_titles.Shop.Shop_v2.MainPageShop")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
-                <meta name="robots" content="index, follow" />
-                <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
-                        }
-                    }
-                `}</script>
-    </Helmet>
-    <ImageCarousel />
-    <div className={style.MainPageShopContainer}>
-      <Row style={{minHeight: "500px", marginBottom: "100px"}} className={style.MainPageShopRow}>
-      {
-      /*
-      <Col xs={12} lg={3} className={style.MainPageShopLinksContainer}>
-        {loading ? (
-          <div>
-            <Spinner animation="border" role="status" />
-            <span style={{ color: "black" }}> Loading...</span>
-          </div>
-        ) : (
-          categories.map(renderCategory)
-        )}
-        
-        
-      </Col>
-      */}
-      
-      <Col  className={style.MainPageShopProducts}>
-        <div style={{ width: "100%", padding: "0 20px 0"}}>
-          
-          <Breadcrumb>
-            <Breadcrumb.Item
-              href="#"
-              onClick={() => {
-                setSelectedCategory(null);
-                setSelectedSubcategory(null);
-                setProducts([]);
-              }}
-            >
-              Home
-            </Breadcrumb.Item>
-            {selectedCategory && (
-              <Breadcrumb.Item
-                href="#"
-                active={!selectedSubcategory}
-                onClick={() => !selectedSubcategory || setSelectedSubcategory(null)}
-              >
-                {categories.find((cat) => cat.key === selectedCategory.key)?.label || selectedCategory.label}
-              </Breadcrumb.Item>
-            )}
-            {selectedSubcategory && (
-              <Breadcrumb.Item active>
-                {
-                  subcategories.find((sub) => sub.id === selectedSubcategory)
-                    ? subcategories.find((sub) => sub.id === selectedSubcategory)[i18n.language === "en" ? "LabelEN" : "LabelPL"]
-                    : (
-                      <span style={{ display: "inline-flex", alignItems: "center" }}>
-                        <Spinner animation="border" size="sm" role="status" style={{ marginRight: 8 }} />
-                        <span style={{ color: "black" }}>Loading...</span>
-                      </span>
-                    )
-                }
-              </Breadcrumb.Item>
-            )}
-          </Breadcrumb>
-          <div>
-            
-          {/* Kategorie (gdy nie wybrano kategorii) */}
-          {!selectedCategory && (
-            categoriesLoading ? (
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
-                <Spinner animation="border" role="status" />
-                <span style={{ color: "black", marginLeft: 8 }}>Loading...</span>
-              </div>
-            ) : (
-              renderCategoriesGrid()
-            )
-          )}
+      <Helmet>
+        <title>{t("page_titles.Shop.Shop_v2.MainPageShop")}</title>
+        <link rel="icon" type="image/png" href="/assets/logo.png" />
+      </Helmet>
 
-          {/* Subkategorie (gdy wybrano kategorię, ale nie subkategorię) */}
-          {selectedCategory && !selectedSubcategory && (
-            subcategoriesLoading
-              ? 
-              <div className={style.MainCategoryList}>
-                {Array.from({length: pendingSubCat.length}).map((_, idx) => (
-                  <div key={idx} className={style.MainCategoryCard}>
-                    <div className={style.CardText}>
-                      <Placeholder as={Card.Title} animation="glow">
-                        <Placeholder xs={12}/>
-                      </Placeholder>
-                      <Placeholder as={Card.Text} animation="glow">
-                        <Placeholder xs={12}/>
-                        <Placeholder xs={12}/>
-                        <Placeholder xs={12}/>
-                      </Placeholder>
-                    </div>
-                    <Placeholder  animation="glow">
-                      <div style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}>
-                        <Placeholder xs={12} style={{display:"flex", height:"100%", width:"100%", justifyContent:"center", alignItems:"center"}}/>
-                      </div>
-                       
-                    </Placeholder>
-                    
+      <ImageCarousel />
+
+      <div className={style.MainPageShopContainer}>
+        <Row
+          style={{ minHeight: "500px", marginBottom: "100px" }}
+          className={style.MainPageShopRow}
+        >
+          <Col className={style.MainPageShopProducts}>
+            <div style={{ width: "100%", padding: "0 20px" }}>
+              <Breadcrumb>
+                <Breadcrumb.Item
+                  onClick={() => {
+                    setSelectedCategory(null);
+                    setSelectedSubcategory(null);
+                  }}
+                >
+                  Home
+                </Breadcrumb.Item>
+                {selectedCategory && (
+                  <Breadcrumb.Item
+                    active={!selectedSubcategory}
+                    onClick={() => !selectedSubcategory && setSelectedSubcategory(null)}
+                  >
+                    {
+                      categories.find((cat) => cat.key === selectedCategory.key)
+                        ?.label || selectedCategory.label
+                    }
+                  </Breadcrumb.Item>
+                )}
+                {selectedSubcategory && (
+                  <Breadcrumb.Item active>
+                    {
+                      subcategories.find((sub) => sub.id === selectedSubcategory)
+                        ? getTranslatedLabel(
+                            subcategories.find((sub) => sub.id === selectedSubcategory)
+                          )
+                        : "..."
+                    }
+                  </Breadcrumb.Item>
+                )}
+              </Breadcrumb>
+
+              {/* Categories */}
+              {!selectedCategory &&
+                (loading.categories ? (
+                  <Spinner animation="border" />
+                ) : (
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+                      gap: "1rem",
+                    }}
+                  >
+                    {categories.map(renderCategoryCard)}
                   </div>
                 ))}
-              </div>
-              : renderSubcategoriesGrid()
-        )}
 
-          {/* Produkty (gdy wybrano subkategorię) */}
-          {selectedSubcategory && new_renderProductsList_v2()}
-          </div>
-        </div>
-      </Col>
+              {/* Subcategories */}
+              {selectedCategory && !selectedSubcategory && (
+                loading.subcategories ? (
+                  <Spinner animation="border" />
+                ) : (
+                  <div className={style.MainCategoryList}>
+                    {subcategories.map((sub) => (
+                      <div
+                        key={sub.id}
+                        className={style.MainCategoryCard}
+                        onClick={() =>
+                          handleSubcategorySelect(sub.id, selectedCategory.key)
+                        }
+                      >
+                        <div className={style.CardText}>
+                          <h5>{sub.label}</h5>
+                          <p>{t("products.count", { count: sub.product_count })}</p>
+                        </div>
+                        <ImageComponent src={sub.photo_url} blurhash={sub.blurhash}></ImageComponent>
+                      </div>
+                    ))}
+                  </div>
+                )
+              )}
 
-      </Row>
-      
-      <Modal show={showModal} onHide={handleCloseModal} centered size="xl" className={style.modal_custom}>
-        <Modal.Header closeButton>
-          <Modal.Title>{modalTitle}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <img 
-            src={modalImage} 
-            alt={modalTitle} 
-            className={style.modal_custom_img} 
-            style={{ maxWidth: '100%', height: 'auto', maxHeight: '70vh' }} 
-            //loading="lazy"
-        />
-        </Modal.Body>
-      </Modal>
-      <ToastContainer position="top-end" className="p-3" style={{ marginTop: "50px" }}>
-        <Toast show={showToast} onClose={() => setShowToast(false)} delay={3000} autohide>
-          <Toast.Body>{toastMessage}</Toast.Body>
-        </Toast>
-      </ToastContainer>
-    </div>
+              {/* Products */}
+              {selectedSubcategory && (
+                loading.products ? (
+                  <Spinner animation="border" />
+                ) : products.length > 0 ? (
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns:
+                        "repeat(auto-fill, minmax(300px, 1fr))",
+                      gap: "1rem",
+                    }}
+                  >
+                    {products.map(renderProductCard)}
+                  </div>
+                ) : (
+                  <p>{t("products.noProducts")}</p>
+                )
+              )}
+            </div>
+          </Col>
+        </Row>
+
+        {/* Modal */}
+        <Modal
+          show={modal.show}
+          onHide={() => setModal({ show: false, image: "", title: "" })}
+          centered
+          size="xl"
+          className={style.modal_custom}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{modal.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img
+              src={modal.image}
+              alt={modal.title}
+              className={style.modal_custom_img}
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "70vh" }}
+            />
+          </Modal.Body>
+        </Modal>
+
+        {/* Toast */}
+        <ToastContainer position="top-end" className="p-3" style={{ marginTop: "50px" }}>
+          <Toast
+            show={toast.show}
+            onClose={() => setToast((prev) => ({ ...prev, show: false }))}
+            delay={3000}
+            autohide
+          >
+            <Toast.Body>{toast.message}</Toast.Body>
+          </Toast>
+        </ToastContainer>
+      </div>
     </>
   );
 }

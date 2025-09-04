@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import { Modal } from 'react-bootstrap';
 
 const ProjectsGallery = () => {
+  
   const [modalCaption, setModalCaption] = useState('');
   const [images, setImages] = useState([]);
   const [modalImage, setModalImage] = useState("");

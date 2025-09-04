@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Blurhash } from "react-blurhash";
 import { Card } from "react-bootstrap";
 
-export default function ImageComponent({ src }) {
+export default function ImageComponent({ src, blurhash }) {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function ImageComponent({ src }) {
         <>
             {!imageLoaded && (
                 <Blurhash
-                    hash={"LEHLk~WB2yk8pyo0adR*.7kCMdnj"}
+                    hash={blurhash}
                     width={200}
                     height={200}
                     resolutionX={32}
