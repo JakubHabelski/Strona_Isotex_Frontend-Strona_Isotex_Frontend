@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { Form } from "react-bootstrap";
 import ParallaxImage from "../../components/ParallaxImage/ParallaxImage";
-import apiURL from '../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../config';
 
 export default function TestPage() { 
 

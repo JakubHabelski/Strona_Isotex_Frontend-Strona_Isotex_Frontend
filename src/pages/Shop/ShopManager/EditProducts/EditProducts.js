@@ -6,7 +6,7 @@ import { Button, Form, FormControl, Modal, Table } from "react-bootstrap";
 import style from "../AddProduct/AddProduct.module.css"
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 
 
 function EditProductsList(){

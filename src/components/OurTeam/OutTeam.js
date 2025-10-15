@@ -14,6 +14,7 @@ export default function OurTeam() {
                     src="/assets/OurTeam/woman.png"
                     alt={t('Team.member1.image_alt')}
                     className={style.teamMemberIMG}
+                    loading="lazy"
                 />
                 <h2>{t('Team.member1.name')}</h2>
                 <p>{t('Team.member1.position')}</p>
@@ -23,6 +24,7 @@ export default function OurTeam() {
                     src="/assets/OurTeam/man.png"
                     alt={t('Team.member2.image_alt')}
                     className={style.teamMemberIMG}
+                    loading="lazy"
                 />
                 <h2>{t('Team.member2.name')}</h2>
                 <p>{t('Team.member2.position')}</p>
@@ -32,6 +34,7 @@ export default function OurTeam() {
                     src="/assets/OurTeam/man.png"
                     alt={t('Team.member3.image_alt')}
                     className={style.teamMemberIMG}
+                    loading="lazy"
                 />
                 <h2>{t('Team.member3.name')}</h2>
                 <p>{t('Team.member3.position')}</p>

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
-import apiURL from '../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../config';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 function JoinUsPageForm() {

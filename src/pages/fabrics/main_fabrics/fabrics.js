@@ -7,6 +7,7 @@ import './fabrics.css';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import { useTranslation } from 'react-i18next'; // Import i18n
+import { baseURL, logoURL, faviconURL } from '../../../config';
 
 function Fabrics_Info() {
     const { t } = useTranslation(); // Hook do tłumaczenia
@@ -53,28 +54,51 @@ function Fabrics_Info() {
     return(
         <>
         <Helmet>
-                <title>{t("page_titles.fabrics.main_fabrics")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
-                <meta name="robots" content="index, follow" />
-                <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
-                        }
-                    }
-                `}</script>
-            </Helmet>
+        <title>{t('page_titles.fabrics.main_fabrics')}</title>
+        <meta name="description" content={t('fabrics_info.meta.description')} />
+        <meta name="keywords" content={t('fabrics_info.meta.keywords')} />
+        <meta name="robots" content="index, follow" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('page_titles.fabrics.main_fabrics')} />
+        <meta name="twitter:description" content={t('fabrics_info.meta.description')} />
+        <meta name="twitter:image" content={logoURL} />
+        <meta property="og:title" content={t('page_titles.fabrics.main_fabrics')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={logoURL} />
+        <meta property="og:url" content={`${baseURL}/tkaniny`} />
+        <meta property="og:description" content={t('fabrics_info.meta.description')} />
+        <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+        <link rel="canonical" href={`${baseURL}/tkaniny`} />
+        <link rel="icon" type="image/png" href={faviconURL} />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "${t('page_titles.fabrics.main_fabrics')}",
+            "description": "${t('fabrics_info.meta.description')}",
+            "url": "${baseURL}/tkaniny",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Isotex Group",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "${logoURL}"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Syców",
+                "addressCountry": "PL"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "kontakt@isotex-poland.com",
+                "url": "${baseURL}/kontakt"
+              }
+            }
+          }
+        `}</script>
+      </Helmet>
         <Navbar_v2></Navbar_v2>
         <Fabrics_Info/>
         

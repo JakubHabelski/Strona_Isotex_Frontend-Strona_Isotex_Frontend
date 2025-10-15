@@ -6,32 +6,56 @@ import styles from '../../Shop/Shop.module.css';
 import { useTranslation } from 'react-i18next';
 import Navbar_v2 from '../../../components/Navbar_v2/Navbar';
 import { Helmet } from 'react-helmet';
+import { baseURL, logoURL, faviconURL } from '../../../config';
 
 function Aramid_Info() {
     const { t } = useTranslation(); // Hook do tłumaczenia
     return (
         <>
-        <Helmet>
-                <title>{t("page_titles.fabrics.aramid")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+            <Helmet>
+                <title>{t('page_titles.fabrics.aramid_fabrics')}</title>
+                <meta name="description" content={t('fabrics_info.aramid_fabrics.meta.description')} />
+                <meta name="keywords" content={t('fabrics_info.aramid_fabrics.meta.keywords')} />
                 <meta name="robots" content="index, follow" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={t('page_titles.fabrics.aramid_fabrics')} />
+                <meta name="twitter:description" content={t('fabrics_info.aramid_fabrics.meta.description')} />
+                <meta name="twitter:image" content={logoURL} />
+                <meta property="og:title" content={t('page_titles.fabrics.aramid_fabrics')} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content={logoURL} />
+                <meta property="og:url" content={`${baseURL}/tkaniny/aramidowe`} />
+                <meta property="og:description" content={t('fabrics_info.aramid_fabrics.meta.description')} />
+                <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+                <link rel="canonical" href={`${baseURL}/tkaniny/aramidowe`} />
+                <link rel="icon" type="image/png" href={faviconURL} />
                 <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
-                        }
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "name": "${t('page_titles.fabrics.aramid_fabrics')}",
+                    "description": "${t('fabrics_info.aramid_fabrics.meta.description')}",
+                    "url": "${baseURL}/tkaniny/aramidowe",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Isotex Group",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "${logoURL}"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Syców",
+                        "addressCountry": "PL"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer service",
+                        "email": "kontakt@isotex-poland.com",
+                        "url": "${baseURL}/kontakt"
                     }
+                    }
+                }
                 `}</script>
             </Helmet>
             <main className="Main_Glass">
@@ -62,7 +86,7 @@ function Aramid_Info() {
                         <Row xs={1} md={2} className="g-4">
                             <Col>
                                 <Card className={styles.card}>
-                                    <Card.Img variant="top" src="/assets/materials/fabrics/aramid/aramid-silikon.jpg" className="card_img_glass" style={{ height: "300px" }} />
+                                    <Card.Img variant="top" src="/assets/materials/fabrics/Aramid/aramid-silikon.jpg" className="card_img_glass" style={{ height: "300px" }} />
                                     <Card.Body>
                                         <Card.Title>{t('aramid_info.siliconeCoatedAramid')}</Card.Title> {/* Tłumaczenie tytułu */}
                                     </Card.Body>
@@ -70,7 +94,7 @@ function Aramid_Info() {
                             </Col>
                             <Col>
                                 <Card className={styles.card}>
-                                    <Card.Img variant="top" src="/assets/materials/fabrics/aramid/aramid-aluminium.jpg" className="card_img_glass" style={{ height: "300px" }} />
+                                    <Card.Img variant="top" src="/assets/materials/fabrics/Aramid/aramid-aluminium.jpg" className="card_img_glass" style={{ height: "300px" }} />
                                     <Card.Body>
                                         <Card.Title>{t('aramid_info.aluminumCoatedAramid')}</Card.Title> {/* Tłumaczenie tytułu */}
                                     </Card.Body>
@@ -103,7 +127,7 @@ function Aramid_Info() {
                                 <Image src="/assets/materials/fabrics/glass/chemia.jpg" className="card_img_glass" />
                             </Col>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/assets/materials/fabrics/aramid/masa.jpg" className="card_img_glass" />
+                                <Image src="/assets/materials/fabrics/Aramid/masa.jpg" className="card_img_glass" />
                             </Col>
                         </Row>
                         <h3>{t('aramid_info.applications')}</h3> {/* Tłumaczenie nagłówka */}
@@ -123,13 +147,13 @@ function Aramid_Info() {
                         </ul>
                         <Row xs={1} md={3}>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/assets/materials/fabrics/aramid/kamizelka.jpg" className="card_img_glass" />
+                                <Image src="/assets/materials/fabrics/Aramid/kamizelka.jpg" className="card_img_glass" />
                             </Col>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/assets/materials/fabrics/aramid/rekawice.jpg" className="card_img_glass" />
+                                <Image src="/assets/materials/fabrics/Aramid/rekawice.jpg" className="card_img_glass" />
                             </Col>
                             <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/assets/materials/fabrics/aramid/samolot.jpg" className="card_img_glass" />
+                                <Image src="/assets/materials/fabrics/Aramid/samolot.jpg" className="card_img_glass" />
                             </Col>
                         </Row>
                         <h3>{t('aramid_info.summary')}</h3> {/* Tłumaczenie nagłówka */}

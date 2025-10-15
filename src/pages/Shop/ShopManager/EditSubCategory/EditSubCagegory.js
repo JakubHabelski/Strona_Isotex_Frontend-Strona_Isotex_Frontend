@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Accordion, Button, Card, Form, Modal, Table, useAccordionButton } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 
 export default function EditSubCagegory(){
     const {t} = useTranslation();

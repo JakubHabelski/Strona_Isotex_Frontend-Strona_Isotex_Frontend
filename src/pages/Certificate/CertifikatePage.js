@@ -7,6 +7,7 @@ import style from './CertifikatePage.module.css'
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
+import { baseURL, logoURL, faviconURL } from '../../config';
 
 function CertificatePageInfo(){
 
@@ -93,27 +94,62 @@ function CertificatePage() {
     const { t, i18n } = useTranslation();
     return (
         <>
-            <Helmet>
-                <title>{t("page_titles.Certificate")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+           <Helmet>
+                <title>{t('page_titles.certificates')}</title>
+                <meta name="description" content={t('certificates_info.meta.description')} />
+                <meta name="keywords" content={t('certificates_info.meta.keywords')} />
                 <meta name="robots" content="index, follow" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={t('page_titles.certificates')} />
+                <meta name="twitter:description" content={t('certificates_info.meta.description')} />
+                <meta name="twitter:image" content={logoURL} />
+                <meta property="og:title" content={t('page_titles.certificates')} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content={logoURL} />
+                <meta property="og:url" content={`${baseURL}/certyfikaty`} />
+                <meta property="og:description" content={t('certificates_info.meta.description')} />
+                <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+                <link rel="canonical" href={`${baseURL}/certyfikaty`} />
+                <link rel="icon" type="image/png" href={faviconURL} />
                 <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "name": "${t('page_titles.certificates')}",
+                    "description": "${t('certificates_info.meta.description')}",
+                    "url": "${baseURL}/certyfikaty",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Isotex Group",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "${logoURL}"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Syców",
+                        "addressCountry": "PL"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer service",
+                        "email": "kontakt@isotex-poland.com",
+                        "url": "${baseURL}/kontakt"
+                    },
+                    "certification": [
+                        {
+                        "@type": "Certification",
+                        "name": "ISO 9001:2015",
+                        "description": "${t('CertificatePage.ISO90012015.Certdesc')}"
+                        },
+                        {
+                        "@type": "Certification",
+                        "name": "${t('CertificatePage.Hygienic_Certificate.CartName')}",
+                        "description": "${t('CertificatePage.Hygienic_Certificate.Certdesc')}"
                         }
+                    ]
                     }
+                }
                 `}</script>
             </Helmet>
             <Navbar_v2></Navbar_v2>

@@ -1,0 +1,193 @@
+
+
+
+
+
+.Shortinfo2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: min(1500px, 90%);
+  margin: 60px auto;
+    
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+.textBlock {
+    color: black;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.h2_custom {
+  color: red;
+  font-weight: 600;
+}
+.imageBlock {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@keyframes appear {
+    from{
+        
+      /*  scale: 0.5;
+      clip-path: inset(100% 100% 0 0); 
+        */
+        transform:  translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+      /*  clip-path: inset(0 0 0 0);
+       scale: 1;
+      */
+     
+      transform:  translateX(0);
+
+    }
+}
+
+.view{
+
+}
+.block{
+    margin:  150px auto ;
+    animation: appear linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.elomelo{
+    
+    
+}
+.Panel_Imageleft_TextSlide_Right{
+    display: flex;
+    
+    flex-direction: row;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left{
+    flex-basis: 35%;
+    display: flex;
+    position: relative;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 0px 20px 20px 0px;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+.Panel_Imageleft_TextSlide_Right .panel_left .img_bg{
+    position: absolute;
+    top: 0;
+    transform: translateY(40%);
+    max-width: 90%;
+}
+.Panel_Imageleft_TextSlide_Right .panel_left .img_cover{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-30%);
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.Panel_Imageleft_TextSlide_Right .panel_right{
+    flex-basis: 65%;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right h1{
+    color: red;
+    text-align: left;
+    padding: 0  min(5rem, 8%) ;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_container{
+    display: grid;
+    grid-template-columns: 1fr;   
+    gap: 1rem; 
+    padding: min(5rem, 8%); 
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element{
+    display: flex;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: translateY(100px);
+    gap: 2rem;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element >*{
+    flex-basis: 50%;
+}
+
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element img{
+     filter:  brightness(0) saturate(100%) invert(16%) sepia(97%) saturate(7497%) hue-rotate(-1deg) brightness(101%) contrast(108%);
+     height: 50px;
+     width: 50px;
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element h5{
+    background-color:  red;
+    height: 1px;
+    
+}
+.Panel_Imageleft_TextSlide_Right .panel_right .text_element p{
+    
+}
+
+@media (max-width: 992px){
+    .Panel_Imageleft_TextSlide_Right{
+        flex-direction: column-reverse;
+    }
+    .Panel_Imageleft_TextSlide_Right .panel_left .img_bg{
+        position: relative;
+        max-width:  100%;
+        transform: none;
+        margin-bottom: 100px;
+    }
+    .Panel_Imageleft_TextSlide_Right .panel_left .img_cover{
+        position: absolute;
+        transform: none;
+    }
+}
+.WideHeadLineWithPhotobg{
+    background-image: url('../../../public/assets/zakład.png');
+    height: 500px;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.WideHeadLineWithPhoto{
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+.WideHeadLineWithPhoto .WideHeadLineWithPhotoOverlay{
+    width: min(1500px, 90%);
+    margin: auto;
+    color: red;
+
+    .textBlock {
+    font-size: 1rem;
+    line-height: 1.6;
+    }
+    .h2_custom {
+    
+    font-weight: 600;
+    }
+}
+
+
+
+
+

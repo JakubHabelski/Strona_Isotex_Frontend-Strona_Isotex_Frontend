@@ -6,7 +6,7 @@ import axios from "axios";
 import style from "./AddProduct.module.css";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 import imageCompression from 'browser-image-compression';
 
 export default function AddProduct() {

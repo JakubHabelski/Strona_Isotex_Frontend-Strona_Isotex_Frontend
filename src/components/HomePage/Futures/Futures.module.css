@@ -1,0 +1,50 @@
+
+.Futures_container{
+    width: min(1500px, 90%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: start;
+    gap: 2rem;
+    margin: 0px auto 60px;
+    
+    
+    
+}
+.Futures_H1{
+    width: min(1500px, 90%);
+    margin: 50px auto;
+    color: red;
+    
+}
+.Futures_container .Futures_card {
+    transition: all 0.8s ease;
+    transform: translateY(-50px);
+    height: 100%;
+    opacity: 0;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    border-radius: 1rem;
+   
+    
+    font-family: helvetica;
+    h1{
+        margin-top: 0;
+        margin-bottom: 16px;
+        margin-left: 60px;
+        text-align: left;
+        color: red;
+    }
+    img{
+        float: left;
+        aspect-ratio: 1/1;
+        width: 50px;
+        height: 50px;
+        filter:  brightness(0) saturate(100%) invert(16%) sepia(97%) saturate(7497%) hue-rotate(-1deg) brightness(101%) contrast(108%);
+
+    }
+    p{
+        text-align: justify;
+    }
+}

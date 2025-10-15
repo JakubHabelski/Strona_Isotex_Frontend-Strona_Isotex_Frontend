@@ -6,7 +6,7 @@ import axios from "axios";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 import imageCompression from 'browser-image-compression';
 
 export default function EditCategory(){

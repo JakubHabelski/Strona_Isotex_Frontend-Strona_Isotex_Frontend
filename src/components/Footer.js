@@ -27,8 +27,8 @@ const Footer = () => {
           </Col>
           <Col md={4}>
             <h5>{t("footer.certifications")}</h5>
-            <img src='/assets/certyfikaty/logo-nizp-atest-pib.jpeg' style={{ width: "200px" }} />
-            <img src='/assets/certyfikaty/system-iso-9001.jpeg' style={{ width: "200px" }} />
+            <img src='/assets/certyfikaty/logo-nizp-atest-pib.jpeg' alt={t("footer.hygiene_certificate")} style={{ width: "200px" }} loading="lazy"/>
+            <img src='/assets/certyfikaty/system-iso-9001.jpeg' alt={t("footer.iso_certificate")} style={{ width: "200px" }} loading="lazy" />
             <p style={{ marginTop: "20px" }}>
               <a href='/assets/certyfikaty/cert-qms-isotex-group-ilona-zurawa-pl.pdf' className='footer_link'>
                 {t("footer.certificationPL")}

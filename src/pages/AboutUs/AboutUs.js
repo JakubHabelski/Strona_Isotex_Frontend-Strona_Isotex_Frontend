@@ -10,6 +10,7 @@ import OrderProcedure from './OrderProcedure/OrderProcedure';
 import WhatWeOffer from './WhatWeOffer/WhatWeOffer';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { baseURL, logoURL, faviconURL } from '../../config';
 
 function HoverImage() {
   const { t } = useTranslation();
@@ -145,28 +146,51 @@ export default function AboutUs() {
   return (
     <>
       <Helmet>
-                <title>{t("page_titles.AboutUs.AboutUs")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
-                <meta name="robots" content="index, follow" />
-                <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
-                        }
-                    }
-                `}</script>
-    </Helmet>
+          <title>{t('page_titles.AboutUs.AboutUs')}</title>
+          <meta name="description" content={t('AboutUsPage.meta.description')} />
+          <meta name="keywords" content={t('AboutUsPage.meta.keywords')} />
+          <meta name="robots" content="index, follow" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={t('page_titles.AboutUs')} />
+          <meta name="twitter:description" content={t('AboutUsPage.meta.description')} />
+          <meta name="twitter:image" content={logoURL} />
+          <meta property="og:title" content={t('page_titles.AboutUs')} />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content={logoURL} />
+          <meta property="og:url" content={`${baseURL}/o-nas`} />
+          <meta property="og:description" content={t('AboutUsPage.meta.description')} />
+          <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+          <link rel="canonical" href={`${baseURL}/o-nas`} />
+          <link rel="icon" type="image/png" href={faviconURL} />
+          <script type="application/ld+json">{`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "${t('page_titles.AboutUs')}",
+              "description": "${t('AboutUsPage.meta.description')}",
+              "url": "${baseURL}/o-nas",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Isotex Group",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "${logoURL}"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Syców",
+                  "addressCountry": "PL"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "contactType": "customer service",
+                  "email": "kontakt@isotex-poland.com",
+                  "url": "${baseURL}/kontakt"
+                }
+              }
+            }
+          `}</script>
+      </Helmet>
       <Navbar_v2 />
       <AboutUsPage />
       <OrderProcedure />

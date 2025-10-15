@@ -11,7 +11,7 @@ export default function JoinUs() {
         <>
             <div className={style.joinUsContainer}>
                 <div >
-                    <img src="/assets/handshake2.jpeg" alt="Join Us" className={style.joinUsImage} />
+                    <img src="/assets/handshake2.jpeg" alt="Join Us" className={style.joinUsImage}loading="lazy" />
                     <div style={{background: "linear-gradient(to right, #ffffff, transparent)"}}></div>
                 </div>
                 

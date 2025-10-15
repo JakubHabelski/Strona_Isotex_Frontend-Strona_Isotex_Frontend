@@ -34,7 +34,7 @@ export default function Filling_List() {
       </Card>
 
       <Card onClick={() => redirectToPage('/wypelnienia/mata-szklana')}>
-        <Card.Img variant="top" src="/assets/materials/Fillings/mata-szklana.jpg" className="card_img" />
+        <Card.Img variant="top" src="/assets/materials/Fillings/Mata-szklana.jpg" className="card_img" />
         <Card.Body>
           <Card.Title>{t("fillings.glassMat")}</Card.Title>  {/* Przetłumaczony tytuł */}
           <Card.Text>

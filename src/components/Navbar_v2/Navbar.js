@@ -55,23 +55,23 @@ export default function Navbar_v2() {
     <>
     <div className={styles.navbar_background} ref={navbar}>
      <div className={`${styles.social_media} `} ref={social_media_ref}>
-        <a href="https://www.facebook.com/P.P.U.H.Isotex/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href="https://www.instagram.com/isotex_insulation_matters/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://pl.linkedin.com/in/isotex-group-128758264" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
-        <a href="https://www.youtube.com/watch?v=DaNj3DzocqQ" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-youtube"></ion-icon></a>
-        <a href="tel:+48600511029" target="_blank" rel="noopener noreferrer" className={styles.social_media_text}><ion-icon name="call-outline" ></ion-icon> +48 600 511 029</a>
-        <LanguageSwitcher />
+       <a href="https://www.facebook.com/P.P.U.H.Isotex/" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/logo-facebook.svg" alt="Isotex Group Facebook"/></a>
+      <a href="https://www.instagram.com/isotex_insulation_matters/" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/logo-instagram.svg" alt="Isotex Group Instagram"/></a>
+      <a href="https://pl.linkedin.com/in/isotex-group-128758264" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/logo-linkedin.svg" alt="Isotex Group Linkedin"/></a>
+      <a href="https://www.youtube.com/watch?v=DaNj3DzocqQ" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/logo-youtube.svg" alt="Isotex Group Youtube"/></a>
+      <a href="tel:+48600511029" target="_blank" rel="noopener noreferrer" className={styles.social_media_text}><img src="/assets/icons/call-outline.svg" alt="Isotex Group Telefon"/> +48 600 511 029</a> 
+<LanguageSwitcher />
      </div>
     <Navbar expand="lg" className={styles.Navbar_v2}>
       <Container>
         <Navbar.Brand href="/" className={styles.Brand}>
-        <img src="/assets/logo_black.png" alt="Logo" width="auto" height="100px" />
+        <img src="/assets/logo_black.png" alt="Isotex Group Logo" width="auto" height="100px" loading="lazy"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={styles.Navbar_Collapse}>
           <Nav className={`${styles.navCentered} ms-auto`}>
             <Nav.Link href="/">
-          <div className={styles.list_item}>{t("Home")}</div>
+          <div className={styles.list_item}>{t("navbar.Home")}</div>
         </Nav.Link>
         <NavDropdown
           title={
@@ -88,6 +88,9 @@ export default function Navbar_v2() {
             {t("navbar.technology")}
           </NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link href="/Blog">
+          Blog
+        </Nav.Link>
         <Nav.Link href="/fabrics">
           <div className={styles.list_item}>{t("navbar.technicalFabrics")}</div>
         </Nav.Link>

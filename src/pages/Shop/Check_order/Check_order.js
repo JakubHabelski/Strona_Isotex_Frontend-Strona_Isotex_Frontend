@@ -7,7 +7,7 @@ import style from "./Check_order.module.css"
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import apiURL from "../../../config";
+import { baseURL, apiURL, logoURL, faviconURL } from "../../../config";
 
 
 function OrderInfo(){

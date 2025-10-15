@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer';
 import { Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
-
+import { baseURL, logoURL, faviconURL } from '../../../config';
 
 export default function Technology() {
     const { t } = useTranslation();
@@ -47,26 +47,49 @@ export default function Technology() {
   return (
     <>
     <Helmet>
-        <title>{t("page_titles.AboutUs.Technology")}</title>
-        <link rel="icon" type="image/png" href="/assets/logo.png" />
-        <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-        <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
+        <title>{t('page_titles.AboutUs.Technology')}</title>
+        <meta name="description" content={t('Technology.meta.description')} />
+        <meta name="keywords" content={t('Technology.meta.keywords')} />
         <meta name="robots" content="index, follow" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('page_titles.Technology')} />
+        <meta name="twitter:description" content={t('Technology.meta.description')} />
+        <meta name="twitter:image" content={logoURL} />
+        <meta property="og:title" content={t('page_titles.Technology')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={logoURL} />
+        <meta property="og:url" content={`${baseURL}/technologia`} />
+        <meta property="og:description" content={t('Technology.meta.description')} />
+        <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+        <link rel="canonical" href={`${baseURL}/technologia`} />
+        <link rel="icon" type="image/png" href={faviconURL} />
         <script type="application/ld+json">{`
-            {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Isotex Group Sklep",
-                "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Isotex Group",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                    }
-                }
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "${t('page_titles.Technology')}",
+            "description": "${t('Technology.meta.description')}",
+            "url": "${baseURL}/technologia",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Isotex Group",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "${logoURL}"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Syców",
+                "addressCountry": "PL"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "kontakt@isotex-poland.com",
+                "url": "${baseURL}/kontakt"
+              }
             }
+          }
         `}</script>
       </Helmet>
     <Navbar_v2></Navbar_v2>

@@ -219,6 +219,7 @@ export default function OurProjects() {
                     src={image.src}
                     alt={image.alt}
                     onClick={() => handleImageClick(image.src, image.src)}
+                    loading="lazy"
                   />
                   {/*
                   <div className={style.tabOverlay}>
@@ -245,7 +246,7 @@ export default function OurProjects() {
           <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={modalImage} alt="Product" className={style.modal_custom_img} />
+          <img src={modalImage} alt="Product" className={style.modal_custom_img} loading="lazy"/>
         </Modal.Body>
       </Modal>
     </>

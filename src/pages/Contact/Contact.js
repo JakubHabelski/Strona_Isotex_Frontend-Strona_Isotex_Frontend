@@ -7,7 +7,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useTranslation } from "react-i18next"
 import { Helmet } from "react-helmet"
-import apiURL from '../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../config';
 import ReCAPTCHA from "react-google-recaptcha"
 
 
@@ -79,7 +79,25 @@ function ContactUs() {
 
   return (
     <div className={style.contactUsContainer}>
-      <h1>{t("ContactUs.title")}</h1>
+      <div className={style.contactUsHeader}>
+        <h1>{t("page_titles.Contact")}</h1>
+        <p>{t("ContactUs.intro")}</p>
+        <h2>{t("ContactUs.details.title")}</h2>
+          <p>
+            <strong>{t("ContactUs.details.company")}</strong><br />
+            ISOTEX GROUP Ilona Żurawa (NIP 9111824789)<br />
+            ul. Daszyńskiego 9A, 56-500 Syców
+          </p>
+          <p>
+            <strong>{t("ContactUs.details.email")}</strong><br />
+            <a href="mailto:kontakt@isotex-poland.com">kontakt@isotex-poland.com</a>
+          </p>
+          <p>
+            <strong>{t("ContactUs.details.phone")}</strong><br />
+            <a href="tel:+48600511029">+48 600 511 029</a>
+          </p>
+      </div>
+      
       <div className={style.contactUsContent}>
         {/*error && <div className={style.error}>{error}</div>*/}
         {/*success && <div className={style.success}>{success}</div>*/}
@@ -155,29 +173,67 @@ export default function Contact() {
     const { t, i18n } = useTranslation();
     return(
         <>
-                <Helmet>
-                <title>{t("page_titles.Contact")}</title>
-                <link rel="icon" type="image/png" href="/assets/logo.png" />
-                <meta name="description" content="Wysokiej jakości tkaniny i maty izolacyjne od Isotex Group. Przeglądaj nasze produktu i zamawiaj online!" />
-                <meta name="keywords" content="tkaniny izolacyjne, maty izolacyjne, Isotex Group, materiały ognioodporne, sklep online" />
-                <meta name="robots" content="index, follow" />
-                <script type="application/ld+json">{`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Isotex Group Sklep",
-                        "description": "Sklep online z tkaninami i matami izolacyjnymi od Isotex Group.",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Isotex Group",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://testfunkcjonalonscisklepu.pl/assets/logo.png"
-                            }
-                        }
-                    }
-                `}</script>
-            </Helmet>
+        <Helmet>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>{t("page_titles.Contact")}</title>
+        <meta name="description" content={t("ContactUs.meta.description")} />
+        <meta name="keywords" content={t("ContactUs.meta.keywords")} />
+        <meta name="robots" content="index, follow" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t("page_titles.Contact")} />
+        <meta name="twitter:description" content={t("ContactUs.meta.description")} />
+        <meta name="twitter:image" content={logoURL} />
+        <meta property="og:title" content={t("page_titles.Contact")} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={logoURL} />
+        <meta property="og:url" content={`${baseURL}/kontakt`} />
+        <meta property="og:description" content={t("ContactUs.meta.description")} />
+        <meta property="og:site_name" content="Isotex Group Ilona Żurawa" />
+        <link rel="canonical" href={`${baseURL}/kontakt`} />
+        <link rel="icon" type="image/png" href={faviconURL} />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "${t("page_titles.Contact")}",
+            "description": "${t("ContactUs.meta.description")}",
+            "url": "${baseURL}/kontakt",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Isotex Group",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "${logoURL}"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Daszyńskiego 9A",
+                "addressLocality": "Syców",
+                "postalCode": "56-500",
+                "addressCountry": "PL"
+              },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "contactType": "customer service",
+                  "email": "kontakt@isotex-poland.com",
+                  "url": "${baseURL}/kontakt"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "contactType": "customer service",
+                  "telephone": "+48 600 511 029",
+                  "url": "${baseURL}/kontakt"
+                }
+              ],
+              "openingHours": "Mo-Fr 08:00-16:00"
+            }
+          }
+        `}</script>
+      </Helmet>
             <Navbar_v2></Navbar_v2>
             <ContactUs></ContactUs>
             <Footer></Footer>

@@ -1,12 +1,12 @@
 {
   "page_titles": {
-  "home": "Isotex Group - Wärmedämmung",
+  "home": "Isotex Group – Wärmedämmung und Isoliermatten – Syców",
   "AboutUs": {
-    "AboutUs": "Isotex Group - Über uns",
-    "OrderProcedure": "",
-    "Technology": "Isotex Group - Technologie"
+    "AboutUs": "Isotex Group Syców – Hersteller von Wärmedämmung",
+    "OrderProcedure": "Isotex Bestellprozess – Syców",
+    "Technology": "Isotex Group Technologie – Dämmstoffproduktion in Syców"
   },
-  "Certificate": "Isotex Group - Zertifikate",
+  "Certificate": "Isotex Zertifikate – ISO 9001 und Hygienezertifikat",
   "Contact": "Isotex Group - Kontakt",
   "fabrics": {
     "aramid": "Isotex Group - Aramidstoffe",
@@ -121,11 +121,12 @@
     },
     "shortinfo2": {
       "heading": "Hersteller von Wärmedämmungen",
-      "paragraph": "Der Hersteller von Wärmedämmungen IsoTex befindet sich in Komorów in der Woiwodschaft Niederschlesien. Der Hauptbereich unserer Tätigkeit umfasst die Produktion, den Verkauf und die Montage von Elementen, die zum Schutz von Industrieanlagen und -geräten vor Wärmeverlusten dienen. In dieser Branche bieten wir seit fast 30 Jahren Dienstleistungen an. Wir haben unsere Tätigkeit im Jahr 1994 aufgenommen.\n\nWir laden Sie ein, unsere Dienstleistungen in Anspruch zu nehmen!\n\nWir gewährleisten einen umfassenden Service – unser Tätigkeitsbereich umfasst den Verkauf, die Planung, die Produktion und die Montage von Dämmungen. Die angewandte Technologie sorgt dafür, dass die in unserem Werk hergestellten Produkte effizient und sicher im täglichen Gebrauch sind. Kunden können auch auf fachkundige Unterstützung in jeder Phase der Zusammenarbeit zählen.",
+      "paragraph": "Der Hersteller von Wärmedämmungen IsoTex befindet sich in Syców in der Woiwodschaft Niederschlesien. Der Hauptbereich unserer Tätigkeit umfasst die Produktion, den Verkauf und die Montage von Elementen, die zum Schutz von Industrieanlagen und -geräten vor Wärmeverlusten dienen. In dieser Branche bieten wir seit fast 30 Jahren Dienstleistungen an. Wir haben unsere Tätigkeit im Jahr 1994 aufgenommen.\n\nWir laden Sie ein, unsere Dienstleistungen in Anspruch zu nehmen!\n\nWir gewährleisten einen umfassenden Service – unser Tätigkeitsbereich umfasst den Verkauf, die Planung, die Produktion und die Montage von Dämmungen. Die angewandte Technologie sorgt dafür, dass die in unserem Werk hergestellten Produkte effizient und sicher im täglichen Gebrauch sind. Kunden können auch auf fachkundige Unterstützung in jeder Phase der Zusammenarbeit zählen.",
       "button": "Erfahren Sie mehr",
       "imageAlt": "Hersteller von Wärmedämmungen IsoTex"
     },
     "navbar": {
+      "Home": "Home",
       "about": "Über uns",
       "insulations": "Wärmedämmungen",
       "products": "Dämmprodukte",
@@ -160,7 +161,9 @@
       "certificationDE": "PN-EN ISO 9001:2015 (DE)",
       "certificationFR": "PN-EN ISO 9001:2015 (FR)",
       "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
-      "allRightsReserved": "Alle Rechte vorbehalten"
+      "allRightsReserved": "Alle Rechte vorbehalten",
+      "hygiene_certificate": "Hygienezertifikat der Isotex Group",
+      "iso_certificate": "Isotex Group ISO 9001:2015 Zertifikat"
     },
     "fabrics": {
       "glassFabrics": "Glasgewebe",
@@ -180,7 +183,11 @@
     },
     "fabrics_info": {
       "fabricsTitle": "Glas- und Aramid-Gewebe",
-      "generalDescription": "Technische Stoffe sind spezialisierte Materialien mit außergewöhnlichen mechanischen, thermischen und chemischen Eigenschaften. Sie finden Anwendung in vielen Industriezweigen – von der Energiewirtschaft bis zur Automobilindustrie – und gewährleisten effektive Wärmedämmung, Schutz vor hohen Temperaturen und Haltbarkeit auch unter extremen Arbeitsbedingungen."
+      "generalDescription": "Technische Stoffe sind spezialisierte Materialien mit außergewöhnlichen mechanischen, thermischen und chemischen Eigenschaften. Sie finden Anwendung in vielen Industriezweigen – von der Energiewirtschaft bis zur Automobilindustrie – und gewährleisten effektive Wärmedämmung, Schutz vor hohen Temperaturen und Haltbarkeit auch unter extremen Arbeitsbedingungen.",
+      "meta": {
+      "description": "Isotex technische Stoffe in Syców: Glas- und Aramidstoffe für Wärmedämmung. Ideal für die Industrie, hitzebeständig.",
+      "keywords": "isotex technische stoffe, glasgewebe, aramidstoffe, wärmedämmung Syców, feuerfeste materialien"
+    }
     },
     "glass_info": {
       "generalCharacteristics": "Glasgewebe – Allgemeine Merkmale",
@@ -221,7 +228,11 @@
       "fireProtection": "Brandschutz",
       "fireProtectionDescription": "Glasgewebe werden als Basismaterial für die Herstellung von Brandschutzvorhängen verwendet, einschließlich Schutzkleidung, Löschdecken und Schutzvorhängen für Industriemaschinen.",
       "summary": "Zusammenfassung",
-      "summaryDescription": "Glasgewebe sind aufgrund ihrer Beständigkeit gegen hohe Temperaturen, Flexibilität, mechanischen Festigkeit und chemischen Beständigkeit unverzichtbare Materialien in vielen Industriezweigen, von der Herstellung von Wärmedämmstoffen bis hin zu Schutzvorhängen unter schwierigen Arbeitsbedingungen."
+      "summaryDescription": "Glasgewebe sind aufgrund ihrer Beständigkeit gegen hohe Temperaturen, Flexibilität, mechanischen Festigkeit und chemischen Beständigkeit unverzichtbare Materialien in vielen Industriezweigen, von der Herstellung von Wärmedämmstoffen bis hin zu Schutzvorhängen unter schwierigen Arbeitsbedingungen.",
+      "meta": {
+        "description": "Isotex Glasgewebe in Syców: hitzebeständig bis 550°C, nicht brennbar, ideal für die Isolierung von Rohrleitungen, Ventilen und Turbinen.",
+        "keywords": "isotex glasgewebe, wärmedämmung Syców, nicht brennbare stoffe, industrielle isolierung, hitzebeständige materialien"
+      }
     },
     "aramid_info": {
       "generalCharacteristics": "Aramid-Gewebe – Allgemeine Merkmale",
@@ -259,7 +270,11 @@
       "industrialInsulation": "Industrielle Dämmung",
       "industrialInsulationDescription": "Wärmeschutzhüllen, Dichtungen, feuerfeste Materialien.",
       "summary": "Zusammenfassung",
-      "summaryDescription": "Aramid-Gewebe gehören dank ihrer einzigartigen Eigenschaften – insbesondere ihrer Beständigkeit gegen Temperaturen, Schnitte und mechanische Schäden – zu den modernsten technischen Materialien. Sie finden nicht nur in der Schwerindustrie, sondern auch in militärischen, medizinischen und luftfahrttechnischen Anwendungen Verwendung."
+      "summaryDescription": "Aramid-Gewebe gehören dank ihrer einzigartigen Eigenschaften – insbesondere ihrer Beständigkeit gegen Temperaturen, Schnitte und mechanische Schäden – zu den modernsten technischen Materialien. Sie finden nicht nur in der Schwerindustrie, sondern auch in militärischen, medizinischen und luftfahrttechnischen Anwendungen Verwendung.",
+      "meta": {
+        "description": "Isotex Aramidstoffe in Syców: abriebfest und hitzebeständig. Perfekt für anspruchsvolle industrielle Dämmungen.",
+        "keywords": "isotex aramidstoffe, wärmedämmung Syców, kevlar stoffe, langlebige materialien, industrielle isolierung"
+      }
     },
     "fillingInfo": {
       "title": "Füllungen in Dämmmatratzen: Wichtige Materialien und ihre Anwendung",
@@ -902,7 +917,7 @@
         "p1": "Der Schutz der Privatsphäre der Nutzer ist für die ISOTEX GROUP Ilona Żurawa besonders wichtig. Aus diesem Grund wird den Nutzern der Website www.isotex-poland.com ein hoher Standard beim Schutz der Privatsphäre garantiert. Die ISOTEX GROUP Ilona Żurawa als Datenverwalter sorgt für die Sicherheit der von den Nutzern bereitgestellten Daten.",
         "p2": "Ziel des Verwalters ist es auch, die Nutzer ordnungsgemäß über die Rechte und Pflichten im Zusammenhang mit der Verarbeitung personenbezogener Daten zu informieren, insbesondere im Hinblick auf die Bestimmungen der Datenschutzverordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27.04.2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr sowie zur Aufhebung der Richtlinie 95/46/EG (im Folgenden „DSGVO“). Daher informiert der Verwalter in diesem Dokument, unter Berücksichtigung des Schutzes der Privatsphäre der Nutzer der Website, über die rechtlichen Grundlagen der Verarbeitung personenbezogener Daten, die von den Nutzern im Zusammenhang mit der Nutzung der Website www.isotex-poland.com (im Folgenden „Website“) bereitgestellt werden, die Methoden der Erhebung, Verarbeitung und des Schutzes personenbezogener Daten sowie die Rechte der Nutzer.",
         "p3": "Nutzer ist jede natürliche Person, deren Daten betroffen sind und die die Website www.isotex-poland.com oder die über die Website verfügbaren elektronischen Dienste nutzt.",
-        "p4": "Verwalter der personenbezogenen Daten, die von den Nutzern auf der Website www.isotex-poland.com bereitgestellt werden, ist die ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, Steuernummer 9111824789 (im Folgenden „Verwalter“)."
+        "p4": "Verwalter der personenbezogenen Daten, die von den Nutzern auf der Website www.isotex-poland.com bereitgestellt werden, ist die ISOTEX GROUP Ilona Żurawa, Syców 9A, 56-500 Syców, Steuernummer 9111824789 (im Folgenden „Verwalter“)."
       },
       "userConsent": {
         "title": "ZUSTIMMUNG DES NUTZERS",
@@ -967,7 +982,7 @@
             "rights": {
             "title": "Rechte des Nutzers",
             "p1": "Der Nutzer hat in jeder Phase der Verarbeitung seiner Daten eine Reihe von Rechten, die es ihm ermöglichen, Zugang zu seinen Daten zu erhalten, die Richtigkeit der Datenverarbeitung zu überprüfen, Korrekturen vorzunehmen sowie das Recht, Widerspruch gegen die Verarbeitung einzulegen, die Löschung der Daten, die Einschränkung der Verarbeitung oder die Datenübertragung zu verlangen.",
-            "p2": "Falls der Nutzer von seinen Rechten als betroffene Person Gebrauch machen möchte, kann er sich mit dem Verwalter über folgende Kontaktdaten in Verbindung setzen: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+            "p2": "Falls der Nutzer von seinen Rechten als betroffene Person Gebrauch machen möchte, kann er sich mit dem Verwalter über folgende Kontaktdaten in Verbindung setzen: ISOTEX GROUP Ilona Żurawa, Syców 9A, 56-500 Syców, isotex.biuro@wp.pl."
             },
             "complaint": {
             "title": "Recht auf Beschwerde bei einer Aufsichtsbehörde",
@@ -1003,44 +1018,28 @@
             },
             "contact": {
             "title": "Kontaktinformationen",
-            "p1": "Um jegliche Informationen zu dieser Datenschutzrichtlinie zu erhalten, kann der Nutzer den Verwalter personenbezogener Daten kontaktieren: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, unter Verwendung der folgenden Kontaktdaten: isotex.biuro@wp.pl.",
-            "p2": "Darüber hinaus besteht die Möglichkeit, per Post unter der Adresse Kontakt aufzunehmen: Komorów 9A, 56-500 Syców."
+            "p1": "Um jegliche Informationen zu dieser Datenschutzrichtlinie zu erhalten, kann der Nutzer den Verwalter personenbezogener Daten kontaktieren: ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, unter Verwendung der folgenden Kontaktdaten: isotex.biuro@wp.pl.",
+            "p2": "Darüber hinaus besteht die Möglichkeit, per Post unter der Adresse Kontakt aufzunehmen: Syców ul. Daszyńskiego 9A, 56-500 Syców."
             },
             "update": {
             "p1": "Die letzte Aktualisierung dieses Dokuments erfolgte am 12.01.2023."
             }
         }
-        },
-        "CertificatePage": {
-        "OurCerts": "Unsere Zertifikate",
-        "ISO90012015": {
-            "Certdesc": "ISO 9001:2015 ist eine internationale Norm, die Anforderungen an ein Qualitätsmanagementsystem (QMS) festlegt. Das ISO 9001:2015-Zertifikat ist weltweit anerkannt und weit verbreitet.\nDas ISO 9001:2015-System enthält Leitlinien zur Entwicklung von Grundsätzen und Verfahren, die notwendig sind, um Produkte und Dienstleistungen bereitzustellen, die die Bedürfnisse der Kunden sowie gesetzliche Anforderungen erfüllen. Es beschreibt verschiedene Bereiche, die ein effektives Qualitätsmanagement beeinflussen, wie Kundenorientierung, Engagement der obersten Leitung und der Mitarbeiter, Planung, Umsetzung und Überwachung von Prozessen sowie deren kontinuierliche Verbesserung.\nOrganisationen, die das ISO 9001:2015-Zertifikat besitzen, garantieren, dass ihre angebotenen Produkte und Dienstleistungen festgelegte Anforderungen erfüllen, was zu einer Erweiterung des potenziellen Kundenstamms führt.\nDas ISO 9001:2015-System ist mit anderen Managementsystemen, wie ISO 14001:2015, kompatibel. Durch die Anpassung der Struktur von ISO 9001:2015 an die Anforderungen des Dokuments Annex SL wird die Integration von Managementsystemen effizienter.",
-            "MoreInfo": {
-            "desc": "Weitere Informationen zur Norm ISO 9001:2015 finden Sie hier: "
-            }
-        },
-        "Hygienic_Certificate": {
-            "CartName": "Hygienisches Zertifikat B.BK",
-            "Certdesc": "Das hygienische Zertifikat NIZP-PZH-BBK bestätigt, dass unsere Dämmmatratzen gesundheitlich unbedenklich sind und in Umgebungen mit hohen Hygienestandards eingesetzt werden können. Das vom Nationalen Institut für Öffentliche Gesundheit – Staatliches Hygieneinstitut ausgestellte Zertifikat garantiert, dass unsere Produkte keine schädlichen Substanzen abgeben und sicher in Bereichen wie Industrieanlagen, Lebensmittel- oder Pharmaindustrie verwendet werden können.\n",
-            "MoreInfo": {
-            "desc": "Weitere Informationen zum hygienischen Zertifikat finden Sie hier: "
-            },
-            "Button": "Hygienisches Zertifikat"
         }
-        }},
+      },
         "Banner": {
-          "title": "Umfassende Lösungen für Wärmedämmung",
-          "description": "Wärmeverluste in industriellen Anlagen sind ein kostspieliges Problem – wir haben die Lösung! Wir entwerfen und produzieren Dämmmatratzen, die die Effizienz Ihrer Systeme steigern.",
+          "title": "Umfassende Lösungen für Wärmedämmung und Isoliermatten",
+          "description": "Wärmeverluste in Industrieanlagen sind ein kostspieliges Problem – wir haben die Lösung! Wir entwerfen und produzieren Isoliermatten, Rohrdämmung und Turbinendämmung, um die Effizienz Ihrer Systeme zu steigern.",
           "learn_more": "Erfahren Sie mehr",
-          "cta_text": "Entdecken Sie unsere Lösungen und reduzieren Sie jetzt Ihre CO2-Emissionen!",
-          "image_alt_a": "Dämmmatratzen – Angebot A",
-          "image_alt_b": "Dämmmatratzen – Angebot B",
-          "image_alt_c": "Dämmmatratzen – Angebot C",
-          "image_alt_d": "Dämmmatratzen – Angebot D"
+          "cta_text": "Entdecken Sie unsere Wärmedämmungslösungen und reduzieren Sie jetzt CO2-Emissionen!",
+          "image_alt_a": "Isoliermatten für Rohrdämmung",
+          "image_alt_b": "Isoliermatten für Turbinendämmung",
+          "image_alt_c": "Wärmedämmung für Armaturen",
+          "image_alt_d": "Wärmedämmung für die Industrie"
         },
         "WhatWeOfferBanner": {
-          "paragraph1": "Unser Angebot umfasst eine breite Palette hochwertiger Produkte, darunter moderne Dämmmatratzen, erstklassige Izo-Standard-Matratzen, die höchste Standards für thermische und akustische Dämmung erfüllen, sowie langlebige technische Stoffe und ein umfassendes Set an Zubehör, das für die Umsetzung verschiedenster Projekte erforderlich ist.",
-          "paragraph2": "Wir bieten auch professionelle Schneidedienstleistungen für Stoffe und andere Materialien mit fortschrittlicher CNC-Technologie an, die Präzision und Effizienz in jeder Produktionsphase gewährleisten. Unsere Lösungen sind auf die Bedürfnisse der Kunden zugeschnitten und bieten Zuverlässigkeit sowie Anpassung an spezifische Anforderungen, was uns zum Marktführer in der Dämm- und Spezialtechnikbranche macht."
+          "paragraph1": "Unser Angebot umfasst hochwertige Wärmedämmung, einschließlich moderner Isoliermatten für Rohr- und Turbinendämmung, erstklassige Izo-Standard-Matten, die höchste Wärme- und Schalldämmungsstandards erfüllen, sowie langlebige technische Stoffe für industrielle Anwendungen.",
+          "paragraph2": "Wir bieten professionelle Schneidedienste für Stoffe und Dämmmaterialien mit CNC-Technologie, die Präzision für Turbinen-, Rohr- und Armaturendämmung gewährleisten. Unsere Lösungen, einschließlich Rohrdämmung und Isoliermatten, sind auf Energieeffizienz und Langlebigkeit ausgelegt, was uns zum führenden Anbieter in der Wärmedämmungsbranche macht."
         },
         "Catalog": {
           "title": "Entdecken Sie unseren neuesten Katalog!",
@@ -1129,6 +1128,10 @@
           "title": "Engagement für Nachhaltigkeit",
           "description": "Unsere Wärmedämmungen helfen, Wärmeverluste zu vermeiden, fördern die Energieeffizienz und reduzieren CO2-Emissionen. Wir produzieren und installieren Lösungen, die die Umwelt und Ihr Unternehmen schonen.",
           "image_alt": "Isotex nachhaltige Dämmung"
+        },
+        "meta": {
+          "description": "Isotex Group Syców – führend in der Produktion von Wärmedämmung und technischen Stoffen seit 1994. Entdecken Sie unsere Geschichte und Technologie!",
+          "keywords": "isotex Group Syców, wärmedämmung hersteller, technische stoffe, industrielle isolierung, Syców"
         }
       },
       "AboutUs": {
@@ -1159,6 +1162,10 @@
         "step5": {
           "title": "Produktion und Installation",
           "description": "Nach Auftragserteilung beginnen wir mit der Produktion der Dämmmatratzen. Nach Abschluss der Produktion liefern wir sie an die angegebene Adresse oder führen eine professionelle Installation vor Ort durch."
+        },
+        "meta": {
+          "description": "Isotex Bestellprozess in Syców: einfacher Kauf von Wärmedämmung und technischen Stoffen. Online bestellen mit PayU!",
+          "keywords": "isotex bestellprozess, wärmedämmung Syców, technische stoffe, online-shop, PayU"
         }
       },
       "WhatWeOffer": {
@@ -1244,6 +1251,10 @@
           "title": "Möchten Sie mehr über unsere Technologie erfahren?",
           "description": "Kontaktieren Sie uns, um zu besprechen, wie unsere modernen Lösungen die Effizienz Ihrer Anlagen steigern können.",
           "button": "Schreiben Sie uns"
+        },
+        "meta": {
+          "description": "Isotex Technologie in Syców: fortschrittliche Produktion von Wärmedämmung und technischen Stoffen. Entdecken Sie unsere innovativen Prozesse!",
+          "keywords": "isotex technologie, wärmedämmung Syców, technische stoffe, dämmstoffproduktion, feuerfeste materialien"
         }
       },
       "Fastenings": {
@@ -1282,26 +1293,46 @@
         }
       },
       "ContactUs": {
-        "title": "Kontaktieren Sie uns!",
-        "form": {
-          "email": {
-            "label": "E-Mail-Adresse",
-            "placeholder": "E-Mail-Adresse eingeben"
-          },
-          "topic": {
-            "label": "Betreff",
-            "placeholder": "Betreff eingeben"
-          },
-          "message": {
-            "label": "Nachricht",
-            "placeholder": "Nachricht eingeben"
-          },
-          "submit_button": "Senden"
-        },
-        "map": {
-          "title": "Karte des Standorts der IsoTex Group"
-        }
+    "title": "Isotex Group Kontakt – Syców",
+    "intro": "Kontaktieren Sie Isotex Group in Syców, führend in der Produktion von Wärmedämmung und technischen Stoffen. Schreiben Sie uns, rufen Sie an oder besuchen Sie uns.",
+    "details": {
+      "title": "Isotex Group Kontaktdaten",
+      "company": "Firma",
+      "email": "E-Mail",
+      "phone": "Telefon"
+    },
+    "form": {
+      "title": "Kontaktformular",
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "E-Mail-Adresse eingeben",
+        "emailInvalid": "Ungültige E-Mail-Adresse"
       },
+      "topic": {
+        "label": "Betreff",
+        "placeholder": "Betreff eingeben",
+        "topicRequired": "Betreff ist erforderlich"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Nachricht eingeben",
+        "textRequired": "Nachricht ist erforderlich"
+      },
+      "submit_button": "Senden",
+      "success": "Formular erfolgreich gesendet!",
+      "error": "Fehler beim Senden des Formulars",
+      "recaptcha": {
+        "error": "Bitte verifizieren Sie reCAPTCHA"
+      }
+    },
+    "map": {
+      "title": "Isotex Group Standort in Syców"
+    },
+    "meta": {
+      "description": "Isotex Group Kontakt in Syców – Hersteller von Wärmedämmung. Kontaktieren Sie uns über das Formular, E-Mail kontakt@isotex-poland.com oder Telefon +48 600 511 029. Besuchen Sie uns: Daszyńskiego 9A.",
+      "keywords": "Isotex Group kontakt, Syców, wärmedämmung hersteller, kontaktformular, industrielle isolierung, Daszyńskiego 9A"
+    }
+  },
       "LocationChangeModal": {
         "title": "Änderung des Firmenstandorts",
         "description": "Wir möchten Sie darüber informieren, dass die Isotex Group ihren Standort geändert hat. Alle unsere Dienstleistungen und Produkte bleiben unverändert.",
@@ -1311,7 +1342,39 @@
           "email": "E-Mail: info@isotex-poland.com"
         },
         "button": "Erfahren Sie mehr"
-      }
+      },
+      
+      "home": {
+    "meta": {
+      "description": "Isotex Group – führend in der Herstellung von Wärmedämmung und Isoliermatten in Syców seit 1994. Wir bieten Lösungen für Rohr-, Turbinen-, Armaturen- und Motorendämmung.",
+      "keywords": "wärmedämmung, isoliermatten, turbinendämmung, rohrdämmung, Isotex Group, Syców, technische stoffe, industrielle dämmung"
+    },
+    "content": {
+      "heading": "Wärmedämmung und Isoliermatten – Isotex Group"
+    }
+  }
+    ,
+        "CertificatePage": {
+        "OurCerts": "Unsere Zertifikate",
+        "ISO90012015": {
+            "Certdesc": "ISO 9001:2015 ist eine internationale Norm, die Anforderungen an ein Qualitätsmanagementsystem (QMS) festlegt. Das ISO 9001:2015-Zertifikat ist weltweit anerkannt und weit verbreitet.\nDas ISO 9001:2015-System enthält Leitlinien zur Entwicklung von Grundsätzen und Verfahren, die notwendig sind, um Produkte und Dienstleistungen bereitzustellen, die die Bedürfnisse der Kunden sowie gesetzliche Anforderungen erfüllen. Es beschreibt verschiedene Bereiche, die ein effektives Qualitätsmanagement beeinflussen, wie Kundenorientierung, Engagement der obersten Leitung und der Mitarbeiter, Planung, Umsetzung und Überwachung von Prozessen sowie deren kontinuierliche Verbesserung.\nOrganisationen, die das ISO 9001:2015-Zertifikat besitzen, garantieren, dass ihre angebotenen Produkte und Dienstleistungen festgelegte Anforderungen erfüllen, was zu einer Erweiterung des potenziellen Kundenstamms führt.\nDas ISO 9001:2015-System ist mit anderen Managementsystemen, wie ISO 14001:2015, kompatibel. Durch die Anpassung der Struktur von ISO 9001:2015 an die Anforderungen des Dokuments Annex SL wird die Integration von Managementsystemen effizienter.",
+            "MoreInfo": {
+            "desc": "Weitere Informationen zur Norm ISO 9001:2015 finden Sie hier: "
+            }
+        },
+        "Hygienic_Certificate": {
+            "CartName": "Hygienisches Zertifikat B.BK",
+            "Certdesc": "Das hygienische Zertifikat NIZP-PZH-BBK bestätigt, dass unsere Dämmmatratzen gesundheitlich unbedenklich sind und in Umgebungen mit hohen Hygienestandards eingesetzt werden können. Das vom Nationalen Institut für Öffentliche Gesundheit – Staatliches Hygieneinstitut ausgestellte Zertifikat garantiert, dass unsere Produkte keine schädlichen Substanzen abgeben und sicher in Bereichen wie Industrieanlagen, Lebensmittel- oder Pharmaindustrie verwendet werden können.\n",
+            "MoreInfo": {
+            "desc": "Weitere Informationen zum hygienischen Zertifikat finden Sie hier: "
+            },
+            "Button": "Hygienisches Zertifikat"
+        },
+        "meta": {
+          "description": "Isotex Zertifikate: ISO 9001:2015 und Hygienezertifikat. Entdecken Sie die Qualität unserer Wärmedämmung und technischen Stoffe.",
+          "keywords": "isotex zertifikate, iso 9001, hygienezertifikat, wärmedämmung, technische stoffe"
+        }
+        }
                               
       
       }

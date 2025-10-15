@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Cart.module.css";
 import Navbar_v2 from "../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
-import apiURL from '../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../config';
 
 function Cart_List() {
     const { t, i18n } = useTranslation();

@@ -1,17 +1,17 @@
 {
   "page_titles": {
-    "home" : "Isotex Group - Izolacje Termiczne",
+    "home" : "Isotex Group – Izolacje termiczne i materace izolacyjne – Syców",
     "AboutUs":{
-      "AboutUs": "Isotex Group - O nas",
-      "OrderProcedure": "",
-      "Technology": "Isotex Group - Technologia"      
+      "AboutUs": "Isotex Group Syców – producent izolacji termicznych",
+      "OrderProcedure": "Isotex Group procedura zamawiania – Syców",
+      "Technology": "Isotex Group technologia – produkcja izolacji w Sycowie"      
     },
-    "Certificate": "Isotex Group - Certyfikaty",
+    "Certificate": "Isotex Group certyfikaty – ISO 9001 i atest higieniczny",
     "Contact": "Isotex Group - Kontakt",
     "fabrics":{
-      "aramid": "Isotex Group - Tkaniny Aramidowe",
-      "glass": "Isotex Group - Tkaniny Szklane",
-      "main_fabrics": "Isotex Group - Tkaniny"
+      "aramid": "Isotex Group tkaniny aramidowe – wytrzymałe izolacje Syców",
+      "glass": "Isotex Group tkaniny szklane – izolacje termiczne Syców",
+      "main_fabrics": "Isotex Group tkaniny techniczne – produkcja w Sycowie"
     },
     "Fastenings": "Isotex Group - Zapięcia",
     "filling":{
@@ -48,6 +48,7 @@
       }
     }
   },
+ 
 
     "header": {
       "title": "Witamy w IsoTex"
@@ -128,12 +129,13 @@
         },
         "shortinfo2": {
             "heading": "Producent izolacji termicznych",
-            "paragraph": "Producent izolacji termicznych IsoTex znajduje się w Komorowie w województwie dolnośląskim. Główny zakres naszej działalności związany jest z produkcją, sprzedażą oraz montażem elementów przeznaczonych do zabezpieczania urządzeń i instalacji przemysłowych przed utratą ciepła. W tej branży usługi świadczymy od prawie 30 lat. Działalność rozpoczęliśmy w 1994 roku.\n\nZachęcamy do skorzystania z naszych usług!\n\nZapewniamy kompleksowość usług – zakres naszych działań obejmuje sprzedaż, projektowanie, produkcję oraz montaż izolacji. Stosowana technologia sprawia, że wykonywane w naszym zakładzie produkty są wydajne i bezpieczne w codziennym użytkowaniu. Klienci mogą też liczyć na fachowe wsparcie na każdym etapie współpracy.",
+            "paragraph": "Producent izolacji termicznych IsoTex znajduje się w Sycowie w województwie dolnośląskim. Główny zakres naszej działalności związany jest z produkcją, sprzedażą oraz montażem elementów przeznaczonych do zabezpieczania urządzeń i instalacji przemysłowych przed utratą ciepła. W tej branży usługi świadczymy od prawie 30 lat. Działalność rozpoczęliśmy w 1994 roku.\n\nZachęcamy do skorzystania z naszych usług!\n\nZapewniamy kompleksowość usług – zakres naszych działań obejmuje sprzedaż, projektowanie, produkcję oraz montaż izolacji. Stosowana technologia sprawia, że wykonywane w naszym zakładzie produkty są wydajne i bezpieczne w codziennym użytkowaniu. Klienci mogą też liczyć na fachowe wsparcie na każdym etapie współpracy.",
             "button": "Dowiedz się więcej",
             "imageAlt": "Producent izolacji termicznych isoTex"
         },
         
             "navbar": {
+              "Home": "Home",
               "about": "O nas",
               "insulations": "Izolacje termiczne",
               "products": "Produkty izolacyjne",
@@ -169,7 +171,9 @@
                 "certificationDE": "PN-EN ISO 9001:2015 (DE)",
                 "certificationFR": "PN-EN ISO 9001:2015 (FR)",
                 "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
-                "allRightsReserved": "Wszelkie prawa zastrzeżone"
+                "allRightsReserved": "Wszelkie prawa zastrzeżone",
+                "hygiene_certificate": "Isotex Group Atest Higieniczny",
+                "iso_certificate": "Isotex Group Certyfikat ISO 9001:2015"
                 },
                 "fabrics": {
                     "glassFabrics": "Tkaniny szklane",
@@ -192,7 +196,11 @@
 
         "fabrics_info": {
             "fabricsTitle": "Tkaniny szklane i aramidowe",
-            "generalDescription": "Tkaniny techniczne to specjalistyczne materiały o wyjątkowych właściwościach mechanicznych, termicznych i chemicznych. Znajdują zastosowanie w wielu gałęziach przemysłu – od energetyki po motoryzację – zapewniając skuteczną izolację termiczną, ochronę przed wysoką temperaturą i trwałość nawet w ekstremalnych warunkach pracy."
+            "generalDescription": "Tkaniny techniczne to specjalistyczne materiały o wyjątkowych właściwościach mechanicznych, termicznych i chemicznych. Znajdują zastosowanie w wielu gałęziach przemysłu – od energetyki po motoryzację – zapewniając skuteczną izolację termiczną, ochronę przed wysoką temperaturą i trwałość nawet w ekstremalnych warunkach pracy.",
+            "meta": {
+              "description": "Isotex tkaniny techniczne w Sycowie: szklane i aramidowe do izolacji termicznych. Idealne dla przemysłu, odporne na wysokie temperatury.",
+              "keywords": "isotex tkaniny techniczne, tkaniny szklane, tkaniny aramidowe, izolacje termiczne Syców, materiały ognioodporne"
+            }
             },
          "glass_info": {
             "generalCharacteristics": "Tkaniny szklane – ogólna charakterystyka",
@@ -233,7 +241,11 @@
             "fireProtection": "Ochrona przeciwpożarowa",
             "fireProtectionDescription": "Tkaniny szklane są wykorzystywane jako materiał bazowy do produkcji osłon przeciwpożarowych, w tym odzieży ochronnej, koców gaśniczych oraz osłon dla maszyn przemysłowych.",
             "summary": "Podsumowanie",
-            "summaryDescription": "Tkaniny szklane, dzięki swojej odporności na wysokie temperatury, elastyczności, wytrzymałości mechanicznej i odporności na czynniki chemiczne, są materiałami niezbędnymi w wielu gałęziach przemysłu, począwszy od produkcji materiałów izolacyjnych termicznych po osłony ochronne w trudnych warunkach roboczych."
+            "summaryDescription": "Tkaniny szklane, dzięki swojej odporności na wysokie temperatury, elastyczności, wytrzymałości mechanicznej i odporności na czynniki chemiczne, są materiałami niezbędnymi w wielu gałęziach przemysłu, począwszy od produkcji materiałów izolacyjnych termicznych po osłony ochronne w trudnych warunkach roboczych.",
+            "meta": {
+              "description": "Isotex tkaniny szklane w Sycowie: odporne na 550°C, niepalne, idealne do izolacji rurociągów, zaworów i turbin. Sprawdź ofertę!",
+              "keywords": "isotex tkaniny szklane, izolacje termiczne Syców, tkaniny niepalne, izolacje przemysłowe, materiały odporne na temperaturę"
+            }
         } ,
         "aramid_info": {
             "generalCharacteristics": "Tkaniny aramidowe – ogólna charakterystyka",
@@ -271,8 +283,12 @@
             "industrialInsulation": "Izolacje przemysłowe",
             "industrialInsulationDescription": "Pokrowce termiczne, uszczelnienia, materiały ogniotrwałe.",
             "summary": "Podsumowanie",
-            "summaryDescription": "Tkaniny aramidowe, dzięki swoim unikalnym właściwościom – szczególnie odporności na temperaturę, przecięcia i uszkodzenia mechaniczne – należą do najnowocześniejszych materiałów technicznych. Znajdują zastosowanie nie tylko w przemyśle ciężkim, ale także w technologiach wojskowych, medycznych i lotniczych."
-        } ,
+            "summaryDescription": "Tkaniny aramidowe, dzięki swoim unikalnym właściwościom – szczególnie odporności na temperaturę, przecięcia i uszkodzenia mechaniczne – należą do najnowocześniejszych materiałów technicznych. Znajdują zastosowanie nie tylko w przemyśle ciężkim, ale także w technologiach wojskowych, medycznych i lotniczych.",
+            "meta": {
+              "description": "Isotex tkaniny aramidowe w Sycowie: wytrzymałe na ścieranie i wysokie temperatury. Idealne do wymagających izolacji przemysłowych.",
+              "keywords": "isotex tkaniny aramidowe, izolacje termiczne Syców, tkaniny kevlar, materiały wytrzymałe, izolacje przemysłowe"
+            }
+            } ,
          "fillingInfo": {
         "title": "Wypełnienia w materacach izolacyjnych: Kluczowe materiały i ich zastosowanie",
         "description": "Materace izolacyjne to skuteczne rozwiązania stosowane w przemyśle, które mają na celu ochronę instalacji przed stratami ciepła, a także zapewnienie bezpieczeństwa ludzi i urządzeń. Kluczową rolę w ich skuteczności odgrywa materiał wypełniający, który odpowiada za właściwości termoizolacyjne, ognioodporność oraz odporność chemiczną i mechaniczną całego systemu.",
@@ -930,7 +946,7 @@
       "p1": "Ochrona prywatności Użytkowników jest dla ISOTEX GROUP Ilona Żurawa szczególnie ważna. Z tego względu Użytkownicy Serwisu www.isotex-poland.com mają zagwarantowane wysokie standardy ochrony prywatności. ISOTEX GROUP Ilona Żurawa jako Administrator danych dba o bezpieczeństwo udostępnionych przez Użytkowników danych.",
       "p2": "Celem Administratora jest również należyte informowanie Użytkowników o prawach i obowiązkach związanych z przetwarzaniem danych osobowych, szczególnie wobec treści przepisów o ochronie danych osobowych określonych w rozporządzeniu Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27.04.2016r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (dalej jako „RODO”). Dlatego też, dbając o ochronę prywatności Użytkowników Serwisu, w niniejszym dokumencie Administrator informuje o podstawach prawnych przetwarzania danych osobowych przekazanych przez Użytkowników w związku z korzystaniem przez nich z Serwisu www.isotex-poland.com (dalej jako „Serwis”), sposobach zbierania, przetwarzania i ochrony danych osobowych, a także o prawach Użytkowników.",
       "p3": "Użytkownikiem jest każda osoba fizyczna, której dane dotyczą, korzystająca z serwisu internetowego www.isotex-poland.com lub usług elektronicznych dostępnych za pośrednictwem Serwisu.",
-      "p4": "Administratorem danych osobowych udostępnionych przez Użytkownika w Serwisie www.isotex-poland.com jest ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, NIP 9111824789, (dalej jako „Administrator”)."
+      "p4": "Administratorem danych osobowych udostępnionych przez Użytkownika w Serwisie www.isotex-poland.com jest ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, NIP 9111824789, (dalej jako „Administrator”)."
     },
     "userConsent": {
       "title": "ZGODA UŻYTKOWNIKA",
@@ -995,7 +1011,7 @@
       "rights": {
         "title": "Prawa Użytkownika",
         "p1": "Użytkownik na każdym etapie przetwarzania jego danych zapewniony ma szereg uprawnień pozwalających mu uzyskać dostęp do swoich danych, weryfikację prawidłowości przetwarzania danych, ich korektę, jak również ma prawo zgłoszenia sprzeciwu wobec ich przetwarzania, może żądać usunięcia danych, ograniczenia przetwarzania lub przeniesienia danych.",
-        "p2": "W przypadku chęci skorzystania przez Użytkownika z przysługujących mu praw jako podmiotu danych osobowych, może on się skontaktować z Administratorem za pomocą następujących danych kontaktowych: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+        "p2": "W przypadku chęci skorzystania przez Użytkownika z przysługujących mu praw jako podmiotu danych osobowych, może on się skontaktować z Administratorem za pomocą następujących danych kontaktowych: ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, isotex.biuro@wp.pl."
       },
       "complaint": {
         "title": "Prawo wniesienia skargi do organu nadzorczego",
@@ -1031,8 +1047,8 @@
       },
       "contact": {
         "title": "Informacje kontaktowe",
-        "p1": "W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, z wykorzystaniem następujących danych kontaktowych: isotex.biuro@wp.pl.",
-        "p2": "Ponadto istnieje również możliwość kontaktu drogą pocztową pod adresem: Komorów 9A, 56-500 Syców."
+        "p1": "W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, z wykorzystaniem następujących danych kontaktowych: isotex.biuro@wp.pl.",
+        "p2": "Ponadto istnieje również możliwość kontaktu drogą pocztową pod adresem: Syców ul. Daszyńskiego 9A, 56-500 Syców."
       },
       "update": {
         "p1": "Ostatnia aktualizacja niniejszego dokumentu miała miejsce dnia 12.01.2023."
@@ -1056,22 +1072,26 @@
           "desc": "Więcej informacji o ateście higienicznym znajdziesz tutaj: "
         },
         "Button" : "Atest higieniczny"
+      },
+      "meta": {
+        "description": "Isotex certyfikaty: ISO 9001:2015 i atest higieniczny. Sprawdź jakość naszych izolacji termicznych i tkanin technicznych.",
+        "keywords": "isotex certyfikaty, iso 9001, atest higieniczny, izolacje termiczne, tkaniny techniczne"
       }
   },
   
   "Banner": {
-    "title": "Kompleksowe rozwiązania w zakresie izolacji termicznych",
-    "description": "Straty ciepła w instalacjach przemysłowych to kosztowny problem – mamy na to sposób! Zaprojektujemy i wyprodukujemy materace izolacyjne, które zwiększą efektywność Twoich systemów.",
+    "title": "Kompleksowe rozwiązania w zakresie izolacji termicznych i materacy izolacyjnych",
+    "description": "Straty ciepła w instalacjach przemysłowych to kosztowny problem – mamy na to sposób! Projektujemy i produkujemy materace izolacyjne, izolacje rur i izolacje turbin, które zwiększają efektywność Twoich systemów.",
     "learn_more": "Dowiedz się więcej",
-    "cta_text": "Poznaj nasze rozwiązania i zmniejsz emisję CO2 już teraz!",
-    "image_alt_a": "Materace izolacyjne – oferta A",
-    "image_alt_b": "Materace izolacyjne – oferta B",
-    "image_alt_c": "Materace izolacyjne – oferta C",
-    "image_alt_d": "Materace izolacyjne – oferta D"
+    "cta_text": "Poznaj nasze rozwiązania w zakresie izolacji termicznych i zmniejsz emisję CO2 już teraz!",
+    "image_alt_a": "Materace izolacyjne do izolacji rur",
+    "image_alt_b": "Materace izolacyjne do izolacji turbin",
+    "image_alt_c": "Izolacje termiczne armatury",
+    "image_alt_d": "Izolacje termiczne dla przemysłu"
   },
   "WhatWeOfferBanner": {
-    "paragraph1": "W naszej ofercie znajdą Państwo szeroki wybór wysokiej jakości produktów, w tym nowoczesne materace izolacyjne, doskonałej jakości materace izo-standard, które spełniają najwyższe standardy izolacji termicznej i akustycznej, a także trwałe tkaniny techniczne oraz kompleksowy zestaw akcesoriów niezbędnych do realizacji różnorodnych projektów.",
-    "paragraph2": "Oferujemy także profesjonalne usługi wycinania w tkaninach oraz w innych materiałach z wykorzystaniem zaawansowanej technologii CNC, zapewniając precyzję i efektywność na każdym etapie produkcji. Nasze rozwiązania są projektowane z myślą o potrzebach klientów, oferując niezawodność i dostosowanie do specyficznych wymagań, co czyni nas liderem w branży izolacji i technik specjalnych."
+    "paragraph1": "W naszej ofercie znajdziesz wysokiej jakości izolacje termiczne, w tym nowoczesne materace izolacyjne do izolacji rur i turbin, doskonałej jakości materace izo-standard spełniające najwyższe standardy izolacji termicznej i akustycznej, a także trwałe tkaniny techniczne do zastosowań przemysłowych.",
+    "paragraph2": "Oferujemy profesjonalne usługi wycinania w tkaninach i materiałach izolacyjnych z użyciem technologii CNC, zapewniając precyzję dla izolacji turbin, rur i armatury. Nasze rozwiązania, w tym izolacje rur i materace izolacyjne, są projektowane z myślą o efektywności energetycznej i trwałości, co czyni nas liderem w branży izolacji termicznych."
   },
   "Catalog": {
     "title": "Zobacz nasz najnowszy katalog!",
@@ -1160,7 +1180,11 @@
         "title": "Zobowiązanie do zrównoważonego rozwoju",
         "description": "Nasze izolacje termiczne pomagają unikać strat ciepła, wspierając efektywność energetyczną i redukując emisję CO2. Produkujemy i montujemy rozwiązania, które dbają o środowisko i Twój biznes.",
         "image_alt": "Zrównoważone izolacje Isotex"
-      }
+      },
+      "meta": {
+      "description": "Isotex Group Syców – lider w produkcji izolacji termicznych i tkanin technicznych od 1994 roku. Poznaj naszą historię i technologie!",
+      "keywords": "isotex Group Syców, producent izolacji termicznych, tkaniny techniczne, izolacje przemysłowe, Syców"
+    }
     },
     "AboutUs": {
       "cta": {
@@ -1190,6 +1214,10 @@
       "step5": {
         "title": "Produkcja i montaż",
         "description": "Po złożeniu zamówienia przystępujemy do produkcji materaców izolacyjnych. Po zakończeniu produkcji dostarczamy je pod wskazany adres lub przeprowadzamy profesjonalny montaż na miejscu."
+      },
+        "meta": {
+        "description": "Isotex procedura zamawiania w Sycowie: łatwy proces zakupu izolacji termicznych i tkanin technicznych. Zamów online z PayU!",
+        "keywords": "isotex procedura zamawiania, izolacje termiczne Syców, tkaniny techniczne, sklep online, PayU"
       }
     },
     "WhatWeOffer": {
@@ -1275,6 +1303,10 @@
         "title": "Chcesz dowiedzieć się więcej o naszej technologii?",
         "description": "Skontaktuj się z nami, aby omówić, jak nasze nowoczesne rozwiązania mogą zwiększyć efektywność Twoich instalacji.",
         "button": "Napisz do nas"
+      },
+      "meta": {
+        "description": "Isotex technologia w Sycowie: nowoczesna produkcja izolacji termicznych i tkanin technicznych. Sprawdź nasze zaawansowane procesy!",
+        "keywords": "isotex technologia, izolacje termiczne Syców, tkaniny techniczne, produkcja izolacji, materiały ognioodporne"
       }
     },
     "Fastenings": {
@@ -1313,26 +1345,46 @@
       }
     },
     "ContactUs": {
-      "title": "Skontaktuj się z nami!",
-      "form": {
-        "email": {
-          "label": "Adres e-mail",
-          "placeholder": "Wpisz adres e-mail"
-        },
-        "topic": {
-          "label": "Temat",
-          "placeholder": "Wpisz temat"
-        },
-        "message": {
-          "label": "Wiadomość",
-          "placeholder": "Wpisz wiadomość"
-        },
-        "submit_button": "Wyślij"
+    "title": "Isotex Group Kontakt – Syców",
+    "intro": "Skontaktuj się z Isotex Group w Sycowie, liderem w produkcji izolacji termicznych i tkanin technicznych. Napisz, zadzwoń lub odwiedź nas w naszej siedzibie.",
+    "details": {
+      "title": "Dane kontaktowe Isotex Group",
+      "company": "Firma",
+      "email": "E-mail",
+      "phone": "Telefon"
+    },
+    "form": {
+      "title": "Formularz kontaktowy",
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "Wpisz adres e-mail",
+        "emailInvalid": "Niepoprawny adres e-mail"
       },
-      "map": {
-        "title": "Mapa lokalizacji IsoTex Group"
+      "topic": {
+        "label": "Temat",
+        "placeholder": "Wpisz temat",
+        "topicRequired": "Temat jest wymagany"
+      },
+      "message": {
+        "label": "Wiadomość",
+        "placeholder": "Wpisz wiadomość",
+        "textRequired": "Wiadomość jest wymagana"
+      },
+      "submit_button": "Wyślij",
+      "success": "Formularz wysłany pomyślnie!",
+      "error": "Wystąpił błąd podczas wysyłania formularza",
+      "recaptcha": {
+        "error": "Proszę zweryfikować reCAPTCHA"
       }
     },
+    "map": {
+      "title": "Lokalizacja Isotex Group w Sycowie"
+    },
+    "meta": {
+      "description": "Isotex Group kontakt w Sycowie – producent izolacji termicznych. Skontaktuj się przez formularz, e-mail kontakt@isotex-poland.com lub telefon +48 600 511 029. Odwiedź nas: Daszyńskiego 9A.",
+      "keywords": "Isotex Group kontakt, Syców, producent izolacji termicznych, formularz kontaktowy, izolacje przemysłowe, Daszyńskiego 9A"
+    }
+  },
     "LocationChangeModal": {
       "title": "Zmiana Lokalizacji Firmy",
       "description": "Informujemy, że firma Isotex Group zmieniła lokalizację. Wszystkie nasze usługi i produkty pozostają bez zmian.",
@@ -1342,7 +1394,18 @@
         "email": "Email: info@isotex-poland.com"
       },
       "button": "Dowiedz się więcej"
-}
+},
+
+  "home": {
+    "meta": {
+      "description": "Isotex Group – producent izolacji termicznych i materacy izolacyjnych w Sycowie od 1994 roku. Oferujemy izolacje rur, turbin, armatury i silników.",
+      "keywords": "izolacje termiczne, materace izolacyjne, izolacja turbiny, izolacje rur, Isotex Group, Syców, tkaniny techniczne, izolacje przemysłowe"
+    },
+    "content": {
+      "heading": "Izolacje termiczne i materace izolacyjne – Isotex Group"
+    }
+  }
+
      
 
    

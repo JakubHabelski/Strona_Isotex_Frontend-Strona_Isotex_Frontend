@@ -70,7 +70,7 @@ function Filling_Info() {
                                 </Card.Body>
                             </Card>
                             <Card className={style.card_element} onClick={() => redirectToPage('/wypelnienia/mata-szklana')}>
-                                <Card.Img variant="top" src="/assets/materials/Fillings/mata-szklana.jpg" className="card_img" />
+                                <Card.Img variant="top" src="/assets/materials/Fillings/Mata-szklana.jpg" className="card_img" />
                                 <Card.Body>
                                     <Card.Title>{t('fillingInfo.glassMats')}</Card.Title>
                                     <Card.Text>

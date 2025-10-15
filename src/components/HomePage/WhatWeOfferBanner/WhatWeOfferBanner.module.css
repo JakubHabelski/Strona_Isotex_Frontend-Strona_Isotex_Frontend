@@ -1,0 +1,8 @@
+.WhatWeOfferBanner{
+    background-color: #E3001B;
+    color: #ffffff;
+    .WhatWeOfferBannerText{
+        width: min(1500px, 90%);
+        margin: 100px auto;
+    }
+}

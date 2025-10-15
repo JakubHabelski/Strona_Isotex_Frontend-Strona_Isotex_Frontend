@@ -65,6 +65,7 @@ export default function ParallaxImage() {
         alt={t('Parallax.image_alt')}
         className={style.parallax__image}
         ref={imageRef}
+        loading="lazy"
       />
       <div className={style.parallax__overlay} ref={overlayRef} />
       <div className={style.parallax__text} ref={textRef}>

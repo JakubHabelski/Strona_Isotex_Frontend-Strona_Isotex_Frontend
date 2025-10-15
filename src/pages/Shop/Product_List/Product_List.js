@@ -9,7 +9,7 @@ import { useLocalStorage } from "../../../utils/localStorage";
 import { useTranslation } from "react-i18next"; // Dodajemy hook i18next
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
-import apiURL from '../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../config';
 
 function ProductList_Get() {
     const { category } = useParams();

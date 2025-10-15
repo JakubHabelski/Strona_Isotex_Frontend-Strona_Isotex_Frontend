@@ -7,7 +7,7 @@ import { form } from "motion/react-client";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 
 
 

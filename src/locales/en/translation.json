@@ -1,12 +1,12 @@
 {
   "page_titles": {
-  "home": "Isotex Group - Thermal Insulation",
+  "home": "Isotex Group – Thermal Insulation and Insulation Mattresses – Syców",
   "AboutUs": {
-    "AboutUs": "Isotex Group - About Us",
-    "OrderProcedure": "",
-    "Technology": "Isotex Group - Technology"
+    "AboutUs": "Isotex Group Syców – thermal insulation manufacturer",
+    "OrderProcedure": "Isotex order procedure – Syców",
+    "Technology": "Isotex Group technology – insulation production in Syców"
   },
-  "Certificate": "Isotex Group - Certificates",
+  "Certificate": "Isotex certificates – ISO 9001 and hygienic certificate",
   "Contact": "Isotex Group - Contact",
   "fabrics": {
     "aramid": "Isotex Group - Aramid Fabrics",
@@ -129,11 +129,12 @@
 
   "shortinfo2": {
     "heading": "Thermal insulation manufacturer",
-    "paragraph": "IsoTex, a manufacturer of thermal insulation, is located in Komorów, Lower Silesian Voivodeship. Our main business activities include the production, sale, and installation of components designed to protect industrial equipment and installations from heat loss. We have been providing services in this industry for nearly 30 years, starting our operations in 1994.\n\nWe encourage you to take advantage of our services!\n\nWe offer a comprehensive approach – our services include sales, design, production, and installation of insulation. The technology we use ensures that our products are efficient and safe for daily use. Customers can also rely on professional support at every stage of cooperation.",
+    "paragraph": "IsoTex, a manufacturer of thermal insulation, is located in Syców, Lower Silesian Voivodeship. Our main business activities include the production, sale, and installation of components designed to protect industrial equipment and installations from heat loss. We have been providing services in this industry for nearly 30 years, starting our operations in 1994.\n\nWe encourage you to take advantage of our services!\n\nWe offer a comprehensive approach – our services include sales, design, production, and installation of insulation. The technology we use ensures that our products are efficient and safe for daily use. Customers can also rely on professional support at every stage of cooperation.",
     "button": "Learn more",
     "imageAlt": "Thermal insulation manufacturer IsoTex"
   },
   "navbar": {
+    "Home": "Home",
     "about": "About us",
     "insulations": "Thermal insulation",
     "products": "Insulation products",
@@ -168,7 +169,9 @@
         "certificationDE": "PN-EN ISO 9001:2015 (DE)",
         "certificationFR": "PN-EN ISO 9001:2015 (FR)",
         "certificationENG": "PN-EN ISO 9001:2015 (ENG)",
-        "allRightsReserved": "All rights reserved"
+        "allRightsReserved": "All rights reserved",
+        "hygiene_certificate": "Isotex Group Hygienic Certificate",
+        "iso_certificate": "Isotex Group ISO 9001:2015 Certificate"
         },
         "fabrics": {
             "glassFabrics": "Glass Fabrics",
@@ -192,7 +195,11 @@
 
          "fabrics_info": {
             "fabricsTitle": "Glass and Aramid Fabrics",
-            "generalDescription": "Technical fabrics are specialized materials with exceptional mechanical, thermal, and chemical properties. They are used in various industries, from energy to automotive, providing effective thermal insulation, protection against high temperatures, and durability even in extreme working conditions."
+            "generalDescription": "Technical fabrics are specialized materials with exceptional mechanical, thermal, and chemical properties. They are used in various industries, from energy to automotive, providing effective thermal insulation, protection against high temperatures, and durability even in extreme working conditions.",
+            "meta": {
+              "description": "Isotex technical fabrics in Syców: glass and aramid for thermal insulation. Perfect for industry, resistant to high temperatures.",
+              "keywords": "isotex technical fabrics, glass fabrics, aramid fabrics, thermal insulation Syców, fire-resistant materials"
+            }
             },
 
             "glass_info": {
@@ -234,7 +241,11 @@
                 "fireProtection": "Fire Protection",
                 "fireProtectionDescription": "Glass fabrics are used as a base material for producing fire protection covers, including protective clothing, fire blankets, and shields for industrial machines.",
                 "summary": "Summary",
-                "summaryDescription": "Glass fabrics, thanks to their resistance to high temperatures, flexibility, mechanical strength, and resistance to chemical factors, are essential materials in many industries, from the production of thermal insulation materials to protective shields in harsh working conditions."
+                "summaryDescription": "Glass fabrics, thanks to their resistance to high temperatures, flexibility, mechanical strength, and resistance to chemical factors, are essential materials in many industries, from the production of thermal insulation materials to protective shields in harsh working conditions.",
+                "meta": {
+                  "description": "Isotex glass fabrics in Syców: resistant to 550°C, non-flammable, ideal for insulating pipelines, valves, and turbines. Check our offer!",
+                  "keywords": "isotex glass fabrics, thermal insulation Syców, non-flammable fabrics, industrial insulation, temperature-resistant materials"
+                }
               },
 
 
@@ -274,7 +285,11 @@
                 "industrialInsulation": "Industrial Insulation",
                 "industrialInsulationDescription": "Thermal covers, seals, fireproof materials.",
                 "summary": "Summary",
-                "summaryDescription": "Aramid fabrics, with their unique properties – particularly resistance to temperature, cuts, and mechanical damage – are among the most advanced technical materials. They are used not only in heavy industry but also in military, medical, and aerospace technologies."
+                "summaryDescription": "Aramid fabrics, with their unique properties – particularly resistance to temperature, cuts, and mechanical damage – are among the most advanced technical materials. They are used not only in heavy industry but also in military, medical, and aerospace technologies.",
+                "meta": {
+                  "description": "Isotex aramid fabrics in Syców: durable against abrasion and high temperatures. Perfect for demanding industrial insulation.",
+                  "keywords": "isotex aramid fabrics, thermal insulation Syców, kevlar fabrics, durable materials, industrial insulation"
+                }
             },
             "fillingInfo": {
                 "title": "Fillings in Thermal Insulation Mattresses: Key Materials and Their Applications",
@@ -928,7 +943,7 @@
       "p1": "The protection of Users' privacy is particularly important to ISOTEX GROUP Ilona Żurawa. For this reason, Users of the Website www.isotex-poland.com are guaranteed high standards of privacy protection. ISOTEX GROUP Ilona Żurawa, as the Data Controller, ensures the security of data provided by Users.",
       "p2": "The Controller's goal is also to properly inform Users about their rights and obligations related to the processing of personal data, particularly in light of the provisions on personal data protection set out in Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (hereinafter referred to as 'GDPR'). Therefore, to protect the privacy of Website Users, in this document, the Controller informs about the legal basis for processing personal data provided by Users in connection with their use of the Website www.isotex-poland.com (hereinafter referred to as the 'Website'), the methods of collecting, processing, and protecting personal data, as well as the rights of Users.",
       "p3": "A User is any natural person whose data is concerned, using the website www.isotex-poland.com or electronic services available through the Website.",
-      "p4": "The Controller of personal data provided by the User on the Website www.isotex-poland.com is ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, NIP 9111824789 (hereinafter referred to as the 'Controller')."
+      "p4": "The Controller of personal data provided by the User on the Website www.isotex-poland.com is ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, NIP 9111824789 (hereinafter referred to as the 'Controller')."
     },
     "userConsent": {
       "title": "USER CONSENT",
@@ -993,7 +1008,7 @@
       "rights": {
         "title": "User Rights",
         "p1": "At every stage of the processing of their data, the User is granted a number of rights allowing them to access their data, verify the correctness of data processing, correct it, as well as object to its processing, request the deletion of data, restriction of processing, or data portability.",
-        "p2": "If the User wishes to exercise their rights as a data subject, they may contact the Controller using the following contact details: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, isotex.biuro@wp.pl."
+        "p2": "If the User wishes to exercise their rights as a data subject, they may contact the Controller using the following contact details: ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, isotex.biuro@wp.pl."
       },
       "complaint": {
         "title": "Right to Lodge a Complaint with a Supervisory Authority",
@@ -1029,8 +1044,8 @@
       },
       "contact": {
         "title": "Contact Information",
-        "p1": "To obtain any information regarding this Privacy Policy, the User may contact the Data Controller: ISOTEX GROUP Ilona Żurawa, Komorów 9A, 56-500 Syców, using the following contact details: isotex.biuro@wp.pl.",
-        "p2": "Additionally, it is also possible to contact by post at the address: Komorów 9A, 56-500 Syców."
+        "p1": "To obtain any information regarding this Privacy Policy, the User may contact the Data Controller: ISOTEX GROUP Ilona Żurawa, Syców ul. Daszyńskiego 9A, 56-500 Syców, using the following contact details: isotex.biuro@wp.pl.",
+        "p2": "Additionally, it is also possible to contact by post at the address: Syców ul. Daszyńskiego 9A, 56-500 Syców."
       },
       "update": {
         "p1": "The last update of this document took place on 12.01.2023."
@@ -1054,21 +1069,25 @@
           "desc": "More information about the hygienic certificate is available here: "
         },
         "Button" : "Hygienic Certificate"
+      },
+      "meta": {
+        "description": "Isotex certificates: ISO 9001:2015 and hygienic certificate. Explore the quality of our thermal insulation and technical fabrics.",
+        "keywords": "isotex certificates, iso 9001, hygienic certificate, thermal insulation, technical fabrics"
       }
     },
     "Banner": {
-      "title": "Comprehensive solutions for thermal insulation",
-      "description": "Heat losses in industrial installations are a costly problem – we have a solution! We will design and manufacture insulation mattresses that increase the efficiency of your systems.",
-      "learn_more": "Learn more",
-      "cta_text": "Discover our solutions and reduce CO2 emissions now!",
-      "image_alt_a": "Insulation mattresses – offer A",
-      "image_alt_b": "Insulation mattresses – offer B",
-      "image_alt_c": "Insulation mattresses – offer C",
-      "image_alt_d": "Insulation mattresses – offer D"
-    },
+    "title": "Comprehensive solutions for thermal insulation and insulation mattresses",
+    "description": "Heat losses in industrial installations are a costly problem – we have a solution! We design and manufacture insulation mattresses, pipe insulation, and turbine insulation to enhance your systems' efficiency.",
+    "learn_more": "Learn more",
+    "cta_text": "Discover our thermal insulation solutions and reduce CO2 emissions now!",
+    "image_alt_a": "Insulation mattresses for pipe insulation",
+    "image_alt_b": "Insulation mattresses for turbine insulation",
+    "image_alt_c": "Thermal insulation for fittings",
+    "image_alt_d": "Thermal insulation for industry"
+  },
     "WhatWeOfferBanner": {
-      "paragraph1": "Our offer includes a wide range of high-quality products, including modern insulation mattresses, top-quality izo-standard mattresses that meet the highest standards of thermal and acoustic insulation, as well as durable technical fabrics and a comprehensive set of accessories necessary for various projects.",
-      "paragraph2": "We also provide professional cutting services for fabrics and other materials using advanced CNC technology, ensuring precision and efficiency at every stage of production. Our solutions are designed with customer needs in mind, offering reliability and customization to specific requirements, making us a leader in the insulation and special techniques industry."
+      "paragraph1": "Our offer includes high-quality thermal insulation, including modern insulation mattresses for pipe and turbine insulation, top-quality izo-standard mattresses meeting the highest thermal and acoustic insulation standards, and durable technical fabrics for industrial applications.",
+      "paragraph2": "We provide professional cutting services for fabrics and insulation materials using CNC technology, ensuring precision for turbine, pipe, and fitting insulation. Our solutions, including pipe insulation and insulation mattresses, are designed for energy efficiency and durability, making us a leader in the thermal insulation industry."
     },
     "Catalog": {
         "title": "Check out our latest catalog!",
@@ -1157,6 +1176,10 @@
         "title": "Commitment to sustainability",
         "description": "Our thermal insulations help prevent heat loss, supporting energy efficiency and reducing CO2 emissions. We produce and install solutions that care for the environment and your business.",
         "image_alt": "Isotex sustainable insulation"
+      },
+      "meta": {
+        "description": "Isotex Group Syców – leader in thermal insulation and technical fabrics production since 1994. Discover our history and technology!",
+        "keywords": "isotex Group Syców, thermal insulation manufacturer, technical fabrics, industrial insulation, Syców"
       }
     },
     "AboutUs": {
@@ -1187,6 +1210,10 @@
       "step5": {
         "title": "Production and installation",
         "description": "Once the order is placed, we begin producing the insulation mattresses. After production, we deliver them to the specified address or perform professional on-site installation."
+      },
+      "meta": {
+        "description": "Isotex order procedure in Syców: simple process for purchasing thermal insulation and technical fabrics. Order online with PayU!",
+        "keywords": "isotex order procedure, thermal insulation Syców, technical fabrics, online shop, PayU"
       }
     },
     "WhatWeOffer": {
@@ -1272,7 +1299,11 @@
         "title": "Want to learn more about our technology?",
         "description": "Contact us to discuss how our modern solutions can enhance the efficiency of your installations.",
         "button": "Write to us"
-      }
+      },
+      "meta": {
+          "description": "Isotex Group technology in Syców: advanced production of thermal insulation and technical fabrics. Discover our innovative processes!",
+          "keywords": "isotex Group technology, thermal insulation Syców, technical fabrics, insulation production, fire-resistant materials"
+        }
     },
     "Fastenings": {
       "hero": {
@@ -1310,26 +1341,46 @@
       }
     } ,
     "ContactUs": {
-      "title": "Contact us!",
-      "form": {
-        "email": {
-          "label": "Email address",
-          "placeholder": "Enter email address"
-        },
-        "topic": {
-          "label": "Subject",
-          "placeholder": "Enter subject"
-        },
-        "message": {
-          "label": "Message",
-          "placeholder": "Enter message"
-        },
-        "submit_button": "Send"
+    "title": "Isotex Group Contact – Syców",
+    "intro": "Contact Isotex Group in Syców, a leader in thermal insulation and technical fabrics production. Reach out via form, call, or visit our office.",
+    "details": {
+      "title": "Isotex Group Contact Details",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "form": {
+      "title": "Contact Form",
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter email address",
+        "emailInvalid": "Invalid email address"
       },
-      "map": {
-        "title": "IsoTex Group location map"
+      "topic": {
+        "label": "Subject",
+        "placeholder": "Enter subject",
+        "topicRequired": "Subject is required"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter message",
+        "textRequired": "Message is required"
+      },
+      "submit_button": "Send",
+      "success": "Form submitted successfully!",
+      "error": "Error occurred while submitting the form",
+      "recaptcha": {
+        "error": "Please verify reCAPTCHA"
       }
     },
+    "map": {
+      "title": "Isotex Group Location in Syców"
+    },
+    "meta": {
+      "description": "Isotex Group contact in Syców – thermal insulation manufacturer. Reach out via form, email kontakt@isotex-poland.com, or phone +48 600 511 029. Visit us at Daszyńskiego 9A.",
+      "keywords": "Isotex Group contact, Syców, thermal insulation manufacturer, contact form, industrial insulation, Daszyńskiego 9A"
+    }
+  },
     "LocationChangeModal": {
       "title": "Change of Company Location",
       "description": "We would like to inform you that Isotex Group has changed its location. All our services and products remain unchanged.",
@@ -1339,8 +1390,18 @@
         "email": "Email: info@isotex-poland.com"
       },
       "button": "Learn more"
-    }  
-  
+    },
+
+  "home": {
+    "meta": {
+      "description": "Isotex Group – a leader in the production of thermal insulation and insulation mattresses in Syców since 1994. We offer solutions for pipe, turbine, fitting, and engine insulation.",
+      "keywords": "thermal insulation, insulation mattresses, turbine insulation, pipe insulation, Isotex Group, Syców, technical fabrics, industrial insulation"
+    },
+    "content": {
+      "heading": "Thermal Insulation and Insulation Mattresses – Isotex Group"
+    }
+  }
+
  
     
 

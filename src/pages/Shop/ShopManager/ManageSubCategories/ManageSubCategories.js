@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
 import { Helmet } from 'react-helmet';
-import apiURL from '../../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../../config';
 
 export default function ManageSubCategories(){
    // const apiUrl = process.env.REACT_APP_API_URL;

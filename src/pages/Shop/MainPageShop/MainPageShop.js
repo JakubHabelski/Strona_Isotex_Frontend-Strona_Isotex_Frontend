@@ -22,7 +22,7 @@ import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel";
 import ImageComponent from "../../../components/ImageComponent/ImageComponent";
 
 import { useLocalStorage } from "../../../utils/localStorage";
-import apiURL from "../../../config";
+import { baseURL, apiURL, logoURL, faviconURL } from "../../../config";
 import style from "./MainPageShop.module.css";
 
 function MainPageShopMain() {
@@ -176,7 +176,7 @@ const renderCategoryCard = (category) => {
         <div className={style.CardText}>
           <h5>{category.label}</h5>
         </div>
-        <ImageComponent src={category.image} blurhash={category.blurhash} />
+        <ImageComponent src={category.image} blurhash={category.blurhash}  width={'200px'} height={'200px'}/>
       </div>
     </div>
   );
@@ -200,7 +200,7 @@ const renderCategoryCard = (category) => {
           aspectRatio: "1/1",
         }}
       >
-        <ImageComponent src={product.imageUrl} blurhash={product.blurhash} />
+        <ImageComponent src={product.imageUrl} blurhash={product.blurhash} width={'200px'} height={'200px'}/>
       </div>
       <Card.Body
         onClick={() => navigate(`/Sklep/${product.category}/${product.id}`)}
@@ -309,7 +309,7 @@ const renderCategoryCard = (category) => {
                           <h5>{sub.label}</h5>
                           <p>{t("products.count", { count: sub.product_count })}</p>
                         </div>
-                        <ImageComponent src={sub.photo_url} blurhash={sub.blurhash}></ImageComponent>
+                        <ImageComponent src={sub.photo_url} blurhash={sub.blurhash} width={'200px'} height={'200px'}></ImageComponent>
                       </div>
                     ))}
                   </div>

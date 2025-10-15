@@ -6,10 +6,10 @@ import Footer from "../../../components/Footer";
 import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import apiURL from '../../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../../config';
 
 export default function OrdersList() {
-  const apiUrl = process.env.REACT_APP_API_URL || "http://testfunkcjonalonscisklepu.pl/api";
+  const apiUrl = process.env.REACT_APP_API_URL || "https://testfunkcjonalonscisklepu.pl/api";
   const token = localStorage.getItem("token");
   const [allOrders, setAllOrders] = useState([]);
   const [showOrderDetails, setShowOrderDetails] = useState(new Map());

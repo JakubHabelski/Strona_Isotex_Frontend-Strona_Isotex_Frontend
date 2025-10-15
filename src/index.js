@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './pages/Shop/Cart';
 import Sending from './pages/Shop/Sending';
 import Fabrics from './pages/fabrics/main_fabrics/fabrics';
@@ -43,11 +43,14 @@ import EditSubCagegory from './pages/Shop/ShopManager/EditSubCategory/EditSubCag
 import OrdersList from './pages/Shop/OrdersList/OrdersList';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import LoginPage from './pages/Shop/ShopManager/LoginPage/LoginPage';
+import BlogEditor from './components/Blog/BlogEditor';
+import AddPost from './pages/Blog/AddPost/AddPost';
+import SinglePostView from './pages/Blog/SinglePostView/SinglePostView';
+import BlogMain from './pages/Blog/BlogMain/BlogMain';
+import EditPost from './pages/Blog/EditPost/EditPost';
 
-
-const root = document.getElementById("root");
-
-ReactDOM.createRoot(root).render(
+const rootElement = document.getElementById('root');
+const app = (
   <CartProvider>
     <BrowserRouter>
       <ScrollToTop />
@@ -56,7 +59,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/mainpage" element={<MainPage />} />
-        <Route path="/test" element={<TestPage />} />
+        <Route path="/test" element={<TestPage />} />        
         <Route path="/kontakt" element={<Contact />} />
         <Route path="/joinus" element={<JoinUsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -153,9 +156,20 @@ ReactDOM.createRoot(root).render(
             </ProtectedRoute>
           }
         />
+        {/* Zabezpieczone trasy zarządzania blogiem */}
+        <Route path='/Blog' element={<BlogMain/>}></Route>
+        <Route path='/Blog/:postID' element={<SinglePostView/>}></Route>
+        <Route path="/AddPost" element={<AddPost/>}/>
+        <Route path='/EditPost' element={<EditPost/>}/>
       </Routes>
     </BrowserRouter>
   </CartProvider>
 );
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}
 
 reportWebVitals();

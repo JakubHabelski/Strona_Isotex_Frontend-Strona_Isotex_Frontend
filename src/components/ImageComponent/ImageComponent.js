@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Blurhash } from "react-blurhash";
 import { Card } from "react-bootstrap";
 
-export default function ImageComponent({ src, blurhash }) {
+export default function ImageComponent({ src, blurhash, width, height }) {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export default function ImageComponent({ src, blurhash }) {
             {!imageLoaded && (
                 <Blurhash
                     hash={blurhash}
-                    width={200}
-                    height={200}
+                    width={width}
+                    height={height}
                     resolutionX={32}
                     resolutionY={32}
                     punch={1}
@@ -30,8 +30,8 @@ export default function ImageComponent({ src, blurhash }) {
                 src={src}
                 className="img-fluid"
                 style={{
-                    maxWidth: '200px',
-                    height: 'auto',
+                    maxWidth: width,
+                    height: height,
                     objectFit: 'cover',
                     display: imageLoaded ? "block" : "none"
                 }}

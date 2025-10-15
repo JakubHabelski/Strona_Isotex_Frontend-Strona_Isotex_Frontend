@@ -1,7 +1,7 @@
 // src/components/ProtectedRoute.jsx
 import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import apiURL from '../../config';
+import { baseURL, apiURL, logoURL, faviconURL } from '../../config';
 import axios from 'axios';
 
 function ProtectedRoute({ children, requiredRole }) {
