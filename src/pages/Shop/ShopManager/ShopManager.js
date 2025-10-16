@@ -32,6 +32,7 @@ function ShopManagerPage(){
                   }
               }
           `}</script>
+          
       </Helmet>   
     <h1>Zarządzamie Sklepem</h1>
     <ListGroup>

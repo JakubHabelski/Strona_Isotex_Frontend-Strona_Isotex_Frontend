@@ -30,6 +30,7 @@ function Blog(){
         console.log('Dane z API:', res.data); // Debug: loguj dane
         setBlogList(res.data || []); // Ustaw listę
         setListLoaded(true);
+        console.log("");
     };
 
     useEffect(() => {
