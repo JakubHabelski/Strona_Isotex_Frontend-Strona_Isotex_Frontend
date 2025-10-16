@@ -5,12 +5,14 @@ import Navbar_v2 from "../../../components/Navbar_v2/Navbar";
 import style from './EditPost.module.css'
 import axios from "axios";
 import { apiURL } from '../../../config';
+import { useParams } from "react-router-dom";
 
 export default function EditPost() {
     const [content, setContent] = useState(null);
+    const {postid} = useParams();
 
     useEffect(() => {
-        axios.get(`${apiURL}/Blog/GetPost/102`)
+        axios.get(`${apiURL}/Blog/GetPost/${postid}`)
             .then(res => {
                 setContent(res.data);
                 console.log(res.data);

@@ -43,11 +43,11 @@ import EditSubCagegory from './pages/Shop/ShopManager/EditSubCategory/EditSubCag
 import OrdersList from './pages/Shop/OrdersList/OrdersList';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import LoginPage from './pages/Shop/ShopManager/LoginPage/LoginPage';
-import BlogEditor from './components/Blog/BlogEditor';
 import AddPost from './pages/Blog/AddPost/AddPost';
 import SinglePostView from './pages/Blog/SinglePostView/SinglePostView';
 import BlogMain from './pages/Blog/BlogMain/BlogMain';
 import EditPost from './pages/Blog/EditPost/EditPost';
+import EditPostList from './pages/Blog/EditPostList/EditPostList';
 
 const rootElement = document.getElementById('root');
 const app = (
@@ -87,6 +87,10 @@ const app = (
         <Route path="/wypelnienia/welna-mineralna" element={<MineralWool />} />
         <Route path="/wypelnienia/welna-ceramiczna" element={<Ceramic_wool />} />
         <Route path="/wypelnienia/mata-szklana" element={<Glass_Mat />} />
+
+        {/*Blog */}
+        <Route path='/Blog' element={<BlogMain/>}></Route>
+        <Route path='/Blog/:postID' element={<SinglePostView/>}></Route>
 
         {/* Trasa logowania */}
         <Route path="/login" element={<LoginPage />} />
@@ -157,10 +161,31 @@ const app = (
           }
         />
         {/* Zabezpieczone trasy zarządzania blogiem */}
-        <Route path='/Blog' element={<BlogMain/>}></Route>
-        <Route path='/Blog/:postID' element={<SinglePostView/>}></Route>
-        <Route path="/AddPost" element={<AddPost/>}/>
-        <Route path='/EditPost' element={<EditPost/>}/>
+        
+        <Route 
+          path="/AddPost" 
+          element={
+            <ProtectedRoute requiredRole="ROLE_ADMIN">
+              <AddPost/>
+            </ProtectedRoute>
+          }
+        />        
+        <Route 
+          path='/EditPostList' 
+          element={
+            <ProtectedRoute requiredRole="ROLE_ADMIN">
+              <EditPostList/>
+            </ProtectedRoute>
+          }        
+        />
+        <Route 
+          path='/EditPost/:postid' 
+          element={
+            <ProtectedRoute requiredRole="ROLE_ADMIN">
+              <EditPost/>
+            </ProtectedRoute>
+          }        
+        />
       </Routes>
     </BrowserRouter>
   </CartProvider>
